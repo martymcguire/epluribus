@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125200510) do
+ActiveRecord::Schema.define(version: 20140125211443) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -20,5 +20,24 @@ ActiveRecord::Schema.define(version: 20140125200510) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email",               default: "", null: false
+    t.string   "name",                default: "", null: false
+    t.string   "avatar"
+    t.string   "password",            default: "", null: false
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",       default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

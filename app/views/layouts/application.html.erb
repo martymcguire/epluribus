@@ -8,7 +8,18 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+  Hi, <%= current_user.name %>
+  <% if ! current_user.avatar.nil? %>
+    <img src="<%= current_user.avatar %>"/>
+  <% end %>
+<% end %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <%= yield %>
+
+<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
 
 </body>
 </html>

@@ -45,3 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'redcarpet', '1.17.2'
+
+gem 'devise'
+gem 'omniauth-google-oauth2'
