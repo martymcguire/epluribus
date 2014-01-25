@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Project.destroy_all
+
+Project.create(
+  name: 'George Washington',
+  description: %Q{
+Let's make the bust of George Washington!
+
+## What's the Deal?
+
+We're at [The Walters](http://thewalters.org/). They are awesome. Woo!
+
+## Bleep Bloop
+
+Blah blah blah!
+  },
+  preview_stl: 'FIXME I NEED A URL OMG'
+)
