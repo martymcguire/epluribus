@@ -33,7 +33,7 @@ Part.destroy_all
   Part.create(
     project_id: p.id,
     model_url: "https://s3.amazonaws.com/epluribus/art-bytes-2014-george-washington-bust/parts/part-#{i}.stl",
-    model_url: "https://s3.amazonaws.com/epluribus/art-bytes-2014-george-washington-bust/preview/part-#{i}.stl",
+    model_preview_url: "https://s3.amazonaws.com/epluribus/art-bytes-2014-george-washington-bust/preview/part-#{i}.stl",
     offset: [x*110,y*110,z*110].join(','),
     extents: [110,110,110].join(','),
     volume: 1300000,
