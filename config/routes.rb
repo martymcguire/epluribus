@@ -1,4 +1,5 @@
 Epluribus::Application.routes.draw do
+  get "welcome/index"
   devise_for :users,
     :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
     :format => false
@@ -8,7 +9,7 @@ Epluribus::Application.routes.draw do
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
-  root 'projects#show', :id => 1
+  root 'welcome#index'
   resources :projects
 
   # The priority is based upon order of creation: first created -> highest priority.
