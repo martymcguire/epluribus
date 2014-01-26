@@ -4,42 +4,12 @@
     <p class="lead">Keep those volunteers busy!</p>
   </div>
 
-  <h2>Parts Awaiting Verification</h2>
-  <% @verification_parts.each do |p| %>
-    <div class="well">
-      <div class="row">
-        <div class="col-md-4">
-          <%= image_tag("george-bust2.png", size: "100") %>
-        </div><!-- /.span2 -->
-        <div class="col-md-8">
-          <p class="pull-right">Part: <%= p.id %> <br/> Project: George </p>
-          Expected Dimensions: <%= p.extents %><br/>
-          Reported Dimensions: X, Y, Z<br/>
-          <%= p.user.name %> <br>
-          <button type="button" class="btn btn-primary btn-sm">Accept</button>
-          <button type="button" class="btn btn-primary btn-sm">Reject</button>
-          <button type="button" class="btn btn-primary btn-sm">Unassign</button>
-        </div><!-- span10 -->
-      </div><!-- /.row -->
-    </div><!-- /.well -->
-   <% end %>
+  <% if @verification_parts.count > 0 %>
+    <h2>Parts Awaiting Verification</h2>
+    <%= render partial: 'verify_part', collection: @verification_parts %>
+  <% end %>
 
-   <h2>Parts In Transit</h2>
-  <% @shipped_parts.each do |p| %>
-    <div class="well">
-      <div class="row">
-        <div class="col-md-4">
-          <%= image_tag("george-bust2.png", size: "100") %>
-        </div><!-- /.span2 -->
-        <div class="col-md-8">
-          <p class="pull-right">Part: <%= p.id %> <br/> Project: George </p>
-          Expected Dimensions: <%= p.extents %><br/>
-          Reported Dimensions: X, Y, Z<br/>
-          <%= p.user.name %> <br>
-          <button type="button" class="btn btn-primary btn-sm">Accept</button>
-          <button type="button" class="btn btn-primary btn-sm">Reject</button>
-          <button type="button" class="btn btn-primary btn-sm">Unassign</button>
-        </div><!-- span10 -->
-      </div><!-- /.row -->
-    </div><!-- /.well -->
-   <% end %>
+  <% if @shipped_parts.count > 0 %>
+    <h2>Parts In Transit</h2>
+    <%= render partial: 'receive_part', collection: @shipped_parts %>
+  <% end %>

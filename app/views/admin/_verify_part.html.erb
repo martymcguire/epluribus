@@ -1,0 +1,16 @@
+    <div class="well">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag("george-bust2.png", size: "100") %>
+        </div><!-- /.span2 -->
+        <div class="col-md-8">
+          <p class="pull-right">Part: <%= verify_part.id %> <br/> Project: George </p>
+          Expected Dimensions: <%= verify_part.extents %><br/>
+          Reported Dimensions: X, Y, Z<br/>
+          <%= verify_part.user.name %> <br>
+          <button type="button" class="btn btn-primary btn-sm">Accept</button>
+          <button type="button" class="btn btn-primary btn-sm">Reject</button>
+          <button type="button" class="btn btn-primary btn-sm">Unassign</button>
+        </div><!-- span10 -->
+      </div><!-- /.row -->
+    </div><!-- /.well -->
