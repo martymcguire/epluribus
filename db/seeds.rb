@@ -9,7 +9,7 @@
 Project.destroy_all
 
 p = Project.create(
-  name: 'George Washington',
+  name: 'Bust of George Washtington',
   description: %Q{
 Let's make the bust of George Washington!
 
