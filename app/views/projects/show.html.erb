@@ -17,6 +17,9 @@
   <% elsif @part.printing? %>
     <div class="well"><p class="lead">Print!</p>
           <p>Here's your file!</p>
+          <p>
+          <%= image_tag @part.model_preview_url, height: '150' %>
+          </p>
       <div class="row">
         <div class="col-md-6">
           <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %><br>
@@ -54,16 +57,25 @@
 
   <% elsif @part.verification? %>
   <div class="well"><p class="lead">Awaiting Verification</p>
+    <p>
+    <%= image_tag @part.model_preview_url, height: '150' %>
     <%= image_tag @part.photo.url(:square) %>
+    </p>
     <p>We're reviewing your photo and measurement info.<br />
     We'll get back to you soon with shipping info!</p>
 	</div>
 
   <% elsif @part.shipping? %>
     <div class="well"><p class="lead">Ship it!</p>
+    <p>
+    <%= image_tag @part.model_preview_url, height: '150' %>
     <%= image_tag @part.photo.url(:square) %>
-    Thank you so much for your help! Now that we have approved your print, please mail it to <b>Toad Blatt 10310 S Dolfield Rd, Owings Mills, MD 21117 </b>
-    <br><br>
+    </p>
+    <p>Thank you so much for your help! Now that we have approved your print, please mail it to: <b><br />
+    Todd Blatt<br />
+    10310 S Dolfield Rd<br />
+    Owings Mills, MD 21117 </b></p>
+    <br /><br />
     Please enter your UPS tracking number so we know when it will arrive.
     <form method="POST" action="<%= project_part_ship_path(@project, @part) %>">
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
@@ -81,8 +93,13 @@
 
   <% elsif @part.shipped? %>
     <div class="well"><p class="lead">In Transit</p>
+    <p>
+    <%= image_tag @part.model_preview_url, height: '150' %>
     <%= image_tag @part.photo.url(:square) %>
+    </p>
+    <p>
     Your part is in transit! We will update you when we receive it!
+    </p>
     </div>
   <% end %>
 
@@ -92,8 +109,8 @@
     You have contributed x% to the George Project.
     <ul>
       <% @finished_parts.each do |fp| %>
-        <li>Part #<%= fp.id %> accepted on <%= fp.updated_at %>
-            <%= image_tag @part.photo.url(:square) %>
+        <li>Part #<%= fp.id %> accepted on <%= fp.updated_at %><br />
+            <%= image_tag fp.photo.url(:square) %>
         </li>
       <% end %>
     </ul>
