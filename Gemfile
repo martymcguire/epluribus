@@ -57,4 +57,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'aasm'
 
+# Heroku configs
 ruby "1.9.3"
+group :production do
+  gem 'rails_12factor'
+end
