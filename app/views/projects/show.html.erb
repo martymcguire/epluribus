@@ -35,13 +35,13 @@
     What are the final dimenions of your print (in millimeters)?
     <div class="row">
       <div class="col-xs-2">
-        <input type="text" class="form-control" placeholder="x">
+        <input name="x-measure" type="text" class="form-control" placeholder="x">
       </div>
       <div class="col-xs-2">
-        <input type="text" class="form-control" placeholder="y">
+        <input name="y-measure" type="text" class="form-control" placeholder="y">
       </div>
       <div class="col-xs-2">
-        <input type="text" class="form-control" placeholder="z">
+        <input name="z-measure" type="text" class="form-control" placeholder="z">
       </div>
       <div class="col-xs-2">
       <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>
@@ -66,7 +66,7 @@
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
     <div class="row">
       <div class="col-xs-4">
-        <input type="text" class="form-control" placeholder="UPS tracking Number">
+        <input name='shipping_info' type="text" class="form-control" placeholder="UPS tracking Number">
       </div>
       <div class="col-xs-2">
     <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>

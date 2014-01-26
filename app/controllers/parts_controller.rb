@@ -9,13 +9,14 @@ class PartsController < ApplicationController
   end
 
   def submit
-    # FIXME: do stuff with the dimensions and photo :P
+    # FIXME: handle image upload :P
+    @part.measurements = [params['x-measure'], params['y-measure'], params['z-measure']].join(',')
     @part.submit!
     redirect_to project_path(@part.project_id)
   end
 
   def ship
-    # FIXME: do stuff with the shipping info!!!!! :P
+    @part.shipping_info = params[:shipping_info]
     @part.ship!
     redirect_to project_path(@part.project_id)
   end
