@@ -1,0 +1,95 @@
+<div class="container">
+  <h1><%= @project.name %></h1>
+  <div class="project-description">
+    <%= markdown @project.description %>
+  </div>
+  <hr />
+  <h2>Your TODO List</h2>
+  <% if @part.nil? %>
+    <div class="well">
+      <p class="lead">Get a File to Print!</p>
+      <p>
+        We are so excited you are ready to help us! Click the button below and we'll assign you a file to print!
+      </p>
+      <%= link_to "I'm Ready, Give me a File to Print!", project_participate_path(@project), class: "btn btn-primary btn-sm" %>
+    </div> <!-- Well -->
+	
+  <% elsif @part.printing? %>
+    <div class="well"><p class="lead">Print!</p>
+      <div class="row">
+        <div class="span9 container">
+          <p>Here's your file!</p>
+          <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %>
+          <%= button_to "I'm Done! Now What?", [@project, @part, :printed], {class: "btn btn-primary"} %>
+        </div>
+        <div class="span3">
+        </div>
+      </div>
+    </div>
+  <% elsif @part.printed? %>
+    <div class="well"><p class="lead">Approve </p>
+    <form action="<%= project_part_submit_path(@project,@part) %>" method="POST">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    Please upload a photo of your finished print. <input type="file" id="exampleInputFile">
+    <br>
+    What are the final dimenions of your print (in millimeters)?
+    <div class="row">
+      <div class="col-xs-2">
+        <input type="text" class="form-control" placeholder="x">
+      </div>
+      <div class="col-xs-2">
+        <input type="text" class="form-control" placeholder="y">
+      </div>
+      <div class="col-xs-2">
+        <input type="text" class="form-control" placeholder="z">
+      </div>
+      <div class="col-xs-2">
+      <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>
+      </div>
+    </div>
+    </form>
+    
+    
+    </div><!-- Well -->
+
+  <% elsif @part.verification? %>
+  <div class="well"><p class="lead">Awaiting Verification</p>
+    <p>We're reviewing your photos and size info. We'll get back to you soon with shipping info!</p>
+	</div>
+
+  <% elsif @part.shipping? %>
+    <div class="well"><p class="lead">Ship it!</p>
+    Thank you so much for your help! Now that we have approved your print, please mail it to <b>Toad Blatt 10310 S Dolfield Rd, Owings Mills, MD 21117 </b>
+    <br><br>
+    Please enter your UPS tracking number so we know when it will arrive.
+    <form method="POST" action="<%= project_part_ship_path(@project, @part) %>">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    <div class="row">
+      <div class="col-xs-4">
+        <input type="text" class="form-control" placeholder="UPS tracking Number">
+      </div>
+      <div class="col-xs-2">
+    <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>
+      </div>
+    </div>
+    </form>
+	
+	</div><!-- Well -->
+
+  <% elsif @part.shipped? %>
+    <div class="well"><p class="lead">In Transit</p>
+    Your part is in transit! We will update you when we receive it!
+    </div>
+  <% end %>
+
+
+  <% if @finished_parts.count > 0 %>
+    <div class="well"><p class="lead">Your Productivity<p> 
+    You have contributed x% to the George Project.
+    <ul>
+      <% @finished_parts.each do |fp| %>
+        <li>Part #<%= fp.id %> accepted on <%= fp.updated_at %></li>
+      <% end %>
+    </ul>
+    </div> <!-- Well -->
+  <% end %>

@@ -2,13 +2,23 @@ class Part < ActiveRecord::Base
   belongs_to :project
   belongs_to :user
 
+  def self.for_user(user)
+    where("user_id = ?", user.id)
+  end
+
+  def self.in_progress
+    where("aasm_state != 'accepted'").first
+  end
+
   include AASM
 
   aasm do
     state :unclaimed, initial: true
     state :printing
+    state :printed
     state :verification
     state :shipping
+    state :shipped
     state :accepted
 
     event :claim do
@@ -16,15 +26,23 @@ class Part < ActiveRecord::Base
     end
 
     event :print do
-      transitions from: :printing, to: :verification
+      transitions from: :printing, to: :printed
+    end
+    
+    event :submit do
+      transitions from: :printed, to: :verification
     end
 
     event :verify do
       transitions from: :verification, to: :shipping
     end
 
+    event :ship do
+      transitions from: :shipping, to: :shipped
+    end
+
     event :accept do
-      transitions from: :shipping, to: :accepted
+      transitions from: :shipped, to: :accepted
     end
 
   end

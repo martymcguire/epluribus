@@ -13,6 +13,11 @@ Epluribus::Application.routes.draw do
   root 'welcome#index'
   resources :projects do
     get 'participate'
+    resources :parts do
+      post 'printed'
+      post 'submit'
+      post 'ship'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
