@@ -1,18 +1,14 @@
 <div class="container">
   <div class="well well-lg">
-    <h1>Welcome!</h1>
-    <p>The rise in popularity of desktop 3D printing and 3D scanning has made it possible for tech-savvy tourists to travel the globe, bringing home digital mementos of their trip, recreated as tiny plastic miniatures.</p>
-
-    <p>But why stop at trinkets when you can replicate the original in its entirety?</p>
-    
-    <p>At the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>, our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art. Giuseppe Ceracchi's strange neoclassical "Bust of George Washington" (1791-1792) is currently on display at the Walters during the restoration of Baltimore's <a href="http://en.wikipedia.org/wiki/Washington_Monument_(Baltimore)">Washington Monument</a>.</p> 
-    
-    <blockquote>
-    — "Friend, surely this statue is too large to produce on a desktop 3D printer?"<br>
-    — "But weren't the pyramids built in pieces, block-by-block?" 
-    </blockquote>
-    
-    <p>We face your challenges, unafraid! Working from a micron-resolution professional 3D scan of the statue donated by <a href="http://www.dirdim.com/">Direct Dimensions</a>, we have sliced and diced the model into 110 easy-to-print sections, each cleaned up and oriented for your printing pleasure. Now we need your help to crowdsource the printing of this monument, a cube at a time, and ship back your contributions to the museum where they will be reunited, stacked and glued into a new replica of a copy of a bust by Giuseppe Ceracchi. We expect that results of this distributed effort will be a monumental (if monstrous) work of art in itself!</p>
+    <%= image_tag("wethebuilders36.png") %>
+	  <p>We the People of the Maker-verse, in Order to form a more perfect replica of a copy of a statue in the style of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s odd neoclassical "Bust of George Washington" (1791-1792), establish a <a href="">Practice of Full 1:1 Scale Community Appropriation of Public Artworks</a>, and ...</p>
+	  
+	  <ul>
+	  <li>We have Preamble[link to About]! </li>
+	  <li>So much Instruction![to anchor for how to participate] </li>
+	  <li>So many cubes[anchor: bust resources]! </li>
+	  <li>You, too!! Must!! [to anchor for user resources</li>
+	  </ul>
   </div>
 </div>
 
@@ -39,52 +35,31 @@
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
-      <%= image_tag "300x200.gif" %>
-      <div class="caption">
-        <h3>Next Project 1</h3>
-        <p>Recent Activity: User X finished block #100<p>
-  <p>Total Progress:</p>
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" style="width: 0%">
-      <span class="sr-only">0% Complete (success)</span>
-    </div>
-    <div class="progress-bar progress-bar-warning" style="width: 0%">
-      <span class="sr-only">0% Complete (warning)</span>
-    </div>
-  </div>
-        <p><a href="#" class="btn btn-primary" role="button">Get Involved</a></p>
-      </div>
-    </div>
+	  <br>
+	  <p class="text-center"><i class="fa fa-users fa-5x" style="font-size:150px;color:#66CC66"></i></p>
+	  <h3 class="text-center">How it works</h3>
+	  <ol style="margin-right:5px">
+	  <li><a href="<%= user_omniauth_authorize_path(:google_oauth2) %>">Sign in with your Google+ account</a></li>
+	  <li>Commit to a project. You will get assigned a new block to print</li>
+	  <li>Print your given block within 1 week. You have the option to print in whatever color you want, and to inscribe your initials on a non-visable face of your block</li>
+	  <li>Verify that you have printed your block by uploading a photo of your printed block</li>
+	  <li>Your print will be verified within 48 hours, and you will receive an address to mail your block</li>
+	  <li>When all blocks for a project have been completed, they will be glued and assembled to present next to the original statue! Your name will appear here on the website as a valued contributor to the project!</li>
+	  </ol>
+	</div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
-      <%= image_tag "300x200.gif" %>
-      <div class="caption">
-        <h3>Next Project 2</h3>
-        <p>Recent Activity: User X finished block #100<p>
-  <p>Total Progress:</p>
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" style="width: 0%">
-      <span class="sr-only">0% Complete (success)</span>
-    </div>
-    <div class="progress-bar progress-bar-warning" style="width: 0%">
-      <span class="sr-only">0% Complete (warning)</span>
-    </div>
-  </div>
-        <p><a href="#" class="btn btn-primary" role="button">Get Involved</a></p>
-      </div>
-    </div>
+	  <br>
+	  <p class="text-center"><i class="fa fa-bolt fa-5x" style="font-size:150px;color:orange"></i></p>
+	  <h3 class="text-center">Recent Activity</h3>
+	  <ul>
+	  <li>Dave just completed part 1234!</li>
+	  <li>Marty is going to print part 5678!</li>
+	  <li>Amy has printed part 1357!</li>
+	  <li>Matt just completed Part 2468!</li>
+	  </ul>
+	</div>
   </div>
 </div>
-
-<div class="well well-lg">
-<h3>How it works</h3>
-<ol>
-<li><a href="<%= user_omniauth_authorize_path(:google_oauth2) %>">Sign in with your Google+ account</a></li>
-<li>Commit to a project. You will get assigned a new block to print</li>
-<li>Print your given block within 1 week. You have the option to print in whatever color you want, and to inscribe your initials on a non-visable face of your block</li>
-<li>Verify that you have printed your block by uploading a photo of your printed block</li>
-<li>Your print will be verified within 48 hours, and you will receive an address to mail your block</li>
-<li>When all blocks for a project have been completed, they will be glued and assembled to present next to the original statue! Your name will appear here on the website as a valued contributor to the project!</li>
-</ol>
-</div>
+<hr>
