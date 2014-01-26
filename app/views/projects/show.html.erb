@@ -16,13 +16,15 @@
 	
   <% elsif @part.printing? %>
     <div class="well"><p class="lead">Print!</p>
-      <div class="row">
-        <div class="span9 container">
           <p>Here's your file!</p>
-          <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %>
-          <%= button_to "I'm Done! Now What?", [@project, @part, :printed], {class: "btn btn-primary"} %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %><br>
         </div>
-        <div class="span3">
+        <div class="col-md-6">
+		  <div class="pull-right">
+            <%= button_to "I'm Done! Now What?", [@project, @part, :printed], {class: "btn btn-success"} %>
+		  </div>
         </div>
       </div>
     </div>

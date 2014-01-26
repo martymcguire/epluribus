@@ -10,17 +10,7 @@ Project.destroy_all
 
 p = Project.create(
   name: 'Bust of George Washington',
-  description: %Q{
-Let's make the bust of George Washington!
-
-## What's the Deal?
-
-We're at [The Walters](http://thewalters.org/). They are awesome. Woo!
-
-## Bleep Bloop
-
-Blah blah blah!
-  },
+  description: "This marble bust of the first president weighs one thousand pounds. The Board of Managers of the Washington Monument in 1834 purchased what they called a \"Colossal Bust\" for $50, which was copied after the original by Italian sculpture Giuseppe Ceracchi. The piece is currently on loan to the [The Walters Art Museum](http://thewalters.org/).",
   preview_stl: 'https://s3.amazonaws.com/epluribus/art-bytes-2014-george-washington-bust/decim.stl'
 )
 
