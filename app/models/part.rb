@@ -2,6 +2,11 @@ class Part < ActiveRecord::Base
   belongs_to :project
   belongs_to :user
 
+  has_attached_file :photo, styles: {
+    thumb: '150x150>',
+    square: '150x150#'
+  }, :default_url => '/assets/missing-150x150.png'
+
   def self.for_user(user)
     where("user_id = ?", user.id)
   end

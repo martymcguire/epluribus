@@ -9,7 +9,7 @@ class PartsController < ApplicationController
   end
 
   def submit
-    # FIXME: handle image upload :P
+    @part.photo = params[:photo]
     @part.measurements = [params['x-measure'], params['y-measure'], params['z-measure']].join(',')
     @part.submit!
     redirect_to project_path(@part.project_id)

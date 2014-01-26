@@ -57,6 +57,10 @@ gem 'omniauth-google-oauth2'
 
 gem 'aasm'
 
+# Image upload handling
+gem 'paperclip'
+gem 'aws-sdk'
+
 # Heroku configs
 ruby "1.9.3"
 group :production do
