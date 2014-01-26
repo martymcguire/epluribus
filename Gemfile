@@ -3,8 +3,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the dev database for Active Record
+group :development, :test do
+  gem 'sqlite3'
+end
+# Use postgresql for production (hi, heroku!)
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -50,3 +56,5 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 
 gem 'aasm'
+
+ruby "1.9.3"
