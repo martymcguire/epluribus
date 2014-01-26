@@ -1,8 +1,18 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1>Welcome</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Learn More &raquo;</a></p>
+<div class="container">
+  <div class="well well-lg">
+    <h1>Welcome!</h1>
+    <p>The rise in popularity of desktop 3D printing and 3D scanning has made it possible for tech-savvy tourists to travel the globe, bringing home digital mementos of their trip, recreated as tiny plastic miniatures.</p>
+
+    <p>But why stop at trinkets when you can replicate the original in its entirety?</p>
+    
+    <p>At the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>, our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art. Giuseppe Ceracchi's strange neoclassical "Bust of George Washington" (1791-1792) is currently on display at the Walters during the restoration of Baltimore's <a href="http://en.wikipedia.org/wiki/Washington_Monument_(Baltimore)">Washington Monument</a>.</p> 
+    
+    <blockquote>
+    — "Friend, surely this statue is too large to produce on a desktop 3D printer?"<br>
+    — "But weren't the pyramids built in pieces, block-by-block?" 
+    </blockquote>
+    
+    <p>We face your challenges, unafraid! Working from a micron-resolution professional 3D scan of the statue donated by <a href="http://www.dirdim.com/">Direct Dimensions</a>, we have sliced and diced the model into 110 easy-to-print sections, each cleaned up and oriented for your printing pleasure. Now we need your help to crowdsource the printing of this monument, a cube at a time, and ship back your contributions to the museum where they will be reunited, stacked and glued into a new replica of a copy of a bust by Giuseppe Ceracchi. We expect that results of this distributed effort will be a monumental (if monstrous) work of art in itself!</p>
   </div>
 </div>
 
@@ -23,7 +33,7 @@
       <span class="sr-only">20% Complete (warning)</span>
     </div>
   </div>
-        <p><%= link_to (user_signed_in? ? "Get Involved" : "Sign in to Get Involved"), project_participate_path(@project), class: "btn btn-primary", role: 'button' %> <a href="model.html" class="btn btn-default" role="button">View 3D model</a></p>
+        <p><%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_participate_path(@project), class: "btn btn-primary", role: 'button' %> <a href="model.html" class="btn btn-default" role="button">View 3D model</a></p>
       </div>
     </div>
   </div>

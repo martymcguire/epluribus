@@ -1,5 +1,5 @@
 Epluribus::Application.routes.draw do
-  get "dashboard/index", :as => :dashboard
+  get "admin/index"
   get "welcome/index"
   devise_for :users,
     :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
