@@ -48,3 +48,5 @@ gem 'redcarpet', '1.17.2'
 
 gem 'devise'
 gem 'omniauth-google-oauth2'
+
+gem 'aasm'

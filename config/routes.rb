@@ -1,4 +1,5 @@
 Epluribus::Application.routes.draw do
+  get "dashboard/index", :as => :dashboard
   get "welcome/index"
   devise_for :users,
     :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
@@ -10,7 +11,9 @@ Epluribus::Application.routes.draw do
   end
 
   root 'welcome#index'
-  resources :projects
+  resources :projects do
+    get 'participate'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
