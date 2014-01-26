@@ -5,7 +5,7 @@ Epluribus::Application.routes.draw do
     :format => false
 
   devise_scope :user do
-    get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+    get 'sign_in', :to => redirect('/users/auth/google_oauth2'), :as => :new_user_session
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
