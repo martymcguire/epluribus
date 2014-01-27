@@ -1,15 +1,15 @@
     <div class="well">
       <div class="row">
         <div class="col-md-2">
-          <%= image_tag("george-bust2.png", size: "100") %>
+          <%= link_to(image_tag(verify_part.photo.url(:square)), verify_part.photo.url) %>
         </div>
         <div class="col-md-8">
-          Project: George <br>
-		  Part: <%= verify_part.id %><br>
+          Project: <%= verify_part.project.name %> <br>
+          Part: <%= verify_part.id %><br>
           Expected Dimensions: <%= verify_part.extents %><br>
           Reported Dimensions: <%= verify_part.measurements %><br>
           User: <%= verify_part.user.name %><br>
-		  Email: <%= verify_part.user.email %><br>
+          Email: <%= verify_part.user.email %><br>
 		</div>
         <div class="col-md-2">
 		  <div class="">
