@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>All parts for <%= @project.name %></h1>
+  <% ['verification', 'shipped', 'shipping', 'printed', 'printing', 'accepted', 'unclaimed'].each do |state| %>
+    <div class="container">
+    <h2><%= state.capitalize %> Parts</h2>
+    <% if @parts[state].nil? %>
+      <p>No parts are currently in '<%= state %>'</p>
+    <% else %>
+      <%= render partial: "#{state}_part", collection: @parts[state] %>
+    <% end %>
+    </div>
+  <% end %>
+</div>

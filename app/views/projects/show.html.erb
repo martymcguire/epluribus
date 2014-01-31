@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @project.name %></h1>
+  <%= link_to_if(current_user.is_admin, "[Admin Page for This Project]", project_parts_path(@project)) %>
   <div class="project-description">
     <%= markdown @project.description %>
   </div>
@@ -17,9 +18,7 @@
   <% elsif @part.printing? %>
     <div class="well"><p class="lead">Print!</p>
           <p>Here's your file!</p>
-          <p>
-          <%= image_tag @part.model_preview_url, height: '150' %>
-          </p>
+          <p><%= part_preview(@part) %></p>
       <div class="row">
         <div class="col-md-6">
           <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %><br>
@@ -33,6 +32,8 @@
     </div>
   <% elsif @part.printed? %>
     <div class="well"><p class="lead">Approve </p>
+    <p>Time to submit a photo and measurements!</p>
+    <p><%= part_preview(@part) %></p>
     <form action="<%= project_part_submit_path(@project,@part) %>" method="POST" enctype='multipart/form-data'>
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
     Please upload a photo of your finished print. <input name="photo" type="file" id="photo">
@@ -58,8 +59,8 @@
   <% elsif @part.verification? %>
   <div class="well"><p class="lead">Awaiting Verification</p>
     <p>
-    <%= image_tag @part.model_preview_url, height: '150' %>
-    <%= image_tag @part.photo.url(:square) %>
+      <%= part_preview(@part) %>
+      <%= part_photo_preview(@part) %>
     </p>
     <p>We're reviewing your photo and measurement info.<br />
     We'll get back to you soon with shipping info!</p>
@@ -68,8 +69,8 @@
   <% elsif @part.shipping? %>
     <div class="well"><p class="lead">Ship it!</p>
     <p>
-    <%= image_tag @part.model_preview_url, height: '150' %>
-    <%= image_tag @part.photo.url(:square) %>
+      <%= part_preview(@part) %>
+      <%= part_photo_preview(@part) %>
     </p>
     <p>Thank you so much for your help! Now that we have approved your print, please mail it to: <b><br />
     Todd Blatt<br />
@@ -94,25 +95,35 @@
   <% elsif @part.shipped? %>
     <div class="well"><p class="lead">In Transit</p>
     <p>
-    <%= image_tag @part.model_preview_url, height: '150' %>
-    <%= image_tag @part.photo.url(:square) %>
+      <%= part_preview(@part) %>
+      <%= part_photo_preview(@part) %>
     </p>
     <p>
-    Your part is in transit! We will update you when we receive it!
-    </p>
+    Your part is in transit! There's nothing for you to do right now.</p>
+    <p>We will update you when we receive your part!</p>
     </div>
   <% end %>
 
 
   <% if @finished_parts.count > 0 %>
-    <div class="well"><p class="lead">Your Productivity<p> 
-    You have contributed x% to the George Project.
-    <ul>
-      <% @finished_parts.each do |fp| %>
-        <li>Part #<%= fp.id %> accepted on <%= fp.updated_at %><br />
-            <%= image_tag fp.photo.url(:square) %>
-        </li>
-      <% end %>
-    </ul>
+    <h2>Your Productivity</h2>
+    <p>You have contributed <%= sprintf("%0.2f", (@finished_parts.count.to_f / @project.parts.count.to_f) * 100.0) %>% to the <%= @project.name %> Project!</p>
+    <% @finished_parts.each do |fp| %>
+      <div class="well"><p class="lead">Part #<%= fp.id %></p> 
+        <div class="row">
+          <div class="col-md-2">
+            <%= part_preview(fp) %>
+          </div>
+          <div class="col-md-2">
+            <%= part_photo_preview(fp) %>
+          </div>
+          <div class="col-md-8">
+            Reported Dimensions: <%= fp.measurements %><br />
+            Tracking Info: <%= fp.shipping_info %><br />
+            Accepted: <% time_ago_in_words(fp.updated_at) %> ago<br />
+          </div>
+        </div>
+      </div>
+    <% end %>
     </div> <!-- Well -->
   <% end %>

@@ -1,5 +1,4 @@
 Epluribus::Application.routes.draw do
-  get "admin", :to => 'admin#index'
 
   devise_for :users,
     :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
@@ -17,6 +16,9 @@ Epluribus::Application.routes.draw do
       post 'printed'
       post 'submit'
       post 'ship'
+      post 'verify'
+      post 'accept'
+      post 'unassign'
     end
   end
 

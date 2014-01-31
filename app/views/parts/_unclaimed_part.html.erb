@@ -1,0 +1,14 @@
+    <div class="well">
+      <div class="row">
+        <div class="col-md-2">
+          <%= part_preview(unclaimed_part) %>
+        </div>
+        <div class="col-md-8">
+          Project: <%= unclaimed_part.project.name %> <br>
+          Part: <%= link_to(unclaimed_part.id, unclaimed_part.model_url) %><br>
+          Expected Dimensions: <%= unclaimed_part.extents %><br>
+          Reported Dimensions: <%= unclaimed_part.measurements %><br>
+		</div>
+        <div class="col-md-2">&nbsp;</div>
+	  </div>
+    </div><!-- /.well -->

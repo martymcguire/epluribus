@@ -1,0 +1,22 @@
+    <div class="well">
+      <div class="row">
+        <div class="col-md-2">
+          <%= part_preview(accepted_part) %>
+        </div>
+        <div class="col-md-2">
+          <%= part_photo_preview(accepted_part) %>
+        </div>
+        <div class="col-md-6">
+          Project: <%= accepted_part.project.name %> <br>
+          Part: <%= accepted_part.id %><br>
+          Expected Dimensions: <%= accepted_part.extents %><br>
+          Reported Dimensions: <%= accepted_part.measurements %><br>
+          User: <%= accepted_part.user.name %><br>
+          Email: <%= accepted_part.user.email %><br>
+          Tracking Info: <%= accepted_part.shipping_info %>
+		</div>
+        <div class="col-md-2">
+          <% # no buttons %>
+        </div>
+	  </div>
+    </div>

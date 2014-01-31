@@ -1,0 +1,24 @@
+    <div class="well">
+      <div class="row">
+        <div class="col-md-2">
+          <%= part_preview(verification_part) %>
+        </div>
+        <div class="col-md-2">
+          <%= part_photo_preview(verification_part) %>
+        </div>
+        <div class="col-md-6">
+          Project: <%= verification_part.project.name %> <br>
+          Part: <%= verification_part.id %><br>
+          Expected Dimensions: <%= verification_part.extents %><br>
+          Reported Dimensions: <%= verification_part.measurements %><br>
+          User: <%= verification_part.user.name %><br>
+          Email: <%= verification_part.user.email %><br>
+		</div>
+        <div class="col-md-2">
+		  <div class="">
+        <p><%= button_to("Accept", project_part_verify_path(verification_part.project_id, verification_part.id), class: "btn btn-primary btn-block") %></p>
+        <p><%= button_to("Unassign", project_part_unassign_path(verification_part.project_id, verification_part.id), class: "btn btn-danger btn-block") %></p>
+		  </div>
+        </div>
+	  </div>
+    </div><!-- /.well -->
