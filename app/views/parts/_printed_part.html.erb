@@ -4,17 +4,12 @@
           <%= part_preview(printed_part) %>
         </div>
         <div class="col-md-8">
-          Project: <%= printed_part.project.name %> <br>
-          Part: <%= printed_part.id %><br>
-          Expected Dimensions: <%= printed_part.extents %><br>
-          Reported Dimensions: <%= printed_part.measurements %><br>
-          User: <%= printed_part.user.name %><br>
-          Email: <%= printed_part.user.email %><br>
-		</div>
+          <%= render partial: "part_details", locals: { part: printed_part } %>
+        </div>
         <div class="col-md-2">
-		  <div class="">
-        <p><%= button_to("Unassign", project_part_unassign_path(printed_part.project_id, printed_part.id), class: "btn btn-danger btn-block") %></p>
-		  </div>
+          <div class="">
+            <p><%= button_to("Unassign", project_part_unassign_path(printed_part.project_id, printed_part.id), class: "btn btn-danger btn-block") %></p>
+          </div>
         </div>
 	  </div>
     </div><!-- /.well -->

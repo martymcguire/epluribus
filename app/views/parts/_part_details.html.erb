@@ -1,0 +1,14 @@
+Project: <%= part.project.name %><br />
+Part: <%= part.id %><br />
+Expected Dimensions: <%= part.extents %><br />
+<% if !!part.measurements %>
+  Reported Dimensions: <%= part.measurements %><br />
+<% end %>
+<% if !!part.user %>
+  User: <%= part.user.name %><br />
+  Email: <%= part.user.email %><br />
+<% end %>
+<% if !!part.shipping_info %>
+  Shipping Info: <%= part.shipping_info %><br />
+<% end %>
+Last Updated: <%= time_ago_in_words(part.updated_at) %> ago

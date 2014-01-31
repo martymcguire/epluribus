@@ -7,17 +7,12 @@
           <%= part_photo_preview(shipping_part) %>
         </div>
         <div class="col-md-6">
-          Project: <%= shipping_part.project.name %> <br>
-          Part: <%= shipping_part.id %><br>
-          Expected Dimensions: <%= shipping_part.extents %><br>
-          Reported Dimensions: <%= shipping_part.measurements %><br>
-          User: <%= shipping_part.user.name %><br>
-          Email: <%= shipping_part.user.email %><br>
-		</div>
+          <%= render partial: "part_details", locals: { part: shipping_part } %>
+        </div>
         <div class="col-md-2">
-		  <div class="">
-        <p><%= button_to("Unassign", project_part_unassign_path(shipping_part.project_id, shipping_part.id), class: "btn btn-danger btn-block") %></p>
-		  </div>
+          <div class="">
+            <p><%= button_to("Unassign", project_part_unassign_path(shipping_part.project_id, shipping_part.id), class: "btn btn-danger btn-block") %></p>
+          </div>
         </div>
 	  </div>
     </div><!-- /.well -->

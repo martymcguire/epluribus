@@ -7,14 +7,8 @@
           <%= part_photo_preview(accepted_part) %>
         </div>
         <div class="col-md-6">
-          Project: <%= accepted_part.project.name %> <br>
-          Part: <%= accepted_part.id %><br>
-          Expected Dimensions: <%= accepted_part.extents %><br>
-          Reported Dimensions: <%= accepted_part.measurements %><br>
-          User: <%= accepted_part.user.name %><br>
-          Email: <%= accepted_part.user.email %><br>
-          Tracking Info: <%= accepted_part.shipping_info %>
-		</div>
+          <%= render partial: "part_details", locals: { part: accepted_part } %>
+        </div>
         <div class="col-md-2">
           <% # no buttons %>
         </div>

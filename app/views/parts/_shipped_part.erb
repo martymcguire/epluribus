@@ -7,19 +7,13 @@
           <%= part_photo_preview(shipped_part) %>
         </div>
         <div class="col-md-6">
-          Project: <%= shipped_part.project.name %> <br>
-          Part: <%= shipped_part.id %><br>
-          Expected Dimensions: <%= shipped_part.extents %><br>
-          Reported Dimensions: <%= shipped_part.measurements %><br>
-          User: <%= shipped_part.user.name %><br>
-          Email: <%= shipped_part.user.email %><br>
-          Tracking Info: <%= shipped_part.shipping_info %>
-		</div>
+          <%= render partial: "part_details", locals: { part: shipped_part } %>
+        </div>
         <div class="col-md-2">
-		  <div class="">
-        <p><%= button_to("Accept", project_part_accept_path(shipped_part.project_id, shipped_part.id), class: "btn btn-primary btn-block") %></p>
-        <p><%= button_to("Unassign", project_part_unassign_path(shipped_part.project_id, shipped_part.id), class: "btn btn-danger btn-block") %></p>
-		  </div>
+          <div class="">
+            <p><%= button_to("Accept", project_part_accept_path(shipped_part.project_id, shipped_part.id), class: "btn btn-primary btn-block") %></p>
+            <p><%= button_to("Unassign", project_part_unassign_path(shipped_part.project_id, shipped_part.id), class: "btn btn-danger btn-block") %></p>
+          </div>
         </div>
 	  </div>
     </div><!-- /.well -->
