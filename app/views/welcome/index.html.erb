@@ -1,14 +1,7 @@
 <div class="container">
   <div class="well well-lg">
     <%= image_tag("wethebuilders36.png", style: "margin: -15px 0 15px" )%>
-	  <p>We the People of the Maker-verse, in Order to form a more perfect replica of a copy of a statue in the style of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s odd neoclassical "Bust of George Washington" (1791-1792), establish a Practice of Full 1:1 Scale Community Appropriation of Public Artworks, and ...</p>
-	  
-	  <ul>
-	  <li>So <a href="#preamble">Preamble</a>! </li>
-	  <li>Such <a href="#how-it-works">Instruction</a>!</li>
-    <li>Much Printing!</li>
-    <li>Wow</li>
-	  </ul>
+	  <p>We the People of the Maker-verse, in Order to form a more perfect replica of a copy of a statue in the style of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s odd neoclassical "Bust of George Washington" (1791-1792), establish a Practice of Full 1:1 Scale Community Appropriation of Public Artworks, and <a href="#preamble">...</a></p>
   </div>
 </div>
 
@@ -20,16 +13,8 @@
       <%= link_to(image_tag("george-bust2.png"), project_path(@project)) %>
       <div class="caption">
         <h3><%= @project.name %></h3>
-        <% # <p>Recent Activity: User X finished block #100<p> %>
   <p>Total Progress:</p>
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" style="width: 35%">
-      <span class="sr-only">35% Complete (success)</span>
-    </div>
-    <div class="progress-bar progress-bar-warning" style="width: 20%">
-      <span class="sr-only">20% Complete (warning)</span>
-    </div>
-  </div>
+    <%= project_progress_bar(@project) %>
         <p><%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_path(@project), class: "btn btn-primary", role: 'button' %> <a href="model.html" class="btn btn-default" role="button">View 3D model</a></p>
       </div>
     </div>
@@ -54,12 +39,9 @@
 	  <br>
 	  <p class="text-center"><i class="fa fa-bolt fa-5x" style="font-size:150px;color:orange"></i></p>
 	  <h3 class="text-center">Recent Activity</h3>
-	  <ul>
-	  <li>Dave just completed part 1234!</li>
-	  <li>Marty is going to print part 5678!</li>
-	  <li>Amy has printed part 1357!</li>
-	  <li>Matt just completed Part 2468!</li>
-	  </ul>
+    <div class="recent-activity">
+      <%= render partial: "part_activity", collection: @parts_activity %>
+    </div>
 	</div>
   </div>
 </div>

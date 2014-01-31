@@ -1,0 +1,15 @@
+<% part = part_activity %>
+<div class="row">
+<% if ! part.user_id.nil? %>
+  <div class="col-md-2">
+    <%= image_tag part.user.avatar, width: 50 %>
+  </div>
+  <div class="col-md-10">
+    <%= part.user.name %> <%= part_activity(part).html_safe %> Part #<%= part.id %>
+<% else %>
+  <div class="col-md-12">
+    New Part #<%= part.id %> added to <%= part.project.name %>
+<% end %>
+  <span><%= time_ago_in_words(part.updated_at) %> ago</span>
+  </div>
+</div>
