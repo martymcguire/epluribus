@@ -17,7 +17,7 @@
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
-      <%= link_to(image_tag("george-bust2.png"), project_participate_path(@project)) %>
+      <%= link_to(image_tag("george-bust2.png"), project_path(@project)) %>
       <div class="caption">
         <h3><%= @project.name %></h3>
         <% # <p>Recent Activity: User X finished block #100<p> %>
@@ -30,7 +30,7 @@
       <span class="sr-only">20% Complete (warning)</span>
     </div>
   </div>
-        <p><%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_participate_path(@project), class: "btn btn-primary", role: 'button' %> <a href="model.html" class="btn btn-default" role="button">View 3D model</a></p>
+        <p><%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_path(@project), class: "btn btn-primary", role: 'button' %> <a href="model.html" class="btn btn-default" role="button">View 3D model</a></p>
       </div>
     </div>
   </div>
