@@ -5,8 +5,7 @@ Expected Dimensions: <%= part.extents %><br />
   Reported Dimensions: <%= part.measurements %><br />
 <% end %>
 <% if !!part.user %>
-  User: <%= part.user.name %><br />
-  Email: <%= part.user.email %><br />
+  Email: <a href='mailto:<%= part.user.name%><<%= part.user.email %>>'><%= part.user.name%> &lt;<%= part.user.email %>&gt;</a><br />
 <% end %>
 <% if !!part.shipping_info %>
   Shipping Info: <%= part.shipping_info %><br />
