@@ -47,8 +47,14 @@
       </div>
     </div>
 
-    <% if notice %><p class="notice"><%= notice %></p><% end %>
-    <% if alert %><p class="alert"><%= alert %></p><% end %>
+    <div class="container">
+      <% if notice %><div class="alert alert-success"><%= notice %></div><% end %>
+      <% if alert %><div class="alert alert-error"><%= alert %></div><% end %>
+      <div class="alert alert-success alert-block">
+        <p>Great news! The George Washtington Bust project will be the featured piece at the 2014 NY 3D Print Show!</p>
+        <p>That means we need your help to get these parts delivered to Baltimore by <strong>Monday, February 10th</strong> so we have enough time to assemble it!</p>
+      </div>
+    </div>
 
 <%= yield %>
 
