@@ -1,16 +1,16 @@
 <div class="container">
   <div class="well well-lg">
     <%= image_tag("wethebuilders36.png", style: "margin: -15px 0 15px" )%>
-	  <p>We the People of the Maker-verse, in Order to form a more perfect replica of a copy of a statue in the style of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s odd neoclassical "Bust of George Washington" (1791-1792), establish a Practice of Full 1:1 Scale Community Appropriation of Public Artworks, and <a href="#preamble">...</a></p>
+	  <p style="font-size: 1.4em">We the People of the Maker-verse, in Order to form more perfect large-scale 3D printed sculptures, hereby establish this crowdsourcing website for the United Printers of the Maker-verse.</p>
   </div>
 </div>
 
 <a name="how-it-works"></a>
 <div class="container">
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 desc-column">
     <div class="thumbnail">
-      <%= link_to(image_tag("george-bust2.png"), project_path(@project)) %>
+      <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
       <div class="caption">
         <h3><%= @project.name %></h3>
   <p>Total Progress:</p>
@@ -19,10 +19,8 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 desc-column">
     <div class="thumbnail">
-	  <br>
-	  <p class="text-center"><i class="fa fa-users fa-5x" style="font-size:150px;color:#66CC66"></i></p>
 	  <h3 class="text-center">How it works</h3>
 	  <ol style="margin-right:5px">
 	  <li><a href="<%= user_omniauth_authorize_path(:google_oauth2) %>">Sign in with your Google+ account</a></li>
@@ -34,10 +32,8 @@
 	  </ol>
 	</div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 desc-column">
     <div class="thumbnail">
-	  <br>
-	  <p class="text-center"><i class="fa fa-bolt fa-5x" style="font-size:150px;color:orange"></i></p>
 	  <h3 class="text-center">Recent Activity</h3>
     <div class="recent-activity">
       <%= render partial: "part_activity", collection: @parts_activity %>
@@ -45,40 +41,7 @@
 	</div>
   </div>
 </div>
-  <a name="preamble"></a>
   <div class="well">
-  <h1>Preamble</h1>
-  We the People of the Maker-verse, in Order to form a more perfect replica of a copy of a statue in the style of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s odd neoclassical "Bust of George Washington" (1791-1792), establish a Practice of Full 1:1 Scale Community Appropriation of Public Artworks, insure Art Curation/Museum critical controversy and policy discord, provide a new means of enjoying humanity's shared cultural capital, promote the general practice of Making and Personal Manufacture, and secure the Blessings of the Interwebbies to this Baltimore icon and other oft-neglected sculptural works of art in Perpetuity throughout the Universe known and unknown, do ordain and establish this Art Project for the People of the Internet and Land Territories.
-
-  <h2>Article I</h2>
-  <h3>Section 1</h3>
-  <p>1: The rise in popularity of desktop 3D printing and 3D scanning has made it possible for tech-savvy tourists to travel the globe, bringing home digital mementos of their trip, recreated as tiny plastic miniatures.</p>
-  <p>2: But why stop at trinkets when you can replicate the original in its entirety?</p>
-  <h3>Section 2</h3>
-  <p>1: At the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>, our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art.</p>
-  <p>2: We selected a copy of <a href="http://en.wikipedia.org/wiki/Giuseppe_Ceracchi">Giuseppe Ceracchi</a>'s strange neoclassical "Bust of George Washington" (1791-1792), currently on display at the Walters during the restoration of Baltimore's <a href="http://en.wikipedia.org/wiki/Washington_Monument_(Baltimore)">Washington Monument</a>.</p>
-  <h2>Article II</h2>
-  <h3>Section the Only</h3>
-  <p>1: <strong>-- Friend, surely this statue is too large to produce on a desktop 3D printer?</strong></p>
-  <p>2: <strong>-- But weren't the pyramids built in pieces, block-by-block?</strong></p>
-  <p>3: <em>We faced this challenge to our enterprise, unafraid and fierce resolved.</em></p>
-  <h2>Article ]|[</h2>
-  <h3>Sectioned Uno</h3>
-  <p>1: Working from a micron-resolution professional <a href="http://en.wikipedia.org/wiki/3D_scanner">3D scan</a> of the statue donated by <a href="http://www.dirdim.com/">Direct Dimensions</a>, and
-  <p>2: <a href="http://youtu.be/Z2ZG_hTM47I">we have sliced and diced the model into 120 easy-to-print sections,</a></p>
-  <p>3: each (lightly) clean up and oriented for your printing pleasure.</p>
-  <h3>Section 2</h3>
-  We need your help to crowdsource the printing of this monument, 
-  a cube at a time, 
-  and ship back your contributions to Baltimore
-  where they will be reunited, 
-  stacked and glued 
-  into a new replica of a copy of a bust by Giuseppe Ceracchi.
-  <h3>Section the Final</h3>
-  <p>1: We expect that results of this distributed effort will be a monumental (monstrous) work of art in itself!</p>
-  <p>2: You, too!! Must!!</p>
-</div>
-<div class="well" style="min-height:50px">
-<i class="fa fa-heart fa-5x pull-left" style="font-size:50px;color:pink"></i>
-We are happy to have <a href="http://www.tinkerines.com">Tinkerine Studio</a> as a sponsor of our project! Their generous dontation will help reduce shipping costs for our contributors! Look for a partial-reimbursement from Paypal after mailing your block!</p>
+  <h2 style="margin-top: 5px;">About We the Builders</h2>
+  <p>We the Builders was created as part of the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>. Our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art using 3D printing. We didn't have enough printers to do it all ourselves, so we built this crowdsourcing platform!</p>
 </div>

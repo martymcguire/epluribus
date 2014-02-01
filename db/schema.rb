@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140127041925) do
+ActiveRecord::Schema.define(version: 20140201195122) do
 
   create_table "parts", force: true do |t|
     t.integer  "project_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140127041925) do
     t.string   "preview_stl"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "preview_img"
   end
 
   create_table "users", force: true do |t|

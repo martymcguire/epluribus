@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.desc-column {
+  h3 {
+    margin-top: 10px;
+  }
+  .caption > h3 {
+    margin-top: 0;
+  }
+}
 div.recent-activity {
   margin: 0;
   font-size: 0.9em;

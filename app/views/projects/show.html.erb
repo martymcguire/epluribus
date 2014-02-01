@@ -1,13 +1,26 @@
 <div class="container">
-  <h1><%= @project.name %></h1>
-  <% if current_user.is_admin? %>
-    <%= link_to("[Admin Page for This Project]", project_parts_path(@project)) %>
-  <% end %>
-  <div class="project-description">
-    <%= markdown @project.description %>
+  <div class="row">
+    <div class="col-md-9">
+      <h1><%= @project.name %></h1>
+      <div class="project-description">
+        <%= markdown @project.description %>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
+        <div class="caption">
+          <p>Total Progress:</p>
+          <%= project_progress_bar(@project) %>
+          <% if current_user.is_admin? %>
+            <%= link_to("Project Admin", project_parts_path(@project), class: "btn btn-primary") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
   <hr />
-  <h2>Your TODO List</h2>
+  <h1>Your TODO List</h1>
   <% if @part.nil? %>
     <div class="well">
       <p class="lead">Get a File to Print!</p>
