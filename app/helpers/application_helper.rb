@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def part_preview(part)
-    link_to(image_tag(part.model_preview_url, width: 150), part.model_url)
+    render partial: 'shared/part_preview', locals: { part: part }
   end
 
   def part_photo_preview(part)

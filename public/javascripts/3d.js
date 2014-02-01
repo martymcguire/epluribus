@@ -2222,7 +2222,7 @@
         }, e.prototype.updateHealth = function() {
             var e, t, r, i;
             if ($(this.container).length)
-                return setTimeout(this.updateHealth, 3e3), e = $(".js-viewer-health"), t = "is-viewer-good is-viewer-bad", this.problems.length ? (i = this.problems.join(","), r = "is-viewer-bad", e.show()) : (i = "Everything running smoothly!", r = "is-viewer-good"), e.removeClass(t), e.addClass(r), e.find(".js-message").html(i)
+                return setTimeout(this.updateHealth, 3e3), e = $(".js-viewer-health"), t = "is-viewer-good is-viewer-bad", this.problems.length ? (i = this.problems.join(","), r = "is-viewer-bad", e.show()) : (i = "Loading file! Please be patient.", r = "is-viewer-good"), e.removeClass(t), e.addClass(r), e.find(".js-message").html(i)
         }, e
     }()
 }.call(this), function(e, t, r, i, n, o, a) {
@@ -2317,7 +2317,7 @@ var MD5 = function(e) {
                 return l.set("loaded")
             }), null == (a = t.error) && (t.error = function() {
                 return l.set("error")
-            }), null == (s = t.timeout) && (t.timeout = 5e3), this.set("loading"), r(e) ? this.loadClient(e, t) : this.loadHttp(e, t)
+            }), null == (s = t.timeout) && (t.timeout = 1e5), this.set("loading"), r(e) ? this.loadClient(e, t) : this.loadHttp(e, t)
         }, e.prototype.set = function(e, t) {
             var r, i;
             return null == t && (t = {}), (i = this.current.filter(function(t) {

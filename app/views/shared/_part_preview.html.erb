@@ -1,0 +1,7 @@
+<div class="part-preview">
+  <%= image_tag( part.model_preview_url, width: 150 ) %>
+  <div class="buttons">
+    <a href="<%= part.model_url %>" title="Download this File" alt="Download this File"><i class="fa fa-download fa-2x"></i></a>
+    <a href="<%= project_part_preview_path(part.project_id, part.id) %>" title="Preview this File" alt="Preview this File"><i class="fa fa-eye fa-2x"></i></a>
+  </div>
+</div>

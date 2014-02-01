@@ -4,6 +4,9 @@ class PartsController < ApplicationController
   before_filter :find_part_from_params, except: [:index]
   before_filter :require_admin!, only: [:index, :verify, :accept, :unassign]
 
+  def preview
+  end
+
   def printed
     @part.print!
     redirect_to project_path(@part.project_id)

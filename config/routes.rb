@@ -19,6 +19,7 @@ Epluribus::Application.routes.draw do
       post 'verify'
       post 'accept'
       post 'unassign'
+       get 'preview'
     end
   end
 
