@@ -15,11 +15,13 @@ Epluribus::Application.routes.draw do
     resources :parts do
       post 'printed'
       post 'submit'
-      post 'ship'
       post 'verify'
       post 'accept'
       post 'unassign'
        get 'preview'
+      collection do
+        post 'ship'
+      end
     end
   end
 

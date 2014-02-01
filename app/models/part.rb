@@ -12,7 +12,7 @@ class Part < ActiveRecord::Base
   end
 
   def self.in_progress
-    where("aasm_state != 'accepted'").first
+    where("aasm_state not in (?)", ['accepted','shipping','shipped']).first
   end
 
   include AASM

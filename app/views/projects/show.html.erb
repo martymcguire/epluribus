@@ -73,28 +73,54 @@
 
   <% elsif @part.verification? %>
   <div class="well"><p class="lead">Awaiting Verification</p>
-    <p>
-      <%= part_preview(@part) %>
-      <%= part_photo_preview(@part) %>
-    </p>
-    <p>We're reviewing your photo and measurement info.<br />
-    We'll get back to you soon with shipping info!</p>
+    <div class="row">
+      <div class="col-md-2">
+        <%= part_preview(@part) %>
+      </div>
+      <div class="col-md-2">
+        <%= part_photo_preview(@part) %>
+      </div>
+      <div class="col-md-8">
+        <p>We're reviewing your photo and measurement info.<br />
+        We look through them every few hours, so check back soon!</p>
+      </div>
+    </div>
 	</div>
+  <% end %>
 
-  <% elsif @part.shipping? %>
-    <div class="well"><p class="lead">Ship it!</p>
-    <p>
-      <%= part_preview(@part) %>
-      <%= part_photo_preview(@part) %>
+  <% if ! @shipping_parts.empty? %>
+    <form method="POST" action="<%= ship_project_parts_path(@project) %>">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    <h2>Parts Ready to Ship</h2>
+    <div class="well">
+      <p class="lead">You've Got Parts to Ship!</p>
+      <% @shipping_parts.each do |part| %>
+        <div class="well shipping-part">
+          <div class="row">
+            <div class="col-md-2">
+              <%= part_preview(part) %>
+            </div>
+            <div class="col-md-2">
+              <%= part_photo_preview(part) %>
+            </div>
+            <div class="col-md-8">
+              <%= render partial: 'parts/part_public_details', locals: { part: part } %>
+            </div>
+            <input type="hidden" name="part_ids[]" value="<%= part.id %>" />
+          </div>
+        </div>
+      <% end %>
+    <p>Thank you so much for your help! Now that we have approved your <%= "print".pluralize(@shipping_parts.size) %>, please mail <%= 'it'.pluralize(@shipping_parts.size) %> to:
     </p>
-    <p>Thank you so much for your help! Now that we have approved your print, please mail it to: <b><br />
+    <p>
+    <strong>
     Todd Blatt<br />
     10310 S Dolfield Rd<br />
-    Owings Mills, MD 21117 </b></p>
-    <br /><br />
+    Owings Mills, MD 21117
+    </strong></p>
+    <p>
     Please enter your UPS tracking number so we know when it will arrive.
-    <form method="POST" action="<%= project_part_ship_path(@project, @part) %>">
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    </p>
     <div class="row">
       <div class="col-xs-4">
         <input name='shipping_info' type="text" class="form-control" placeholder="UPS tracking Number">
@@ -104,24 +130,35 @@
       </div>
     </div>
     </form>
-	
 	</div><!-- Well -->
+  <% end %>
 
-  <% elsif @part.shipped? %>
+  <% if @shipped_parts.count > 0 %>
     <div class="well"><p class="lead">In Transit</p>
+      <% @shipped_parts.each do |part| %>
+        <div class="well shipping-part">
+          <div class="row">
+            <div class="col-md-2">
+              <%= part_preview(part) %>
+            </div>
+            <div class="col-md-2">
+              <%= part_photo_preview(part) %>
+            </div>
+            <div class="col-md-8">
+              <%= render partial: 'parts/part_public_details', locals: { part: part } %>
+            </div>
+            <input type="hidden" name="part_ids[]" value="<%= part.id %>" />
+          </div>
+        </div>
+      <% end %>
     <p>
-      <%= part_preview(@part) %>
-      <%= part_photo_preview(@part) %>
-    </p>
-    <p>
-    Your part is in transit! There's nothing for you to do right now.</p>
-    <p>We will update you when we receive your part!</p>
+    The above part(s) are in transit! We will update you when we receive your part!</p>
+    <p>In the meantime, why not grab another part and start printing?</p>
     </div>
   <% end %>
 
-
   <% if @finished_parts.count > 0 %>
-    <h2>Your Productivity</h2>
+    <h2>Your Accepted Parts</h2>
     <p>You have contributed <%= sprintf("%0.2f", (@finished_parts.count.to_f / @project.parts.count.to_f) * 100.0) %>% to the <%= @project.name %> Project!</p>
     <% @finished_parts.each do |fp| %>
       <div class="well"><p class="lead">Part #<%= fp.id %></p> 

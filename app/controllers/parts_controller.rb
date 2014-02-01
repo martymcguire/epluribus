@@ -1,7 +1,7 @@
 class PartsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :find_part_from_params, except: [:index]
+  before_filter :find_part_from_params, except: [:index, :ship]
   before_filter :require_admin!, only: [:index, :verify, :accept, :unassign]
 
   def preview
@@ -20,9 +20,10 @@ class PartsController < ApplicationController
   end
 
   def ship
-    @part.shipping_info = params[:shipping_info]
-    @part.ship!
-    redirect_to project_path(@part.project_id)
+    shipped_parts = Part.for_user(current_user).where('id in (?)', params[:part_ids])
+    shipped_parts.update_all(shipping_info: params[:shipping_info])
+    shipped_parts.each { |p| p.ship! }
+    redirect_to project_path(shipped_parts.first.project_id)
   end
 
   ### Admin actions ###

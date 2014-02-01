@@ -5,6 +5,8 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     parts_for_user = @project.parts.for_user(current_user)
+    @shipping_parts = parts_for_user.shipping
+    @shipped_parts = parts_for_user.shipped
     @finished_parts = parts_for_user.accepted
     @part = parts_for_user.in_progress
   end
