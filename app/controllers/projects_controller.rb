@@ -13,8 +13,8 @@ class ProjectsController < ApplicationController
 
   def participate
     @project = Project.find(params[:project_id])
-    @part = @project.parts.where(user_id: current_user.id).last
-    if(@part.nil? || @part.accepted?)
+    @part = @project.parts.where(user_id: current_user.id).in_progress.last
+    if(@part.nil?)
       @part = @project.random_part
       @part.claim_for_user(current_user)
     end
