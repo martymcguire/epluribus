@@ -21,6 +21,6 @@ class User < ActiveRecord::Base
   end
 
   def avatar
-    attributes['avatar'] || '/assets/no-avatar.png'
+    attributes['avatar'] || 'no-avatar.png'
   end
 end
