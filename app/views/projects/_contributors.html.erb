@@ -5,7 +5,9 @@
     <% people.each do |person| %>
       <li>
         <img class="img-circle" data-src="<%= person.avatar %>" src="<%= person.avatar %>" alt="<%= person.name %> (<%= pluralize(person.part_count, "Part") %>)" title="<%= person.name %> (<%= pluralize(person.part_count, "Part") %>)" />
-        <span class="part-count"><%= person.part_count %></span>
+        <% if person.part_count > 1 %>
+          <span class="part-count"><%= person.part_count %></span>
+        <% end %>
       </li>
     <% end %>
   </ul>
