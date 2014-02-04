@@ -16,9 +16,18 @@ class Project < ActiveRecord::Base
   end
 
   def contributors
-    parts.where(
-      "user_id IS NOT NULL AND aasm_state in (?)",
-      ['accepted','shipped','shipping']
-    ).map{ |p| p.user }.uniq
+    user_ids_counts = parts.where(
+        "user_id IS NOT NULL AND aasm_state in (?)",
+        ['accepted','shipped','shipping']
+    ).group("user_id").pluck('DISTINCT user_id', 'count(*)')
+    user_ids, counts = user_ids_counts.transpose
+    users = User.find(user_ids)
+    users.each_with_index.map do |u,i|
+      OpenStruct.new({
+        name: u.name,
+        avatar: u.avatar,
+        part_count: counts[i]
+      })
+    end
   end
 end

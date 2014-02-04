@@ -18,9 +18,22 @@
   li {
     float: left;
     margin: 2px;
+    position: relative;
     img {
       width: 50px;
       height: 50px;
+    }
+    .part-count {
+      position: absolute;
+      bottom: -1px;
+      right: -5px;
+      background: none #428bca;
+      color: #fff;
+      border-radius: 50%;
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      font-size: 12px;
     }
   }
 }
