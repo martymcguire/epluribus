@@ -19,6 +19,6 @@ class Project < ActiveRecord::Base
     parts.where(
       "user_id IS NOT NULL AND aasm_state in (?)",
       ['accepted','shipped','shipping']
-    ).map{ |p| p.user }
+    ).map{ |p| p.user }.uniq
   end
 end
