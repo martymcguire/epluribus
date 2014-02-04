@@ -5,6 +5,7 @@
       <div class="project-description">
         <%= markdown @project.description %>
       </div>
+      <%= render partial: 'contributors', locals: { people: @project.contributors } %>
     </div>
     <div class="col-md-3">
       <div class="thumbnail">

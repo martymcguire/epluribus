@@ -14,4 +14,11 @@ class Project < ActiveRecord::Base
   def percent_active
     100.0 * (self.parts.where('aasm_state IN (?)', ['printing','printed','verification','shipping','shipped']).count.to_f / self.parts.count.to_f)
   end
+
+  def contributors
+    parts.where(
+      "user_id IS NOT NULL AND aasm_state in (?)",
+      ['accepted','shipped','shipping']
+    ).map{ |p| p.user }
+  end
 end

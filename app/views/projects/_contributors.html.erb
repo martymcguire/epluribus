@@ -1,0 +1,11 @@
+<% if people.size > 0 %>
+  <h3>Contributors</h3>
+  <p>Our thanks to all the people who are making this project happen!</p>
+  <ul class="contributors">
+    <% people.each do |person| %>
+      <li>
+        <img class="img-circle" data-src="<%= person.avatar %>" src="<%= person.avatar %>" alt="<%= person.name %>" title="<%= person.name %>" />
+      </li>
+    <% end %>
+  </ul>
+<% end %>
