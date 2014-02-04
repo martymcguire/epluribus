@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
       end
       user
   end
+
+  def avatar
+    attributes['avatar'] || '/assets/no-avatar.png'
+  end
 end
