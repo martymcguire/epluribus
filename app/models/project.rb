@@ -19,14 +19,16 @@ class Project < ActiveRecord::Base
     user_ids_counts = parts.where(
         "user_id IS NOT NULL AND aasm_state in (?)",
         ['accepted','shipped','shipping']
-    ).group("user_id").pluck('DISTINCT user_id', 'count(*)')
-    user_ids, counts = user_ids_counts.transpose
-    users = User.find(user_ids)
-    users.each_with_index.map do |u,i|
+    ).group("user_id").pluck('user_id', 'count(*)')
+    user_ids = user_ids_counts.map{ |uid,c| uid }
+    users = Hash[ User.find(user_ids).map{ |u| [u.id,u] } ]
+    user_ids_counts.map do |uid,count|
+      u = users[uid]
       OpenStruct.new({
+        id: u.id,
         name: u.name,
         avatar: u.avatar,
-        part_count: counts[i]
+        part_count: count
       })
     end
   end
