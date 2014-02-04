@@ -20,6 +20,7 @@ class Project < ActiveRecord::Base
         "user_id IS NOT NULL AND aasm_state in (?)",
         ['accepted','shipped','shipping']
     ).group("user_id").pluck('user_id', 'count(*)')
+    user_ids_counts.sort!{ |a,b| b.part_count <=> a.part_count }
     user_ids = user_ids_counts.map{ |uid,c| uid }
     users = Hash[ User.find(user_ids).map{ |u| [u.id,u] } ]
     user_ids_counts.map do |uid,count|
