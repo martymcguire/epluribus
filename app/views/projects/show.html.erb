@@ -185,7 +185,7 @@
           <div class="col-md-8">
             Reported Dimensions: <%= fp.measurements %><br />
             Tracking Info: <%= fp.shipping_info %><br />
-            Accepted: <% time_ago_in_words(fp.updated_at) %> ago<br />
+            Accepted: <%= time_ago_in_words(fp.updated_at) %> ago<br />
           </div>
         </div>
       </div>
