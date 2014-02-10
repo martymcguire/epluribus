@@ -2,6 +2,10 @@ class Project < ActiveRecord::Base
 
   has_many :parts
 
+  def part_available?
+    self.parts.unclaimed.count > 0
+  end
+
   def random_part
     idx = rand(self.parts.unclaimed.count)
     self.parts.unclaimed.first(offset: idx)

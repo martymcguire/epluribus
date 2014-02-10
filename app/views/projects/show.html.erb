@@ -23,13 +23,25 @@
   <hr />
   <h1>Your TODO List</h1>
   <% if @part.nil? %>
-    <div class="well">
-      <p class="lead">Get a File to Print!</p>
-      <p>
-        We are so excited you are ready to help us! Click the button below and we'll assign you a file to print!
-      </p>
-      <%= link_to "I'm Ready, Give me a File to Print!", project_participate_path(@project), class: "btn btn-primary btn-sm" %>
-    </div> <!-- Well -->
+    <% if @project.part_available? %>
+      <div class="well">
+        <p class="lead">Get a File to Print!</p>
+        <p>
+          We are so excited you are ready to help us! Click the button below and we'll assign you a file to print!
+        </p>
+        <%= link_to "I'm Ready, Give me a File to Print!", project_participate_path(@project), class: "btn btn-primary btn-sm" %>
+      </div> <!-- Well -->
+    <% else %>
+      <div class="well">
+        <p class="lead">All Parts Account For!</p>
+        <p>
+          It looks like all parts have been claimed for printing at this time! Wow!
+        </p>
+        <p>
+          Keep an eye on this space - if a part becomes available, you'll be able to claim it, here.
+        </p>
+      </div>
+    <% end %>
 	
   <% elsif @part.printing? %>
     <div class="well"><p class="lead">Print!</p>
