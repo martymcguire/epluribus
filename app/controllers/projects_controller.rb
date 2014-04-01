@@ -21,4 +21,14 @@ class ProjectsController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project.update_attributes!(params.require(:project).permit(:name, :description, :preview_stl, :preview_img))
+    redirect_to @project, flash: { notice: 'Project Details Updated' }
+  end
+
 end
