@@ -10,6 +10,8 @@ Epluribus::Application.routes.draw do
   end
 
   root 'welcome#index'
+  get 'sign_up', :to => 'welcome#sign_up'
+
   resources :projects do
     get 'participate'
     resources :parts do

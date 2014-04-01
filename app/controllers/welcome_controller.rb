@@ -3,4 +3,7 @@ class WelcomeController < ApplicationController
     @project = Project.first
     @parts_activity = @project.parts.order('updated_at DESC').limit(8)
   end
+
+  def sign_up
+  end
 end
