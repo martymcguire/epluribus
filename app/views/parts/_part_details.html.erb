@@ -1,6 +1,6 @@
 Project: <%= part.project.name %><br />
-Part: <%= part.id %><br />
-Expected Dimensions: <%= part.extents %><br />
+Part: <%= part.part.id %><br />
+Expected Dimensions: <%= part.part.extents %><br />
 <% if !!part.measurements %>
   Reported Dimensions: <%= part.measurements %><br />
 <% end %>

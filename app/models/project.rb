@@ -1,26 +1,27 @@
 class Project < ActiveRecord::Base
 
   has_many :parts
+  has_many :print_jobs
 
   def part_available?
-    self.parts.unclaimed.count > 0
+    self.parts.available.count > 0
   end
 
   def random_part
-    idx = rand(self.parts.unclaimed.count)
-    self.parts.unclaimed.first(offset: idx)
+    idx = rand(self.parts.available.count)
+    self.parts.available.first(offset: idx)
   end
 
   def percent_complete
-    100.0 * (self.parts.where('aasm_state = ?', 'accepted').count.to_f / self.parts.count.to_f)
+    100.0 * (self.print_jobs.where('aasm_state = ?', 'accepted').size.to_f / self.parts.size.to_f)
   end
 
   def percent_active
-    100.0 * (self.parts.where('aasm_state IN (?)', ['printing','printed','verification','shipping','shipped']).count.to_f / self.parts.count.to_f)
+    100.0 * (self.print_jobs.active.size.to_f / self.parts.size.to_f)
   end
 
   def contributors
-    user_ids_counts = parts.where(
+    user_ids_counts = print_jobs.where(
         "user_id IS NOT NULL AND aasm_state in (?)",
         ['accepted','shipped','shipping']
     ).group("user_id").pluck('user_id', 'count(*)')

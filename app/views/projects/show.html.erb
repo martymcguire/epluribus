@@ -27,7 +27,7 @@
   </div>
   <hr />
   <h1>Your TODO List</h1>
-  <% if @part.nil? %>
+  <% if @print_job.nil? %>
     <% if @project.part_available? %>
       <div class="well">
         <p class="lead">Get a File to Print!</p>
@@ -48,30 +48,30 @@
       </div>
     <% end %>
 	
-  <% elsif @part.printing? %>
+  <% elsif @print_job.printing? %>
     <div class="well"><p class="lead">Print!</p>
           <p>Here's your file!</p>
-          <p><%= part_preview(@part) %></p>
+          <p><%= part_preview(@print_job.part) %></p>
       <div class="row">
         <div class="col-md-6">
-          <%= link_to "Download STL File", @part.model_url, class: "btn btn-primary" %><br>
+          <%= link_to "Download STL File", @print_job.part.model_url, class: "btn btn-primary" %><br>
         </div>
         <div class="col-md-6">
 		  <div class="pull-right">
-            <%= button_to "I'm Done! Now What?", [@project, @part, :printed], {class: "btn btn-success"} %>
+            <%= button_to "I'm Done! Now What?", [@project, @print_job, :printed], {class: "btn btn-success"} %>
 		  </div>
         </div>
       </div>
     </div>
-  <% elsif @part.printed? %>
+  <% elsif @print_job.printed? %>
     <div class="well"><p class="lead">Approve </p>
     <p>Time to submit a photo and measurements!</p>
-    <p><%= part_preview(@part) %></p>
-    <form action="<%= project_part_submit_path(@project,@part) %>" method="POST" enctype='multipart/form-data'>
+    <p><%= part_preview(@print_job.part) %></p>
+    <form action="<%= project_print_job_submit_path(@project,@print_job) %>" method="POST" enctype='multipart/form-data'>
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
     Please upload a photo of your finished print. <input name="photo" type="file" id="photo">
     <br>
-    What are the final dimenions of your print (in millimeters)?
+    What are the final dimensions of your print (in millimeters)?
     <div class="row">
       <div class="col-xs-2">
         <input name="x-measure" type="text" class="form-control" placeholder="x">
@@ -89,14 +89,14 @@
     </form>
     </div><!-- Well -->
 
-  <% elsif @part.verification? %>
+  <% elsif @print_job.verifying? %>
   <div class="well"><p class="lead">Awaiting Verification</p>
     <div class="row">
       <div class="col-md-2">
-        <%= part_preview(@part) %>
+        <%= part_preview(@print_job.part) %>
       </div>
       <div class="col-md-2">
-        <%= part_photo_preview(@part) %>
+        <%= print_job_photo_preview(@print_job) %>
       </div>
       <div class="col-md-8">
         <p>We're reviewing your photo and measurement info.<br />
@@ -106,29 +106,29 @@
 	</div>
   <% end %>
 
-  <% if ! @shipping_parts.empty? %>
-    <form method="POST" action="<%= ship_project_parts_path(@project) %>">
+  <% if ! @shipping_print_jobs.empty? %>
+    <form method="POST" action="<%= ship_project_print_jobs_path(@project) %>">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
     <h2>Parts Ready to Ship</h2>
     <div class="well">
       <p class="lead">You've Got Parts to Ship!</p>
-      <% @shipping_parts.each do |part| %>
+      <% @shipping_print_jobs.each do |print_job| %>
         <div class="well shipping-part">
           <div class="row">
             <div class="col-md-2">
-              <%= part_preview(part) %>
+              <%= part_preview(print_job.part) %>
             </div>
             <div class="col-md-2">
-              <%= part_photo_preview(part) %>
+              <%= print_job_photo_preview(print_job) %>
             </div>
             <div class="col-md-8">
-              <%= render partial: 'parts/part_public_details', locals: { part: part } %>
+              <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
-            <input type="hidden" name="part_ids[]" value="<%= part.id %>" />
+            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>" />
           </div>
         </div>
       <% end %>
-    <p>Thank you so much for your help! Now that we have approved your <%= "print".pluralize(@shipping_parts.size) %>, please mail <%= 'it'.pluralize(@shipping_parts.size) %> to:
+    <p>Thank you so much for your help! Now that we have approved your <%= "print".pluralize(@shipping_print_jobs.size) %>, please mail <%= 'it'.pluralize(@shipping_print_jobs.size) %> to:
     </p>
     <p>
     <strong>
@@ -151,21 +151,21 @@
 	</div><!-- Well -->
   <% end %>
 
-  <% if @shipped_parts.count > 0 %>
+  <% if @shipped_print_jobs.size > 0 %>
     <div class="well"><p class="lead">In Transit</p>
-      <% @shipped_parts.each do |part| %>
+      <% @shipped_print_jobs.each do |print_job| %>
         <div class="well shipping-part">
           <div class="row">
             <div class="col-md-2">
-              <%= part_preview(part) %>
+              <%= part_preview(print_job.part) %>
             </div>
             <div class="col-md-2">
-              <%= part_photo_preview(part) %>
+              <%= print_job_photo_preview(print_job) %>
             </div>
             <div class="col-md-8">
-              <%= render partial: 'parts/part_public_details', locals: { part: part } %>
+              <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
-            <input type="hidden" name="part_ids[]" value="<%= part.id %>" />
+            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>" />
           </div>
         </div>
       <% end %>
@@ -175,22 +175,22 @@
     </div>
   <% end %>
 
-  <% if @finished_parts.count > 0 %>
+  <% if @finished_print_jobs.size > 0 %>
     <h2>Your Accepted Parts</h2>
-    <p>You have contributed <%= sprintf("%0.2f", (@finished_parts.count.to_f / @project.parts.count.to_f) * 100.0) %>% to the <%= @project.name %> Project!</p>
-    <% @finished_parts.each do |fp| %>
-      <div class="well"><p class="lead">Part #<%= fp.id %></p> 
+    <p>You have contributed <%= sprintf("%0.2f", (@finished_print_jobs.size.to_f / @project.parts.size.to_f) * 100.0) %>% to the <%= @project.name %> Project!</p>
+    <% @finished_print_jobs.each do |fpj| %>
+      <div class="well"><p class="lead">Part #<%= fpj.part.id %></p> 
         <div class="row">
           <div class="col-md-2">
-            <%= part_preview(fp) %>
+            <%= part_preview(fpj.part) %>
           </div>
           <div class="col-md-2">
-            <%= part_photo_preview(fp) %>
+            <%= print_job_photo_preview(fpj) %>
           </div>
           <div class="col-md-8">
-            Reported Dimensions: <%= fp.measurements %><br />
-            Tracking Info: <%= fp.shipping_info %><br />
-            Accepted: <%= time_ago_in_words(fp.updated_at) %> ago<br />
+            Reported Dimensions: <%= fpj.measurements %><br />
+            Tracking Info: <%= fpj.shipping_info %><br />
+            Accepted: <%= time_ago_in_words(fpj.updated_at) %> ago<br />
           </div>
         </div>
       </div>

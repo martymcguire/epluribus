@@ -1,10 +1,10 @@
     <div class="well">
       <div class="row">
         <div class="col-md-2">
-          <%= part_preview(accepted_part) %>
+          <%= part_preview(accepted_part.part) %>
         </div>
         <div class="col-md-2">
-          <%= part_photo_preview(accepted_part) %>
+          <%= print_job_photo_preview(accepted_part) %>
         </div>
         <div class="col-md-6">
           <%= render partial: "part_details", locals: { part: accepted_part } %>

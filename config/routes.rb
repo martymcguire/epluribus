@@ -15,12 +15,14 @@ Epluribus::Application.routes.draw do
   resources :projects do
     get 'participate'
     resources :parts do
+      get 'preview'
+    end
+    resources :print_jobs do
       post 'printed'
       post 'submit'
       post 'verify'
       post 'accept'
       post 'unassign'
-       get 'preview'
       collection do
         post 'ship'
       end

@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @project = Project.first
-    @parts_activity = @project.parts.order('updated_at DESC').limit(8)
+    @activity = @project.print_jobs.order('updated_at DESC').limit(8)
   end
 
   def sign_up

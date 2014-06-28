@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201195122) do
+ActiveRecord::Schema.define(version: 20140627214926) do
 
   create_table "parts", force: true do |t|
     t.integer  "project_id"
@@ -21,19 +21,28 @@ ActiveRecord::Schema.define(version: 20140201195122) do
     t.string   "offset"
     t.string   "extents"
     t.float    "volume"
-    t.string   "aasm_state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "print_jobs_count"
+  end
+
+  add_index "parts", ["project_id"], name: "index_parts_on_project_id"
+  add_index "parts", ["user_id"], name: "index_parts_on_user_id"
+
+  create_table "print_jobs", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.integer  "part_id"
+    t.string   "aasm_state"
     t.string   "measurements"
     t.string   "shipping_info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
   end
-
-  add_index "parts", ["project_id"], name: "index_parts_on_project_id"
-  add_index "parts", ["user_id"], name: "index_parts_on_user_id"
 
   create_table "projects", force: true do |t|
     t.string   "name"

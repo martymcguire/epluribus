@@ -4,17 +4,17 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    parts_for_user = @project.parts.for_user(current_user)
-    @shipping_parts = parts_for_user.shipping
-    @shipped_parts = parts_for_user.shipped
-    @finished_parts = parts_for_user.accepted
-    @part = parts_for_user.in_progress
+    print_jobs_for_user = @project.print_jobs.for_user(current_user)
+    @shipping_print_jobs = print_jobs_for_user.shipping
+    @shipped_print_jobs = print_jobs_for_user.shipped
+    @finished_print_jobs = print_jobs_for_user.accepted
+    @print_job = print_jobs_for_user.active.first
   end
 
   def participate
     @project = Project.find(params[:project_id])
-    @part = @project.parts.where(user_id: current_user.id).in_progress
-    if(@part.nil?)
+    @print_job = @project.print_jobs.where(user_id: current_user.id).active
+    if(@print_job.empty?)
       @part = @project.random_part
       @part.claim_for_user(current_user)
     end

@@ -1,13 +1,13 @@
 <div class="container">
   <h1>All parts for <%= @project.name %></h1>
-  <% ['verification', 'shipped', 'shipping', 'printed', 'printing', 'accepted', 'unclaimed'].each do |state| %>
+  <% ['verifying', 'shipped', 'shipping', 'printed', 'printing', 'accepted', 'unclaimed'].each do |state| %>
     <div class="container">
-    <h2><%= state_name(state) %> (<%= @parts[state].nil? ? 0 : @parts[state].size %>)</h2>
+    <h2><%= state_name(state) %> (<%= @print_jobs[state].nil? ? 0 : @print_jobs[state].size %>)</h2>
     <p><%= state_description(state) %></p>
-    <% if @parts[state].nil? %>
+    <% if @print_jobs[state].nil? %>
       <p>No parts are currently in '<%= state %>'</p>
     <% else %>
-      <%= render partial: "#{state}_part", collection: @parts[state] %>
+      <%= render partial: "#{state}_part", collection: @print_jobs[state] %>
     <% end %>
     </div>
   <% end %>
