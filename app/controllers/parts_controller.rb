@@ -17,7 +17,7 @@ class PartsController < ApplicationController
       @print_jobs[pj.aasm_state] ||= []
       @print_jobs[pj.aasm_state] << pj
     end
-    @print_jobs['unclaimed'] = @project.parts.available.map{|p| FPJ.new(p, p.project, p.updated_at)}
+    @print_jobs['unclaimed'] = Part.where(project_id: @project.id).available.map{|p| FPJ.new(p, p.project, p.updated_at)}
   end
 
 protected
