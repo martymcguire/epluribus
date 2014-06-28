@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   has_many :print_jobs
 
   def part_available?
-    self.parts.available.count > 0
+    self.parts.available.size > 0
   end
 
   def random_part
