@@ -6,7 +6,7 @@ class PrintJob < ActiveRecord::Base
   has_attached_file :photo, styles: {
     thumb: '150x150>',
     square: '150x150#'
-  }, :default_url => '/assets/missing-150x150.png'
+  }, :default_url => 'missing-150x150.png'
 
   INACTIVE_STATES = ['accepted','rejected','shipping','shipped']
 
