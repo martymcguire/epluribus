@@ -1,11 +1,7 @@
 class Part < ActiveRecord::Base
   belongs_to :project
   has_many :print_jobs
-
-  has_attached_file :photo, styles: {
-    thumb: '150x150>',
-    square: '150x150#'
-  }, :default_url => '/assets/missing-150x150.png'
+  has_one :model_file
 
   def self.available
     where("id NOT IN (?)", claimed.select(:part_id))
@@ -20,5 +16,13 @@ class Part < ActiveRecord::Base
       project_id: project_id,
       user_id: user.id,
     )
+  end
+
+  def download_url
+    if model_file && model_file.file?
+      model_file.file.url
+    else
+      model_url
+    end
   end
 end

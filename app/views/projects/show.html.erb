@@ -54,7 +54,7 @@
           <p><%= part_preview(@print_job.part) %></p>
       <div class="row">
         <div class="col-md-6">
-          <%= link_to "Download STL File", @print_job.part.model_url, class: "btn btn-primary" %><br>
+          <%= link_to "Download STL File", @print_job.part.download_url, class: "btn btn-primary" %><br>
         </div>
         <div class="col-md-6">
 		  <div class="pull-right">
