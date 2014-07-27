@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727030729) do
+ActiveRecord::Schema.define(version: 20140727034151) do
 
   create_table "model_files", force: true do |t|
     t.integer  "part_id"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 20140727030729) do
 
   create_table "parts", force: true do |t|
     t.integer  "project_id"
-    t.string   "model_url"
-    t.string   "model_preview_url"
     t.string   "offset"
     t.string   "extents"
     t.float    "volume"

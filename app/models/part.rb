@@ -22,8 +22,7 @@ class Part < ActiveRecord::Base
     if model_file && model_file.file?
       model_file.file.url
     else
-      # FIXME: temporary support for old style model_url on Part
-      model_url
+      nil
     end
   end
 
@@ -31,8 +30,7 @@ class Part < ActiveRecord::Base
     if model_file && model_file.render?
       model_file.render.url(size)
     else
-      # FIXME: temporary support for old style model_preview_url on Part
-      model_preview_url
+      'missing-150x150.png'
     end
   end
 end
