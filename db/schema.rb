@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727012427) do
+ActiveRecord::Schema.define(version: 20140727030729) do
 
   create_table "model_files", force: true do |t|
     t.integer  "part_id"
@@ -21,7 +21,11 @@ ActiveRecord::Schema.define(version: 20140727012427) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
-    t.integer  "render_state",      default: 0
+    t.integer  "render_state",        default: 0
+    t.string   "render_file_name"
+    t.string   "render_content_type"
+    t.integer  "render_file_size"
+    t.datetime "render_updated_at"
   end
 
   create_table "parts", force: true do |t|
