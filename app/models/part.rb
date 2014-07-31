@@ -20,7 +20,7 @@ class Part < ActiveRecord::Base
 
   def download_url
     if model_file && model_file.file?
-      model_file.file.url
+      model_file.file.url(:original, timestamp: false)
     else
       nil
     end
