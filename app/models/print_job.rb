@@ -7,6 +7,7 @@ class PrintJob < ActiveRecord::Base
     thumb: '150x150>',
     square: '150x150#'
   }, :default_url => 'missing-150x150.png'
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   INACTIVE_STATES = ['accepted','rejected','shipping','shipped']
 
