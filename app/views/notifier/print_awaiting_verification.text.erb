@@ -1,0 +1,14 @@
+Hello!
+
+A part has been submitted for verification!
+
+Project: <%= @project.name %> - <%= project_url(@project) %>
+Submitter: "<%= @user.name %>" <<%= @user.email %>>
+Part: <%= @part.part_name %> (Part <%= @part.id %>)
+
+You can view their photo and measurements here:
+<%= project_parts_url(@project) %>#verify-print-<%= @print_job.id %>
+
+Thanks!
+
+-- We the Builders Alert Robot

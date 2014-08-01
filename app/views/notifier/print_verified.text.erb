@@ -1,0 +1,17 @@
+Hello, <%= @user.name %>!
+
+This is the We the Builders Alert Robot writing to let you know that:
+
+Your part (<%= @part.part_name %>) has been verified and is now ready to ship!
+
+Please visit the <%= @project.name %> project page for information on how to
+ship your part, or grab a new part and keep printing!
+
+<%= project_url(@project) %>
+
+Thanks so much for being a part of the <%= @project.name %> project!
+
+-- We the Builders
+
+You are receiving this email because you claimed a part for 3D printing from
+the <%= @project.name %> project at www.wethebuilders.com.

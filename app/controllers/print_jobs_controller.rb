@@ -12,6 +12,7 @@ class PrintJobsController < ApplicationController
     @print_job.photo = params[:photo]
     @print_job.measurements = [params['x-measure'], params['y-measure'], params['z-measure']].join(',')
     @print_job.submit!
+    Notifier.print_awaiting_verification(@print_job).deliver
     redirect_to project_path(@print_job.project_id)
   end
 
@@ -26,6 +27,7 @@ class PrintJobsController < ApplicationController
 
   def verify
     @print_job.verify!
+    Notifier.print_verified(@print_job).deliver
     redirect_to project_parts_path(@print_job.project_id)
   end
 
