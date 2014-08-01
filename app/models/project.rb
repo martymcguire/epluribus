@@ -12,7 +12,7 @@ class Project < ActiveRecord::Base
     # self.parts.available.first(offset: idx)
     # ugh, this is gross. the above fails in pgsql because of stupid
     # prepared statement binding. instead: let's get gross with it.
-    claimed_part_ids = Part.joins(:print_jobs).where("print_jobs.aasm_state != 'rejected'").where(project_id: id).select(:part_id)
+    claimed_part_ids = Part.joins(:print_jobs).where("print_jobs.aasm_state != 'rejected'").where(project_id: id).select("parts.id").to_a
     Part.where(project_id: id).where("id NOT IN (?)", claimed_part_ids).first(offset: idx)
   end
 
