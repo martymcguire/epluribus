@@ -50,8 +50,17 @@
 	
   <% elsif @print_job.printing? %>
     <div class="well"><p class="lead">Print!</p>
+      <div class="row">
+        <div class="col-md-3">
           <p>Here's your file!</p>
           <p><%= part_preview(@print_job.part) %></p>
+        </div>
+        <div class="col-md-9">
+          <p>We've chosen a random part for you to print. Give it a shot!</p>
+          <p>When the part has finished printing, click the "I'm Done!" button!</p>
+          <%= render partial: 'parts/part_public_details', locals: { part: @print_job.part } %>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-6">
           <%= link_to "Download STL File", @print_job.part.download_url, class: "btn btn-primary" %><br>
@@ -64,28 +73,66 @@
       </div>
     </div>
   <% elsif @print_job.printed? %>
-    <div class="well"><p class="lead">Approve </p>
-    <p>Time to submit a photo and measurements!</p>
-    <p><%= part_preview(@print_job.part) %></p>
+    <div class="well">
     <form action="<%= project_print_job_submit_path(@project,@print_job) %>" method="POST" enctype='multipart/form-data'>
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-    Please upload a photo of your finished print. <input name="photo" type="file" id="photo">
-    <br>
-    What are the final dimensions of your print (in millimeters)?
-    <div class="row">
-      <div class="col-xs-2">
-        <input name="x-measure" type="text" class="form-control" placeholder="x">
+      <p class="lead">Mark and Photograph</p>
+      <div class="row">
+        <div class="col-md-2">
+          <p><%= image_tag "part-marking.jpg", width: '150px' %>
+            <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>Grab a sharpie and write your Part ID on your finished print!
+            <ul>
+              <li>Pick a flat side that will end up on the "inside" the finished build.</li>
+              <li>Clearly write your Part ID in Sharpie: <strong><%= @print_job.part.part_name %></strong>.</li>
+              <li>Go ahead and sign it. :)</li>
+            </ul>
+          </p>
+          <p>Don't forget to upload a photo of your part so we can admire your handiwork!</p>
+        </div>
+        <div class="col-md-4">
+          Upload a photo of your finished print.
+          <div class="row" style="margin: 10px 0 0 0">
+            <input name="photo" type="file" id="photo">
+          </div>
+        </div>
       </div>
-      <div class="col-xs-2">
-        <input name="y-measure" type="text" class="form-control" placeholder="y">
+      <hr style="border: 1px dashed #999"/>
+      <p class="lead">Measure</p>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+          <p>For sanity's sake, we'd like to make sure that your print matches up with the dimensions of the virtual part.</p>
+          <p>Grab a ruler or measuring tape that can measure millimeters. Measure the width, height, and depth of the print and then note them here.</p>
+        </div>
+        <div class="col-md-4">
+          What are the final dimensions of your print (in millimeters)?
+          <div class="row-fluid" style="margin: 10px 0 0 0">
+            <div class="col-xs-4">
+              <input name="x-measure" type="text" class="form-control" placeholder="x">
+            </div>
+            <div class="col-xs-4">
+              <input name="y-measure" type="text" class="form-control" placeholder="y">
+            </div>
+            <div class="col-xs-4">
+              <input name="z-measure" type="text" class="form-control" placeholder="z">
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-2">
-        <input name="z-measure" type="text" class="form-control" placeholder="z">
+      <hr style="border: 1px dashed #999"/>
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-6">
+          Thanks for the details! Let's go to the next step!
+        </div>
+        <div class="col-xs-4">
+          <input type="submit" value="All Done! Submit it!" class="btn btn-primary btn-lg"></input>
+        </div>
       </div>
-      <div class="col-xs-2">
-      <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>
-      </div>
-    </div>
     </form>
     </div><!-- Well -->
 

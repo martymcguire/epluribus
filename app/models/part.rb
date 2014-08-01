@@ -33,4 +33,8 @@ class Part < ActiveRecord::Base
       'missing-150x150.png'
     end
   end
+
+  def part_name
+    "X%d Y%d Z%d" % offset.split(',')
+  end
 end
