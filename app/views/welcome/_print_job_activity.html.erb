@@ -5,10 +5,7 @@
     <%= image_tag print_job.user.avatar, width: 50 %>
   </div>
   <div class="col-md-10">
-    <%= print_job.user.name %> <%= print_job_activity(print_job).html_safe %> Part #<%= print_job.part_id %>
-<% else %>
-  <div class="col-md-12">
-    New Part #<%= print_job.part_id %> added to <%= print_job.project.name %>
+    <%= print_job.user.name %> <%= print_job_activity(print_job).html_safe %> Part <%= print_job.part.part_name %>
 <% end %>
   <span><%= time_ago_in_words(print_job.updated_at) %> ago</span>
   </div>

@@ -47,6 +47,13 @@
 	  <h3 class="text-center">Recent Activity</h3>
     <div class="recent-activity">
       <%= render partial: "print_job_activity", collection: @activity %>
+      <% if @activity.empty? || @activity.size < 5 %>
+        <div class="row">
+          <div class="col-md-12">
+            Project Updated: <%= time_ago_in_words(@project.updated_at) %> ago
+          </div>
+        </div>
+      <% end %>
     </div>
 	</div>
   </div>
