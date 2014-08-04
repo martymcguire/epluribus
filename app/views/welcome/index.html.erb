@@ -69,7 +69,11 @@
       <div class="row">
         <div class="col-md-3">
           <%= link_to(image_tag(@previous_project.preview_img, style: "width: 300px"), project_path(@previous_project)) %>
-          <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <%= link_to "Learn More", project_path(@previous_project), class: "btn btn-primary", role: 'button' %>
         </div>
       </div>
     </div>
