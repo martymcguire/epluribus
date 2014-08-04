@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
     if(@project)
       @activity = @project.print_jobs.order('updated_at DESC').limit(8)
     end
+    @previous_project = Project.where(complete: true).last
   end
 
   def sign_up

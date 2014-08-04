@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804190155) do
+ActiveRecord::Schema.define(version: 20140804193905) do
 
   create_table "model_files", force: true do |t|
     t.integer  "part_id"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140804190155) do
     t.datetime "updated_at"
     t.string   "preview_img"
     t.boolean  "featured"
+    t.boolean  "complete"
   end
 
   create_table "users", force: true do |t|

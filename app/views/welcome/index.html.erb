@@ -51,7 +51,25 @@
 	</div>
   </div>
 </div>
+<% if @previous_project %>
+  <div class="row well">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 style="margin-top: 5px;">Past Project:<br/><%= @previous_project.name %></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <%= link_to(image_tag(@previous_project.preview_img, style: "width: 300px"), project_path(@previous_project)) %>
+          <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+<% else %>
   <div class="well">
+<% end %>
   <h2 style="margin-top: 5px;">About We the Builders</h2>
   <p>We the Builders was created as part of the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>. Our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art using 3D printing. We didn't have enough printers to do it all ourselves, so we built this crowdsourcing platform!</p>
   <p>The We the Builders Team is:
@@ -66,4 +84,7 @@
   </p>
   <p>Special thanks to <a href="http://dirdim.com/">Direct Dimensions</a> for their amazing 3D scanning skills.</p>
   <p>Special thanks to <a href="http://www.tinkerines.com/">Tinkerine Studio</a> for sponsoring the George Washington Bust project to allow us to reimburse some shipping costs!</p>
-</div>
+<% if @previous_project %>
+    </div>
+<% end %>
+  </div>
