@@ -1,14 +1,16 @@
 class ProjectsController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:show]
 
   def show
     @project = Project.find(params[:id])
-    print_jobs_for_user = @project.print_jobs.for_user(current_user)
-    @shipping_print_jobs = print_jobs_for_user.shipping
-    @shipped_print_jobs = print_jobs_for_user.shipped
-    @finished_print_jobs = print_jobs_for_user.accepted
-    @print_job = print_jobs_for_user.active.first
+    if(current_user)
+      print_jobs_for_user = @project.print_jobs.for_user(current_user)
+      @shipping_print_jobs = print_jobs_for_user.shipping
+      @shipped_print_jobs = print_jobs_for_user.shipped
+      @finished_print_jobs = print_jobs_for_user.accepted
+      @print_job = print_jobs_for_user.active.first
+    end
   end
 
   def participate
