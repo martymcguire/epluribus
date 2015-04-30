@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804193905) do
+ActiveRecord::Schema.define(version: 20150430011414) do
 
   create_table "model_files", force: true do |t|
     t.integer  "part_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140804193905) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "print_jobs_count"
+    t.string   "part_label"
   end
 
   add_index "parts", ["project_id"], name: "index_parts_on_project_id"
