@@ -35,6 +35,6 @@ class Part < ActiveRecord::Base
   end
 
   def part_name
-    part_label.empty? ? "X%d Y%d Z%d" % offset.split(',') : part_label
+    (part_label.nil? || part_label.empty?) ? "X%d Y%d Z%d" % offset.split(',') : part_label
   end
 end
