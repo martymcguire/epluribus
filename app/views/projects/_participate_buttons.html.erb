@@ -1,3 +1,3 @@
-<% @part_colors.each do |color, count| %>
-<%= link_to "Give me a #{color.label} File to Print!", project_participate_path(@project, desired_color: color.name), class: "btn btn-primary btn-sm" %>
+<% part_colors.each do |color, count| %>
+<%= link_to "Give me a File to Print (#{color.label})", project_participate_path(project, desired_color: color.name), class: "btn btn-primary btn-sm" %>
 <% end %>
