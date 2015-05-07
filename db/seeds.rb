@@ -1,4 +1,4 @@
-project_id = 666666
+project_id = 6
 colors = {
   any: PartColor.find_by_name('any'),
   dark: PartColor.find_by_name('dark'),
