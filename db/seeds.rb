@@ -1,20 +1,18 @@
-p = PartColor.create(
-  name: 'any',
-  label: 'Any color',
-  description: 'any color that you like'
-)
-puts "Created color #{p.name}: #{p.label}"
-
-p = PartColor.create(
-  name: 'light',
-  label: 'Light color',
-  description: 'a light color such as white or yellow'
-)
-puts "Created color #{p.name}: #{p.label}"
-
-p = PartColor.create(
-  name: 'dark',
-  label: 'Dark color',
-  description: 'a dark color such as black or brown'
-)
-puts "Created color #{p.name}: #{p.label}"
+project_id = 666666
+colors = {
+  any: PartColor.find_by_name('any'),
+  dark: PartColor.find_by_name('dark'),
+  light: PartColor.find_by_name('light')
+}
+Project.find(project_id).parts.each do |part|
+  label = part.part_label.nil? ? '' : part.part_label
+  color = colors[:any]
+  if(label.ends_with?('D'))
+    color = colors[:dark]
+  elsif(label.ends_with?('L'))
+    color = colors[:light]
+  end
+  part.desired_color_id = color.id
+  part.save
+  puts "Part #{part.id}(#{label}): #{color.label}"
+end

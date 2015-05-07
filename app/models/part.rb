@@ -2,6 +2,7 @@ class Part < ActiveRecord::Base
   belongs_to :project
   has_many :print_jobs
   has_one :model_file
+  belongs_to :desired_color, class_name: 'PartColor'
 
   def self.available
     where("id NOT IN (?)", claimed.select(:part_id))

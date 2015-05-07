@@ -68,4 +68,17 @@ module ApplicationHelper
       'accepted' => "These parts have supposedly been received! Now put them together!"
     }[state] || "Something went wrong."
   end
+
+  def desired_part_color(part)
+    pc = part.desired_color
+    if pc
+      if pc.name === 'any'
+        return "You may print this part in #{pc.description}."
+      else
+        return "<strong>IMPORTANT!</strong> This part needs to be a particular color! <br/>Please print this part in <strong>#{pc.description}.</strong>".html_safe
+      end
+    else  
+      return "You may print this part in any color."
+    end
+  end
 end
