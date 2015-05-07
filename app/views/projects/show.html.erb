@@ -35,7 +35,7 @@
           <p>
             We are so excited you are ready to help us! Click the button below and we'll assign you a file to print!
           </p>
-          <%= link_to "I'm Ready, Give me a File to Print!", project_participate_path(@project), class: "btn btn-primary btn-sm" %>
+          <%= project_participate_buttons(@project) %>
         </div> <!-- Well -->
       <% else %>
         <div class="well">

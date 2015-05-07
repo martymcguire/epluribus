@@ -81,4 +81,9 @@ module ApplicationHelper
       return "You may print this part in any color."
     end
   end
+
+  def project_participate_buttons(project)
+    part_colors = Part.available.where(project_id: project.id).group(:desired_color).count
+    render partial: 'project/_participate_buttons', locals: { project: project, part_colors: part_colors }
+  end
 end
