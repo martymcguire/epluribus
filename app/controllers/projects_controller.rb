@@ -17,7 +17,11 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:project_id])
     @print_job = @project.print_jobs.where(user_id: current_user.id).active
     if(@print_job.empty?)
-      @part = @project.random_part
+      if(params[:desired_color])
+        @part = @project.random_part_by_color(params[:desired_color])
+      else
+        @part = @project.random_part
+      end
       @part.claim_for_user(current_user)
     end
     redirect_to project_path(@project)

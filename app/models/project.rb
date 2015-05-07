@@ -21,6 +21,21 @@ class Project < ActiveRecord::Base
     selector.first(offset: idx)
   end
 
+  def random_part_by_color(color_name)
+    color = PartColor.find_by_name(color_name)
+    if(color.nil?)
+      return nil
+    end
+
+    claimed_part_ids = Part.joins(:print_jobs).where("print_jobs.aasm_state != 'rejected'").where(project_id: id).select("parts.id").to_a
+    selector = Part.where(project_id: id, desired_color_id: color.id)
+    if(! claimed_part_ids.empty?)
+      selector = selector.where("id NOT IN (?)", claimed_part_ids)
+    end
+    idx = rand(selector.count)
+    selector.first(offset: idx)
+  end
+
   def percent_complete
     100.0 * (self.print_jobs.where('aasm_state = ?', 'accepted').size.to_f / self.parts.size.to_f)
   end
