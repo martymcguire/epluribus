@@ -21,7 +21,9 @@
           <% else %>
             <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
           <% end %>
-          <a href="model.html" class="btn btn-default" role="button">View 3D model</a>
+          <% if @project.preview_stl %>
+            <%= link_to "View 3D model", project_preview_path(@project), class: "btn btn-default", role: "button" %>
+          <% end %>
         </p>
       </div>
     </div>

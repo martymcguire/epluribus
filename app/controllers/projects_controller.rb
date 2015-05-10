@@ -37,4 +37,10 @@ class ProjectsController < ApplicationController
     redirect_to @project, flash: { notice: 'Project Details Updated' }
   end
 
+  # 3D preview
+  def preview
+    @project = Project.find(params[:project_id])
+    render layout: "threedee_preview"
+  end
+
 end
