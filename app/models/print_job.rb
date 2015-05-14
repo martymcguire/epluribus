@@ -9,7 +9,7 @@ class PrintJob < ActiveRecord::Base
   }, :default_url => 'missing-150x150.png'
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
-  INACTIVE_STATES = ['accepted','rejected','shipped']
+  INACTIVE_STATES = ['accepted','rejected','shipping','shipped']
 
   def self.for_user(user)
     where("user_id = ?", user.id)
