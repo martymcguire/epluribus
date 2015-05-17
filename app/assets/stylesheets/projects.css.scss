@@ -37,3 +37,32 @@
     }
   }
 }
+
+div.recent-activity {
+  margin: 0;
+  font-size: 0.9em;
+  > div {
+    margin: 0;
+    padding: 10px 0;
+    &:nth-child(2n-1) {
+      background-color: #DDD;
+    }
+    &:nth-child(2n) {
+      background-color: #F5F5F5;
+    }
+  }
+  span {
+    font-size: 0.8em;
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+  }
+
+}

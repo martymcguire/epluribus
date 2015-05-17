@@ -13,13 +13,29 @@
       <%= render partial: 'contributors', locals: { people: @project.contributors } %>
     </div>
     <div class="col-md-3">
-      <div class="thumbnail">
-        <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
-        <div class="caption">
-          <p>Total Progress:</p>
-          <%= project_progress_bar(@project) %>
-          <% if current_user && current_user.is_admin? %>
-            <%= link_to("Parts Admin", project_parts_path(@project), class: "btn btn-primary") %>
+      <div class="row">
+        <div class="thumbnail">
+          <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
+          <div class="caption">
+            <p>Total Progress:</p>
+            <%= project_progress_bar(@project) %>
+            <% if current_user && current_user.is_admin? %>
+              <%= link_to("Parts Admin", project_parts_path(@project), class: "btn btn-primary") %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="row project-pg-activity">
+        <div class="thumbnail">
+        <h4 class="text-center">Recent Activity</h4>
+        <div class="recent-activity">
+          <%= render partial: "print_job_activity", collection: @activity %>
+          <% if @activity.empty? || @activity.size < 5 %>
+            <div class="row">
+              <div class="col-md-12">
+                Project Updated: <%= time_ago_in_words(@project.updated_at) %> ago
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
