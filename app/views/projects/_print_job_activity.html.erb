@@ -2,7 +2,7 @@
 <div class="row">
 <% if ! print_job.user_id.nil? %>
   <div class="col-md-2">
-    <%= image_tag print_job.user.avatar, width: 50 %>
+    <%= image_tag print_job.user.avatar, class: 'activitar' %>
   </div>
   <div class="col-md-10">
     <%= print_job.user.name %> <%= print_job_activity(print_job).html_safe %> Part <%= print_job.part.part_name %>
