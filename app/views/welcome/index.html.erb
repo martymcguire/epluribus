@@ -1,130 +1,33 @@
-<div class="container">
-  <div class="well well-lg">
-    <%= image_tag("wethebuilders36.png", style: "margin: -15px 0 15px" )%>
-	  <p style="font-size: 1.4em">We the People of the Maker-verse, in Order to form more perfect large-scale 3D printed sculptures, hereby establish this crowdsourcing website for the United Printers of the Maker-verse.</p>
+<div id="welcomeCarousel" class="carousel container slide" data-ride="carousel" data-pause="false">
+  <div class="carousel-inner">
+    <div class="active item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/george-scanning.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/marked-parts.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/patchwork-of-ben-pieces.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-assembly.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-hat.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/george-complete.jpg')"></div>
+    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-complete.jpg')"></div>
   </div>
 </div>
 
-<a name="how-it-works"></a>
-<div class="container">
-<div class="row">
-  <div class="col-md-4 desc-column">
-    <div class="thumbnail">
-      <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
-      <div class="caption">
-        <h3><%= @project.name %></h3>
-  <p>Total Progress:</p>
-    <%= project_progress_bar(@project) %>
-        <p>
-          <% if @project.part_available? -%>
-            <%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_path(@project), class: "btn btn-primary", role: 'button' %>
-          <% else %>
-            <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
-          <% end %>
-          <% if @project.preview_stl %>
-            <%= link_to "View 3D model", project_preview_path(@project), class: "btn btn-default", role: "button" %>
-          <% end %>
-        </p>
+<div class="jumbotron text-center">
+  <h2>Let's build big sculptures from small parts!</h2>
+  <h3>You 3D print, document, and ship. We assemble. Together we build crowdsourced sculptures!</h3>
+  <div class="container call-to-action text-center">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-3">
+        <%= link_to("Learn how it works", "how-it-works", class:"btn btn-default btn-lg", role: "button") %>
+      </div>
+      <div class="col-sm-3">
+        <% if @project %>
+          <%= link_to("See the current project", @project, class: "btn btn-default btn-lg", role: "button") %>
+        <% else %>
+          <%= link_to("Sign Up to be Notified about the next project", "sign_up", class:"btn btn-default btn-lg", role: "button") %>
+        <% end %>
       </div>
     </div>
-  </div>
-  <div class="col-md-4 desc-column">
-    <div class="thumbnail">
-      <h3 class="text-center">How it works</h3>
-      <ol style="margin-right:5px">
-        <li><a href="<%= user_omniauth_authorize_path(:google_oauth2) %>">Sign in with your Google+ account</a></li>
-        <li>Commit to a project. You will be assigned a new block to print.</li>
-        <li>Print your given block within 24 hours. You may print in whatever color or material you like, so long as the part comes out nicely. Feel free to inscribe your initials on the back (or other non-visible face)!</li>
-        <li>Verify your printed block by uploading a photo of your printed block along with its length, width, and height measurements.</li>
-        <li>Your print will be verified within a couple of hours and you will receive an address to mail your block</li>
-        <li>When all blocks for a project have been completed, they will be glued and assembled to present next to the original statue! Your name will appear here on the website as a valued contributor to the project!</li>
-      </ol>
-      <div class="text-center" style="margin: 20px 0">
-        <a href="/sign_up" class="btn btn-primary" role="button">Sign Up to be Notified about the next Project!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 desc-column">
-    <div class="thumbnail">
-	  <h3 class="text-center">Recent Activity</h3>
-    <div class="recent-activity">
-      <%= render partial: "print_job_activity", collection: @activity %>
-      <% if @activity.empty? || @activity.size < 5 %>
-        <div class="row">
-          <div class="col-md-12">
-            Project Updated: <%= time_ago_in_words(@project.updated_at) %> ago
-          </div>
-        </div>
-      <% end %>
-    </div>
-	</div>
   </div>
 </div>
-<% if @previous_project %>
-  <div class="row well">
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-xs-12">
-          <h2 style="margin-top: 5px;">Past Project:<br/><%= @previous_project.name %></h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <%= link_to(image_tag(@previous_project.preview_img, style: "width: 300px"), project_path(@previous_project)) %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <%= link_to "Learn More", project_path(@previous_project), class: "btn btn-primary", role: 'button' %>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-<% else %>
-  <div class="well">
-<% end %>
-  <h2 style="margin-top: 5px;">About We the Builders</h2>
-  <p>We the Builders was created as part of the <a href="http://articles.thewalters.org/artbytes2014/">ArtBytes Hackathon</a> at the <a href="http://thewalters.org/default.aspx">Walters Art Museum</a>. Our team set out to recreate a full 1:1 scale replica of a prominent work of Baltimore public art using 3D printing. We didn't have enough printers to do it all ourselves, so we built this crowdsourcing platform!</p>
-  <p>The We the Builders Team is:
-    <ul>
-      <li>Todd Blatt</li>
-      <li>David Fine</li>
-      <li>Matthew Griffin</li>
-      <li>Amy Hurst</li>
-      <li>Ryan Kittleson</li>
-      <li>Marty McGuire</li>
-    </ul>
-  </p>
-  <p>Special thanks to <a href="http://dirdim.com/">Direct Dimensions</a> for their amazing 3D scanning skills.</p>
-  <p>Special thanks to <a href="http://www.tinkerines.com/">Tinkerine Studio</a> for sponsoring the George Washington Bust project to allow us to reimburse some shipping costs!</p>
-<% if @previous_project %>
-    </div>
-<% end %>
-<% if @older_projects && !@older_projects.empty? %>
-  <div class="row">
-    <div class="col-xs-12">
-      <hr style="border-top: 1px solid #ccc" />
-      <h3>Older Projects</h3>
-      <% @older_projects.each do |old_proj| %>
-        <div class="col-md-3 text-center">
-          <div class="row">
-            <div class="col-xs-12">
-              <h4 style="margin-top: 5px;"><%= old_proj.name %></h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <%= link_to(image_tag(old_proj.preview_img, style: "width: 200px"), project_path(old_proj)) %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <%= link_to "Learn More", project_path(old_proj), class: "btn", role: 'button' %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-<% end %>
-  </div>
+<div class="fixed-footer">
+  <%= render partial: "shared/footer" %>
+</div>

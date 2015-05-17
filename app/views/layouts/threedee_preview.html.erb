@@ -20,41 +20,8 @@
 </head>
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to "Home", root_path, class: "navbar-brand" %>
-        </div>
-        <div class="navbar-collapse collapse">
-          <% if user_signed_in? %>
-            <div class="navbar-right">
-              <% if ! current_user.avatar.nil? %>
-                <%= image_tag current_user.avatar, height: '50', style: 'float: left' %>
-              <% end %>
-              <div style="float:left; color:#FFF; margin: 15px 0 0 15px">
-                Hi, <%= current_user.name %>
-                <%= link_to "Sign Out", destroy_user_session_path, style: 'margin-left: 10px'  %>
-              </div>
-             </div>
-          <% else %>
-            <%= link_to(image_tag('google-signin.png', height: '50'), user_omniauth_authorize_path(:google_oauth2), :class=>"navbar-right") %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" style="margin-top:20px">
-      <% if notice %><div class="alert alert-success"><%= notice %></div><% end %>
-      <% if alert %><div class="alert alert-error"><%= alert %></div><% end %>
-    </div>
-
-<%= yield %>
+  <%= render partial: "shared/navbar" %>
+  <%= yield %>
 
 </body>
 </html>

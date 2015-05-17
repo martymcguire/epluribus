@@ -11,6 +11,8 @@ Epluribus::Application.routes.draw do
 
   root 'welcome#index'
   get 'sign_up', :to => 'welcome#sign_up'
+  get 'how-it-works', :to => 'welcome#how_it_works'
+  get 'about', :to => 'welcome#about'
 
   resources :projects do
     get 'participate'

@@ -15,4 +15,10 @@ class WelcomeController < ApplicationController
 
   def sign_up
   end
+
+  def how_it_works
+  end
+
+  def about
+  end
 end

@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  padding-top: 50px;
+}
+
+.navbar, .navbar .navbar-brand {
+  padding-bottom: 0;
+}
+
+.navbar img.navatar {
+  height: 50px;
+  float: left;
+  border-radius: 50%;
+}
