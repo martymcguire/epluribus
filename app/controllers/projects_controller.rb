@@ -2,6 +2,18 @@ class ProjectsController < ApplicationController
 
   before_filter :authenticate_user!, except: [:show]
 
+  def index
+    @project = Project.where(featured: true).first
+    if(@project.nil?)
+      @project = Project.last
+    end
+    @activity = []
+    if(@project)
+      @activity = @project.print_jobs.order('updated_at DESC').limit(8)
+    end
+    @older_projects = Project.where(complete: true)
+  end
+
   def show
     @project = Project.find(params[:id])
     if(current_user)

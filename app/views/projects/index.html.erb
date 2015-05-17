@@ -1,0 +1,72 @@
+<% if @project %>
+<div class="container">
+<h1>Current Project</h1>
+<div class="row">
+  <div class="col-md-4 desc-column">
+    <div class="thumbnail">
+      <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
+      <div class="caption">
+        <h3><%= @project.name %></h3>
+  <p>Total Progress:</p>
+    <%= project_progress_bar(@project) %>
+        <p>
+          <% if @project.part_available? -%>
+            <%= link_to (user_signed_in? ? "Get Involved" : "Sign in to get involved"), project_path(@project), class: "btn btn-primary", role: 'button' %>
+          <% else %>
+            <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
+          <% end %>
+          <% if @project.preview_stl %>
+            <%= link_to "View 3D model", project_preview_path(@project), class: "btn btn-default", role: "button" %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 desc-column">
+    <div class="thumbnail">
+	  <h3 class="text-center">Recent Activity</h3>
+    <div class="recent-activity">
+      <%= render partial: "print_job_activity", collection: @activity %>
+      <% if @activity.empty? || @activity.size < 5 %>
+        <div class="row">
+          <div class="col-md-12">
+            Project Updated: <%= time_ago_in_words(@project.updated_at) %> ago
+          </div>
+        </div>
+      <% end %>
+    </div>
+	</div>
+  </div>
+</div>
+</div>
+<% end %>
+
+<% if @older_projects && !@older_projects.empty? %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr style="border-top: 1px solid #ccc" />
+      <h3>Older Projects</h3>
+      <% @older_projects.each do |old_proj| %>
+        <div class="col-md-3 text-center">
+          <div class="row">
+            <div class="col-xs-12">
+              <h4 style="margin-top: 5px;"><%= old_proj.name %></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <%= link_to(image_tag(old_proj.preview_img, style: "width: 200px"), project_path(old_proj)) %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <%= link_to "Learn More", project_path(old_proj), class: "btn", role: 'button' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
