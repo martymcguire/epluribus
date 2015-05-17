@@ -16,7 +16,7 @@
   <%= javascript_include_tag "https://code.jquery.com/jquery.js", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="welcome">
+<body class="<%= controller_name %>-<%=action_name %>">
 
   <%= render partial: "shared/navbar" %>
   <%= yield %>
