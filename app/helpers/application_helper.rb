@@ -17,6 +17,8 @@ module ApplicationHelper
     ret = "<div class='progress'>"
     ret += "<div class='progress-bar progress-bar-success' style='width: #{project.percent_complete}%'>"
     ret += "<span class='sr-only'>#{project.percent_complete}% Complete</span></div>"
+    ret += "<div class='progress-bar progress-bar-info' style='width: #{project.percent_shipping}%'>"
+    ret += "<span class='sr-only'>#{project.percent_shipping}% Shipping</span></div>"
     ret += "<div class='progress-bar progress-bar-warning' style='width: #{project.percent_active}%'>"
     ret += "<span class='sr-only'>#{project.percent_active}% In Progress</span></div>"
     ret += "</div>"
