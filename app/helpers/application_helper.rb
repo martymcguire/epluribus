@@ -15,11 +15,11 @@ module ApplicationHelper
 
   def project_progress_bar(project)
     ret = "<div class='progress'>"
-    ret += "<div class='progress-bar progress-bar-success' style='width: #{project.percent_complete}%'>"
+    ret += "<div class='progress-bar progress-bar-success' title='#{project.percent_complete}% Complete' style='width: #{project.percent_complete}%'>"
     ret += "<span class='sr-only'>#{project.percent_complete}% Complete</span></div>"
-    ret += "<div class='progress-bar progress-bar-info' style='width: #{project.percent_shipping}%'>"
+    ret += "<div class='progress-bar progress-bar-info' title='#{project.percent_shipping}% Shipping' style='width: #{project.percent_shipping}%'>"
     ret += "<span class='sr-only'>#{project.percent_shipping}% Shipping</span></div>"
-    ret += "<div class='progress-bar progress-bar-warning' style='width: #{project.percent_active}%'>"
+    ret += "<div class='progress-bar progress-bar-warning' title='#{project.percent_active}% In Progress' style='width: #{project.percent_active}%'>"
     ret += "<span class='sr-only'>#{project.percent_active}% In Progress</span></div>"
     ret += "</div>"
     ret.html_safe
