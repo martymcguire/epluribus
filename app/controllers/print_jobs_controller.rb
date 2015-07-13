@@ -32,7 +32,12 @@ class PrintJobsController < ApplicationController
   end
 
   def accept
-    @print_job.accept!
+    if(params[:force] == 'true')
+      @print_job.aasm_state = :accepted
+      @print_job.save!
+    else
+      @print_job.accept!
+    end
     redirect_to project_parts_path(@print_job.project_id)
   end
 

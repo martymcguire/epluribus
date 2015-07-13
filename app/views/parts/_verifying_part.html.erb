@@ -11,9 +11,10 @@
         </div>
         <div class="col-md-2">
           <div class="">
-            <p><%= button_to("Accept", project_print_job_verify_path(verifying_part.project_id, verifying_part.id), class: "btn btn-primary btn-block") %></p>
+            <p><%= button_to("Mark as Verified", project_print_job_verify_path(verifying_part.project_id, verifying_part.id), class: "btn btn-primary btn-block") %></p>
             <p><%= button_to("Unassign", project_print_job_unassign_path(verifying_part.project_id, verifying_part.id), class: "btn btn-danger btn-block") %></p>
           </div>
+          <%= render partial: "admin_part_options", locals: { part: verifying_part } %>
         </div>
 	  </div>
     </div><!-- /.well -->

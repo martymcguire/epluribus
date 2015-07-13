@@ -10,6 +10,7 @@
           <div class="">
             <p><%= button_to("Unassign", project_print_job_unassign_path(printed_part.project_id, printed_part.id), class: "btn btn-danger btn-block") %></p>
           </div>
+          <%= render partial: "admin_part_options", locals: { part: printed_part } %>
         </div>
 	  </div>
     </div><!-- /.well -->
