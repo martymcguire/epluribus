@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_filter :authenticate_user!, except: [:show, :index]
+  before_filter :authenticate_user!, except: [:show, :index, :preview]
+  before_filter :require_project_admin!, only: [:edit, :update]
 
   def index
     @project = Project.where(featured: true).first
@@ -40,6 +41,14 @@ class ProjectsController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  # 3D preview
+  def preview
+    @project = Project.find(params[:project_id])
+    render layout: "threedee_preview"
+  end
+
+  # admin stufffffff
+
   def edit
     @project = Project.find(params[:id])
   end
@@ -48,12 +57,6 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project.update_attributes!(params.require(:project).permit(:name, :description, :preview_stl, :preview_img))
     redirect_to @project, flash: { notice: 'Project Details Updated' }
-  end
-
-  # 3D preview
-  def preview
-    @project = Project.find(params[:project_id])
-    render layout: "threedee_preview"
   end
 
 end

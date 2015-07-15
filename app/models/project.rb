@@ -66,4 +66,9 @@ class Project < ActiveRecord::Base
       })
     end
   end
+
+  def user_is_admin?(u)
+    user_ids = User.where(is_admin: true).pluck('id')
+    return user_ids.include? u.id
+  end
 end

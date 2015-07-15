@@ -12,8 +12,16 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
-  def require_admin!
+  def require_site_admin!
     if ! current_user.is_admin?
+      redirect_to root_path
+    end
+  end
+
+  def require_project_admin!
+    p_id = params[:project_id] || params[:id]
+    project = Project.find(p_id)
+    if (! project.user_is_admin?(current_user))
       redirect_to root_path
     end
   end

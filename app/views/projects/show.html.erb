@@ -3,7 +3,7 @@
     <div class="col-md-9">
       <h1>
         <%= @project.name %>
-        <% if current_user && current_user.is_admin? %>
+        <% if current_user && @project.user_is_admin?(current_user) %>
           <%= link_to("Edit Project Details", edit_project_path(@project), class: "btn btn-primary") %>
         <% end %>
       </h1>
@@ -19,7 +19,7 @@
           <div class="caption">
             <p>Total Progress:</p>
             <%= project_progress_bar(@project) %>
-            <% if current_user && current_user.is_admin? %>
+            <% if current_user && @project.user_is_admin?(current_user) %>
               <%= link_to("Parts Admin", project_parts_path(@project), class: "btn btn-primary") %>
             <% end %>
           </div>

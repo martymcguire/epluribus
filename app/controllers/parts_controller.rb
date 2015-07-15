@@ -2,7 +2,7 @@ class PartsController < ApplicationController
 
   before_filter :authenticate_user!
   before_filter :find_part_from_params, except: :index
-  before_filter :require_admin!, only: :index
+  before_filter :require_project_admin!, only: :index
 
   def preview
   end
