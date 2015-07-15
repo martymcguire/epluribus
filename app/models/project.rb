@@ -2,6 +2,7 @@ class Project < ActiveRecord::Base
 
   has_many :parts
   has_many :print_jobs
+  has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
 
   def part_available?
     Part.where(project_id: id).available.size > 0

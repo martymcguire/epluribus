@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507203507) do
+ActiveRecord::Schema.define(version: 20150715024627) do
 
   create_table "model_files", force: true do |t|
     t.integer  "part_id"
@@ -75,6 +75,13 @@ ActiveRecord::Schema.define(version: 20150507203507) do
     t.boolean  "featured"
     t.boolean  "complete"
   end
+
+  create_table "projects_editors", id: false, force: true do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+  end
+
+  add_index "projects_editors", ["project_id", "user_id"], name: "index_projects_editors_on_project_id_and_user_id", unique: true
 
   create_table "users", force: true do |t|
     t.string   "email",               default: "", null: false
