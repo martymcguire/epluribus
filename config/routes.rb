@@ -17,6 +17,7 @@ Epluribus::Application.routes.draw do
   resources :projects do
     get 'participate'
     get 'preview'
+    resources :editors, only: [:create, :destroy]
     resources :parts do
       get 'preview'
     end

@@ -1,0 +1,27 @@
+.editors-edit-editors {
+  .row {
+    position: relative;
+    padding: 10px 0;
+    background-color: #ccc;
+    &:nth-child(2) {
+      background-color: #aaa;
+    }
+  }
+  .remove {
+    position: absolute;
+    top: 0px; right: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #880000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .editors-edit-empty {
+    padding: 10px;
+    display: none;
+    &:last-child {
+      display: block;
+    }
+  }
+}

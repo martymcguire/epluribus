@@ -64,5 +64,18 @@ div.recent-activity {
         clear: both;
     }
   }
+}
 
+.project-edit-tabs {
+  background-color: #ddd;
+  .nav.nav-tabs {
+    background-color: #fff;
+    li.active a {
+      background-color: #ddd;
+    }
+  }
+  .tab-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

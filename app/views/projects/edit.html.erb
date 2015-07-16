@@ -1,22 +1,14 @@
-<div class="container">
-  <%= form_for(@project, html: {role: 'form'}) do |f| %>
-    <div class="form-group">
-      <label for="name">Project Name</label>
-      <%= f.text_field :name, class: 'form-control', placeholder: 'My Awesome Project' %>
+<div class="container project-edit-tabs">
+  <ul class="row nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#project-detail" aria-controls="project-detail" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Project Details</a></li>
+    <li role="presentation"><a href="#project-editors" aria-controls="project-editors" role="tab" data-toggle="tab"><i class="fa fa-users"></i> Project Editors</a></li>
+  </ul>
+  <div class="tab-content row">
+    <div role="tabpanel" class="tab-pane container fade in active" id="project-detail">
+      <%= render partial: 'projects/edit_details' %>
     </div>
-    <div class="form-group">
-      <label for="description">Project Description</label>
-      <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> and <a href="http://getbootstrap.com/css/">Bootstrap HTML</a> are supported.</span>
-      <%= f.text_area :description, class: 'form-control', rows: 20 %>
+    <div role="tabpanel" class="tab-pane container fade" id="project-editors">
+      <%= render partial: 'projects/edit_editors' %>
     </div>
-    <div class="form-group">
-      <label for="preview_stl">Preview STL URL</label>
-      <%= f.text_field :preview_stl, class: 'form-control', placeholder: 'http://example.com/some/model.stl' %>
-    </div>
-    <div class="form-group">
-      <label for="preview_stl">Preview Image URL</label>
-      <%= f.text_field :preview_img, class: 'form-control', placeholder: 'http://placekitten.com/500/500' %>
-    </div>
-    <%= f.submit class: 'btn btn-primary' %>
-  <% end %>
+  </div>
 </div>

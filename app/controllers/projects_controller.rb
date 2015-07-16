@@ -51,6 +51,7 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+    @editors = @project.editors.where.not(id: current_user.id)
   end
 
   def update

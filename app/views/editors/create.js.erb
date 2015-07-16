@@ -1,0 +1,12 @@
+$('form#new_user')[0].reset();
+<% if @editor %>
+  var $el = $("<%= escape_javascript(render partial: 'editors/editor_in_list', locals: { user: @editor }) %>");
+  $el.hide().appendTo('.editors-edit-editors').fadeIn(500);
+<% end %>
+var $err = $('#form-error');
+<% if !@err %>
+  $err.hide();
+<% else %>
+  $err.html("<%= escape_javascript(@err) %>");
+  $err.show();
+<% end %>
