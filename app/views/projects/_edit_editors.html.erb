@@ -1,23 +1,10 @@
-<div id="form-error" class="alert alert-danger" role="alert" style="display: none"></div>
-<div id="form-success" class="alert alert-success" role="alert" style="display: none"></div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4 editors-edit-editors">
-      <h3>Current Editors</h3>
-      <div class="row editors-edit-empty">
-        This project has no other editors.
-      </div>
-      <%= render partial: "editors/editor_in_list", collection: @editors, as: 'user' %>
-    </div>
-    <div class="col-sm-4">
-      <h3>Add new Editor</h3>
-      <%= form_for(@project.editors.build, url: project_editors_path(@project), html: {role: 'form'}, remote: true) do |f| %>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <%= f.text_field :email, class: 'form-control', placeholder: 'jane_smith@gmail.com' %>
-        </div>
-        <%= f.submit "Invite", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= react_component('ProjectEditorBox',
+      { form_presenter: {
+            action: project_editors_path(@project),
+            csrf_param: request_forgery_protection_token,
+            csrf_token: form_authenticity_token
+        },
+        editors: @editors_json, csrf_token: request_forgery_protection_token.to_s, csrf_token_value: form_authenticity_token
+      },
+      {prerender: true }
+    ) %>

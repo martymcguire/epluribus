@@ -51,7 +51,16 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
-    @editors = @project.editors.where.not(id: current_user.id)
+    @editors = @project.editors #.where.not(id: current_user.id)
+    @editors_json = @editors.map do |e|
+      {
+        project_id: @project.id,
+        user_id: e.id,
+        name: e.name,
+        avatar: e.avatar,
+        email: e.email
+      }
+    end
   end
 
   def update

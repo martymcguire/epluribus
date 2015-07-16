@@ -13,14 +13,20 @@ class EditorsController < ApplicationController
         else
           @err = "'#{@email}' is already an editor."
         end
-        @editor = nil
       end
     else
       @err = "No user found with email address '#{@email}'. Invite them to the site!"
     end
+    editors = @project.editors.map{|e| {
+      project_id: @project.id,
+      user_id: e.id,
+      avatar: e.avatar,
+      name: e.name,
+      email: e.email
+    }}
     respond_to do |format|
       format.html { redirect_to project_edit_path(@project) }
-      format.js
+      format.js { render text: { editors: editors, err: @err }.to_json }
     end
   end
 
@@ -29,7 +35,7 @@ class EditorsController < ApplicationController
     @project.editors.delete(@editor)
     respond_to do |format|
       format.html { redirect_to_project_edit_path(@project) }
-      format.js
+      format.js { render text: {ok: 'ok'}.to_json }
     end
   end
 

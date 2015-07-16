@@ -1,9 +1,0 @@
-<div class="row editors-edit-row" id="project_<%= @project.id %>_editor_<%= user.id %>">
-  <div class="col-md-3">
-    <%= image_tag user.avatar, class: 'activitar' %>
-  </div>
-  <div class="col-md-9">
-    <%= user.name %> &lt;<%= user.email %>&gt;
-  </div>
-  <%= link_to raw("&times;"), project_editor_path(@project, user), method: :delete, remote: true, class: 'remove' %>
-</div>
