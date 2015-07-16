@@ -3,7 +3,7 @@
     position: relative;
     padding: 10px 0;
     background-color: #ccc;
-    &:nth-child(2) {
+    &:nth-child(2n) {
       background-color: #aaa;
     }
   }
