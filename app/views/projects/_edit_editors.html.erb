@@ -6,5 +6,5 @@ window.ProjectEditorStore = new ProjectEditorStoreDef({
 </script>
 <%= react_component('ProjectEditorBox',
       { form_presenter: @form_presenter, editors: @editors_json },
-      { prerender: true }
+      #{ prerender: true }
     ) %>
