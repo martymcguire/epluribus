@@ -61,6 +61,11 @@ class ProjectsController < ApplicationController
         email: e.email
       }
     end
+    @form_presenter = {
+      action: project_editors_path(@project),
+      csrf_param: request_forgery_protection_token,
+      csrf_token: form_authenticity_token
+    }
   end
 
   def update

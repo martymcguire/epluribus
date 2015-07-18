@@ -4,14 +4,7 @@
     e.stopPropagation()
     email = @refs.email.getDOMNode().value.trim()
     return if !email
-    $.ajax
-      url: @props.presenter.action
-      type: "POST"
-      data: $(@refs.form.getDOMNode()).serialize()
-      dataType: 'json'
-      success: (data, textStatus, jqXHR) =>
-        @props.onError(data.err) if 'err' of data
-        @props.onAddEditor(data.editors);
+    this.props.onAddEditor(email)
     @refs.email.getDOMNode().value = '';
 
   render: ->

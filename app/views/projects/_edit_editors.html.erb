@@ -1,10 +1,10 @@
+<script>
+window.ProjectEditorStore = new ProjectEditorStoreDef({
+  editors: JSON.parse("<%= escape_javascript(@editors_json.to_json).html_safe %>"),
+  form_presenter: JSON.parse("<%= escape_javascript(@form_presenter.to_json).html_safe %>")
+});
+</script>
 <%= react_component('ProjectEditorBox',
-      { form_presenter: {
-            action: project_editors_path(@project),
-            csrf_param: request_forgery_protection_token,
-            csrf_token: form_authenticity_token
-        },
-        editors: @editors_json, csrf_token: request_forgery_protection_token.to_s, csrf_token_value: form_authenticity_token
-      },
-      {prerender: true }
+      { form_presenter: @form_presenter, editors: @editors_json },
+      { prerender: true }
     ) %>
