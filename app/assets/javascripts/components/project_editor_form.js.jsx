@@ -1,6 +1,7 @@
 var ProjectEditorForm = React.createClass({
   handleSubmit: function(e){
     e.preventDefault();
+    e.stopPropagation();
     var email = this.refs.email.getDOMNode().value.trim();
     if (!email) { return; }
     var xhr = $.ajax(this.props.presenter.action,

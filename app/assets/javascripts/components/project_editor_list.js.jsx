@@ -26,9 +26,8 @@ var ProjectEditorList = React.createClass({
           This project has no other editors.
         </div>
         {this.props.editors.map(function(editor, idx){
-          var boundRemoveItem = this.removeItem.bind(this, idx);
           return(
-            <ProjectEditor onRemoveItem={boundRemoveItem} data={editor} key={idx} />
+            <ProjectEditor onRemoveItem={this.removeItem.bind(null, idx)} editor={editor} key={idx} />
           );
         }, this)}
       </div>
