@@ -2,10 +2,10 @@ div = React.createFactory 'div'
 img = React.createFactory 'img'
 @ProjectEditor = React.createClass
   handleRemove: (e) ->
-    @.props.onRemoveItem()
+    $(@refs["row"].getDOMNode()).fadeOut( => @.props.onRemoveItem() )
 
   render: ->
-    div className: "row editors-edit-row",
+    div className: "row editors-edit-row fade in", ref: "row",
       div className: "col-md-3",
         img src: this.props.editor.avatar, className:"activitar"
       div className:"col-md-9",
