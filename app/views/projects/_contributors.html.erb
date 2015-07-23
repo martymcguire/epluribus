@@ -4,7 +4,7 @@
   <ul class="contributors">
     <% people.each do |person| %>
       <li>
-        <%= image_tag(person.avatar, class: 'img-circle', title: "#{person.name} (#{pluralize(person.part_count, 'Part')})", alt: "#{person.name} (#{pluralize(person.part_count, 'Part')})") %>
+        <%= link_to(image_tag(person.avatar, class: 'img-circle', title: "#{person.name} (#{pluralize(person.part_count, 'Part')})", alt: "#{person.name} (#{pluralize(person.part_count, 'Part')})"), path_to_builder(person)) %>
         <% if person.part_count > 1 %>
           <span class="part-count"><%= person.part_count %></span>
         <% end %>

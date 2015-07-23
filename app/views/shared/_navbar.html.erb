@@ -24,10 +24,10 @@
           <% if user_signed_in? %>
             <div class="navbar-right">
               <% if ! current_user.avatar.nil? %>
-                <%= image_tag current_user.avatar, class: 'navatar' %>
+                <%= link_to(image_tag(current_user.avatar, class: 'navatar'), path_to_builder(current_user)) %>
               <% end %>
               <div style="float:left; color:#FFF; margin: 15px 0 0 15px">
-                Hi, <%= current_user.name %>
+                Hi, <%= link_to current_user.name, path_to_builder(current_user) %>
                 <%= link_to "Sign Out", destroy_user_session_path, style: 'margin-left: 10px'  %>
               </div>
              </div>

@@ -25,4 +25,9 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def id_from_hashid(hashid)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    return hashids.decode(hashid)
+  end
 end

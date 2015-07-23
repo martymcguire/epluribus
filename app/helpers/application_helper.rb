@@ -84,4 +84,10 @@ module ApplicationHelper
     end
   end
 
+  def path_to_builder(user)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    hashid = hashids.encode(user.id)
+    builder_path(hashid)
+  end
+
 end
