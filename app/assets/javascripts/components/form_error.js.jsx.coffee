@@ -3,19 +3,20 @@
     { error: this.props.error }
 
   handleError: (err) ->
-    @setState {error: err}, =>
-      console.log(err)
-      $el = $(@refs['message'].getDOMNode())
-      if @state['error']
-        $el.fadeIn()
-      else
-        $el.fadeOut()
+    @setState {error: err}
 
   componentDidMount: ->
     this.props.store.on('error', @handleError)
 
   componentWillUnmount: ->
     this.props.store.removeListener('error', @handleError)
+
+  componentDidUpdate: ->
+    $el = $(@refs['message'].getDOMNode())
+    if @state['error']
+      $el.fadeIn()
+    else
+      $el.fadeOut()
 
   render: ->
     classNames = "alert alert-danger"
