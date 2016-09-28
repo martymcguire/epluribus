@@ -38,15 +38,21 @@ class Project < ActiveRecord::Base
   end
 
   def percent_complete
-    100.0 * (self.print_jobs.where('aasm_state = ?', 'accepted').size.to_f / self.parts.size.to_f)
+    (self.parts.size == 0) ? 0.0 : (
+      100.0 * (self.print_jobs.where('aasm_state = ?', 'accepted').size.to_f / self.parts.size.to_f)
+    )
   end
 
   def percent_shipping
-    100.0 * (self.print_jobs.where('aasm_state IN (?)', ['shipping','shipped']).size.to_f / self.parts.size.to_f)
+    (self.parts.size == 0) ? 0.0 : (
+      100.0 * (self.print_jobs.where('aasm_state IN (?)', ['shipping','shipped']).size.to_f / self.parts.size.to_f)
+    )
   end
 
   def percent_active
-    100.0 * (self.print_jobs.active.size.to_f / self.parts.size.to_f)
+    (self.parts.size == 0) ? 0.0 : (
+      100.0 * (self.print_jobs.active.size.to_f / self.parts.size.to_f)
+    )
   end
 
   def contributors
