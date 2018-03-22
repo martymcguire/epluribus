@@ -13,7 +13,14 @@ class PartsController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     @print_jobs = {}
-    @project.print_jobs.order('updated_at DESC').each do |pj|
+    all_jobs = @project.print_jobs.order('updated_at DESC')
+    ActiveRecord::Associations::Preloader.new.preload(
+      all_jobs, [
+        :user, 
+        {:part => [:model_file, :desired_color]}
+      ]
+    )
+    all_jobs.each do |pj|
       @print_jobs[pj.aasm_state] ||= []
       @print_jobs[pj.aasm_state] << pj
     end
