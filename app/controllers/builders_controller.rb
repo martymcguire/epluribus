@@ -5,6 +5,9 @@ class BuildersController < ApplicationController
     @builder = User.find_by_id!(id)
     @project_parts = {}
     print_jobs = PrintJob.where(user_id: @builder.id, aasm_state: 'accepted')
+    ActiveRecord::Associations::Preloader.new.preload(
+      print_jobs, {:part => [:model_file]}
+    )
     print_jobs.each do |pj|
       prj = @project_parts[pj.project_id]
       if prj.nil?

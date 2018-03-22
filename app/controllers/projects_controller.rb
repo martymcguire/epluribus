@@ -18,6 +18,9 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @activity = @project.print_jobs.order('updated_at DESC').limit(8)
+    ActiveRecord::Associations::Preloader.new.preload(
+      @activity, [:user, :part]
+    )
     if(current_user)
       print_jobs_for_user = @project.print_jobs.for_user(current_user)
       @shipping_print_jobs = print_jobs_for_user.shipping
