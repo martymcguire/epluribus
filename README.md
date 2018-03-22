@@ -36,7 +36,7 @@ Deployment
 You'll need:
 
 * Rails 4
-* A database
+* A PostgreSQL database
 * Amazon AWS credentials for S3
 * Google App Engine credentials for Sign-in with Google
 * SMTP configuration for sending emails (we use mandrillapp.com)
@@ -55,11 +55,12 @@ We deployed to Heroku's free tier with no problems thus far. Our config vars loo
     SMTP_PASSWORD:                ...
     SMTP_PORT:                    ...
     SMTP_USERNAME:                ...
+    HASHID_SALT:                  ...
 
 License
 =======
 
-    Copyright (C) 2014,2015  Marty McGuire, David Fine
+    Copyright (C) 2014-2018  Marty McGuire, David Fine
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

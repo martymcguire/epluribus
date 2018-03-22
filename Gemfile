@@ -56,7 +56,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 
 # Heroku configs
-ruby "2.3.0"
+ruby "2.5.0"
 group :production do
   gem 'rails_12factor'
 end
