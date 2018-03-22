@@ -32,7 +32,7 @@
               </div>
              </div>
           <% else %>
-            <%= link_to(image_tag('google-signin.png', height: '50'), user_omniauth_authorize_path(:google_oauth2), :class=>"navbar-right") %>
+            <%= link_to(image_tag('google-signin.png', height: '50'), user_google_oauth2_omniauth_authorize_path(), :class=>"navbar-right") %>
           <% end %>
         </div>
       </div>
