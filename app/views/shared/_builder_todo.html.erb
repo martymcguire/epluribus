@@ -10,7 +10,7 @@
         </p>
         <%= project_participate_buttons(@project) %>
       </div> <!-- Well -->
-    <% else %>
+    <% elsif ! @project.complete %>
       <div class="well">
         <p class="lead">All Parts Accounted For!</p>
         <p>
@@ -205,12 +205,8 @@
     <% @finished_print_jobs.each do |fpj| %>
       <div class="well"><p class="lead">Part #<%= fpj.part.id %></p> 
         <div class="row">
-          <div class="col-md-2">
-            <%= part_preview(fpj.part) %>
-          </div>
-          <div class="col-md-2">
-            <%= print_job_photo_preview(fpj) %>
-          </div>
+          <div class="col-md-2"><%= part_preview(fpj.part) %></div>
+          <div class="col-md-2"><%= print_job_photo_preview(fpj) %></div>
           <div class="col-md-8">
             Reported Dimensions: <%= fpj.measurements %><br />
             Tracking Info: <%= fpj.shipping_info %><br />
@@ -219,6 +215,5 @@
         </div>
       </div>
     <% end %>
-    </div> <!-- Well -->
   <% end %>
 <% end # if current_user %>
