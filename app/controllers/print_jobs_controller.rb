@@ -25,6 +25,8 @@ class PrintJobsController < ApplicationController
 
 ### Admin stuffffff
 
+  # 2018-04-22 - No longer needed but allow admin to accept any parts stuck in
+  # this legacy state.
   def verify
     @print_job.verify!
     Notifier.print_verified(@print_job).deliver

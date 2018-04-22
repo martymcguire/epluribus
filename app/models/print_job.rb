@@ -39,9 +39,12 @@ class PrintJob < ActiveRecord::Base
     end
 
     event :submit do
-      transitions from: :printed, to: :verifying
+      # 2018-04-22 - parts with submitted photos go directly to shipping state
+      transitions from: :printed, to: :shipping
     end
 
+    # 2018-04-22 - No longer needed but allow admin to accept any
+    # parts stuck in this legacy state.
     event :verify do
       transitions from: :verifying, to: :shipping
     end
