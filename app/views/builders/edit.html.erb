@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row profile">
+		<% flash.each do |key, value| %>
+				<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %> 
+    <div class="col-md-3 hidden-xs">
+      <%= render partial: "builder_sidebar" %>
+    </div>
+    <div class="col-md-9">
+      <%= form_for @builder, :url => path_to_builder(@builder), :method => 'put' do |f| %>
+        <fieldset>
+          <legend>Email Notifications</legend>
+          <div class="form-group">
+            <label>Primary Email</label>
+            <span class="form-control" disabled><%= obfuscate_email(@builder.email) %></span>
+            <span class="help-block">The email address you use to log in. By default, we will send notifications and questions about your prints to this address.</span>
+          </div>
+          <div class="form-group<%= @builder.errors.include?(:secondary_email) ? ' has-error' : ''%>">
+            <label for="secondary-email">Secondary Email</label>
+            <%= f.email_field 'secondary_email', :class => 'form-control' %>
+          </div>
+          <% if @builder.errors.include? :secondary_email %>
+            <div><small style="color: red"><%= @builder.errors[:secondary_email].to_sentence %></small></div>
+          <% end %>
+          <span class="help-block">
+            <% if @builder.secondary_email_unconfirmed? %>
+              We need to verify this address before it can be used for notifications. Please check your email for a confirmation link.<% if false %> TODO: Didn't get a confirmation email? Click here to re-send.<% end %>
+            <% else %>
+              If you would like to receive notifications at another email address, please enter it here.
+            <% end %>
+          </span>
+          <%= f.submit "#{@builder.secondary_email.empty? ? 'Add' : 'Update'} Secondary Email", :class => "btn btn-primary" %>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>

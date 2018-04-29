@@ -732,6 +732,8 @@ GEM
     unicorn (5.4.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    validates_email_format_of (1.6.3)
+      i18n
     warden (1.2.7)
       rack (>= 1.0)
 
@@ -757,6 +759,7 @@ DEPENDENCIES
   sdoc
   uglifier (>= 1.3.0)
   unicorn
+  validates_email_format_of
 
 RUBY VERSION
    ruby 2.5.0p0

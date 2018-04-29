@@ -27,8 +27,9 @@
                 <%= link_to(image_tag(current_user.avatar, class: 'navatar'), path_to_builder(current_user)) %>
               <% end %>
               <div style="float:left; color:#FFF; margin: 15px 0 0 15px">
-                Hi, <%= link_to current_user.name, path_to_builder(current_user) %>
-                <%= link_to "Sign Out", destroy_user_session_path, style: 'margin-left: 10px'  %>
+                Hi, <%= link_to "#{current_user.name}", path_to_builder(current_user) %>
+                <%= link_to "<i class='fa fa-gear'></i> Account".html_safe, path_to_edit_builder(current_user), style: 'margin-left: 1em; padding-left: 1em; border-left: 1px solid white'  %>
+                <%= link_to "Sign Out", destroy_user_session_path, style: 'margin-left: 1em; padding-left: 1em; border-left: 1px solid white'  %>
               </div>
              </div>
           <% else %>

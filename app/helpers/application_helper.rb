@@ -90,4 +90,24 @@ module ApplicationHelper
     builder_path(hashid)
   end
 
+  def path_to_edit_builder(user)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    hashid = hashids.encode(user.id)
+    edit_builder_path(hashid)
+  end
+
+  def path_to_update_builder(user)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    hashid = hashids.encode(user.id)
+    update_builder_path(hashid)
+  end
+
+  def obfuscate_email(email)
+    local, domain = email.split('@')
+    "#{local[0..1]}...#{local[-1]}@#{domain}"
+  end
+
+  def email_confirmation_link(user)
+    user.secondary_email_confirm_token
+  end
 end

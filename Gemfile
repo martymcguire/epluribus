@@ -44,11 +44,17 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Markdown!
 gem 'redcarpet', '1.17.2'
 
+# Authentication w/ Google OAuth2
 gem 'devise'
 gem 'omniauth-google-oauth2'
 
+# Validating user alternate emails
+gem 'validates_email_format_of'
+
+# Tracking states of print jobs
 gem 'aasm'
 
 # Image upload handling

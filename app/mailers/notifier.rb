@@ -1,6 +1,9 @@
 class Notifier < ActionMailer::Base
   default from: "no-reply@wethebuilders.com"
 
+  helper ApplicationHelper
+
+  # deprecated 2018-04 as we no longer require verification
   def print_awaiting_verification(print_job)
     @print_job = print_job
     @project = print_job.project
@@ -16,7 +19,14 @@ class Notifier < ActionMailer::Base
     @part = print_job.part
     @model_file = @part.model_file
     @user = print_job.user
+    # FIXME: use secondary email if present and verified!
     email_with_name = "#{@user.name} <#{@user.email}>"
+    mail(to: email_with_name, cc: ENV['SMTP_ALERT_DESTINATION'])
+  end
+
+  def secondary_email_verification(user)
+    @user = user
+    email_with_name = "#{@user.name} <#{@user.secondary_email}>"
     mail(to: email_with_name, cc: ENV['SMTP_ALERT_DESTINATION'])
   end
 end

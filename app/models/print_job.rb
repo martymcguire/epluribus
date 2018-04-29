@@ -41,6 +41,10 @@ class PrintJob < ActiveRecord::Base
     event :submit do
       # 2018-04-22 - parts with submitted photos go directly to shipping state
       transitions from: :printed, to: :shipping
+      after do
+        # send builder an email notification
+        Notifier.print_verified(self).deliver
+      end
     end
 
     # 2018-04-22 - No longer needed but allow admin to accept any
