@@ -152,13 +152,7 @@
       <% end %>
     <p>Thank you so much for your help! Your <%= "print".pluralize(@shipping_print_jobs.size) %> should be ready to ship! Please mail <%= 'it'.pluralize(@shipping_print_jobs.size) %> to:
     </p>
-    <p>
-    <strong>
-    We The Builders<br />
-    c/o Todd Blatt<br />
-    5728 Richardson Mews Sq<br />
-    Halethorpe, MD 21227
-    </strong></p>
+    <p><strong><%= markdown (@project.shipping_address || "TBD") %></strong></p>
     <p>
     Please enter your tracking number so we know when it will arrive.
     </p>

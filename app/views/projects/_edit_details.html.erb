@@ -9,6 +9,11 @@
     <%= f.text_area :description, class: 'form-control', rows: 20 %>
   </div>
   <div class="form-group">
+    <label for="shipping_address">Shipping Address</label>
+    <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> is supported.</span>
+    <%= f.text_area :shipping_address, class: 'form-control', rows: 4 %>
+  </div>
+  <div class="form-group">
     <label for="preview_stl">Preview STL URL</label>
     <%= f.text_field :preview_stl, class: 'form-control', placeholder: 'http://example.com/some/model.stl' %>
   </div>

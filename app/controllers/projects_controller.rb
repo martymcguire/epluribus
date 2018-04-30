@@ -73,7 +73,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    @project.update_attributes!(params.require(:project).permit(:name, :description, :preview_stl, :preview_img))
+    @project.update_attributes!(params.require(:project).permit(:name, :description, :shipping_address, :preview_stl, :preview_img))
     redirect_to @project, flash: { notice: 'Project Details Updated' }
   end
 
