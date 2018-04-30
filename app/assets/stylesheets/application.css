@@ -21,12 +21,12 @@ body {
 }
 
 .navbar img.navatar {
-  height: 50px;
-  float: left;
   border-radius: 50%;
+  float: left;
+  height: 50px;
 }
 
 img.activitar {
-  height: 50px;
   border-radius: 50%;
+  max-width: 100%;
 }
