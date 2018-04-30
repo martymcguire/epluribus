@@ -20,6 +20,7 @@ Epluribus::Application.routes.draw do
     resources :editors, only: [:create, :destroy]
     resources :parts do
       get 'preview'
+      get 'layer/:layer', to: 'parts#layer', on: :collection, as: :layer
     end
     resources :print_jobs do
       post 'printed'

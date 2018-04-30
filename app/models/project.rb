@@ -82,4 +82,8 @@ class Project < ActiveRecord::Base
       return site_admin_ids.include? u.id
     end
   end
+
+  def layers
+    parts.map{|p| p.offset.split(',')[2].to_i }.uniq.sort
+  end
 end

@@ -1,7 +1,7 @@
 class PartsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :find_part_from_params, except: :index
+  before_filter :find_part_from_params, except: [:index, :layer]
   before_filter :require_project_admin!, only: :index
 
   def preview
@@ -12,8 +12,16 @@ class PartsController < ApplicationController
   FPJ = Struct.new(:part, :project, :updated_at, :measurements, :shipping_info, :user)
   def index
     @project = Project.find(params[:project_id])
+    redirect_to layer_project_parts_path(@project, 1)
+  end
+
+  def layer
+    @project = Project.find(params[:project_id])
+    @layer = params[:layer] ? params[:layer].to_i : 1
+    @layers = @project.layers
     @print_jobs = {}
-    all_jobs = @project.print_jobs.order('updated_at DESC')
+    parts = Part.arel_table
+    all_jobs = @project.print_jobs.joins(:part).where(parts[:offset].matches("%,#{@layer}")).order('updated_at DESC')
     ActiveRecord::Associations::Preloader.new.preload(
       all_jobs, [
         :user, 
@@ -24,7 +32,8 @@ class PartsController < ApplicationController
       @print_jobs[pj.aasm_state] ||= []
       @print_jobs[pj.aasm_state] << pj
     end
-    @print_jobs['unclaimed'] = Part.where(project_id: @project.id).available.map{|p| FPJ.new(p, p.project, p.updated_at)}
+    @print_jobs['unclaimed'] = Part.where(project_id: @project.id).where(parts[:offset].matches("%,#{@layer}")).available.map{|p| FPJ.new(p, p.project, p.updated_at)}
+    render 'index'
   end
 
 protected

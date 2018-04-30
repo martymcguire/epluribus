@@ -1,5 +1,11 @@
 <div class="container">
-  <h1>All parts for <%= @project.name %></h1>
+  <h1><% if @layer %>Parts for Layer <%= @layer %> of <% else %>All parts for <% end %><%= @project.name %></h1>
+  <p>View another layer:</p>
+	<ul class="nav nav-tabs">
+		<% @layers.each do |l| %>
+			<li role="presentation" <% if l == @layer %>class="active"<% end %>><%= link_to l.to_s, layer_project_parts_path(@project, l) %></li>
+		<% end %>
+	</ul>
   <% ['verifying', 'shipped', 'shipping', 'printed', 'printing', 'accepted', 'unclaimed'].each do |state| %>
     <div class="container">
     <h2><%= state_name(state) %> (<%= @print_jobs[state].nil? ? 0 : @print_jobs[state].size %>)</h2>
