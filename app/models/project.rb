@@ -18,8 +18,7 @@ class Project < ActiveRecord::Base
     if(! claimed_part_ids.empty?)
       selector = selector.where("id NOT IN (?)", claimed_part_ids)
     end
-    idx = rand(selector.count)
-    selector.first(offset: idx)
+    selector.reorder("RANDOM()").first()
   end
 
   def random_part_by_color(color_name)
