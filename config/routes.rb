@@ -34,7 +34,11 @@ Epluribus::Application.routes.draw do
     end
   end
 
-  resources :builders, only: [:show, :edit, :update]
+  resources :builders, only: [:show, :edit, :update] do
+    collection do
+        get 'verify_email/:code', to: 'builders#verify_email', as: :verify_email
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

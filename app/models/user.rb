@@ -36,6 +36,12 @@ class User < ActiveRecord::Base
     (! secondary_email.nil?) && (! secondary_email_confirmed) && (! secondary_email_confirm_token.nil?)
   end
 
+  def confirm_secondary_email!
+    self.secondary_email_confirmed = true
+    self.secondary_email_confirm_token = nil
+    self.save!
+  end
+
 private
   def verify_secondary_email
     if changes.include? "secondary_email"

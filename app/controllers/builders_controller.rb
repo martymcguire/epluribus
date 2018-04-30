@@ -1,6 +1,6 @@
 class BuildersController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:edit, :update]
+  before_filter :authenticate_user!, only: [:edit, :update, :verify_email]
 
   def show
     id = id_from_hashid(params[:id])
@@ -49,6 +49,18 @@ class BuildersController < ApplicationController
         # no changes occurred
         redirect_to view_context.path_to_edit_builder(current_user)
       end
+    end
+  end
+
+  def verify_email
+    @builder = User.find_by_secondary_email_confirm_token!(params[:code])
+    if (@builder.id == current_user.id) && @builder.secondary_email_unconfirmed?
+      @builder.confirm_secondary_email!
+      flash[:success] = "Email confirmed! We'll now send email notifications to the address you specified."
+      redirect_to view_context.path_to_edit_builder(current_user)
+    else
+      flash[:danger] = "Sorry, the email verification link you followed was invalid or expired."
+      redirect_to view_context.path_to_builder(current_user)
     end
   end
 end

@@ -108,6 +108,6 @@ module ApplicationHelper
   end
 
   def email_confirmation_link(user)
-    user.secondary_email_confirm_token
+    verify_email_builders_url(user.secondary_email_confirm_token)
   end
 end
