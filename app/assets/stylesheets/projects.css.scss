@@ -79,3 +79,24 @@ div.recent-activity {
     padding-bottom: 20px;
   }
 }
+
+.completed-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
+  .completed-project {
+    box-shadow: rgba(0,0,0,0.4) 0 0 3px;
+    padding: 1em;
+  }
+  .completed-project-image {
+    max-height: 200px;
+    max-width: 100%;
+
+    img {
+      max-height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+

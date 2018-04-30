@@ -22,25 +22,14 @@
   <% if @older_projects && !@older_projects.empty? %>
       <div class="col-md-8">
         <h3>Completed Projects</h3>
-        <% @older_projects.each do |old_proj| %>
-          <div class="col-sm-4 text-center">
-            <div class="row">
-              <div class="col-xs-12">
-                <h4 style="margin-top: 5px;"><%= old_proj.name %></h4>
-              </div>
+        <div class="completed-projects">
+          <% @older_projects.each do |old_proj| %>
+            <div class="completed-project">
+              <%= link_to(image_tag(old_proj.preview_img), project_path(old_proj), class: "completed-project-image") %>
+              <h4 class="completed-project-title"><%= old_proj.name %></h4>
             </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <%= link_to(image_tag(old_proj.preview_img, style: "width: 200px"), project_path(old_proj)) %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <%= link_to "Learn More", project_path(old_proj), class: "btn", role: 'button' %>
-              </div>
-            </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
   <% end %>
 </div>
