@@ -33,8 +33,7 @@ class Project < ActiveRecord::Base
     if(! claimed_part_ids.empty?)
       selector = selector.where("id NOT IN (?)", claimed_part_ids)
     end
-    idx = rand(selector.count)
-    selector.first(offset: idx)
+    selector.reorder("RANDOM()").first()
   end
 
   def percent_complete
