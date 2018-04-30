@@ -10,6 +10,7 @@ class Notifier < ActionMailer::Base
     @part = print_job.part
     @model_file = @part.model_file
     @user = print_job.user
+    # alert us
     mail(to: ENV['SMTP_ALERT_DESTINATION'])
   end
 
@@ -19,14 +20,17 @@ class Notifier < ActionMailer::Base
     @part = print_job.part
     @model_file = @part.model_file
     @user = print_job.user
-    # FIXME: use secondary email if present and verified!
-    email_with_name = "#{@user.name} <#{@user.email}>"
+    # send to builder's configured notification email address
+    email_with_name = "#{@user.name} <#{@user.notification_email}>"
+    # also CC us so we know it happened.
     mail(to: email_with_name, cc: ENV['SMTP_ALERT_DESTINATION'])
   end
 
   def secondary_email_verification(user)
     @user = user
+    # send directly to their secondary email address
     email_with_name = "#{@user.name} <#{@user.secondary_email}>"
-    mail(to: email_with_name, cc: ENV['SMTP_ALERT_DESTINATION'])
+    # don't CC us. :p
+    mail(to: email_with_name)
   end
 end

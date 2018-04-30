@@ -42,6 +42,14 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def secondary_email_confirmed?
+    (!(self.secondary_email.nil? || self.secondary_email.empty?) && self.secondary_email_confirmed)
+  end
+
+  def notification_email
+    (self.secondary_email_confirmed?) ? self.secondary_email : self.email
+  end
+
 private
   def verify_secondary_email
     if changes.include? "secondary_email"
