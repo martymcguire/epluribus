@@ -209,4 +209,6 @@
       </div>
     <% end %>
   <% end %>
+<% else # if current_user %>
+  <div class="alert">Want to jump in and start printing a part? <%= link_to "Sign in with your Google account", new_user_session_path %> to begin!</div>
 <% end # if current_user %>
