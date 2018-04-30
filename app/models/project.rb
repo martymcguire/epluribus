@@ -5,7 +5,8 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
 
   def part_available?
-    Part.where(project_id: id).available.size > 0
+    avail_count = Part.where(project_id: id).available.size
+    avail_count > parts_in_reserve
   end
 
   def random_part

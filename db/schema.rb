@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430195747) do
+ActiveRecord::Schema.define(version: 20180430202155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20180430195747) do
     t.boolean  "featured"
     t.boolean  "complete"
     t.text     "shipping_address"
+    t.integer  "parts_in_reserve",             default: 0, null: false
   end
 
   create_table "projects_editors", id: false, force: :cascade do |t|
