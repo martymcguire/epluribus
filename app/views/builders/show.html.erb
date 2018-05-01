@@ -6,6 +6,11 @@
     <div class="col-md-9">
       <div class="profile-content">
          <h1>Builder Contributions</h1>
+         <% if @current_user && @current_user.is_admin? %>
+            <h2>Active Print Jobs</h2>
+            <%= render partial: "builder_admin_active_contribution", collection: @active_project_parts.values, as: :builder_contribution %>
+            <h2>Accepted Parts</h2>
+         <% end %>
          <%= render partial: "builder_contribution", collection: @project_parts.values, as: :builder_contribution %>
       </div>
     </div>

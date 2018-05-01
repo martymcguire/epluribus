@@ -10,7 +10,9 @@ module ApplicationHelper
   end
 
   def print_job_photo_preview(print_job)
-    link_to(image_tag(print_job.photo.url(:square)), print_job.photo.url)
+    unless print_job.photo.nil?
+      link_to(image_tag(print_job.photo.url(:square)), print_job.photo.url, class: 'part-photo-preview')
+    end
   end
 
   def project_progress_bar(project)

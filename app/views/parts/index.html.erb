@@ -13,7 +13,9 @@
     <% if @print_jobs[state].nil? %>
       <p>No parts are currently in '<%= state %>'</p>
     <% else %>
-      <%= render partial: "#{state}_part", collection: @print_jobs[state] %>
+      <% @print_jobs[state].each do |pj| %>
+      <%= render partial: "parts/part_list_part", locals: { state: state, print_job: pj } %>
+      <% end %>
     <% end %>
     </div>
   <% end %>

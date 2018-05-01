@@ -1,0 +1,4 @@
+<div class="">
+  <p><%= button_to("Unassign", project_print_job_unassign_path(shipping_part.project_id, shipping_part.id), class: "btn btn-danger btn-block") %></p>
+</div>
+<%= render partial: "parts/admin_part_options", locals: { part: shipping_part } %>

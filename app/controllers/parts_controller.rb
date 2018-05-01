@@ -9,7 +9,7 @@ class PartsController < ApplicationController
 
   ### Admin actions ###
 
-  FPJ = Struct.new(:part, :project, :updated_at, :measurements, :shipping_info, :user)
+  FPJ = Struct.new(:part, :project, :updated_at, :measurements, :shipping_info, :user, :photo)
   def index
     @project = Project.find(params[:project_id])
     redirect_to layer_project_parts_path(@project, 1)

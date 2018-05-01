@@ -3,8 +3,7 @@ class BuildersController < ApplicationController
   before_filter :authenticate_user!, only: [:edit, :update, :verify_email]
 
   def show
-    id = id_from_hashid(params[:id])
-    @builder = User.find_by_id!(id)
+    @builder = user_from_hashid!(params[:id])
     @project_parts = {}
     print_jobs = PrintJob.where(user_id: @builder.id, aasm_state: 'accepted')
     ActiveRecord::Associations::Preloader.new.preload(
@@ -18,11 +17,25 @@ class BuildersController < ApplicationController
       end
       prj[:parts] << pj
     end
+    if current_user && current_user.is_admin?
+      @active_project_parts = {}
+      print_jobs = @builder.print_jobs.where.not(aasm_state: 'accepted')
+      ActiveRecord::Associations::Preloader.new.preload(
+        print_jobs, {:part => [:model_file, :project]}
+      )
+      print_jobs.each do |pj|
+        state = @active_project_parts[pj.aasm_state]
+        if state.nil?
+          state = { state: pj.aasm_state, parts: [] }
+          @active_project_parts[pj.aasm_state] = state
+        end
+        state[:parts] << pj
+      end
+    end
   end
 
   def edit
-    id = id_from_hashid(params[:id])
-    @builder = User.find_by_id!(id)
+    @builder = user_from_hashid!(params[:id])
     if @builder.id != current_user.id
       redirect_to view_context.path_to_edit_builder(current_user)
     else
@@ -30,8 +43,7 @@ class BuildersController < ApplicationController
   end
 
   def update
-    id = id_from_hashid(params[:id])
-    @builder = User.find_by_id!(id)
+    @builder = user_from_hashid!(params[:id])
     if @builder.id != current_user.id
       redirect_to view_context.path_to_edit_builder(current_user)
     else

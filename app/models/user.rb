@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :editor_projects, class_name: 'Project', join_table: 'projects_editors'
 
+  has_many :print_jobs
+
   validates_email_format_of :secondary_email,
     :message => 'Must be a valid email address.',
     :allow_blank => true
@@ -26,6 +28,16 @@ class User < ActiveRecord::Base
           )
       end
       user
+  end
+
+  def self.find_for_hashid(hashid)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    return User.find_by_id(hashids.decode(hashid))
+  end
+
+  def self.find_for_hashid!(hashid)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    return User.find_by_id!(hashids.decode(hashid))
   end
 
   def avatar

@@ -1,0 +1,10 @@
+<div>
+  <% state = builder_contribution[:state] %>
+  <% print_jobs = builder_contribution[:parts] %>
+  <h3><%= state_name(state) %> (<%= pluralize(print_jobs.count, 'Part')%>)</h3>
+  <div class="builder-contribution">
+      <% print_jobs.each do |pj| %>
+        <%= render partial: "parts/part_list_part", locals: { state: state, print_job: pj } %>
+      <% end %>
+  </div>
+</div>

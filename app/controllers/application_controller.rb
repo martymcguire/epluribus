@@ -30,4 +30,12 @@ class ApplicationController < ActionController::Base
     hashids = Hashids.new(HashidConfig.config[:salt])
     return hashids.decode(hashid)
   end
+
+  def user_from_hashid(hashid)
+    User.find_for_hashid(hashid)
+  end
+
+  def user_from_hashid!(hashid)
+    User.find_for_hashid!(hashid)
+  end
 end
