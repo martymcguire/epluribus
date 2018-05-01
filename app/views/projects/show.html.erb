@@ -1,3 +1,13 @@
+<% content_for :head do %>
+	<% desc = truncate(ActionView::Base.full_sanitizer.sanitize(@project.description), :length => 155, :separator => '…').gsub(/\n+/, ' ') %>
+	<meta name="description" content="<%= desc %>"/>
+	<meta property="og:url" content="<%= request.original_url %>" />
+	<meta property="og:title" content="<%= @project.name %> – We the Builders" />
+	<meta property="og:description" content="<%= desc %>" />
+	<meta property="og:image" content="<%= @project.preview_img %>" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@we_the_builders" />
+<% end %>
 <div class="container">
   <%= render partial: 'shared/builder_todo' %>
   <div class="row">
