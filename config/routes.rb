@@ -24,6 +24,7 @@ Epluribus::Application.routes.draw do
     end
     resources :print_jobs do
       post 'printed'
+      get 'printundo'
       post 'submit'
       post 'verify'
       post 'accept'

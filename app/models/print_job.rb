@@ -38,6 +38,10 @@ class PrintJob < ActiveRecord::Base
       transitions from: :printing, to: :printed
     end
 
+    event :printed_undo do
+      transitions from: :printed, to: :printing
+    end
+
     event :submit do
       # 2018-04-22 - parts with submitted photos go directly to shipping state
       transitions from: :printed, to: :shipping

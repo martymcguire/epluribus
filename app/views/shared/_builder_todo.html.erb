@@ -102,10 +102,12 @@
       <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-6">
-          Thanks for the details! Let's go to the next step!
+          <p>Not ready to submit this part? Let's go back to the previous step.</p>
+          <%= link_to "Show me this part again", project_print_job_printundo_path(@project,@print_job), class: "btn btn-default" %>
         </div>
         <div class="col-xs-4">
-          <input type="submit" value="All Done! Submit it!" class="btn btn-primary btn-lg"></input>
+          <p>Thanks for the details! Let's go to the next step!</p>
+          <input type="submit" value="All Done! Submit part!" class="btn btn-primary"></input>
         </div>
       </div>
     </form>

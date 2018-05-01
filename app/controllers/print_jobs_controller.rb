@@ -8,6 +8,11 @@ class PrintJobsController < ApplicationController
     redirect_to project_path(@print_job.project_id)
   end
 
+  def printundo
+    @print_job.printed_undo!
+    redirect_to project_path(@print_job.project_id)
+  end
+
   def submit
     @print_job.photo = params[:photo]
     @print_job.measurements = [params['x-measure'], params['y-measure'], params['z-measure']].join(',')
