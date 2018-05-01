@@ -1,8 +1,8 @@
 class PartsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :find_part_from_params, except: [:index, :layer]
-  before_filter :require_project_admin!, only: :index
+  before_filter :find_part_from_params, except: [:index, :layer, :show]
+  before_filter :require_project_admin!, only: [:index, :layer, :show]
 
   def preview
   end
@@ -34,6 +34,14 @@ class PartsController < ApplicationController
     end
     @print_jobs['unclaimed'] = Part.where(project_id: @project.id).where(parts[:offset].matches("%,#{@layer}")).available.map{|p| FPJ.new(p, p.project, p.updated_at)}
     render 'index'
+  end
+
+  def show
+    @part = Project.find(params[:project_id]).parts.find(params[:id])
+    @print_jobs = @part.print_jobs
+    if @print_jobs.empty?
+      @fpj = FPJ.new(@part, @part.project, @part.updated_at)
+    end
   end
 
 protected

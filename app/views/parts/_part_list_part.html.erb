@@ -2,7 +2,7 @@
   <%= part_preview(print_job.part) %>
   <%= print_job_photo_preview(print_job) %>
   <div class="part-details">
-    <%= render partial: "parts/part_details", locals: { part: print_job } %>
+    <%= render partial: "parts/part_details", locals: { part: print_job, state: state } %>
   </div>
   <div class="part-admin-controls">
     <%= render partial: "parts/admin_controls/#{state}", locals: { "#{state}_part".to_sym => print_job } %>

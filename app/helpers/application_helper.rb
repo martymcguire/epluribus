@@ -56,7 +56,8 @@ module ApplicationHelper
       'verifying' => "Awaiting Admin Verification",
       'shipping' => "Ready to Ship",
       'shipped' => "Shipped",
-      'accepted' => "Received and Accepted"
+      'accepted' => "Received and Accepted",
+      'rejected' => "Rejected"
     }
     titles[state] || "Unknown State '#{state}'"
   end

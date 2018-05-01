@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>All print jobs for Part <%= @part.part_name %> (<%= @part.id %>)</h1>
+  <% if @print_jobs.empty? %>
+      <%= render partial: "parts/part_list_part", locals: { state: 'unclaimed', print_job: @fpj } %>
+  <% else %>
+    <% @print_jobs.each do |pj| %>
+      <%= render partial: "parts/part_list_part", locals: { state: pj.aasm_state, print_job: pj } %>
+    <% end %>
+  <% end %>
+</div>

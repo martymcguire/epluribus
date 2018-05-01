@@ -1,5 +1,6 @@
+State: <%= state_name(state) %><br />
 Project: <%= link_to part.project.name, part.project %><br />
-Part: <%= part.part.part_name %> (<%= part.part.id %>)<br />
+Part: <%= link_to "#{part.part.part_name} (#{part.part.id})", project_part_path(part.project.id, part.part.id) %><br />
 Expected Dimensions: <%= part.part.extents.split(',').join(', ') %><br />
 Desired Color: <%= part.part.desired_color.label %><br />
 <% if !!part.measurements %>
