@@ -137,22 +137,23 @@
       <% @shipping_print_jobs.each do |print_job| %>
         <div class="well shipping-part">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <%= part_preview(print_job.part) %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <%= print_job_photo_preview(print_job) %>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
               <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
             <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>" />
           </div>
         </div>
       <% end %>
-    <p>Thank you so much for your help! Your <%= "print".pluralize(@shipping_print_jobs.size) %> should be ready to ship! Please mail <%= 'it'.pluralize(@shipping_print_jobs.size) %> to:
-    </p>
+    <p>Thank you so much for your help! Your <%= "print".pluralize(@shipping_print_jobs.size) %> should be ready to ship! Please mail your package to:</p>
     <p><strong><%= markdown (@project.shipping_address || "TBD") %></strong></p>
+    <p>Grab a sharpie and write your Part <%= 'ID'.pluralize(@shipping_print_jobs.size) %> on the outside of your shipping box or envelope.<br/>
+    This will <em>greatly</em> help us keep track of the <%= @project.parts.size %> parts for this project as they come in!</p>
     <p>
     Please enter your tracking number so we know when it will arrive.
     </p>
