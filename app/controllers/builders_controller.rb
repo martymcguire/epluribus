@@ -31,6 +31,8 @@ class BuildersController < ApplicationController
         end
         state[:parts] << pj
       end
+      # Pull out rejected parts into their own list
+      @rejected_project_parts = @active_project_parts.delete('rejected')
     end
   end
 
