@@ -9,11 +9,11 @@
          <% if @current_user && @current_user.is_admin? %>
             <h2>Active Print Jobs</h2>
             <%= render partial: "builder_admin_active_contribution", collection: @active_project_parts.values, as: :builder_contribution %>
-            <% if ! @rejected_project_parts.nil? %>
+            <% unless @rejected_project_parts.nil? %>
               <h2>Rejected Print Jobs</h2>
-              <%= render partial: "builder_admin_active_contribution", collection: @rejected_project_parts, as: :builder_contribution %>
+              <%= render partial: "builder_admin_active_contribution", locals: { builder_contribution: @rejected_project_parts } %>
             <% end %>
-            <% if ! @project_parts.nil? %>
+            <% unless @project_parts.nil? %>
               <h2>Accepted Parts</h2>
             <% end %>
          <% end %>
