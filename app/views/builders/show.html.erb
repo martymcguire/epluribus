@@ -13,7 +13,7 @@
               <h2>Rejected Print Jobs</h2>
               <%= render partial: "builder_admin_active_contribution", collection: @rejected_project_parts, as: :builder_contribution %>
             <% end %>
-            <%= if ! @project_parts.nil? %>
+            <% if ! @project_parts.nil? %>
               <h2>Accepted Parts</h2>
             <% end %>
          <% end %>
