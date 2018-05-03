@@ -47,7 +47,22 @@
     <div class="well">
     <form action="<%= project_print_job_submit_path(@project,@print_job) %>" method="POST" enctype='multipart/form-data'>
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-      <p class="lead">Mark and Photograph</p>
+      <p class="lead"><strong>Verify Part <%= @print_job.part.part_name %></strong></p>
+      <div class="row">
+        <div class="col-md-2">
+          <p><%= part_preview(@print_job.part) %></p>
+        </div>
+        <div class="col-md-6">
+          <p>Thank you for printing this part! There are just a few more steps needed to get your part ready to ship.</p>
+          <p>Double-check that the part you printed matches the render photo on the left.</p>
+        </div>
+        <div class="col-md-4 pull-right">
+          <p>Not ready to submit this part? Let's go back to the previous step.</p>
+          <%= link_to "Show me this part again", project_print_job_printundo_path(@project,@print_job), class: "btn btn-primary" %>
+        </div>
+      </div>
+      <hr style="border: 1px dashed #999"/>
+      <p class="lead">1. Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
           <p><%= image_tag "part-marking.jpg", width: '150px' %>
@@ -57,7 +72,7 @@
         <div class="col-md-6">
           <p>Grab a sharpie and write your Part ID on your finished print!
             <ul>
-              <li>Pick a flat side that will end up on the "inside" the finished build.</li>
+              <li>Pick a flat side that will end up on the "inside" of the finished build.</li>
               <li>Clearly write your Part ID in Sharpie: <strong><%= @print_job.part.part_name %></strong>.</li>
               <li>Go ahead and sign it. :)</li>
             </ul>
@@ -72,7 +87,7 @@
         </div>
       </div>
       <hr style="border: 1px dashed #999"/>
-      <p class="lead">Measure</p>
+      <p class="lead">2. Measure</p>
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-6">
@@ -95,15 +110,14 @@
         </div>
       </div>
       <hr style="border: 1px dashed #999"/>
+      <p class="lead">3. Check it In!</p>
       <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-6">
-          <p>Not ready to submit this part? Let's go back to the previous step.</p>
-          <%= link_to "Show me this part again", project_print_job_printundo_path(@project,@print_job), class: "btn btn-default" %>
+          <p>That's all the details we need for this part! Click "Check it In!" to go to the next step.</p>
         </div>
         <div class="col-xs-4">
-          <p>Thanks for the details! Let's go to the next step!</p>
-          <input type="submit" value="All Done! Submit part!" class="btn btn-primary"></input>
+          <input type="submit" value="Check it In!" class="btn btn-primary"></input>
         </div>
       </div>
     </form>
@@ -160,7 +174,7 @@
         <input name='shipping_info' type="text" class="form-control" placeholder="Tracking Number">
       </div>
       <div class="col-xs-2">
-    <input type="submit" value="Submit" class="btn btn-primary btn-sm"></input>
+    <input type="submit" value="I Shipped It!" class="btn btn-primary btn-sm"></input>
       </div>
     </div>
     </form>
