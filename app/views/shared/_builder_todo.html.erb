@@ -32,18 +32,14 @@
           <p>We've chosen a random part for you to print. Give it a shot!</p>
           <p><%= desired_part_color(@print_job.part) %></p>
           <p><strong>Recommended print settings:</strong> 2 shells. Infill between 5-15%.</p>
-          <p>When the part has finished printing, click the "I'm Done!" button!</p>
+          <p>When the part has finished printing, click the "I Printed It!" button!</p>
           <%= render partial: 'parts/part_public_details', locals: { part: @print_job.part } %>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">
-          <%= link_to "Download STL File", @print_job.part.download_url, class: "btn btn-primary" %><br>
-        </div>
-        <div class="col-md-6">
-      <div class="pull-right">
-            <%= button_to "I'm Done! Now What?", [@project, @print_job, :printed], {class: "btn btn-success"} %>
-      </div>
+        <div class="col-md-6 pull-right" style="display: flex; justify-content: flex-end">
+            <%= link_to "<i class='fa fa-download'></i> Download this Part".html_safe, @print_job.part.download_url, class: "btn btn-primary", style: "margin-right: 1em" %><br>
+            <%= link_to "<i class='fa fa-check'></i> I Printed It!".html_safe, [@project, @print_job, :printed], class: "btn btn-primary", method: :post %>
         </div>
       </div>
     </div>
