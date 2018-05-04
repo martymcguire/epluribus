@@ -12,6 +12,12 @@ class Part < ActiveRecord::Base
     joins(:print_jobs).where("aasm_state != 'rejected'")
   end
 
+  # useful to find parts that fit on a small build plate.
+  # note: round build plates have a longest side of Math.sqrt((diam**2)/2)
+  def self.smaller_than(longest_side_mm)
+    select {|p| p.extents.split(',').map{|xyz| xyz.to_f}.max < longest_side_mm}
+  end
+
   def claim_for_user(user)
     print_jobs.create(
       project_id: project_id,
