@@ -100,3 +100,42 @@ div.recent-activity {
   }
 }
 
+.prj-stats-box {
+  text-align: center;
+  *[class$='-count'] {
+    font-weight: bold;
+  }
+  .total-progress {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    margin: 1em 0;
+    padding: 0 0 1em;
+
+    > div {
+      margin: 0.5em 0;
+    }
+  }
+  .in-progress-progress {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1em 0;
+    padding: 0 0 1em;
+
+    > div {
+      margin: 0.5em 0;
+    }
+    .total-in-progress {
+      width: 100%;
+    }
+    .progress-count {
+      font-size: 1.2;
+    }
+  }
+  .remaining-progress {
+    > div {
+      margin: 0.5em 0;
+    }
+  }
+}

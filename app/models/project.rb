@@ -36,21 +36,33 @@ class Project < ActiveRecord::Base
     selector.reorder("RANDOM()").first()
   end
 
+  def complete_count
+    self.print_jobs.where('aasm_state = ?', 'accepted').size
+  end
+
   def percent_complete
     (self.parts.size == 0) ? 0.0 : (
-      100.0 * (self.print_jobs.where('aasm_state = ?', 'accepted').size.to_f / self.parts.size.to_f)
+      100.0 * (self.complete_count.to_f / self.parts.size.to_f)
     )
+  end
+
+  def shipping_count
+    self.print_jobs.where('aasm_state IN (?)', ['shipping','shipped']).size
   end
 
   def percent_shipping
     (self.parts.size == 0) ? 0.0 : (
-      100.0 * (self.print_jobs.where('aasm_state IN (?)', ['shipping','shipped']).size.to_f / self.parts.size.to_f)
+      100.0 * (self.shipping_count.to_f / self.parts.size.to_f)
     )
+  end
+
+  def active_count
+    self.print_jobs.active.size
   end
 
   def percent_active
     (self.parts.size == 0) ? 0.0 : (
-      100.0 * (self.print_jobs.active.size.to_f / self.parts.size.to_f)
+      100.0 * (self.active_count.to_f / self.parts.size.to_f)
     )
   end
 

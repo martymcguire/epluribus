@@ -26,14 +26,7 @@
     <div class="col-md-3">
       <div class="row">
         <div class="thumbnail">
-          <%= link_to(image_tag(@project.preview_img), project_path(@project)) %>
-          <div class="caption">
-            <p>Total Progress:</p>
-            <%= project_progress_bar(@project) %>
-            <% if current_user && @project.user_is_admin?(current_user) %>
-              <%= link_to("Parts Admin", project_parts_path(@project), class: "btn btn-primary") %>
-            <% end %>
-          </div>
+          <%= render partial: 'stats', locals: { project: @project } %>
         </div>
       </div>
       <div class="row project-pg-activity">
