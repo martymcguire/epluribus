@@ -1,10 +1,10 @@
 <% print_job = print_job_activity %>
 <div class="row">
 <% if ! print_job.user_id.nil? %>
-  <div class="col-md-4">
+  <div class="col-xs-4">
     <%= image_tag print_job.user.avatar, class: 'activitar' %>
   </div>
-  <div class="col-md-8" style="padding-left: 0">
+  <div class="col-xs-8" style="padding-left: 0">
     <%= print_job.user.name %> <%= print_job_activity(print_job).html_safe %> Part <%= print_job.part.part_name %>
 <% end %>
   <span><%= time_ago_in_words(print_job.updated_at) %> ago</span>
