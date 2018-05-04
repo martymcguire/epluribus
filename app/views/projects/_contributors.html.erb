@@ -1,7 +1,7 @@
 <% if people.size > 0 %>
   <h3>Contributors</h3>
   <p>Our thanks to all the people who are making this project happen!</p>
-  <ul class="contributors">
+  <ul class="contributors clearfix" style="margin-bottom: 1em">
     <% people.each do |person| %>
       <li>
         <%= link_to(image_tag(person.avatar, class: 'img-circle', title: "#{person.name} (#{pluralize(person.part_count, 'Part')})", alt: "#{person.name} (#{pluralize(person.part_count, 'Part')})"), path_to_builder(person)) %>
