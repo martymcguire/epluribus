@@ -40,6 +40,11 @@ class User < ActiveRecord::Base
     return User.find_by_id!(hashids.decode(hashid))
   end
 
+  def hashid
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    return hashids.encode(id)
+  end
+
   def avatar
     attributes['avatar'] || 'no-avatar.png'
   end
