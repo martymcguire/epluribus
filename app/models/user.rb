@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
                password: Devise.friendly_token[0,20]
           )
       end
+      if user.avatar != data["image"]
+        user.avatar = data["image"]
+        user.save
+      end
       user
   end
 
