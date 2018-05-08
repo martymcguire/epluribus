@@ -1,8 +1,8 @@
 class PartsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :find_part_from_params, except: [:index, :layer, :show]
-  before_filter :require_project_admin!, only: [:index, :layer, :show]
+  before_filter :find_part_from_params, except: [:by_label, :index, :layer, :show]
+  before_filter :require_project_admin!, only: [:by_label, :index, :layer, :show]
 
   def preview
   end
@@ -13,6 +13,11 @@ class PartsController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     redirect_to layer_project_parts_path(@project, 1)
+  end
+
+  def by_label
+    @part = Project.find(params[:project_id]).parts.where(part_label: params[:label]).first!
+    redirect_to project_part_path(@part.project_id, @part.id)
   end
 
   def layer
