@@ -7,33 +7,46 @@
       <%= render partial: "builder_sidebar" %>
     </div>
     <div class="col-md-9">
-      <%= form_for @builder, :url => path_to_builder(@builder), :method => 'put' do |f| %>
-        <fieldset>
-          <legend>Email Notifications</legend>
-          <div class="form-group">
-            <label>Primary Email</label>
-            <span class="form-control" disabled><%= obfuscate_email(@builder.email) %></span>
-            <span class="help-block">The email address you use to log in. 
-            <% if (@builder.secondary_email.nil? || @builder.secondary_email.empty? || @builder.secondary_email_unconfirmed?) %>You'll receive notifications and questions about your prints to this address.<% end %></span>
-          </div>
-          <div class="form-group<%= @builder.errors.include?(:secondary_email) ? ' has-error' : ''%>">
-            <label for="secondary-email">Notifications Email</label>
-            <%= f.email_field 'secondary_email', :class => 'form-control' %>
-          </div>
-          <% if @builder.errors.include? :secondary_email %>
-            <div><small style="color: red"><%= @builder.errors[:secondary_email].to_sentence %></small></div>
-          <% end %>
-          <span class="help-block">
-            <% if @builder.secondary_email_unconfirmed? %>
-              We need to verify this address before it can be used for notifications. Please check your email for a confirmation link.<% if false %> TODO: Didn't get a confirmation email? Click here to re-send.<% end %>
-            <% elsif !(@builder.secondary_email.nil? || @builder.secondary_email.empty?) %>
-              You'll receive notification emails at this address.
-            <% else %>
-              If you would like to receive notifications at another email address, please enter it here.
+      <div class="row-fluid">
+        <%= form_for @builder, :url => path_to_builder(@builder), :method => 'put' do |f| %>
+          <fieldset>
+            <legend>Email Notifications</legend>
+            <div class="form-group">
+              <label>Primary Email</label>
+              <span class="form-control" disabled><%= obfuscate_email(@builder.email) %></span>
+              <span class="help-block">The email address you use to log in. 
+              <% if (@builder.secondary_email.nil? || @builder.secondary_email.empty? || @builder.secondary_email_unconfirmed?) %>You'll receive notifications and questions about your prints to this address.<% end %></span>
+            </div>
+            <div class="form-group<%= @builder.errors.include?(:secondary_email) ? ' has-error' : ''%>">
+              <label for="secondary-email">Notifications Email</label>
+              <%= f.email_field 'secondary_email', :class => 'form-control' %>
+            </div>
+            <% if @builder.errors.include? :secondary_email %>
+              <div><small style="color: red"><%= @builder.errors[:secondary_email].to_sentence %></small></div>
             <% end %>
-          </span>
-          <%= f.submit "#{(@builder.secondary_email.nil? || @builder.secondary_email.empty?) ? 'Add' : 'Update'} Secondary Email", :class => "btn btn-primary" %>
-        </fieldset>
+            <span class="help-block">
+              <% if @builder.secondary_email_unconfirmed? %>
+                We need to verify this address before it can be used for notifications. Please check your email for a confirmation link.<% if false %> TODO: Didn't get a confirmation email? Click here to re-send.<% end %>
+              <% elsif !(@builder.secondary_email.nil? || @builder.secondary_email.empty?) %>
+                You'll receive notification emails at this address.
+              <% else %>
+                If you would like to receive notifications at another email address, please enter it here.
+              <% end %>
+            </span>
+            <%= f.submit "#{(@builder.secondary_email.nil? || @builder.secondary_email.empty?) ? 'Add' : 'Update'} Secondary Email", :class => "btn btn-primary" %>
+          </fieldset>
+        <% end %>
+      </div><% # email notifications row
+      %>
+      <% unless @builder.max_part_size.nil? %>
+        <div class="row-fluid" style="margin: 1em 0">
+          <legend>Special Part Requests</legend>
+          <div class="form-group">
+            <label>Maximum Part Dimensions</label>
+            <span class="form-control" disabled><%= @builder.max_part_size %>mm</span>
+            <span class="help-block">When you claim a part we will make sure the longest dimension is smaller than this.</span>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

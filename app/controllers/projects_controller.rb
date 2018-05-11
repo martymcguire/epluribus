@@ -32,12 +32,13 @@ class ProjectsController < ApplicationController
 
   def participate
     @project = Project.find(params[:project_id])
-    @print_job = @project.print_jobs.where(user_id: current_user.id).active
+    @u = User.find(current_user.id)
+    @print_job = @project.print_jobs.where(user_id: @u.id).active
     if(@print_job.empty?)
       if(params[:desired_color])
-        @part = @project.random_part_by_color(params[:desired_color])
+        @part = @project.random_part_by_color(params[:desired_color], @u.max_part_size)
       else
-        @part = @project.random_part
+        @part = @project.random_part @u.max_part_size
       end
       @part.claim_for_user(current_user)
     end

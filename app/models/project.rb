@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
     avail_count > parts_in_reserve
   end
 
-  def random_part
+  def random_part(max_part_size = nil)
     # idx = rand(self.parts.available.count)
     # self.parts.available.first(offset: idx)
     # ugh, this is gross. the above fails in pgsql because of stupid
@@ -19,7 +19,12 @@ class Project < ActiveRecord::Base
     if(! claimed_part_ids.empty?)
       selector = selector.where("id NOT IN (?)", claimed_part_ids)
     end
-    selector.reorder("RANDOM()").first()
+    if(max_part_size.nil?)
+      return selector.reorder("RANDOM()").first()
+    else
+      smaller_parts = selector.smaller_than(max_part_size)
+      return smaller_parts[rand(smaller_parts.size)]
+    end
   end
 
   def random_part_by_color(color_name)
@@ -33,7 +38,12 @@ class Project < ActiveRecord::Base
     if(! claimed_part_ids.empty?)
       selector = selector.where("id NOT IN (?)", claimed_part_ids)
     end
-    selector.reorder("RANDOM()").first()
+    if(max_part_size.nil?)
+      return selector.reorder("RANDOM()").first()
+    else
+      smaller_parts = selector.smaller_than(max_part_size)
+      return smaller_parts[rand(smaller_parts.size)]
+    end
   end
 
   def complete_count
