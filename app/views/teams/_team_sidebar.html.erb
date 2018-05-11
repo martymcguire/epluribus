@@ -1,0 +1,39 @@
+      <div class="profile-sidebar">
+        <div class="profile-userpic">
+          <img src="<%= @team.avatar %>" class="img-responsive" alt="">
+        </div>
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%= @team.name %>
+          </div>
+          <div class="profile-usertitle-job">
+            Team
+          </div>
+          <div class="profile-usertitle-job">
+            <%= link_to @team.project.name, project_path(@team.project) %>
+          </div>
+        </div>
+        <p class="profile-bio">
+          <%= @team.description %>
+        </p>
+        <% if current_user && @team.user_is_admin?(current_user) %>
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li<% if current_page? url_for(project_team_path(@team.project, @team.hashid)) %> class="active"<% end %>>
+                <a href="<%= url_for(project_team_path(@team.project, @team.hashid)) %>"> <i class="fa fa-home"></i> Contributions </a>
+              </li>
+              <li<% if current_page? url_for(edit_project_team_path(@team.project,@team.hashid)) %> class="active"<% end %>>
+                <a href="<%= url_for(edit_project_team_path(@team.project,@team.hashid)) %>"> <i class="fa fa-user"></i> Members </a>
+              </li>
+              <% if false %>
+                <li>
+                  <a href="#"> <i class="fa fa-check"></i> Print Jobs </a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fa fa-flag"></i> Help </a>
+                </li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>

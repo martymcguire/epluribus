@@ -34,6 +34,7 @@ Epluribus::Application.routes.draw do
         post 'ship'
       end
     end
+    resources :teams, only: [:show, :edit]
   end
 
   resources :builders, only: [:show, :edit, :update] do

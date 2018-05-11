@@ -95,6 +95,25 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def team_contributors
+    team_ids_counts = print_jobs.joins("LEFT JOIN teams_users tu ON tu.user_id = print_jobs.user_id").where(
+        "print_jobs.user_id IS NOT NULL AND aasm_state in (?)",
+        ['accepted','shipped','shipping']
+    ).group("team_id").where("team_id IS NOT NULL").pluck('team_id', 'count(*)')
+    team_ids_counts.sort!{ |a,b| b[1] <=> a[1] }
+    team_ids = team_ids_counts.map{ |tid,c| tid }
+    teams = Hash[ Team.find(team_ids).map{ |t| [t.id,t] } ]
+    team_ids_counts.map do |tid,count|
+      t = teams[tid]
+      OpenStruct.new({
+        id: t.id,
+        name: t.name,
+        avatar: t.avatar,
+        part_count: count
+      })
+    end
+  end
+
   def user_is_admin?(u)
     if editors.include? u
       return true

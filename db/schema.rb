@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180511153611) do
+ActiveRecord::Schema.define(version: 20180511201801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,28 @@ ActiveRecord::Schema.define(version: 20180511153611) do
 
   add_index "projects_editors", ["project_id", "user_id"], name: "index_projects_editors_on_project_id_and_user_id", unique: true, using: :btree
 
+  create_table "teams", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "invite_code"
+    t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "teams", ["project_id"], name: "index_teams_on_project_id", using: :btree
+  add_index "teams", ["user_id"], name: "index_teams_on_user_id", using: :btree
+
+  create_table "teams_users", id: false, force: :cascade do |t|
+    t.integer "team_id", null: false
+    t.integer "user_id", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                         limit: 255, default: "",    null: false
     t.string   "name",                          limit: 255, default: "",    null: false
@@ -112,4 +134,6 @@ ActiveRecord::Schema.define(version: 20180511153611) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "teams", "projects"
+  add_foreign_key "teams", "users"
 end

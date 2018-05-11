@@ -1,0 +1,18 @@
+<div>
+  <% prj = @team.project %>
+  <h3><%= pluralize(@shipping_jobs.size, 'Part')%> Shipped or Shipping</h3>
+  <h3><%= pluralize(@accepted_jobs.size, 'Part')%> Accepted</h3>
+  <div class="builder-contribution">
+    <div class="row">
+      <% @accepted_jobs.each do |pj| part=pj.part %>
+        <div class="col-sm-3 col-xs-6">
+          <div class="thumbnail">
+            <%= image_tag( part.preview_url(:square), className: 'img-responsive') %>
+            <p>Part: <%= part.part_name %></p>
+            <p>Received: <%= pj.updated_at.to_date.to_s(:long).gsub(/ /,'&nbsp;').html_safe %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

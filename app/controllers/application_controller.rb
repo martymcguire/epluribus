@@ -38,4 +38,12 @@ class ApplicationController < ActionController::Base
   def user_from_hashid!(hashid)
     User.find_for_hashid!(hashid)
   end
+  
+  def team_from_hashid(hashid)
+    Team.find_for_hashid(hashid)
+  end
+
+  def team_from_hashid!(hashid)
+    Team.find_for_hashid!(hashid)
+  end
 end

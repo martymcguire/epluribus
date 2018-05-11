@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :editor_projects, class_name: 'Project', join_table: 'projects_editors'
 
+  has_and_belongs_to_many :teams
+
   has_many :print_jobs
 
   validates_email_format_of :secondary_email,

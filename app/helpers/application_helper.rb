@@ -113,4 +113,10 @@ module ApplicationHelper
   def email_confirmation_link(user)
     verify_email_builders_url(user.secondary_email_confirm_token)
   end
+
+  def path_to_project_team(project, team)
+    hashids = Hashids.new(HashidConfig.config[:salt])
+    hashid = hashids.encode(team.id)
+    project_team_path(project,hashid)
+  end
 end

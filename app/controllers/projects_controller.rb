@@ -21,6 +21,8 @@ class ProjectsController < ApplicationController
     ActiveRecord::Associations::Preloader.new.preload(
       @activity, [:user, :part]
     )
+    @individual_contributors = @project.contributors
+    @team_contributors = @project.team_contributors
     if(current_user)
       print_jobs_for_user = @project.print_jobs.for_user(current_user)
       @shipping_print_jobs = print_jobs_for_user.shipping
