@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row profile">
+		<% flash.each do |key, value| %>
+				<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %> 
+    <div class="col-md-3">
+      <%= render partial: "team_sidebar" %>
+    </div>
+    <div class="col-md-9">
+      <div class="row-fluid">
+        <legend>Add Members</legend>
+        <p>Invite new members to your team by sending them your invite code:</p>
+        <input type="text" readonly class="form-control" value="<%= url_for(project_team_join_url(@team.project_id, @team.hashid, @team.invite_code)) %>" />
+        <legend style="margin-top: 1em">Current Members</legend>
+        <ul class="contributors clearfix">
+          <% @members.each do |person| %>
+            <li>
+              <%= link_to(image_tag(person.avatar, class: 'img-circle', title: "#{person.name}", alt: "#{person.name}"), path_to_builder(person)) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

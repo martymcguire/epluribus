@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row profile">
+     <% flash.each do |key, value| %>
+       <div class="alert alert-<%= key %>"><%= value %></div>
+     <% end %>
+    <div class="col-md-3">
+      <%= render partial: "team_sidebar" %>
+    </div>
+    <div class="col-md-9">
+      <div class="profile-content">
+         <h1>Join team <%= @team.name %>?</h1>
+         <p>You are about to join <strong><%= @team.name %></strong>.</p>
+         <ul>
+           <li>Your parts for the <strong><%= link_to @team.project.name, project_path(@team.project) %></strong> project will be counted towards this team's totals.</li>
+           <li>Your individual contributions will still be counted in the contributors list!</li>
+           <% if @old_team %>
+              <li>You will be removed from your current team, <strong><%= link_to @old_team.name, project_team_path(@old_team.project, @old_team.hashid) %></strong>.</li>
+           <% end %>
+         </ul>
+         <%= form_tag do |form| %>
+            <fieldset>
+              <input type="submit" value="Join this Team!" class="btn btn-primary" />
+              <%= link_to "No Thanks", root_path, class: "btn btn-default" %>
+            </fieldset>
+         <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,25 @@
 <div class="container">
   <div class="row profile">
+     <% flash.each do |key, value| %>
+       <div class="alert alert-<%= key %>"><%= value %></div>
+     <% end %>
     <div class="col-md-3">
       <%= render partial: "team_sidebar" %>
     </div>
     <div class="col-md-9">
       <div class="profile-content">
-         <h1>Team Contributions</h1>
-         <%= render partial: "team_contribution" %>
+        <h1>Team Contributions</h1>
+        <% unless @user_role.nil? %>
+          <div class="alert alert-default">
+            <% if @user_role == :member %>
+              <i class="fa fa-user"></i>
+              You are a member of this team.
+            <% elsif @user_role == :admin %>
+              You are the leader for this team. You can invite more members on the <%= link_to "members page", project_team_members_path(@team.project, @team.hashid) %>.<br/>Email <a href="mailto:info@wethebuilers.com">info@wethebuilders.com</a> if you need to change any details about this team.
+            <% end %>
+          </div>
+        <% end %>
+        <%= render partial: "team_contribution" %>
       </div>
     </div>
   </div>

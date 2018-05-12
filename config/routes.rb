@@ -34,7 +34,11 @@ Epluribus::Application.routes.draw do
         post 'ship'
       end
     end
-    resources :teams, only: [:show, :edit]
+    resources :teams, only: [:show] do
+      get 'members'
+      get 'join/:code', to: 'teams#join', as: :join
+      post 'join/:code', to: 'teams#join_verify', as: :join_verify
+    end
   end
 
   resources :builders, only: [:show, :edit, :update] do
