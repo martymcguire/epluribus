@@ -33,10 +33,10 @@ class TeamsController < ApplicationController
       flash[:danger] = "Sorry, that invite link was invalid. Try asking this team's leader for another invite link!"
       redirect_to project_team_path(@team.project_id, @team.hashid)
     end
-    #if @team.members.include? current_user
-    #  flash[:danger] = "You are already a member of this team!"
-    #  redirect_to project_team_path(@team.project_id, @team.hashid)
-    #end
+    if @team.members.include? current_user
+      flash[:danger] = "You are already a member of this team!"
+      redirect_to project_team_path(@team.project_id, @team.hashid)
+    end
   end
 
   def join_verify
