@@ -42,7 +42,11 @@ class ProjectsController < ApplicationController
       else
         @part = @project.random_part @u.max_part_size
       end
-      @part.claim_for_user(current_user)
+      if @part
+        @part.claim_for_user(current_user)
+      else
+        flash[:danger] = "Could not find a part matching your criteria. It's possible all matching parts are claimed. Please check back later in case we release some parts!"
+      end
     end
     redirect_to project_path(@project)
   end
