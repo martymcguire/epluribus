@@ -12,7 +12,9 @@
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
-  <%= render partial: 'shared/builder_todo' %>
+  <% if ! @project.complete? %>
+    <%= render partial: 'shared/builder_todo' %>
+  <% end %>
   <div class="row">
     <div class="col-md-9">
       <h1>
@@ -26,6 +28,9 @@
       </div>
       <%= render partial: 'contributors', locals: { people: @team_contributors, type: 'team' } %>
       <%= render partial: 'contributors', locals: { people: @individual_contributors, type: 'individual' } %>
+    <% if @project.complete? %>
+      <%= render partial: 'shared/builder_todo' %>
+    <% end %>
     </div>
     <div class="col-md-3">
       <div class="row">
