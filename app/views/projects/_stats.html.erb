@@ -1,28 +1,38 @@
 <div class="prj-stats-box">
-	<div class="total-progress">
-    <div class="total-needed">This build requires <span class="total-count"><%= project.parts.count %></span> parts</div>
-    <% if project.complete_count > 0.05 * project.parts.count %>
-      <div class="total-complete">We have completed <span class="total-complete-count"><%= project.complete_count %></span></div>
-      <div style="max-width: 90%; margin: 1em auto 0;"><%= project_progress_bar(project) %></div>
-    <% end %>
-	</div>
-  <div class="in-progress-progress">
-    <% shipping = project.shipping_count %>
-    <% active = project.active_count %>
-    <div class="total-in-progress"><span class="in-progress-count"><%= shipping + active %></span> parts are in progress.</div>
-    <div class="active-progress">
-      <div class="progress-label">Printing</div>
-      <div class="progress-count"><%= active %></div>
+  <% if project.complete? %>
+    <div class="total-needed" style="margin-top: 1em">This build required <span class="total-count"><%= project.parts.count %></span> parts</div>
+    <div class="total-complete">We have completed <span class="total-complete-count">100%</span>!</div>
+    <div style="max-width: 90%; margin: 1em auto 0;">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+      </div>
     </div>
-    <div style="border-right: 1px solid black; margin: 0; padding: 0"></div>
-    <div class="shipping-progress">
-      <div class="progress-label">Shipping</div>
-      <div class="progress-count"><%= shipping %></div>
+  <% else %>
+    <div class="total-progress">
+      <div class="total-needed">This build requires <span class="total-count"><%= project.parts.count %></span> parts</div>
+      <% if project.complete_count > 0.05 * project.parts.count %>
+        <div class="total-complete">We have completed <span class="total-complete-count"><%= project.complete_count %></span></div>
+        <div style="max-width: 90%; margin: 1em auto 0;"><%= project_progress_bar(project) %></div>
+      <% end %>
     </div>
-  </div>
-  <div class="remaining-progress">
-    <div class="unclaimed-progress"><span class="unclaimed-count"><%= project.parts.available.count %></span> parts still need a builder</div>
-  </div>
+    <div class="in-progress-progress">
+      <% shipping = project.shipping_count %>
+      <% active = project.active_count %>
+      <div class="total-in-progress"><span class="in-progress-count"><%= shipping + active %></span> parts are in progress.</div>
+      <div class="active-progress">
+        <div class="progress-label">Printing</div>
+        <div class="progress-count"><%= active %></div>
+      </div>
+      <div style="border-right: 1px solid black; margin: 0; padding: 0"></div>
+      <div class="shipping-progress">
+        <div class="progress-label">Shipping</div>
+        <div class="progress-count"><%= shipping %></div>
+      </div>
+    </div>
+    <div class="remaining-progress">
+      <div class="unclaimed-progress"><span class="unclaimed-count"><%= project.parts.available.count %></span> parts still need a builder</div>
+    </div>
+	<% end %>
 	<% if current_user && project.user_is_admin?(current_user) %>
 		<%= link_to("Parts Admin", project_parts_path(project), class: "btn btn-primary") %>
 	<% end %>

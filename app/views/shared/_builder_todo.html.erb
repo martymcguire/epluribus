@@ -222,6 +222,6 @@
       </div>
     <% end %>
   <% end %>
-<% else # if current_user %>
+<% elsif ! @project.complete? # no current_user but project is active %>
   <div class="alert">Want to jump in and start printing a part? <%= link_to "Sign in with your Google account", new_user_session_path %> to begin!</div>
 <% end # if current_user %>
