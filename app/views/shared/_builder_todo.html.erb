@@ -31,7 +31,7 @@
         <div class="col-md-9">
           <p>We've chosen a random part for you to print. Give it a shot!</p>
           <p><%= desired_part_color(@print_job.part) %></p>
-          <p><strong>Recommended print settings:</strong> 2 shells. Infill between 5-15%.</p>
+          <p><strong>Recommended print settings:</strong> <% if @project.print_settings? %><%= @project.print_settings %><% else %>2 shells. Infill between 5-15%.<% end %></p>
           <p>When the part has finished printing, click the "I Printed It!" button!</p>
           <%= render partial: 'parts/part_public_details', locals: { part: @print_job.part } %>
         </div>
