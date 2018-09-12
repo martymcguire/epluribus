@@ -70,6 +70,9 @@
           </p>
         </div>
         <div class="col-md-6">
+          <% if @project.marking_instructions %>
+            <%= (markdown @project.marking_instructions).gsub('%PARTID%', @print_job.part.part_name).html_safe %>
+          <% else %>
           <p>Grab a sharpie and write your Part ID on your finished print!
             <ul>
               <li>Pick a flat side that will end up on the "inside" of the finished build.</li>
@@ -77,6 +80,7 @@
               <li>Go ahead and sign it. :)</li>
             </ul>
           </p>
+          <% end %>
           <p>Don't forget to upload a photo of your part so we can admire your handiwork!</p>
         </div>
         <div class="col-md-4">
