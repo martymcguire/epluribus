@@ -35,5 +35,10 @@
     <span class="help-block">Special instructions for marking the printed parts, if any. <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> and <a href="http://getbootstrap.com/css/">Bootstrap HTML</a> are supported.</span>
     <%= f.text_area :marking_instructions, class: 'form-control', rows: 5 %>
   </div>
+  <div class="form-group">
+    <label for="marking_instructions_photo">Marking Instructions Image URL</label>
+    <span class="help-block">(Optional) A photo to demonstrate special instructions for marking the printed parts, if any.</span>
+    <%= f.text_field :marking_instructions_photo, class: 'form-control', placeholder: 'http://placekitten.com/200/200' %>
+  </div>
   <%= f.submit class: 'btn btn-primary', value: 'Save Details' %>
 <% end %>
