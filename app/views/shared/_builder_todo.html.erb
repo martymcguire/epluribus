@@ -65,7 +65,7 @@
       <p class="lead">1. Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
-          <p><%= image_tag "part-marking.jpg", width: '150px' %>
+          <p><%= image_tag (@project.marking_instructions_photo? ? @project.marking_instructions_photo : "part-marking.jpg"), width: '150px' %>
             <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
           </p>
         </div>
