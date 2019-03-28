@@ -28,7 +28,7 @@
       </div>
       <%= render partial: 'contributors', locals: { people: @team_contributors, type: 'team' } %>
       <%= render partial: 'contributors', locals: { people: @individual_contributors, type: 'individual' } %>
-    <% if @project.complete? %>
+    <% if ! @project.complete? %>
       <%= render partial: 'shared/builder_todo' %>
     <% end %>
     </div>
