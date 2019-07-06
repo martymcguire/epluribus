@@ -96,9 +96,13 @@ class Project < ActiveRecord::Base
   end
 
   def team_contributors
-    team_ids_counts = print_jobs.joins("LEFT JOIN teams_users tu ON tu.user_id = print_jobs.user_id").where(
+    team_ids_counts = print_jobs.joins("LEFT JOIN teams_users tu ON tu.user_id = print_jobs.user_id").joins(
+        "LEFT JOIN teams t ON tu.team_id = t.id"
+    ).where(
         "print_jobs.user_id IS NOT NULL AND aasm_state in (?)",
         ['accepted','shipped','shipping']
+    ).where(
+        "t.project_id = ?", self.id
     ).group("team_id").where("team_id IS NOT NULL").pluck('team_id', 'count(*)')
     team_ids_counts.sort!{ |a,b| b[1] <=> a[1] }
     team_ids = team_ids_counts.map{ |tid,c| tid }
