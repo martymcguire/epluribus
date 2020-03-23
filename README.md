@@ -24,11 +24,14 @@ Baltimore, MD.
 Our team is:
 
 * Todd Blatt (concept, modeling, file and part wrangling, assembly)
+* Marty McGuire (web dev, assembly)
+* Jen Schachter (wordsmith, sculptor and organizer)
 * David Fine (web dev)
 * Matthew Griffin (concept, writing)
 * Amy Hurst (UX)
-* Ryan Kittleson (modeling)
-* Marty McGuire (web dev, assembly)
+* Ryan Kittleson (modeling poe and george slicer)
+* Chris Preisinger (web dev)
+* Corey Constantino (web dev)
 
 Deployment
 ==========
