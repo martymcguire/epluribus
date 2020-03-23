@@ -2,17 +2,18 @@ class ProjectsController < ApplicationController
 
   before_filter :authenticate_user!, except: [:show, :index, :preview]
   before_filter :require_project_admin!, only: [:edit, :update]
+  before_action -> ( param = params[:id] ) { require_public_or_admin! param }, only: %i|show|
 
   def index
-    @project = Project.where(featured: true).first
+    @project = Project.published.where(featured: true).first
     if(@project.nil?)
-      @project = Project.last
+      @project = Project.published.last
     end
     @activity = []
     if(@project)
       @activity = @project.print_jobs.order('updated_at DESC').limit(8)
     end
-    @older_projects = Project.where(complete: true).order('updated_at DESC')
+    @older_projects = Project.published.where(complete: true).order('updated_at DESC')
   end
 
   def show

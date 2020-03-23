@@ -4,6 +4,8 @@ class Project < ActiveRecord::Base
   has_many :print_jobs
   has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
 
+  scope :published, -> { where("status = 'published'") }
+
   def part_available?
     avail_count = Part.where(project_id: id).available.size
     avail_count > parts_in_reserve
@@ -129,5 +131,13 @@ class Project < ActiveRecord::Base
 
   def layers
     parts.map{|p| p.offset.split(',')[2].to_i }.uniq.sort
+  end
+
+  def is_published?
+    self.status == "published"
+  end
+
+  def is_draft?
+    self.status == "draft"
   end
 end

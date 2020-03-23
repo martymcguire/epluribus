@@ -26,6 +26,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_public_or_admin!(project_id)
+    project = Project.find(project_id)
+
+    if (! project.is_published? && ! current_user.is_admin?)
+      redirect_to root_path
+    end
+  end
+
   def id_from_hashid(hashid)
     hashids = Hashids.new(HashidConfig.config[:salt])
     return hashids.decode(hashid)

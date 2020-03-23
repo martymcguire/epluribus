@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180915193536) do
+ActiveRecord::Schema.define(version: 20200323164509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,35 +20,35 @@ ActiveRecord::Schema.define(version: 20180915193536) do
     t.integer  "part_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "file_file_name",      limit: 255
-    t.string   "file_content_type",   limit: 255
-    t.integer  "file_file_size"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size",      limit: 8
     t.datetime "file_updated_at"
-    t.integer  "render_state",                    default: 0
-    t.string   "render_file_name",    limit: 255
-    t.string   "render_content_type", limit: 255
-    t.integer  "render_file_size"
+    t.integer  "render_state",                  default: 0
+    t.string   "render_file_name"
+    t.string   "render_content_type"
+    t.integer  "render_file_size",    limit: 8
     t.datetime "render_updated_at"
   end
 
   create_table "part_colors", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "label",       limit: 255
-    t.string   "description", limit: 255
+    t.string   "name"
+    t.string   "label"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "parts", force: :cascade do |t|
     t.integer  "project_id"
-    t.string   "offset",           limit: 255
-    t.string   "extents",          limit: 255
+    t.string   "offset"
+    t.string   "extents"
     t.float    "volume"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "print_jobs_count"
-    t.string   "part_label",       limit: 255
-    t.integer  "desired_color_id",             default: 1, null: false
+    t.string   "part_label"
+    t.integer  "desired_color_id", default: 1, null: false
   end
 
   add_index "parts", ["project_id"], name: "index_parts_on_project_id", using: :btree
@@ -57,31 +57,32 @@ ActiveRecord::Schema.define(version: 20180915193536) do
     t.integer  "user_id"
     t.integer  "project_id"
     t.integer  "part_id"
-    t.string   "aasm_state",         limit: 255
-    t.string   "measurements",       limit: 255
-    t.string   "shipping_info",      limit: 255
+    t.string   "aasm_state"
+    t.string   "measurements"
+    t.string   "shipping_info"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name",    limit: 255
-    t.string   "photo_content_type", limit: 255
-    t.integer  "photo_file_size"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size",    limit: 8
     t.datetime "photo_updated_at"
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name",                       limit: 255
+    t.string   "name"
     t.text     "description"
-    t.string   "preview_stl",                limit: 255
+    t.string   "preview_stl"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "preview_img",                limit: 255
+    t.string   "preview_img"
     t.boolean  "featured"
     t.boolean  "complete"
     t.text     "shipping_address"
-    t.integer  "parts_in_reserve",                       default: 0, null: false
+    t.integer  "parts_in_reserve",           default: 0,       null: false
     t.string   "print_settings"
     t.string   "marking_instructions"
     t.string   "marking_instructions_photo"
+    t.string   "status",                     default: "draft"
   end
 
   create_table "projects_editors", id: false, force: :cascade do |t|
@@ -99,10 +100,10 @@ ActiveRecord::Schema.define(version: 20180915193536) do
     t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
+    t.integer  "avatar_file_size",    limit: 8
     t.datetime "avatar_updated_at"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   add_index "teams", ["project_id"], name: "index_teams_on_project_id", using: :btree
@@ -114,23 +115,23 @@ ActiveRecord::Schema.define(version: 20180915193536) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                         limit: 255, default: "",    null: false
-    t.string   "name",                          limit: 255, default: "",    null: false
-    t.string   "avatar",                        limit: 255
-    t.string   "password",                      limit: 255, default: "",    null: false
+    t.string   "email",                         default: "",    null: false
+    t.string   "name",                          default: "",    null: false
+    t.string   "avatar"
+    t.string   "password",                      default: "",    null: false
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                             default: 0,     null: false
+    t.integer  "sign_in_count",                 default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",            limit: 255
-    t.string   "last_sign_in_ip",               limit: 255
-    t.string   "provider",                      limit: 255
-    t.string   "uid",                           limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_admin"
     t.string   "secondary_email"
-    t.boolean  "secondary_email_confirmed",                 default: false
+    t.boolean  "secondary_email_confirmed",     default: false
     t.string   "secondary_email_confirm_token"
     t.integer  "max_part_size"
   end
