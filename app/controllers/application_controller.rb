@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   def require_public_or_admin!(project_id)
     project = Project.find(project_id)
 
-    if (! project.is_published? && ! current_user.is_admin?)
+    if (! project.is_published? && (current_user.nil? || ! current_user.is_admin?))
       redirect_to root_path
     end
   end
