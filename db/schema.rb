@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200323164509) do
+ActiveRecord::Schema.define(version: 20200324005327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20200323164509) do
     t.boolean  "complete"
     t.text     "shipping_address"
     t.integer  "parts_in_reserve",                       default: 0,       null: false
-    t.string   "print_settings"
+    t.text     "print_settings"
     t.string   "marking_instructions"
     t.string   "marking_instructions_photo"
     t.string   "status",                                 default: "draft"

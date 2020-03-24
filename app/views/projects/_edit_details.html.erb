@@ -9,6 +9,11 @@
     <%= f.text_area :description, class: 'form-control', rows: 20 %>
   </div>
   <div class="form-group">
+    <label for="preview_stl">Printing Instructions</label>
+    <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> and <a href="http://getbootstrap.com/css/">Bootstrap HTML</a> are supported.</span>
+    <%= f.text_area :print_settings, class: 'form-control', rows: 20 %>
+  </div>
+  <div class="form-group">
     <label for="shipping_address">Shipping Address</label>
     <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> is supported.</span>
     <%= f.text_area :shipping_address, class: 'form-control', rows: 4 %>
@@ -25,10 +30,6 @@
     <label for="parts_in_reserve">Parts in Reserve</label>
     <span class="help-block">If the number of unclaimed parts is below this number, stop giving out parts. Maximum: <%= @project.parts.size %></span>
     <%= f.number_field :parts_in_reserve, class: 'form-control', style: 'width: 10em' %>
-  </div>
-  <div class="form-group">
-    <label for="preview_stl">Recommended Print Settings</label>
-    <%= f.text_field :print_settings, class: 'form-control', placeholder: '2 shells. Infill between 5-15%.' %>
   </div>
   <div class="form-group">
     <label for="marking-instructions">Marking Instructions</label>
