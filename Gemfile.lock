@@ -827,6 +827,7 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+    nanoid (2.0.0)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.1)
@@ -943,6 +944,7 @@ DEPENDENCIES
   hashids (= 1.0.2)
   jbuilder (~> 1.2)
   jquery-rails
+  nanoid (~> 2.0)
   omniauth-google-oauth2
   paperclip
   pg (~> 0.18)
