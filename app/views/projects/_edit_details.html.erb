@@ -19,6 +19,11 @@
     <%= f.text_area :marking_instructions, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
+    <label for="marking_instructions_photo">Marking Instructions Image URL</label>
+    <span class="help-block">(Optional) A photo to demonstrate special instructions for marking the printed parts, if any.</span>
+    <%= f.text_field :marking_instructions_photo, class: 'form-control', placeholder: 'http://placekitten.com/200/200' %>
+  </div>
+  <div class="form-group">
     <label for="shipping_address">Shipping Address</label>
     <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> is supported.</span>
     <%= f.text_area :shipping_address, class: 'form-control', rows: 4 %>
@@ -35,11 +40,6 @@
     <label for="parts_in_reserve">Parts in Reserve</label>
     <span class="help-block">If the number of unclaimed parts is below this number, stop giving out parts. Maximum: <%= @project.parts.size %></span>
     <%= f.number_field :parts_in_reserve, class: 'form-control', style: 'width: 10em' %>
-  </div>
-  <div class="form-group">
-    <label for="marking_instructions_photo">Marking Instructions Image URL</label>
-    <span class="help-block">(Optional) A photo to demonstrate special instructions for marking the printed parts, if any.</span>
-    <%= f.text_field :marking_instructions_photo, class: 'form-control', placeholder: 'http://placekitten.com/200/200' %>
   </div>
   <%= f.submit class: 'btn btn-primary', value: 'Save Details' %>
 <% end %>
