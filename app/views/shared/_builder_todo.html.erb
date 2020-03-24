@@ -51,35 +51,36 @@
           <p><%= part_preview(@print_job.part) %></p>
         </div>
         <div class="col-md-6">
-          <p>Thank you for printing this part! There are just a few more steps needed to get your part ready to ship.</p>
-          <p>Double-check that the part you printed matches the render photo on the left.</p>
+          <p>Thank you for printing! There are just a few more steps needed to get you ready to ship.</p>
         </div>
         <div class="col-md-4 pull-right">
           <p>Not ready to submit this part? Let's go back to the previous step.</p>
           <%= link_to "Show me this part again", project_print_job_printundo_path(@project,@print_job), class: "btn btn-primary" %>
         </div>
       </div>
+      <% if @project.marking_instructions %>
+        <%= (markdown @project.marking_instructions).gsub('%PARTID%', @print_job.part.part_name).html_safe %>
+      <% end %>
       <hr style="border: 1px dashed #999"/>
-      <p class="lead">1. Mark and Photograph</p>
+      <p class="lead">Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
-          <p><%= image_tag (@project.marking_instructions_photo? ? @project.marking_instructions_photo : "part-marking.jpg"), width: '150px' %>
+          <p><%= link_to(
+                   image_tag( (@project.marking_instructions_photo? ? @project.marking_instructions_photo : "part-marking.jpg"), width: '150px' ),
+                   (@project.marking_instructions_photo? ? @project.marking_instructions_photo : image_path("part-marking.jpg"))
+                 ) %>
             <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
           </p>
         </div>
         <div class="col-md-6">
-          <% if @project.marking_instructions %>
-            <%= (markdown @project.marking_instructions).gsub('%PARTID%', @print_job.part.part_name).html_safe %>
-          <% else %>
-          <p>Grab a sharpie and write your Part ID on your finished print!
+          <p>Grab a sharpie and write your unique Part ID on the outside of your bagged part.
             <ul>
               <li>Pick a flat side that will end up on the "inside" of the finished build.</li>
               <li>Clearly write your Part ID in Sharpie: <strong><%= @print_job.part.part_name %></strong>.</li>
               <li>Go ahead and sign it. :)</li>
             </ul>
           </p>
-          <% end %>
-          <p>Don't forget to upload a photo of your part so we can admire your handiwork!</p>
+          <p>Seal up and take a photo of the finished package. Make sure the Part ID is visible in the photo.</p>
         </div>
         <div class="col-md-4">
           Upload a photo of your finished print.
@@ -89,6 +90,7 @@
           </div>
         </div>
       </div>
+      <%#= # not needed for project 11
       <hr style="border: 1px dashed #999"/>
       <p class="lead">2. Measure</p>
       <div class="row">
@@ -112,8 +114,10 @@
           </div>
         </div>
       </div>
+      <%
+      %>
       <hr style="border: 1px dashed #999"/>
-      <p class="lead">3. Check it In!</p>
+      <p class="lead">Check it In!</p>
       <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-6">
