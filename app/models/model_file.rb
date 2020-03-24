@@ -4,7 +4,7 @@ class ModelFile < ActiveRecord::Base
   belongs_to :part
 
   has_attached_file :file, :s3_headers => { "Content-Type" => "application/octet-stream" }
-  validates_attachment_file_name :file, matches: /.*\.stl/
+  validates_attachment_file_name :file, matches: /.*\.(stl|zip)/
   before_post_process :override_content_type
 
   has_attached_file :render, styles: {
