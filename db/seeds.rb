@@ -4,7 +4,7 @@ alphabet = '0123456789ABCDEFGHJKLMNPQRSTUVWXYZ'
 # Grab the project id
 project_id = Project.find_by_name("MD Makers Unite - Face Shields to Open Works in Baltimore").id
 
-(0..1000).each do |idx|
+(1001..2000).each do |idx|
   p = Part.create(
     project_id: project_id,
     offset: [idx % 10, (idx / 10) % 10, ((idx / 100) % 10) + 1].join(','),
