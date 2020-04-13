@@ -21,7 +21,7 @@ Epluribus::Application.routes.draw do
     resources :parts do
       get 'preview'
       get 'layer/:layer', to: 'parts#layer', on: :collection, as: :layer
-      get 'by-label/:label', to: 'parts#by_label', on: :collection, as: :by_label
+      get 'by-label(/:label)', to: 'parts#by_label', on: :collection, as: :by_label
     end
     resources :print_jobs do
       post 'printed'

@@ -1,4 +1,5 @@
 <div class="container">
+  <%= render partial: "parts/part_by_label_form", locals: { project: @part.project } %>
   <h1>All print jobs for Part <%= @part.part_name %> (<%= @part.id %>)</h1>
   <% if @print_jobs.empty? %>
       <%= render partial: "parts/part_list_part", locals: { state: 'unclaimed', print_job: @fpj } %>

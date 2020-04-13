@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form action="<%= by_label_project_parts_path(project.id) %>">
+      <label for="part-by-label">Find a part by label:</label>
+      <input id="part-by-label" name="label" />
+      <input type="submit" value="Search" >
+      <span class="help-block">Case-sensitive. For example <strong>AJJ2X3</strong>.</span>
+    </form>
+  </div>
+</div>
+

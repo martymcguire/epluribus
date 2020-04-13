@@ -1,5 +1,6 @@
 <div class="container">
   <h1><% if @layer %>Parts for Layer <%= @layer %> of <% else %>All parts for <% end %><%= @project.name %></h1>
+  <%= render partial: "parts/part_by_label_form", locals: { project: @project } %>
   <p>View another layer:</p>
 	<ul class="nav nav-tabs">
 		<% @layers.each do |l| %>

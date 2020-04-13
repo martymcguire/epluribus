@@ -16,8 +16,12 @@ class PartsController < ApplicationController
   end
 
   def by_label
-    @part = Project.find(params[:project_id]).parts.where(part_label: params[:label]).first!
-    redirect_to project_part_path(@part.project_id, @part.id)
+    if (params[:label].nil?)
+      redirect_to project_parts_path(params[:project_id])
+    else
+      @part = Project.find(params[:project_id]).parts.where(part_label: params[:label]).first!
+      redirect_to project_part_path(@part.project_id, @part.id)
+    end
   end
 
   def layer
