@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 4.2.11'
+gem 'rails', '~> 5.2.4.3'
 
 # Use postgresql for Active Record
 gem "pg", "~> 0.18"
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 4.2.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.2.2'
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -35,8 +35,8 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
-# Use unicorn as the app server
-gem 'unicorn'
+# Use puma as the app server
+gem 'puma', '~> 3.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -45,7 +45,7 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 # Markdown!
-gem 'redcarpet', '1.17.2'
+gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
 gem 'devise'
@@ -62,7 +62,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 
 # Heroku configs
-ruby "2.5.1"
+ruby "2.5.8"
 group :production do
   gem 'rails_12factor'
 end

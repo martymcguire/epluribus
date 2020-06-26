@@ -1,4 +1,4 @@
-class PrintJob < ActiveRecord::Base
+class PrintJob < ApplicationRecord
   belongs_to :user
   belongs_to :project
   belongs_to :part, :counter_cache => true, :touch => true
@@ -47,7 +47,7 @@ class PrintJob < ActiveRecord::Base
       transitions from: :printed, to: :shipping
       after do
         # send builder an email notification
-        Notifier.print_verified(self).deliver
+        Notifier.print_verified(self).deliver_now
       end
     end
 

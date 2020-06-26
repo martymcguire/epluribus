@@ -1,8 +1,9 @@
 module ApplicationHelper
 
   def markdown(text)
-     options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
-     Redcarpet.new(text, *options).to_html.html_safe
+     renderer = Redcarpet::Render::HTML.new(hard_wrap: true)
+     markdown = Redcarpet::Markdown.new(renderer, autolink: true, no_intra_emphasis: true, fenced_code_blocks: true)
+     markdown.render(text).html_safe
   end
 
   def part_preview(part)

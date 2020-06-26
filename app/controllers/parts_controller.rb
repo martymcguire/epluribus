@@ -1,8 +1,8 @@
 class PartsController < ApplicationController
 
-  before_filter :authenticate_user!
-  before_filter :find_part_from_params, except: [:by_label, :index, :layer, :show]
-  before_filter :require_project_admin!, only: [:by_label, :index, :layer, :show]
+  before_action :authenticate_user!
+  before_action :find_part_from_params, except: [:by_label, :index, :layer, :show]
+  before_action :require_project_admin!, only: [:by_label, :index, :layer, :show]
 
   def preview
   end

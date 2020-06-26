@@ -12,7 +12,7 @@
     this.props.store.removeListener('error', @handleError)
 
   componentDidUpdate: ->
-    $el = $(@refs['message'].getDOMNode())
+    $el = $(@refs['message'])
     if @state['error']
       $el.fadeIn()
     else

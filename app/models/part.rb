@@ -1,4 +1,4 @@
-class Part < ActiveRecord::Base
+class Part < ApplicationRecord
   belongs_to :project
   has_many :print_jobs
   has_one :model_file

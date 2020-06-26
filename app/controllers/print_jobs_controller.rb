@@ -1,7 +1,7 @@
 class PrintJobsController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter :find_print_job_from_params, except: [:index, :ship]
-  before_filter :require_project_admin!, only: [:verify, :accept, :unassign]
+  before_action :authenticate_user!
+  before_action :find_print_job_from_params, except: [:index, :ship]
+  before_action :require_project_admin!, only: [:verify, :accept, :unassign]
 
   def printed
     @print_job.print!
@@ -17,7 +17,7 @@ class PrintJobsController < ApplicationController
     @print_job.photo = params[:photo]
     @print_job.measurements = [params['x-measure'], params['y-measure'], params['z-measure']].join(',')
     @print_job.submit!
-    Notifier.print_awaiting_verification(@print_job).deliver
+    Notifier.print_awaiting_verification(@print_job).deliver_now
     redirect_to project_path(@print_job.project_id)
   end
 
@@ -34,7 +34,7 @@ class PrintJobsController < ApplicationController
   # this legacy state.
   def verify
     @print_job.verify!
-    Notifier.print_verified(@print_job).deliver
+    Notifier.print_verified(@print_job).deliver_now
     redirect_to project_parts_path(@print_job.project_id)
   end
 

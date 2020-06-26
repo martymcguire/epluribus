@@ -1,6 +1,6 @@
 require 'securerandom'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :rememberable,
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     :message => 'Must be a valid email address.',
     :allow_blank => true
   before_save :verify_secondary_email
-  after_save :send_secondary_email_verification, :if => :secondary_email_changed?
+  after_save :send_secondary_email_verification, :if => :saved_change_to_secondary_email?
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
       data = access_token.info
@@ -87,7 +87,7 @@ private
 
   def send_secondary_email_verification
     if self.secondary_email_unconfirmed?
-      Notifier.secondary_email_verification(self).deliver
+      Notifier.secondary_email_verification(self).deliver_now
     end
   end
 end

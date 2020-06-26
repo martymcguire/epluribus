@@ -1,4 +1,4 @@
-class ModelFile < ActiveRecord::Base
+class ModelFile < ApplicationRecord
   RENDER_STATES = [:pending, :processing, :success, :failure]
 
   belongs_to :part

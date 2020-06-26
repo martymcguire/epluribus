@@ -28,6 +28,7 @@ Epluribus::Application.configure do
   config.assets.debug = true
   # For react??
   config.assets.initialize_on_precompile = true
+  config.assets.precompile += %w( 3d.js ) # rails 5???
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 

@@ -1,2 +1,2 @@
-class PartColor < ActiveRecord::Base
+class PartColor < ApplicationRecord
 end
