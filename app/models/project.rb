@@ -1,4 +1,4 @@
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
 
   has_many :parts
   has_many :print_jobs

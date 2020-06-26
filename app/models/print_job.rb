@@ -1,4 +1,4 @@
-class PrintJob < ActiveRecord::Base
+class PrintJob < ApplicationRecord
   belongs_to :user
   belongs_to :project
   belongs_to :part, :counter_cache => true, :touch => true
