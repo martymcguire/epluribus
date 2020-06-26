@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:members, :join, :join_verify]
+  before_action :authenticate_user!, only: [:members, :join, :join_verify]
 
   def show
     @team = team_from_hashid!(params[:id])

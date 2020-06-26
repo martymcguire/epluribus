@@ -1,5 +1,5 @@
 class EditorsController < ApplicationController
-  before_filter :find_project_from_params, :require_project_admin!
+  before_action :find_project_from_params, :require_project_admin!
 
   def create
     @email = params[:email]

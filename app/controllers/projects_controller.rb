@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_filter :authenticate_user!, except: [:show, :index, :preview]
-  before_filter :require_project_admin!, only: [:edit, :update]
+  before_action :authenticate_user!, except: [:show, :index, :preview]
+  before_action :require_project_admin!, only: [:edit, :update]
   before_action -> ( param = params[:id] ) { require_public_or_admin! param }, only: %i|show|
 
   def index

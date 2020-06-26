@@ -1,6 +1,6 @@
 class BuildersController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:edit, :update, :verify_email]
+  before_action :authenticate_user!, only: [:edit, :update, :verify_email]
 
   def show
     @builder = user_from_hashid!(params[:id])
