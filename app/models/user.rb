@@ -87,7 +87,7 @@ private
 
   def send_secondary_email_verification
     if self.secondary_email_unconfirmed?
-      Notifier.secondary_email_verification(self).deliver
+      Notifier.secondary_email_verification(self).deliver_now
     end
   end
 end

@@ -47,7 +47,7 @@ class PrintJob < ActiveRecord::Base
       transitions from: :printed, to: :shipping
       after do
         # send builder an email notification
-        Notifier.print_verified(self).deliver
+        Notifier.print_verified(self).deliver_now
       end
     end
 
