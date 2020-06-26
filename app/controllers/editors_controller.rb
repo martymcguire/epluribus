@@ -16,13 +16,13 @@ class EditorsController < ApplicationController
         }, status: 200
       else        # already in the list of editors
         if(@email == current_user.email)
-          render text: "You're already an editor.", status: 400
+          render plain: "You're already an editor.", status: 400
         else
-          render text: "'#{@email}' is already an editor.", status: 400
+          render plain: "'#{@email}' is already an editor.", status: 400
         end
       end
     else
-      render text: "No user found with email address '#{@email}'. Invite them to the site!", status: 404
+      render plain: "No user found with email address '#{@email}'. Invite them to the site!", status: 404
     end
   end
 

@@ -2,10 +2,11 @@
   handleSubmit: (e) ->
     e.preventDefault()
     e.stopPropagation()
-    email = @refs.email.getDOMNode().value.trim()
+    console.log(@refs.email.value)
+    email = @refs.email.value.trim()
     return if !email
     this.props.onAddEditor(email)
-    @refs.email.getDOMNode().value = '';
+    @refs.email.value = '';
 
   render: ->
       `<div className="col-sm-4">
