@@ -4,7 +4,8 @@
   <ul class="contributors clearfix" style="margin-bottom: 1em">
     <% people.each do |person| %>
       <li>
-        <%= link_to(image_tag(person.avatar, class: 'img-circle', title: "#{person.name} (#{pluralize(person.part_count, 'Part')})", alt: "#{person.name} (#{pluralize(person.part_count, 'Part')})"), (type == 'team' ? path_to_project_team(@project, person) : path_to_builder(person))) %>
+        <% avatar_url = person.avatar.class.method_defined?(:url) ? person.avatar.url : person.avatar %>
+        <%= link_to(image_tag(avatar_url, class: 'img-circle', title: "#{person.name} (#{pluralize(person.part_count, 'Part')})", alt: "#{person.name} (#{pluralize(person.part_count, 'Part')})"), (type == 'team' ? path_to_project_team(@project, person) : path_to_builder(person))) %>
         <% if person.part_count > 1 %>
           <span class="part-count"><%= person.part_count %></span>
         <% end %>
