@@ -17,13 +17,16 @@ module ApplicationHelper
   end
 
   def project_progress_bar(project)
+    pct_complete = project.complete? ? 100.0 : project.percent_complete.round
+    pct_shipping = project.complete? ? 0.0 : project.percent_shipping.round
+    pct_active = project.complete? ? 0.0 : project.percent_active.round
     ret = "<div class='progress'>"
-    ret += "<div class='progress-bar progress-bar-success' title='#{project.percent_complete.round}% Complete' style='width: #{project.percent_complete}%'>"
-    ret += "<span class='sr-only'>#{project.percent_complete.round}% Complete</span></div>"
-    ret += "<div class='progress-bar progress-bar-info' title='#{project.percent_shipping.round}% Shipping' style='width: #{project.percent_shipping}%'>"
-    ret += "<span class='sr-only'>#{project.percent_shipping.round}% Shipping</span></div>"
-    ret += "<div class='progress-bar progress-bar-warning' title='#{project.percent_active.round}% In Progress' style='width: #{project.percent_active}%'>"
-    ret += "<span class='sr-only'>#{project.percent_active.round}% In Progress</span></div>"
+    ret += "<div class='progress-bar progress-bar-success' title='#{pct_complete}% Complete' style='width: #{pct_complete}%'>"
+    ret += "<span class='sr-only'>#{pct_complete}% Complete</span></div>"
+    ret += "<div class='progress-bar progress-bar-info' title='#{pct_shipping}% Shipping' style='width: #{pct_shipping}%'>"
+    ret += "<span class='sr-only'>#{pct_shipping}% Shipping</span></div>"
+    ret += "<div class='progress-bar progress-bar-warning' title='#{pct_active}% In Progress' style='width: #{pct_active}%'>"
+    ret += "<span class='sr-only'>#{pct_active}% In Progress</span></div>"
     ret += "</div>"
     ret.html_safe
   end
