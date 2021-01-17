@@ -6,6 +6,13 @@ footer {
   border-top: 1px solid #fff;
   padding-top: 10px;
   margin-top: 20px;
+  
+  a {
+    color: #fff;
+    &:focus, &:hover {
+      color: inherit;
+    }
+  }
 }
 
 .carousel {
@@ -28,6 +35,12 @@ body.welcome-index {
     background: transparent;
     border: none;
     text-shadow: #333 1px 1px 1px;
+    a {
+      color: #fff;
+      &:focus, &:hover {
+        color: inherit;
+      }
+    }
   }
 
   #welcomeCarousel {

@@ -20,10 +20,15 @@
       </div>
       <div class="col-sm-3">
         <% if @project %>
-          <%= link_to("See the current project", @project, class: "btn btn-default btn-lg", role: "button") %>
+          <%= link_to("See the latest project", @project, class: "btn btn-default btn-lg", role: "button") %>
         <% else %>
           <%= link_to("Sign Up to be Notified about the next project", "sign_up", class:"btn btn-default btn-lg", role: "button") %>
         <% end %>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 1em">
+      <div class="col-sm-12">
+        <%= link_to("Check out our past projects", projects_path, class:"btn btn-default btn-lg") %>
       </div>
     </div>
   </div>
