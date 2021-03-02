@@ -48,7 +48,11 @@ gem 'puma', '~> 3.11'
 gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
-gem 'devise'
+#gem 'devise' # great. omniauth 2.0 broke a bad version string check in devise
+              # 4.7.3 and earlier. there's a fix on their main branch, but
+              # devise needs to cut a new version before it will be available.
+              # switch to the gh version for now and pray
+gem "devise", github: "heartcombo/devise", branch: "master"
 gem 'omniauth-google-oauth2'
 
 # Validating user alternate emails
