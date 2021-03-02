@@ -8,7 +8,7 @@ footer {
   margin-top: 20px;
   
   a {
-    color: #fff;
+    color: #000;
     &:focus, &:hover {
       color: inherit;
     }
@@ -84,6 +84,12 @@ body.welcome-index {
     bottom: 0;
     width: 96%;
     margin-left: 2%;
+    a {
+      color: #fff;
+      &:focus, &:hover {
+        color: inherit;
+      }
+    }
   }
 
 }
