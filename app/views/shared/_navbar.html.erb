@@ -33,8 +33,8 @@
               </div>
              </div>
           <% else %>
-            <%= link_to(image_tag('google-signin.png', height: '50'), new_user_session_path(), :class=>"navbar-right") %>
-          <% end %>
+            <%= link_to(image_tag('google-signin.png', height: '50'), '/users/auth/google_oauth2', :method => :post, :class=>"navbar-right") %>
+          <% end %> 
         </div>
       </div>
     </div>

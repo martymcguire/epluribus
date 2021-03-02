@@ -54,6 +54,8 @@ gem 'redcarpet', '~> 3.5'
               # switch to the gh version for now and pray
 gem "devise", github: "heartcombo/devise", branch: "master"
 gem 'omniauth-google-oauth2'
+# added 2021-03 for https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
+gem 'omniauth-rails_csrf_protection'
 
 # Validating user alternate emails
 gem 'validates_email_format_of'

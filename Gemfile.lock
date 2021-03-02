@@ -1183,6 +1183,9 @@ GEM
     omniauth-oauth2 (1.7.1)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-rails_csrf_protection (1.0.0)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     orm_adapter (0.5.0)
     paperclip (6.1.0)
       activemodel (>= 4.2.0)
@@ -1293,6 +1296,7 @@ DEPENDENCIES
   jquery-rails
   nanoid (~> 2.0)
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   paperclip
   pg (~> 0.18)
   puma (~> 3.11)
