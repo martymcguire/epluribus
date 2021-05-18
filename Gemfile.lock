@@ -1196,7 +1196,8 @@ GEM
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
     pg (0.21.0)
-    puma (3.12.6)
+    puma (5.3.1)
+      nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -1301,7 +1302,7 @@ DEPENDENCIES
   omniauth-rails_csrf_protection
   paperclip
   pg (~> 0.18)
-  puma (~> 3.11)
+  puma (~> 5.3)
   rails (~> 5.2.4.5)
   rails_12factor
   react-rails (~> 1.0)
