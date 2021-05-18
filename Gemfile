@@ -65,7 +65,7 @@ gem 'aasm'
 
 # Image upload handling
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk-s3'
 
 # Heroku configs
 ruby "2.5.8"
