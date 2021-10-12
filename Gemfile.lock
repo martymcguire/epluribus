@@ -137,7 +137,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nanoid (2.0.0)
-    nio4r (2.5.7)
+    nio4r (2.5.8)
     nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -170,7 +170,7 @@ GEM
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
     pg (0.21.0)
-    puma (5.3.1)
+    puma (5.5.1)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -276,7 +276,7 @@ DEPENDENCIES
   omniauth-rails_csrf_protection
   paperclip
   pg (~> 0.18)
-  puma (~> 5.3)
+  puma (~> 5.5)
   rails (~> 5.2.4.6)
   rails_12factor
   react-rails (~> 1.0)
