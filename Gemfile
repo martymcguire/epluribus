@@ -36,7 +36,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use puma as the app server
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 5.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
