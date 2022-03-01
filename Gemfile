@@ -48,11 +48,7 @@ gem 'puma', '~> 5.6'
 gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
-#gem 'devise' # great. omniauth 2.0 broke a bad version string check in devise
-              # 4.7.3 and earlier. there's a fix on their main branch, but
-              # devise needs to cut a new version before it will be available.
-              # switch to the gh version for now and pray
-gem "devise", github: "heartcombo/devise", branch: "main"
+gem 'devise'
 gem 'omniauth-google-oauth2'
 # added 2021-03 for https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
 gem 'omniauth-rails_csrf_protection'
