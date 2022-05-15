@@ -106,6 +106,12 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jwt (2.3.0)
+    kt-paperclip (7.1.1)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      marcel (~> 1.0.1)
+      mime-types
+      terrapin (~> 0.6.0)
     loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -116,9 +122,6 @@ GEM
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
-    mimemagic (0.3.10)
-      nokogiri (~> 1)
-      rake
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
     minitest (5.15.0)
@@ -151,12 +154,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
-    paperclip (6.1.0)
-      activemodel (>= 4.2.0)
-      activesupport (>= 4.2.0)
-      mime-types
-      mimemagic (~> 0.3.0)
-      terrapin (~> 0.6.0)
     pg (0.21.0)
     psych (4.0.3)
       stringio
@@ -263,11 +260,11 @@ DEPENDENCIES
   hashids (= 1.0.2)
   jbuilder (~> 2.5)
   jquery-rails
+  kt-paperclip (~> 7.1, >= 7.1.1)
   nanoid (~> 2.0)
   nokogiri (~> 1.13.4)
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
-  paperclip
   pg (~> 0.18)
   puma (~> 5.6)
   rails (~> 5.2.7.1)
@@ -283,4 +280,4 @@ RUBY VERSION
    ruby 2.7.5p203
 
 BUNDLED WITH
-   1.17.3
+   2.1.4

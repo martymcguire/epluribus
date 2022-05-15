@@ -60,7 +60,7 @@ gem 'validates_email_format_of'
 gem 'aasm'
 
 # Image upload handling
-gem 'paperclip'
+gem "kt-paperclip", "~> 7.1", ">= 7.1.1"
 gem 'aws-sdk-s3'
 
 # Heroku configs
