@@ -78,4 +78,4 @@ gem 'hashids', '1.0.2'
 gem "nanoid", "~> 2.0"
 
 # Nokogiri CVE 2022-03-01
-gem 'nokogiri', '~> 1.13.4'
+gem 'nokogiri', '~> 1.13.5'
