@@ -129,7 +129,7 @@ GEM
     multi_xml (0.6.0)
     nanoid (2.0.0)
     nio4r (2.5.8)
-    nokogiri (1.13.5)
+    nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oauth2 (1.4.9)
@@ -262,7 +262,7 @@ DEPENDENCIES
   jquery-rails
   kt-paperclip (~> 7.1, >= 7.1.1)
   nanoid (~> 2.0)
-  nokogiri (~> 1.13.5)
+  nokogiri (~> 1.13.6)
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pg (~> 0.18)
