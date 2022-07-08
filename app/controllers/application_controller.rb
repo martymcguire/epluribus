@@ -33,8 +33,13 @@ class ApplicationController < ActionController::Base
     # - they are signed in
     # - they're a site admin OR they're in the list of editors for this project
     # otherwise redirect them to the home page.
-    if ((! project.is_published?) && (current_user.nil? || ((! current_user.is_admin?) || (! project.editors.include?(current_user)))))
-      redirect_to root_path
+    if (! project.is_published?)
+      if current_user.nil?
+        redirect_to root_path
+      end
+      if ((! current_user.is_admin?) && (! project.editors.include?(current_user)))
+        redirect_to root_path
+      end
     end
   end
 
