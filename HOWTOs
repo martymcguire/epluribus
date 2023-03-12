@@ -1,0 +1,3 @@
+# Minimal New Project
+
+p = Project.new(name: 'Name', description: '', status: 'draft')
