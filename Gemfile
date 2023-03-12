@@ -64,7 +64,7 @@ gem "kt-paperclip", "~> 7.1", ">= 7.1.1"
 gem 'aws-sdk-s3'
 
 # Heroku configs
-ruby "2.7.5"
+ruby "2.7.6"
 group :production do
   gem 'rails_12factor'
 end
