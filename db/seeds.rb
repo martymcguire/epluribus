@@ -1,5559 +1,7201 @@
-# Grab the project id
-#project_id = Project.find_by_name("Nefertiti").id
 project_id = 12
 p = Part.create(
   project_id: project_id,
-  offset: "1,2,1",
-  extents: "21.533623000000006,72.155723,55.518443999999995",
-  volume: "15710.060547",
-  part_label: "010201"
+  offset: "3,1,21",
+  extents: "3.1169779999999996,3.153926,2.867147",
+  volume: "5.801142",
+  part_label: "HornZ1Y1X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010201.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z1_Y1_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z1_Y1_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,2,2",
-  extents: "50.368473,68.82800999999999,91.666664",
-  volume: "124568.484375",
-  part_label: "010202"
+  offset: "4,1,21",
+  extents: "4.100786000000001,4.482316,4.818178",
+  volume: "22.777454",
+  part_label: "HornZ1Y1X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010202.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z1_Y1_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z1_Y1_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,2,3",
-  extents: "62.79155699999999,53.010436999999996,91.666672",
-  volume: "99066.859375",
-  part_label: "010203"
+  offset: "3,2,21",
+  extents: "3.458668000000001,2.3868980000000004,2.7186049999999997",
+  volume: "8.520255",
+  part_label: "HornZ1Y2X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010203.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z1_Y2_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z1_Y2_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,2,4",
-  extents: "35.172447000000005,14.83135999999999,27.11953699999998",
-  volume: "2614.506836",
-  part_label: "010204"
+  offset: "4,2,21",
+  extents: "2.0317369999999997,2.0264420000000003,2.5778950000000003",
+  volume: "4.375211",
+  part_label: "HornZ1Y2X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010204.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z1_Y2_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z1_Y2_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,1",
-  extents: "5.353240999999997,23.949021000000016,14.354225",
-  volume: "306.710449",
-  part_label: "010301"
+  offset: "3,1,22",
+  extents: "3.4467869999999987,2.267298,2.096998",
+  volume: "3.065322",
+  part_label: "HornZ2Y1X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010301.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y1_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y1_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,2",
-  extents: "46.749756000000005,80.42146300000002,91.666664",
-  volume: "103806.515625",
-  part_label: "010302"
+  offset: "4,1,22",
+  extents: "1.9756060000000009,2.5336859999999994,1.1640929999999994",
+  volume: "2.275412",
+  part_label: "HornZ2Y1X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010302.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y1_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y1_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,3",
-  extents: "76.657451,88.952774,107.525894",
-  volume: "349204.34375",
-  part_label: "010303"
+  offset: "2,2,22",
+  extents: "3.7021429999999995,3.2223800000000002,3.7540370000000003",
+  volume: "10.069628",
+  part_label: "HornZ2Y2X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010303.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y2_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y2_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,4",
-  extents: "91.559924,91.01908900000001,91.66665599999999",
-  volume: "352011.15625",
-  part_label: "010304"
+  offset: "3,2,22",
+  extents: "4.211234000000001,4.099403000000001,3.632879",
+  volume: "20.240252",
+  part_label: "HornZ2Y2X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010304.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y2_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y2_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,5",
-  extents: "72.550978,36.848922000000016,31.04107700000003",
-  volume: "15312.711914",
-  part_label: "010305"
+  offset: "4,2,22",
+  extents: "1.8019949999999998,1.8785410000000002,1.1695849999999997",
+  volume: "1.17775",
+  part_label: "HornZ2Y2X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010305.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y2_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y2_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,3,10",
-  extents: "14.366318000000007,21.070769999999982,10.741333000000054",
-  volume: "338.996216",
-  part_label: "010310"
+  offset: "2,3,22",
+  extents: "3.5263809999999998,1.4293110000000002,2.036131",
+  volume: "1.795173",
+  part_label: "HornZ2Y3X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010310.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z2_Y3_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z2_Y3_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,2",
-  extents: "26.250985,80.42147899999998,57.82081599999999",
-  volume: "20077.787109",
-  part_label: "010402"
+  offset: "2,2,23",
+  extents: "2.575456,1.5023869999999997,1.0824999999999996",
+  volume: "1.074099",
+  part_label: "HornZ3Y2X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010402.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z3_Y2_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z3_Y2_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,3",
-  extents: "63.417564,80.42147899999998,91.666672",
-  volume: "218947.59375",
-  part_label: "010403"
+  offset: "1,3,23",
+  extents: "4.203532,3.873336,4.436368",
+  volume: "4.201468",
+  part_label: "HornZ3Y3X1"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010403.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z3_Y3_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z3_Y3_X1.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,4",
-  extents: "95.045461,89.524811,111.55487099999999",
-  volume: "475851.8125",
-  part_label: "010404"
+  offset: "2,3,23",
+  extents: "2.831867999999999,2.073753999999999,2.002025999999999",
+  volume: "3.267334",
+  part_label: "HornZ3Y3X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010404.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Horn_Z3_Y3_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Horn_Z3_Y3_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,5",
-  extents: "97.6046,91.30834999999996,91.66665699999999",
-  volume: "322747.25",
-  part_label: "010405"
+  offset: "1,10,10",
+  extents: "2.387197,2.9291529999999995,3.1469840000000033",
+  volume: "8.257008",
+  part_label: "MeshZ10Y10X1"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010405.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X1.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,6",
-  extents: "4.191597000000002,2.167449999999974,1.2597049999999967",
-  volume: "1.990802",
-  part_label: "010406"
+  offset: "2,10,10",
+  extents: "2.97619,2.724150999999999,4.0647009999999995",
+  volume: "10.600033",
+  part_label: "MeshZ10Y10X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010406.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,8",
-  extents: "10.174346999999997,8.594758000000013,4.611694000000057",
-  volume: "95.07029",
-  part_label: "010408"
+  offset: "3,10,10",
+  extents: "3.0667619999999998,3.8051829999999995,4.234603999999997",
+  volume: "25.812788",
+  part_label: "MeshZ10Y10X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010408.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,9",
-  extents: "39.565823,54.063537999999994,91.66668699999991",
-  volume: "23857.189453",
-  part_label: "010409"
+  offset: "4,10,10",
+  extents: "3.0538559999999997,3.5885920000000056,3.986618",
+  volume: "32.867397",
+  part_label: "MeshZ10Y10X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010409.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,10",
-  extents: "55.525223,56.06686400000001,91.66668700000002",
-  volume: "47242.789062",
-  part_label: "010410"
+  offset: "5,10,10",
+  extents: "2.787203,3.4789200000000022,3.986618",
+  volume: "9.843742",
+  part_label: "MeshZ10Y10X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010410.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,4,11",
-  extents: "24.166123,46.151733999999976,51.931152",
-  volume: "3658.259277",
-  part_label: "010411"
+  offset: "6,10,10",
+  extents: "0.6288789999999995,1.2427100000000024,0.5382269999999991",
+  volume: "0.0857",
+  part_label: "MeshZ10Y10X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010411.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y10_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,2",
-  extents: "3.5878979999999956,16.051544000000035,9.621002000000004",
-  volume: "92.347679",
-  part_label: "010502"
+  offset: "1,11,10",
+  extents: "0.481951,2.0663800000000023,0.8045959999999965",
+  volume: "0.20583",
+  part_label: "MeshZ10Y11X1"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010502.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y11_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y11_X1.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,3",
-  extents: "44.82171999999999,80.42147800000004,91.666672",
-  volume: "92683.109375",
-  part_label: "010503"
+  offset: "2,11,10",
+  extents: "2.9643630000000005,3.588592999999996,3.986618",
+  volume: "17.231255",
+  part_label: "MeshZ10Y11X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010503.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y11_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,4",
-  extents: "79.680804,80.42147800000004,93.89160199999998",
-  volume: "336759.21875",
-  part_label: "010504"
+  offset: "3,11,10",
+  extents: "2.984013,3.9224359999999976,4.123848000000002",
+  volume: "23.194321",
+  part_label: "MeshZ10Y11X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010504.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y11_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,5",
-  extents: "99.395882,91.87707499999999,91.66665699999999",
-  volume: "541609.8125",
-  part_label: "010505"
+  offset: "4,11,10",
+  extents: "2.641285999999999,3.9224359999999976,3.986618",
+  volume: "11.858843",
+  part_label: "MeshZ10Y11X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010505.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y11_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,6",
-  extents: "62.031532,80.42147800000004,23.319763000000023",
-  volume: "31936.816406",
-  part_label: "010506"
+  offset: "2,12,10",
+  extents: "1.339725,1.0899240000000034,1.2930490000000034",
+  volume: "0.43004",
+  part_label: "MeshZ10Y12X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010506.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y12_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,8",
-  extents: "9.747253999999998,18.397186000000033,9.626587000000086",
-  volume: "486.392395",
-  part_label: "010508"
+  offset: "3,12,10",
+  extents: "1.587179,1.5526729999999986,3.986618",
+  volume: "3.66764",
+  part_label: "MeshZ10Y12X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010508.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y12_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "1,5,9",
-  extents: "26.123627,56.51913400000001,91.66668699999991",
-  volume: "22060.771484",
-  part_label: "010509"
+  offset: "4,12,10",
+  extents: "2.4241379999999992,1.5808409999999995,3.986618",
+  volume: "6.46875",
+  part_label: "MeshZ10Y12X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,5,10",
-  extents: "29.224655000000013,50.96490399999999,88.219605",
-  volume: "21383.667969",
-  part_label: "010510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,6,3",
-  extents: "24.127663,79.60180599999995,53.08561700000001",
-  volume: "15574.479492",
-  part_label: "010603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,6,4",
-  extents: "61.71298900000001,80.42147799999998,91.66665599999999",
-  volume: "206419.40625",
-  part_label: "010604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,6,5",
-  extents: "91.663472,82.29296899999997,91.66665699999999",
-  volume: "444466.6875",
-  part_label: "010605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,6,6",
-  extents: "64.823578,80.42147799999998,23.35067700000002",
-  volume: "32799.96875",
-  part_label: "010606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,7,4",
-  extents: "38.844727,29.45263699999998,89.686737",
-  volume: "28106.871094",
-  part_label: "010704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,7,5",
-  extents: "68.83905800000001,57.536163000000045,91.66665699999999",
-  volume: "154707.84375",
-  part_label: "010705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "1,7,6",
-  extents: "19.798164999999997,12.12750299999999,5.105286000000035",
-  volume: "216.509537",
-  part_label: "010706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/010706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/010706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,1,1",
-  extents: "89.607567,63.30048000000001,91.666664",
-  volume: "183181.984375",
-  part_label: "020101"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020101.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,1,2",
-  extents: "78.302757,47.701275,91.666664",
-  volume: "72545.59375",
-  part_label: "020102"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020102.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,1,3",
-  extents: "30.892105000000015,8.976547999999994,21.806884999999994",
-  volume: "1124.480957",
-  part_label: "020103"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020103.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,1",
-  extents: "99.36821,91.47865999999999,107.825966",
-  volume: "632536.75",
-  part_label: "020201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,2",
-  extents: "99.22221400000001,90.83962199999999,108.41225399999999",
-  volume: "640632.625",
-  part_label: "020202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,3",
-  extents: "98.79844700000001,93.17089000000001,91.666672",
-  volume: "457848.53125",
-  part_label: "020203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,4",
-  extents: "95.127746,45.584152,62.22699",
-  volume: "74782.164062",
-  part_label: "020204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,9",
-  extents: "1.9104770000000144,2.6170040000000085,3.2769159999999147",
-  volume: "2.579928",
-  part_label: "020209"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020209.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020209.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,10",
-  extents: "38.785019000000005,28.24151599999999,91.66668700000002",
-  volume: "8287.165039",
-  part_label: "020210"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020210.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020210.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,2,11",
-  extents: "29.408203000000015,16.617691000000008,56.18798800000002",
-  volume: "1646.147461",
-  part_label: "020211"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020211.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020211.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,1",
-  extents: "99.395645,91.13398800000002,91.666664",
-  volume: "521381.8125",
-  part_label: "020301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,2",
-  extents: "97.52600900000002,89.259995,108.41199499999999",
-  volume: "650649.4375",
-  part_label: "020302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,3",
-  extents: "97.237999,89.34600900000001,109.111984",
-  volume: "606011.5",
-  part_label: "020303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,4",
-  extents: "99.15034499999999,80.98616100000001,91.66665599999999",
-  volume: "593530.75",
-  part_label: "020304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,5",
-  extents: "95.172256,52.600082000000015,59.76138400000002",
-  volume: "104066.15625",
-  part_label: "020305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,9",
-  extents: "88.656601,80.42146300000002,84.83795199999997",
-  volume: "41452.628906",
-  part_label: "020309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020309.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,10",
-  extents: "99.210556,90.637101,91.66668700000002",
-  volume: "238112.5",
-  part_label: "020310"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020310.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,11",
-  extents: "88.58627999999999,80.42146300000002,91.66668700000002",
-  volume: "139692.453125",
-  part_label: "020311"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,3,12",
-  extents: "24.13067699999999,69.90423600000003,43.48101799999995",
-  volume: "7028.049316",
-  part_label: "020312"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020312.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020312.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,1",
-  extents: "86.69399999999999,80.64401200000003,91.666008",
-  volume: "387819.6875",
-  part_label: "020401"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020401.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,2",
-  extents: "99.18199899999999,89.26800500000002,91.666008",
-  volume: "620770.25",
-  part_label: "020402"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020402.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,3",
-  extents: "91.640007,89.27401700000001,91.67399599999999",
-  volume: "555809.0625",
-  part_label: "020403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,4",
-  extents: "96.913803,81.47903500000001,111.55487099999999",
-  volume: "541024.625",
-  part_label: "020404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,5",
-  extents: "99.06570400000001,80.42147899999998,91.66665699999999",
-  volume: "550154.9375",
-  part_label: "020405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,6",
-  extents: "91.640793,43.85962000000001,28.630066",
-  volume: "21275.271484",
-  part_label: "020406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,8",
-  extents: "86.158195,63.424590999999964,84.71966600000007",
-  volume: "65937.148438",
-  part_label: "020408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,9",
-  extents: "99.335586,92.51135299999999,109.82324199999994",
-  volume: "384921.5",
-  part_label: "020409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020409.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,10",
-  extents: "99.18424999999999,90.80081200000001,105.89227300000005",
-  volume: "582401.8125",
-  part_label: "020410"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020410.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,11",
-  extents: "99.139084,86.02911399999999,91.66668700000002",
-  volume: "402558.09375",
-  part_label: "020411"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020411.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,4,12",
-  extents: "58.247338,80.42147899999998,16.38775600000008",
-  volume: "16124.573242",
-  part_label: "020412"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020412.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020412.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,1",
-  extents: "68.76152800000001,80.42147800000004,91.891708",
-  volume: "258420.390625",
-  part_label: "020501"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020501.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,2",
-  extents: "99.430374,91.86999500000002,108.41225399999999",
-  volume: "517738.53125",
-  part_label: "020502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,3",
-  extents: "97.83431999999999,91.23468000000003,108.65736400000003",
-  volume: "634504.5625",
-  part_label: "020503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,4",
-  extents: "91.640793,92.102417,95.23046900000003",
-  volume: "456144.15625",
-  part_label: "020504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,5",
-  extents: "98.173904,88.74606299999999,94.16442899999998",
-  volume: "599481.9375",
-  part_label: "020505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,6",
-  extents: "97.21508800000001,80.42147800000004,61.06201199999998",
-  volume: "235992.265625",
-  part_label: "020506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,7",
-  extents: "0.3785400000000152,11.989899000000037,0.9195560000000569",
-  volume: "0.115735",
-  part_label: "020507"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020507.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020507.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,8",
-  extents: "99.15502899999998,80.42147800000004,91.66668700000002",
-  volume: "280788.53125",
-  part_label: "020508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,9",
-  extents: "99.42991599999999,90.83624200000003,109.82324199999994",
-  volume: "599325.25",
-  part_label: "020509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,10",
-  extents: "99.205398,82.37677000000002,91.66668700000002",
-  volume: "562753.125",
-  part_label: "020510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,11",
-  extents: "95.85485800000001,80.42147800000004,91.66668700000002",
-  volume: "274807.1875",
-  part_label: "020511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020511.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,5,12",
-  extents: "52.515502999999995,26.81933600000002,9.250794000000042",
-  volume: "1096.383789",
-  part_label: "020512"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020512.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020512.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,1",
-  extents: "47.61123599999999,42.070006999999976,91.666664",
-  volume: "73358.703125",
-  part_label: "020601"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020601.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,2",
-  extents: "83.22848499999999,58.95873999999998,97.148079",
-  volume: "254367.34375",
-  part_label: "020602"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020602.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,3",
-  extents: "98.79707300000001,80.04742399999998,109.11189300000001",
-  volume: "541944.0",
-  part_label: "020603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,4",
-  extents: "99.33547999999999,85.92199699999998,91.66665599999999",
-  volume: "658445.625",
-  part_label: "020604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,5",
-  extents: "99.00119000000001,92.08172599999995,91.66665699999999",
-  volume: "655596.9375",
-  part_label: "020605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,6",
-  extents: "97.71646100000001,80.42147799999998,61.847961000000055",
-  volume: "269186.03125",
-  part_label: "020606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,8",
-  extents: "46.01475500000001,50.68218999999999,76.82666000000006",
-  volume: "35275.921875",
-  part_label: "020608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,9",
-  extents: "87.25995699999999,80.42147799999998,91.66668699999991",
-  volume: "252020.953125",
-  part_label: "020609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020609.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,10",
-  extents: "84.25609599999999,80.42147799999998,91.66668700000002",
-  volume: "188502.859375",
-  part_label: "020610"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020610.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,6,11",
-  extents: "41.84372000000002,54.50262399999997,86.20361300000002",
-  volume: "42437.3125",
-  part_label: "020611"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,7,4",
-  extents: "94.47290000000001,29.42987099999999,90.21481299999999",
-  volume: "110067.0625",
-  part_label: "020704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,7,5",
-  extents: "97.776184,68.973908,91.66665699999999",
-  volume: "387987.0625",
-  part_label: "020705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,7,6",
-  extents: "94.774338,50.532317999999975,43.595154000000036",
-  volume: "43441.039062",
-  part_label: "020706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,7,9",
-  extents: "20.25753800000001,24.139373999999975,73.59515399999998",
-  volume: "3213.29834",
-  part_label: "020709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020709.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "2,7,10",
-  extents: "14.488754999999998,15.633971999999972,11.643189000000007",
-  volume: "144.146255",
-  part_label: "020710"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/020710.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/020710.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,1",
-  extents: "98.530014,71.896006,91.666008",
-  volume: "466729.84375",
-  part_label: "030101"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030101.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,2",
-  extents: "96.72811899999999,67.084574,91.666664",
-  volume: "289998.375",
-  part_label: "030102"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030102.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,3",
-  extents: "91.64077700000001,28.960727999999996,45.454712",
-  volume: "34022.039062",
-  part_label: "030103"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030103.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,8",
-  extents: "19.98687700000002,5.580162000000001,52.293030000000044",
-  volume: "1951.640747",
-  part_label: "030108"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030108.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030108.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,9",
-  extents: "48.03979500000003,31.147537999999997,91.66668699999991",
-  volume: "23431.763672",
-  part_label: "030109"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030109.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030109.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,10",
-  extents: "51.103211000000016,35.799251999999996,91.66668700000002",
-  volume: "25972.546875",
-  part_label: "030110"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030110.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030110.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,1,11",
-  extents: "39.60929899999999,38.808204999999994,80.702087",
-  volume: "24071.890625",
-  part_label: "030111"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030111.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030111.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,1",
-  extents: "98.75897199999997,80.42147,91.666664",
-  volume: "613601.875",
-  part_label: "030201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,2",
-  extents: "98.527984,80.42147,91.666664",
-  volume: "587735.25",
-  part_label: "030202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,3",
-  extents: "99.029449,90.65465499999999,91.666672",
-  volume: "602991.125",
-  part_label: "030203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,4",
-  extents: "95.54055799999998,60.272751000000014,71.99676499999998",
-  volume: "164486.109375",
-  part_label: "030204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,6",
-  extents: "2.92965700000002,9.260513000000003,2.241088999999988",
-  volume: "10.647886",
-  part_label: "030206"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030206.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030206.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,7",
-  extents: "75.31535300000002,78.40271,91.66668700000002",
-  volume: "143290.015625",
-  part_label: "030207"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030207.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030207.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,8",
-  extents: "86.24183600000003,91.15273200000001,91.66668700000002",
-  volume: "397806.375",
-  part_label: "030208"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030208.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030208.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,9",
-  extents: "99.54602,91.453498,108.00756799999999",
-  volume: "453688.1875",
-  part_label: "030209"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030209.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030209.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,10",
-  extents: "99.07635499999998,91.397133,91.66668700000002",
-  volume: "454958.65625",
-  part_label: "030210"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030210.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030210.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,11",
-  extents: "99.343322,91.534614,91.66668700000002",
-  volume: "408955.40625",
-  part_label: "030211"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030211.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030211.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,2,12",
-  extents: "65.18977299999997,70.114189,38.552429000000075",
-  volume: "31392.841797",
-  part_label: "030212"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030212.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030212.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,1",
-  extents: "97.505676,87.67437799999999,91.666664",
-  volume: "454156.375",
-  part_label: "030301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,2",
-  extents: "91.64077700000001,80.42146300000002,91.666664",
-  volume: "44439.753906",
-  part_label: "030302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,3",
-  extents: "96.73544299999998,76.69525200000001,91.666672",
-  volume: "313677.75",
-  part_label: "030303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,4",
-  extents: "99.23141399999997,80.42146300000002,91.66665599999999",
-  volume: "646836.0",
-  part_label: "030304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,5",
-  extents: "95.80181900000002,76.95137,91.66665699999999",
-  volume: "222706.375",
-  part_label: "030305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,6",
-  extents: "37.15069600000001,80.42146300000002,91.66668700000002",
-  volume: "19707.955078",
-  part_label: "030306"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030306.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030306.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,7",
-  extents: "86.195709,91.22627299999999,91.66668700000002",
-  volume: "389911.53125",
-  part_label: "030307"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030307.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030307.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,8",
-  extents: "98.21527100000003,89.076096,91.66668700000002",
-  volume: "599488.1875",
-  part_label: "030308"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030308.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030308.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,9",
-  extents: "99.22103900000002,89.46901,91.66668699999991",
-  volume: "647507.1875",
-  part_label: "030309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030309.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y12_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "3,3,10",
-  extents: "98.92681900000002,90.637101,92.13147000000004",
-  volume: "664735.125",
-  part_label: "030310"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030310.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,11",
-  extents: "99.36819400000002,91.56042500000001,91.66668700000002",
-  volume: "654310.375",
-  part_label: "030311"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,3,12",
-  extents: "96.44830300000001,80.42146300000002,58.453551999999945",
-  volume: "136054.265625",
-  part_label: "030312"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030312.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030312.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,1",
-  extents: "97.50759899999997,91.96429499999999,91.666664",
-  volume: "505661.9375",
-  part_label: "030401"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030401.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,2",
-  extents: "42.328002999999995,80.42001299999998,91.666008",
-  volume: "133789.140625",
-  part_label: "030402"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030402.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,3",
-  extents: "10.325988999999993,46.19601399999999,27.685988999999978",
-  volume: "2201.404297",
-  part_label: "030403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,4",
-  extents: "96.414489,80.42147899999998,87.21795600000002",
-  volume: "266329.0",
-  part_label: "030404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,5",
-  extents: "99.32394399999998,91.30834999999996,91.66665699999999",
-  volume: "647157.375",
-  part_label: "030405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,6",
-  extents: "99.214538,80.42147899999998,91.66668700000002",
-  volume: "265216.15625",
-  part_label: "030406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,7",
-  extents: "84.99877899999998,80.42147899999998,91.66668700000002",
-  volume: "345830.65625",
-  part_label: "030407"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030407.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030407.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,8",
-  extents: "99.46887199999998,91.530823,91.66668700000002",
-  volume: "597005.625",
-  part_label: "030408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,9",
-  extents: "97.300903,90.12710599999997,109.82324199999994",
-  volume: "651696.4375",
-  part_label: "030409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030409.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,10",
-  extents: "91.64077700000001,80.42147899999998,109.45977800000003",
-  volume: "484543.75",
-  part_label: "030410"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030410.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,11",
-  extents: "98.32913200000002,91.47473199999996,91.66668700000002",
-  volume: "629535.25",
-  part_label: "030411"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030411.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,4,12",
-  extents: "98.10128800000001,80.78424100000001,75.34820599999989",
-  volume: "268326.09375",
-  part_label: "030412"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030412.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030412.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,1",
-  extents: "98.942138,91.99877900000001,106.210037",
-  volume: "641739.5",
-  part_label: "030501"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030501.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,2",
-  extents: "97.61663800000002,92.90731800000003,92.36144300000001",
-  volume: "487818.78125",
-  part_label: "030502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,3",
-  extents: "96.37612899999999,80.42147800000004,91.666672",
-  volume: "268421.4375",
-  part_label: "030503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,4",
-  extents: "91.64077700000001,88.93685900000003,91.66665599999999",
-  volume: "69617.015625",
-  part_label: "030504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,5",
-  extents: "98.16854799999999,89.70050000000003,120.87735000000004",
-  volume: "532657.25",
-  part_label: "030505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,6",
-  extents: "99.38119499999999,85.423431,91.66668700000002",
-  volume: "470016.65625",
-  part_label: "030506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,7",
-  extents: "99.66845699999999,80.42147800000004,112.28405799999996",
-  volume: "271079.96875",
-  part_label: "030507"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030507.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030507.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,8",
-  extents: "98.71920699999998,93.35320999999999,110.87475599999993",
-  volume: "658247.625",
-  part_label: "030508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,9",
-  extents: "97.72354100000001,84.34622100000001,109.82324199999994",
-  volume: "609790.8125",
-  part_label: "030509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,10",
-  extents: "91.64077700000001,90.420166,91.66668700000002",
-  volume: "417060.34375",
-  part_label: "030510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,11",
-  extents: "98.46182199999998,91.35906900000003,91.66668700000002",
-  volume: "637240.625",
-  part_label: "030511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030511.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,5,12",
-  extents: "96.61181599999998,84.22363200000001,68.78765900000008",
-  volume: "210811.859375",
-  part_label: "030512"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030512.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030512.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,1",
-  extents: "96.18800399999998,42.00399799999997,91.666008",
-  volume: "284024.125",
-  part_label: "030601"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030601.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,2",
-  extents: "97.74800099999999,58.938019,91.666008",
-  volume: "417275.90625",
-  part_label: "030602"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030602.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,3",
-  extents: "98.79702700000001,79.94094799999999,91.666672",
-  volume: "578798.9375",
-  part_label: "030603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,4",
-  extents: "99.33601399999998,80.42199699999998,91.668",
-  volume: "667341.1875",
-  part_label: "030604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,5",
-  extents: "98.89126599999997,80.42147799999998,120.87735000000004",
-  volume: "607621.9375",
-  part_label: "030605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,6",
-  extents: "99.22393799999998,80.42147799999998,91.66668700000002",
-  volume: "542524.5",
-  part_label: "030606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,7",
-  extents: "87.94100900000001,66.83557099999996,91.66668700000002",
-  volume: "64728.824219",
-  part_label: "030607"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030607.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030607.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,8",
-  extents: "99.29998699999999,80.42147799999998,110.87475599999993",
-  volume: "535133.125",
-  part_label: "030608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,9",
-  extents: "98.887268,92.18606599999998,91.66668699999991",
-  volume: "655426.4375",
-  part_label: "030609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030609.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,10",
-  extents: "98.91201799999999,91.85143999999997,91.66668700000002",
-  volume: "657866.6875",
-  part_label: "030610"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030610.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,11",
-  extents: "99.168182,80.42147799999998,91.66668700000002",
-  volume: "517756.59375",
-  part_label: "030611"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,6,12",
-  extents: "63.888030999999984,54.85433899999998,37.10992400000009",
-  volume: "33512.722656",
-  part_label: "030612"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030612.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030612.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,4",
-  extents: "94.47287,29.42602599999998,89.83914099999998",
-  volume: "111937.726562",
-  part_label: "030704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,5",
-  extents: "98.00302099999999,79.48171999999994,91.66665699999999",
-  volume: "445142.625",
-  part_label: "030705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,6",
-  extents: "96.46432499999997,71.97934000000004,75.71691900000008",
-  volume: "187452.546875",
-  part_label: "030706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,8",
-  extents: "60.416229999999985,58.21762099999995,75.86785900000007",
-  volume: "81599.59375",
-  part_label: "030708"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030708.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030708.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,9",
-  extents: "98.09613000000002,65.37014800000003,91.66668699999991",
-  volume: "240208.09375",
-  part_label: "030709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030709.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,10",
-  extents: "97.589721,66.17147800000004,91.66668700000002",
-  volume: "194093.078125",
-  part_label: "030710"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030710.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030710.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "3,7,11",
-  extents: "65.884231,37.99050900000003,69.28991700000006",
-  volume: "53887.84375",
-  part_label: "030711"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/030711.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/030711.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,1",
-  extents: "98.72000099999997,91.64000300000001,91.666008",
-  volume: "551079.25",
-  part_label: "040101"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040101.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,2",
-  extents: "96.75759899999997,68.42848000000001,91.666664",
-  volume: "381144.25",
-  part_label: "040102"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040102.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,3",
-  extents: "94.48193399999997,39.619823000000004,62.36090100000001",
-  volume: "81166.476562",
-  part_label: "040103"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040103.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,7",
-  extents: "75.89703300000002,38.815582,84.960327",
-  volume: "46101.011719",
-  part_label: "040107"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040107.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040107.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,8",
-  extents: "93.36642499999999,91.429367,95.26238999999998",
-  volume: "276537.3125",
-  part_label: "040108"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040108.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040108.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,9",
-  extents: "95.06787099999997,80.748525,91.66668699999991",
-  volume: "222775.796875",
-  part_label: "040109"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040109.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040109.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,10",
-  extents: "96.124146,65.867554,94.46972700000003",
-  volume: "243484.734375",
-  part_label: "040110"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040110.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040110.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,11",
-  extents: "97.159424,69.28487100000001,91.66668700000002",
-  volume: "284673.8125",
-  part_label: "040111"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040111.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040111.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,1,12",
-  extents: "78.42330900000002,18.444657,13.859923999999978",
-  volume: "5423.577637",
-  part_label: "040112"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040112.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040112.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,1",
-  extents: "98.69619799999998,87.676094,91.666664",
-  volume: "562585.4375",
-  part_label: "040201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,2",
-  extents: "98.24435499999998,80.42147,91.666664",
-  volume: "494397.46875",
-  part_label: "040202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,3",
-  extents: "99.20867899999996,80.42147,95.414963",
-  volume: "628197.0625",
-  part_label: "040203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,4",
-  extents: "95.89141899999998,59.931006999999994,75.63192700000002",
-  volume: "186614.875",
-  part_label: "040204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,6",
-  extents: "94.462128,80.663071,47.67010499999992",
-  volume: "92752.78125",
-  part_label: "040206"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040206.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040206.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,7",
-  extents: "99.34704599999998,91.016639,106.696777",
-  volume: "626192.5625",
-  part_label: "040207"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040207.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040207.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,8",
-  extents: "99.31924499999997,80.42147,104.26910399999997",
-  volume: "662697.75",
-  part_label: "040208"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040208.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040208.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,9",
-  extents: "99.36819499999996,80.42147,108.00756799999999",
-  volume: "671296.375",
-  part_label: "040209"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040209.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040209.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,10",
-  extents: "99.21878099999998,86.25438700000001,107.68048099999999",
-  volume: "659405.0625",
-  part_label: "040210"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040210.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040210.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,11",
-  extents: "99.31741399999999,80.42147,91.66668700000002",
-  volume: "659164.6875",
-  part_label: "040211"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040211.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040211.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,2,12",
-  extents: "96.66717599999998,87.97977399999999,63.51702900000009",
-  volume: "235768.953125",
-  part_label: "040212"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040212.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040212.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,1",
-  extents: "97.50399699999997,87.44999700000002,52.910004",
-  volume: "388072.65625",
-  part_label: "040301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,2",
-  extents: "50.97085599999997,5.210373000000004,9.718474999999984",
-  volume: "660.247559",
-  part_label: "040302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,3",
-  extents: "96.79598999999996,80.42146300000002,109.11189300000001",
-  volume: "286765.375",
-  part_label: "040303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,4",
-  extents: "98.87023999999997,91.01908900000001,91.66665599999999",
-  volume: "651328.1875",
-  part_label: "040304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,5",
-  extents: "95.302033,76.23254400000002,91.66665699999999",
-  volume: "311633.875",
-  part_label: "040305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,6",
-  extents: "97.84375,92.048584,109.658142",
-  volume: "347647.03125",
-  part_label: "040306"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040306.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040306.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,7",
-  extents: "98.44982899999997,90.10832200000002,91.66668700000002",
-  volume: "576761.4375",
-  part_label: "040307"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040307.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040307.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,8",
-  extents: "94.17657499999996,80.42146300000002,91.66668700000002",
-  volume: "200527.546875",
-  part_label: "040308"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040308.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040308.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,9",
-  extents: "91.64080799999999,80.42146300000002,91.66668699999991",
-  volume: "176142.8125",
-  part_label: "040309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040309.png")
+  extents: "0.5938920000000003,0.07679600000000164,1.296723",
+  volume: "0.02476",
+  part_label: "MeshZ10Y3X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y3_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y3_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "4,3,10",
-  extents: "91.64080799999999,80.42146300000002,91.66668700000002",
-  volume: "176397.34375",
-  part_label: "040310"
+  extents: "1.1307390000000002,0.24199199999999976,1.350434",
+  volume: "0.099511",
+  part_label: "MeshZ10Y3X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040310.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y3_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "4,3,11",
-  extents: "96.55490099999997,80.42146300000002,111.50024399999995",
-  volume: "468590.46875",
-  part_label: "040311"
+  offset: "3,4,10",
+  extents: "1.168062,1.6455479999999998,2.1967399999999984",
+  volume: "1.777721",
+  part_label: "MeshZ10Y4X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,3,12",
-  extents: "98.26529,90.62811300000001,83.62713600000006",
-  volume: "466677.40625",
-  part_label: "040312"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040312.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040312.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,1",
-  extents: "97.50399699999997,86.55599899999999,53.784004",
-  volume: "388099.84375",
-  part_label: "040401"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040401.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,3",
-  extents: "30.540771000000007,5.179076999999978,3.948943999999983",
-  volume: "193.527191",
-  part_label: "040403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,4",
-  extents: "96.95178299999998,73.45504799999998,91.66665599999999",
-  volume: "293128.1875",
-  part_label: "040404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,5",
-  extents: "98.96743799999996,86.77560499999998,91.66665699999999",
-  volume: "647269.5",
-  part_label: "040405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,6",
-  extents: "98.441956,90.70245399999999,91.66668700000002",
-  volume: "640337.1875",
-  part_label: "040406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,7",
-  extents: "94.96463,89.46768199999997,91.66668700000002",
-  volume: "490313.78125",
-  part_label: "040407"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040407.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040407.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,8",
-  extents: "67.25933899999995,91.530823,91.66668700000002",
-  volume: "260839.5",
-  part_label: "040408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,9",
-  extents: "40.23782399999999,80.42147899999998,60.27459699999997",
-  volume: "47954.570312",
-  part_label: "040409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040409.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y4_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y4_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "4,4,10",
-  extents: "14.02319399999999,11.197814999999991,31.16290300000003",
-  volume: "1142.99646",
-  part_label: "040410"
+  extents: "1.4226039999999998,1.6555280000000003,2.1562309999999982",
+  volume: "2.208238",
+  part_label: "MeshZ10Y4X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040410.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y4_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "4,4,11",
-  extents: "97.025147,80.42147899999998,122.23962399999994",
-  volume: "338792.90625",
-  part_label: "040411"
+  offset: "3,6,10",
+  extents: "2.5083920000000006,3.405912999999998,2.2376289999999983",
+  volume: "5.784828",
+  part_label: "MeshZ10Y6X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040411.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,4,12",
-  extents: "97.55798399999998,87.63305700000001,89.56658900000002",
-  volume: "477451.34375",
-  part_label: "040412"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040412.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040412.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,1",
-  extents: "98.99353099999996,91.33709700000003,91.666664",
-  volume: "603436.9375",
-  part_label: "040501"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040501.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,2",
-  extents: "97.65173399999998,68.40286300000002,91.666664",
-  volume: "407193.65625",
-  part_label: "040502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,3",
-  extents: "96.43942299999998,50.547821,91.666672",
-  volume: "255315.359375",
-  part_label: "040503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,4",
-  extents: "91.63998399999997,19.90600599999999,72.141999",
-  volume: "68619.460938",
-  part_label: "040504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,5",
-  extents: "67.68353299999995,80.42147800000004,85.41064499999999",
-  volume: "228106.1875",
-  part_label: "040505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,6",
-  extents: "96.510895,90.71423300000004,94.30621300000007",
-  volume: "580572.875",
-  part_label: "040506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,7",
-  extents: "98.88928299999998,91.66897499999999,112.28405799999996",
-  volume: "666990.3125",
-  part_label: "040507"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040507.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040507.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,8",
-  extents: "96.40945499999998,80.42147800000004,91.66668700000002",
-  volume: "507862.625",
-  part_label: "040508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,9",
-  extents: "47.601471000000004,80.42147800000004,63.57580599999994",
-  volume: "101947.164062",
-  part_label: "040509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,10",
-  extents: "91.64080799999999,13.269592000000046,18.104247999999984",
-  volume: "4984.911621",
-  part_label: "040510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,11",
-  extents: "97.46530200000001,91.35906900000003,91.66668700000002",
-  volume: "437025.84375",
-  part_label: "040511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040511.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,5,12",
-  extents: "98.78363099999996,87.57592700000004,89.92901600000005",
-  volume: "459328.40625",
-  part_label: "040512"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040512.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040512.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,1",
-  extents: "96.05651899999998,42.00375399999996,91.666664",
-  volume: "287460.6875",
-  part_label: "040601"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040601.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,2",
-  extents: "97.68582199999997,58.936554,91.666664",
-  volume: "416530.46875",
-  part_label: "040602"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040602.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,3",
-  extents: "98.72540299999997,79.94058199999995,91.666672",
-  volume: "575726.0",
-  part_label: "040603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,4",
-  extents: "99.35400299999998,84.62399299999998,91.668",
-  volume: "669278.3125",
-  part_label: "040604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,5",
-  extents: "98.22998000000001,92.08200099999999,91.66601499999996",
-  volume: "517163.09375",
-  part_label: "040605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,6",
-  extents: "99.10205099999996,91.94216899999998,96.79107699999997",
-  volume: "657541.8125",
-  part_label: "040606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,7",
-  extents: "96.111176,80.42147799999998,91.66668700000002",
-  volume: "379531.71875",
-  part_label: "040607"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040607.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040607.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,8",
-  extents: "99.23999099999997,91.03835999999995,91.66668700000002",
-  volume: "665031.4375",
-  part_label: "040608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,9",
-  extents: "97.87054499999999,80.42147799999998,91.66668699999991",
-  volume: "480961.5",
-  part_label: "040609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040609.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y6_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y6_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "4,6,10",
-  extents: "98.30413799999997,80.42147799999998,91.66668700000002",
-  volume: "514844.625",
-  part_label: "040610"
+  extents: "2.690109999999999,2.9685179999999995,2.2351230000000015",
+  volume: "3.263849",
+  part_label: "MeshZ10Y6X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040610.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y6_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "4,6,11",
-  extents: "99.00824,88.34771699999999,91.66668700000002",
-  volume: "657058.125",
-  part_label: "040611"
+  offset: "3,7,10",
+  extents: "1.5069460000000001,2.690222000000002,2.2568819999999974",
+  volume: "2.76401",
+  part_label: "MeshZ10Y7X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,6,12",
-  extents: "96.12356599999998,80.42147799999998,68.29266400000006",
-  volume: "165592.03125",
-  part_label: "040612"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040612.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040612.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,4",
-  extents: "94.399993,29.425995,89.83801300000005",
-  volume: "111684.492188",
-  part_label: "040704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,5",
-  extents: "97.82800299999997,80.42199700000003,91.66601499999996",
-  volume: "455942.09375",
-  part_label: "040705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,6",
-  extents: "97.11300699999998,73.894928,90.02691600000003",
-  volume: "306433.65625",
-  part_label: "040706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,7",
-  extents: "58.251435000000015,11.12634300000002,11.044556000000057",
-  volume: "1165.877319",
-  part_label: "040707"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040707.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040707.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,8",
-  extents: "95.84112599999997,58.53744499999999,91.66668700000002",
-  volume: "223584.5625",
-  part_label: "040708"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040708.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040708.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,9",
-  extents: "98.27166799999998,70.27450600000003,91.66668699999991",
-  volume: "477837.71875",
-  part_label: "040709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040709.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y7_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y7_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "4,7,10",
-  extents: "98.03179999999998,69.43350200000003,91.66668700000002",
-  volume: "442312.5",
-  part_label: "040710"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040710.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040710.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,11",
-  extents: "94.53573599999999,48.15060399999999,91.66668700000002",
-  volume: "162765.640625",
-  part_label: "040711"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040711.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040711.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "4,7,12",
-  extents: "25.037323000000015,17.68081699999999,12.684570000000008",
-  volume: "859.270081",
-  part_label: "040712"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/040712.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/040712.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,1",
-  extents: "98.51971499999996,89.14586100000001,91.666664",
-  volume: "561323.625",
-  part_label: "050101"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050101.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,2",
-  extents: "97.10263099999997,63.332854,91.666664",
-  volume: "341222.6875",
-  part_label: "050102"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050102.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,3",
-  extents: "91.64080799999999,36.968956000000006,62.347320999999994",
-  volume: "64527.59375",
-  part_label: "050103"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050103.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,7",
-  extents: "24.196380999999974,24.114742999999997,78.12756300000001",
-  volume: "5807.350098",
-  part_label: "050107"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050107.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050107.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,8",
-  extents: "87.318329,45.758674,91.66668700000002",
-  volume: "80083.039062",
-  part_label: "050108"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050108.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050108.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,9",
-  extents: "87.35922299999999,43.23555399999999,91.66668699999991",
-  volume: "136130.96875",
-  part_label: "050109"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050109.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050109.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,10",
-  extents: "95.854218,69.966926,91.66668700000002",
-  volume: "346501.34375",
-  part_label: "050110"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050110.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050110.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,11",
-  extents: "91.64080799999999,66.053915,91.66668700000002",
-  volume: "237354.28125",
-  part_label: "050111"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050111.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050111.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,1,12",
-  extents: "46.32965100000001,15.386498000000003,6.900574000000006",
-  volume: "992.228149",
-  part_label: "050112"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050112.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050112.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,1",
-  extents: "98.79040599999996,87.676094,91.666664",
-  volume: "575934.5",
-  part_label: "050201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,2",
-  extents: "98.57531799999998,80.42147,91.666664",
-  volume: "529752.0",
-  part_label: "050202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,3",
-  extents: "99.042664,93.17089000000001,100.39759900000001",
-  volume: "639774.8125",
-  part_label: "050203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,4",
-  extents: "95.89001400000001,72.41400900000001,88.94400100000001",
-  volume: "234745.3125",
-  part_label: "050204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,5",
-  extents: "59.51034500000003,6.458526000000006,26.64196800000002",
-  volume: "713.456421",
-  part_label: "050205"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050205.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050205.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,6",
-  extents: "57.11410599999999,75.552536,30.661010999999917",
-  volume: "28669.679688",
-  part_label: "050206"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050206.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050206.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,7",
-  extents: "95.77548300000001,92.19387,96.45190400000001",
-  volume: "480785.71875",
-  part_label: "050207"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050207.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050207.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,8",
-  extents: "98.95599399999998,91.15273200000001,91.66668700000002",
-  volume: "662902.0",
-  part_label: "050208"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050208.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050208.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,9",
-  extents: "99.03744499999999,89.70507,91.66668699999991",
-  volume: "671618.875",
-  part_label: "050209"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050209.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050209.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,10",
-  extents: "98.99636900000002,91.32593500000002,91.66668700000002",
-  volume: "666880.5625",
-  part_label: "050210"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050210.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050210.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,11",
-  extents: "99.03329500000001,91.534614,91.66668700000002",
-  volume: "667426.625",
-  part_label: "050211"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050211.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050211.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,2,12",
-  extents: "91.64080799999999,86.54369299999999,59.659362999999985",
-  volume: "190952.765625",
-  part_label: "050212"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050212.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050212.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,1",
-  extents: "97.506012,87.44999700000002,52.938004",
-  volume: "388071.6875",
-  part_label: "050301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,2",
-  extents: "62.98306200000002,5.5881200000000035,10.559691999999984",
-  volume: "786.041382",
-  part_label: "050302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,3",
-  extents: "96.593659,80.42146300000002,109.11189300000001",
-  volume: "256916.078125",
-  part_label: "050303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,4",
-  extents: "99.26602100000002,88.70399500000002,109.134003",
-  volume: "649717.6875",
-  part_label: "050304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,5",
-  extents: "95.73327699999999,91.115128,91.66665699999999",
-  volume: "283272.15625",
-  part_label: "050305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,6",
-  extents: "91.64080799999999,87.28715500000001,98.48352",
-  volume: "276529.3125",
-  part_label: "050306"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050306.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050306.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,7",
-  extents: "98.82266299999998,91.22627299999999,91.66668700000002",
-  volume: "633913.4375",
-  part_label: "050307"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050307.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050307.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,8",
-  extents: "99.27505500000001,89.32341,91.66668700000002",
-  volume: "403917.34375",
-  part_label: "050308"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050308.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050308.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,9",
-  extents: "99.29449499999998,80.42146300000002,91.66668699999991",
-  volume: "366070.8125",
-  part_label: "050309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050309.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,10",
-  extents: "99.368225,80.42146300000002,91.66668700000002",
-  volume: "292741.5",
-  part_label: "050310"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050310.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,11",
-  extents: "99.35015899999996,80.42146300000002,107.18914800000005",
-  volume: "483143.71875",
-  part_label: "050311"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,3,12",
-  extents: "95.90716599999996,87.118042,79.91729699999996",
-  volume: "415717.65625",
-  part_label: "050312"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050312.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050312.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,1",
-  extents: "97.505494,86.55581699999999,52.912209",
-  volume: "387956.53125",
-  part_label: "050401"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050401.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,3",
-  extents: "35.065308000000016,5.168792999999994,3.942504999999983",
-  volume: "233.2211",
-  part_label: "050403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,4",
-  extents: "96.99703999999997,80.42147899999998,111.55487099999999",
-  volume: "328785.125",
-  part_label: "050404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,5",
-  extents: "99.06308000000001,91.51867699999997,91.66665699999999",
-  volume: "639031.4375",
-  part_label: "050405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,6",
-  extents: "99.17309599999999,90.85858200000001,91.66668700000002",
-  volume: "644665.0",
-  part_label: "050406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,7",
-  extents: "99.368225,88.993897,91.66668700000002",
-  volume: "541777.1875",
-  part_label: "050407"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050407.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050407.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,8",
-  extents: "79.007385,90.686646,92.37164299999995",
-  volume: "390235.375",
-  part_label: "050408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,9",
-  extents: "54.04135100000002,80.42147899999998,91.66668699999991",
-  volume: "221295.59375",
-  part_label: "050409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050409.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,10",
-  extents: "31.01263499999999,80.42147899999998,91.66668700000002",
-  volume: "58226.976562",
-  part_label: "050410"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050410.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,11",
-  extents: "99.18539499999997,80.42147899999998,122.23962399999994",
-  volume: "367578.78125",
-  part_label: "050411"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050411.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,4,12",
-  extents: "97.59808399999997,91.41305599999998,89.783142",
-  volume: "481719.84375",
-  part_label: "050412"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050412.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050412.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,1",
-  extents: "98.880585,91.99877900000001,91.666664",
-  volume: "597428.875",
-  part_label: "050501"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050501.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,2",
-  extents: "97.62200899999999,62.67401100000001,91.666008",
-  volume: "404307.1875",
-  part_label: "050502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,3",
-  extents: "96.37600700000002,48.376007999999956,91.666",
-  volume: "253514.9375",
-  part_label: "050503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,4",
-  extents: "91.64001400000001,80.42199700000003,91.668",
-  volume: "68801.773438",
-  part_label: "050504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,5",
-  extents: "74.96844499999997,80.42147800000004,91.66665699999999",
-  volume: "157927.3125",
-  part_label: "050505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,6",
-  extents: "99.368225,90.71423300000004,109.658142",
-  volume: "543147.25",
-  part_label: "050506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,7",
-  extents: "99.31320199999999,86.398864,91.66668700000002",
-  volume: "651937.9375",
-  part_label: "050507"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050507.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050507.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,8",
-  extents: "99.27166799999998,90.89617900000002,91.66668700000002",
-  volume: "476001.875",
-  part_label: "050508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,9",
-  extents: "50.32278400000001,80.42147800000004,91.66668699999991",
-  volume: "83957.75",
-  part_label: "050509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,10",
-  extents: "91.64080799999999,80.42147800000004,91.66668700000002",
-  volume: "13003.1875",
-  part_label: "050510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,11",
-  extents: "99.21603399999998,80.42147800000004,91.66668700000002",
-  volume: "440586.15625",
-  part_label: "050511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050511.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,5,12",
-  extents: "97.23791499999999,85.63705400000003,91.66656499999999",
-  volume: "480766.03125",
-  part_label: "050512"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050512.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050512.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,1",
-  extents: "96.18753099999998,42.003814999999975,91.666664",
-  volume: "284890.5",
-  part_label: "050601"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050601.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,2",
-  extents: "97.7482,58.93618799999996,91.666664",
-  volume: "421247.375",
-  part_label: "050602"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050602.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,3",
-  extents: "98.821076,79.94049099999995,104.384232",
-  volume: "581933.0625",
-  part_label: "050603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,4",
-  extents: "99.288025,85.92199699999998,91.668",
-  volume: "664887.0",
-  part_label: "050604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,5",
-  extents: "98.44000199999999,92.08200099999999,91.66601499999996",
-  volume: "482248.84375",
-  part_label: "050605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,6",
-  extents: "99.25436400000001,91.94216899999998,109.658142",
-  volume: "655131.0",
-  part_label: "050606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,7",
-  extents: "94.52835099999999,80.42147799999998,91.66668700000002",
-  volume: "353896.6875",
-  part_label: "050607"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050607.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050607.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,8",
-  extents: "99.10079999999999,87.38720699999999,91.66668700000002",
-  volume: "651474.1875",
-  part_label: "050608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,9",
-  extents: "99.34396399999997,92.18606599999998,91.66668699999991",
-  volume: "500825.875",
-  part_label: "050609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050609.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,10",
-  extents: "99.36233599999997,91.85143999999997,107.68048099999999",
-  volume: "537007.0625",
-  part_label: "050610"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050610.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,11",
-  extents: "99.163208,87.55508399999997,91.66668700000002",
-  volume: "643965.375",
-  part_label: "050611"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,6,12",
-  extents: "94.617615,80.42147799999998,69.07428000000004",
-  volume: "190423.140625",
-  part_label: "050612"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050612.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050612.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,4",
-  extents: "94.47399899999999,29.42800900000003,89.83801299999999",
-  volume: "110314.21875",
-  part_label: "050704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,5",
-  extents: "97.98001099999999,79.66601600000001,91.66601499999996",
-  volume: "455267.125",
-  part_label: "050705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,6",
-  extents: "96.463776,73.99783299999996,89.93188500000008",
-  volume: "308244.09375",
-  part_label: "050706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,7",
-  extents: "29.87081900000004,7.929687999999999,10.805176000000074",
-  volume: "544.648254",
-  part_label: "050707"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050707.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050707.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,8",
-  extents: "94.82101499999999,58.69186399999995,91.66668700000002",
-  volume: "189012.953125",
-  part_label: "050708"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050708.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050708.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "5,7,9",
-  extents: "97.46765199999999,74.83511400000003,91.66668699999991",
-  volume: "459510.25",
-  part_label: "050709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050709.png")
+  extents: "2.9382519999999985,3.804997,2.935890999999998",
+  volume: "13.813438",
+  part_label: "MeshZ10Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y7_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "5,7,10",
-  extents: "97.014771,73.87185700000003,91.66668700000002",
-  volume: "446972.40625",
-  part_label: "050710"
+  extents: "2.081128999999999,3.6799,3.4917190000000033",
+  volume: "2.604277",
+  part_label: "MeshZ10Y7X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050710.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050710.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y7_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "5,7,11",
-  extents: "95.15750199999997,51.47549399999997,91.66668700000002",
-  volume: "206758.21875",
-  part_label: "050711"
+  offset: "4,8,10",
+  extents: "2.7792530000000006,4.013008000000003,3.986618",
+  volume: "21.782015",
+  part_label: "MeshZ10Y8X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050711.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050711.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y8_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "5,7,12",
-  extents: "54.32696599999997,22.27554299999997,18.427306999999928",
-  volume: "4708.88916",
-  part_label: "050712"
+  offset: "5,8,10",
+  extents: "3.092613,3.647917000000003,4.292774999999999",
+  volume: "32.862278",
+  part_label: "MeshZ10Y8X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/050712.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/050712.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y8_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,1,1",
-  extents: "97.27331600000002,72.44728099999999,91.666664",
-  volume: "460295.34375",
-  part_label: "060101"
+  offset: "6,8,10",
+  extents: "1.2041129999999995,3.228237,4.1881679999999974",
+  volume: "9.049591",
+  part_label: "MeshZ10Y8X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060101.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y8_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,1,2",
-  extents: "95.87219300000004,63.577118,91.666664",
-  volume: "278956.09375",
-  part_label: "060102"
+  offset: "1,9,10",
+  extents: "0.839985,0.2868959999999987,1.2801060000000035",
+  volume: "0.06739",
+  part_label: "MeshZ10Y9X1"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060102.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y9_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y9_X1.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,1,3",
-  extents: "91.64080899999999,26.923438999999995,44.88327100000001",
-  volume: "31680.833984",
-  part_label: "060103"
+  offset: "3,9,10",
+  extents: "1.250310999999999,3.4419270000000033,3.986618",
+  volume: "4.067334",
+  part_label: "MeshZ10Y9X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060103.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y9_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,1,10",
-  extents: "57.61364800000001,56.42155100000001,79.33337399999994",
-  volume: "68208.03125",
-  part_label: "060110"
+  offset: "4,9,10",
+  extents: "3.0387199999999996,3.8325139999999998,4.36459",
+  volume: "35.971344",
+  part_label: "MeshZ10Y9X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060110.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060110.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y9_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,1,11",
-  extents: "21.217255000000023,25.189656,43.749145999999996",
-  volume: "4889.70166",
-  part_label: "060111"
+  offset: "5,9,10",
+  extents: "2.965026999999999,3.83568,3.986618",
+  volume: "30.773899",
+  part_label: "MeshZ10Y9X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060111.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060111.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y9_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,1",
-  extents: "99.428223,80.42147,102.605354",
-  volume: "615022.4375",
-  part_label: "060201"
+  offset: "6,9,10",
+  extents: "0.9470659999999995,3.5885909999999974,3.199269000000001",
+  volume: "2.388112",
+  part_label: "MeshZ10Y9X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060201.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z10_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z10_Y9_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,2",
-  extents: "99.19873099999995,80.42147,91.666664",
-  volume: "596150.4375",
-  part_label: "060202"
+  offset: "2,10,11",
+  extents: "1.926206,3.5885920000000056,3.4898650000000018",
+  volume: "5.249331",
+  part_label: "MeshZ11Y10X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060202.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y10_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,3",
-  extents: "98.67687999999998,80.42147,91.666672",
-  volume: "595855.375",
-  part_label: "060203"
+  offset: "3,10,11",
+  extents: "2.9496949999999993,3.5885920000000056,3.590916",
+  volume: "17.443359",
+  part_label: "MeshZ11Y10X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060203.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y10_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,4",
-  extents: "94.89837699999998,62.03060100000002,78.81179800000001",
-  volume: "157077.21875",
-  part_label: "060204"
+  offset: "4,10,11",
+  extents: "2.787203,3.5885920000000056,1.4532859999999985",
+  volume: "2.470196",
+  part_label: "MeshZ11Y10X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060204.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y10_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,5",
-  extents: "6.515899999999988,6.45567299999999,21.055999999999983",
-  volume: "334.914825",
-  part_label: "060205"
+  offset: "5,10,11",
+  extents: "0.40167600000000014,0.36056100000000413,0.5481419999999986",
+  volume: "0.012453",
+  part_label: "MeshZ11Y10X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060205.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060205.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y10_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,7",
-  extents: "37.80419999999998,56.95491799999999,62.83776899999998",
-  volume: "32843.570312",
-  part_label: "060207"
+  offset: "2,11,11",
+  extents: "0.18563300000000016,0.11630299999999494,0.23035500000000297",
+  volume: "0.001081",
+  part_label: "MeshZ11Y11X2"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060207.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060207.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y11_X2.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,8",
-  extents: "44.48410100000001,87.30793700000001,91.66668700000002",
-  volume: "157094.0",
-  part_label: "060208"
+  offset: "3,11,11",
+  extents: "2.7872030000000008,3.588592999999996,2.1565590000000014",
+  volume: "3.478191",
+  part_label: "MeshZ11Y11X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060208.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060208.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y11_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,9",
-  extents: "72.78436299999998,87.484077,91.66668699999991",
-  volume: "165654.90625",
-  part_label: "060209"
+  offset: "4,11,11",
+  extents: "1.9294589999999996,3.588592999999996,1.7322389999999999",
+  volume: "0.901826",
+  part_label: "MeshZ11Y11X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060209.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060209.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y11_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,10",
-  extents: "91.15393099999994,86.86045000000001,91.66668700000002",
-  volume: "413566.9375",
-  part_label: "060210"
+  offset: "3,12,11",
+  extents: "0.4660770000000003,0.020386000000002014,0.04858099999999865",
+  volume: "0.000141",
+  part_label: "MeshZ11Y12X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060210.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060210.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y12_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,11",
-  extents: "74.74554499999999,83.004478,91.66668700000002",
-  volume: "237100.046875",
-  part_label: "060211"
+  offset: "4,12,11",
+  extents: "1.8384900000000002,0.1182980000000029,0.2448699999999988",
+  volume: "0.01009",
+  part_label: "MeshZ11Y12X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060211.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060211.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y12_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,2,12",
-  extents: "36.28225800000001,40.785995,28.15338100000008",
-  volume: "5662.622559",
-  part_label: "060212"
+  offset: "4,8,11",
+  extents: "2.628584,3.3856050000000018,3.6708070000000035",
+  volume: "4.589061",
+  part_label: "MeshZ11Y8X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060212.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060212.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,11",
+  extents: "2.9968579999999996,3.679667000000002,3.986618",
+  volume: "22.361523",
+  part_label: "MeshZ11Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,11",
+  extents: "1.2101419999999994,2.7304530000000007,3.986618",
+  volume: "4.639535",
+  part_label: "MeshZ11Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,9,11",
+  extents: "1.9143540000000003,1.6421969999999995,2.9187730000000016",
+  volume: "4.111252",
+  part_label: "MeshZ11Y9X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y9_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y9_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,11",
+  extents: "2.7872030000000008,2.914641000000003,3.9328769999999977",
+  volume: "2.721619",
+  part_label: "MeshZ11Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,11",
+  extents: "2.974601999999999,3.7279039999999988,4.182262999999999",
+  volume: "23.943789",
+  part_label: "MeshZ11Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,11",
+  extents: "2.787203,3.5885909999999974,4.284813",
+  volume: "21.049612",
+  part_label: "MeshZ11Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,11",
+  extents: "0.4673559999999988,0.45502099999999857,1.2819900000000004",
+  volume: "0.060052",
+  part_label: "MeshZ11Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z11_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z11_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,12",
+  extents: "1.332526999999999,2.3693470000000048,3.4809219999999996",
+  volume: "2.821527",
+  part_label: "MeshZ12Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,12",
+  extents: "2.680199,3.5751109999999997,3.8417969999999997",
+  volume: "12.494577",
+  part_label: "MeshZ12Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,12",
+  extents: "2.2960720000000006,1.454809000000001,2.089081",
+  volume: "1.826914",
+  part_label: "MeshZ12Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,12",
+  extents: "0.6661839999999994,0.8933029999999995,1.8634150000000034",
+  volume: "0.309449",
+  part_label: "MeshZ12Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,12",
+  extents: "2.2049830000000004,3.493485999999997,3.435696",
+  volume: "9.55311",
+  part_label: "MeshZ12Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,12",
+  extents: "2.787203,3.721300000000003,3.8440020000000032",
+  volume: "19.216702",
+  part_label: "MeshZ12Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,12",
+  extents: "0.4951679999999996,0.647161999999998,1.8708349999999996",
+  volume: "0.22083",
+  part_label: "MeshZ12Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z12_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z12_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,10,1",
+  extents: "2.7872069999999987,3.5885920000000056,3.986615",
+  volume: "20.347158",
+  part_label: "MeshZ1Y10X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,10,1",
+  extents: "1.2512400000000001,3.5885920000000056,2.150665",
+  volume: "3.628781",
+  part_label: "MeshZ1Y10X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,1",
+  extents: "3.1180449999999995,3.5885920000000056,3.986618",
+  volume: "33.157799",
+  part_label: "MeshZ1Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,1",
+  extents: "2.787203,3.960177999999999,4.10776",
+  volume: "26.353605",
+  part_label: "MeshZ1Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,1",
+  extents: "0.5146990000000002,0.855476000000003,0.6218870000000001",
+  volume: "0.042374",
+  part_label: "MeshZ1Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,10,1",
+  extents: "1.7865970000000004,3.5885920000000056,3.986607",
+  volume: "3.753194",
+  part_label: "MeshZ1Y10X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,10,1",
+  extents: "3.105657000000001,3.987102,3.986615",
+  volume: "36.939819",
+  part_label: "MeshZ1Y10X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y10_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y10_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,11,1",
+  extents: "2.558924000000001,3.9460949999999997,3.986617",
+  volume: "23.123152",
+  part_label: "MeshZ1Y11X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,11,1",
+  extents: "1.2485779999999993,3.588592999999996,1.9363000000000001",
+  volume: "3.244702",
+  part_label: "MeshZ1Y11X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,1",
+  extents: "3.1274869999999995,3.714019999999998,3.986617",
+  volume: "30.862619",
+  part_label: "MeshZ1Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,1",
+  extents: "3.1035579999999996,4.086929999999995,4.570355",
+  volume: "40.14312",
+  part_label: "MeshZ1Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,1",
+  extents: "2.787203,3.588592999999996,3.986614",
+  volume: "14.336287",
+  part_label: "MeshZ1Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,1",
+  extents: "2.787203,0.5718839999999972,0.5669580000000001",
+  volume: "0.057942",
+  part_label: "MeshZ1Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,1",
+  extents: "2.9274330000000006,2.0924369999999968,4.106283",
+  volume: "4.709215",
+  part_label: "MeshZ1Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,11,1",
+  extents: "3.1182230000000004,4.133480999999996,4.570356",
+  volume: "28.302719",
+  part_label: "MeshZ1Y11X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,11,1",
+  extents: "3.129448,3.942623999999995,3.986617",
+  volume: "37.063602",
+  part_label: "MeshZ1Y11X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y11_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y11_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,12,1",
+  extents: "2.0692389999999996,2.9280240000000006,3.986617",
+  volume: "7.706758",
+  part_label: "MeshZ1Y12X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,1",
+  extents: "1.2806259999999998,3.588593000000003,2.366792",
+  volume: "3.863888",
+  part_label: "MeshZ1Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,1",
+  extents: "3.110036,3.9839780000000005,3.8571899999999997",
+  volume: "32.409142",
+  part_label: "MeshZ1Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,1",
+  extents: "3.0980039999999995,3.588593000000003,3.986617",
+  volume: "35.005402",
+  part_label: "MeshZ1Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,1",
+  extents: "3.101545999999999,4.027912000000001,3.986611",
+  volume: "38.576973",
+  part_label: "MeshZ1Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,1",
+  extents: "3.079299999999998,3.588593000000003,3.986611",
+  volume: "29.305519",
+  part_label: "MeshZ1Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,12,1",
+  extents: "3.128226999999999,3.840125999999998,3.986617",
+  volume: "38.160583",
+  part_label: "MeshZ1Y12X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,12,1",
+  extents: "3.0884890000000027,4.076725000000003,4.570355",
+  volume: "38.48415",
+  part_label: "MeshZ1Y12X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,12,1",
+  extents: "3.0395429999999983,3.588593000000003,3.986618",
+  volume: "26.039284",
+  part_label: "MeshZ1Y12X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y12_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y12_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,1",
+  extents: "0.8874440000000003,1.9353249999999989,2.24837",
+  volume: "0.72656",
+  part_label: "MeshZ1Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,1",
+  extents: "3.056299,3.788920999999995,3.292168",
+  volume: "21.218931",
+  part_label: "MeshZ1Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,1",
+  extents: "3.0408939999999998,3.788920999999995,3.463702",
+  volume: "22.478691",
+  part_label: "MeshZ1Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,1",
+  extents: "3.1130049999999994,3.5885919999999984,3.986611",
+  volume: "28.263323",
+  part_label: "MeshZ1Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,13,1",
+  extents: "3.0662579999999995,3.8939239999999984,3.986616",
+  volume: "34.103298",
+  part_label: "MeshZ1Y13X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,13,1",
+  extents: "3.074183999999999,3.5885919999999984,3.986618",
+  volume: "22.050156",
+  part_label: "MeshZ1Y13X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,13,1",
+  extents: "2.7872030000000017,3.5885919999999984,3.986618",
+  volume: "20.938305",
+  part_label: "MeshZ1Y13X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,13,1",
+  extents: "0.9454950000000011,1.4465019999999953,1.989491",
+  volume: "0.292019",
+  part_label: "MeshZ1Y13X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y13_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y13_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,1",
+  extents: "1.8389160000000002,1.1573750000000018,1.470936",
+  volume: "0.938966",
+  part_label: "MeshZ1Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,14,1",
+  extents: "2.787203,1.1958240000000018,1.4708830000000002",
+  volume: "1.638867",
+  part_label: "MeshZ1Y14X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,14,1",
+  extents: "2.787203,1.3044549999999973,2.190834",
+  volume: "1.323038",
+  part_label: "MeshZ1Y14X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,14,1",
+  extents: "2.787203,1.441829999999996,2.547939",
+  volume: "4.09883",
+  part_label: "MeshZ1Y14X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,14,1",
+  extents: "2.787202999999998,0.6277469999999994,1.0552119999999998",
+  volume: "0.094422",
+  part_label: "MeshZ1Y14X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,14,1",
+  extents: "0.8559820000000009,0.11739000000000033,0.317464",
+  volume: "0.00861",
+  part_label: "MeshZ1Y14X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y14_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y14_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,3,1",
+  extents: "1.0026650000000004,0.6173040000000007,0.9900090000000001",
+  volume: "0.090142",
+  part_label: "MeshZ1Y3X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y3_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y3_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,1",
+  extents: "2.787203,1.2983569999999993,1.040187",
+  volume: "1.600111",
+  part_label: "MeshZ1Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,1",
+  extents: "2.787203,1.1970790000000004,3.027478",
+  volume: "2.73923",
+  part_label: "MeshZ1Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y3_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "6,3,1",
-  extents: "99.40270999999996,88.552841,91.666664",
-  volume: "443592.9375",
-  part_label: "060301"
+  extents: "1.4173919999999995,0.6115580000000005,2.255737",
+  volume: "0.753082",
+  part_label: "MeshZ1Y3X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060301.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y3_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,3,2",
-  extents: "97.64929199999995,80.42146300000002,91.666664",
-  volume: "46852.035156",
-  part_label: "060302"
+  offset: "3,4,1",
+  extents: "2.5540010000000004,3.5885920000000002,2.959239",
+  volume: "10.901701",
+  part_label: "MeshZ1Y4X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060302.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y4_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y4_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,3,3",
-  extents: "97.48809900000003,78.75508099999999,91.666672",
-  volume: "327021.21875",
-  part_label: "060303"
+  offset: "4,4,1",
+  extents: "3.1199969999999997,4.093584,4.511981",
+  volume: "27.826612",
+  part_label: "MeshZ1Y4X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060303.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y4_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,3,4",
-  extents: "99.10955899999999,89.95933600000001,98.19940200000002",
-  volume: "644747.3125",
-  part_label: "060304"
+  offset: "5,4,1",
+  extents: "3.104604,3.8515680000000003,4.371814",
+  volume: "34.929691",
+  part_label: "MeshZ1Y4X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,5",
-  extents: "95.02410899999995,87.437577,91.66665699999999",
-  volume: "292271.0625",
-  part_label: "060305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,6",
-  extents: "55.17016699999999,31.264419000000004,91.66668700000002",
-  volume: "8341.529297",
-  part_label: "060306"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060306.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060306.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,7",
-  extents: "49.668304999999975,80.42146300000002,91.66668700000002",
-  volume: "178739.796875",
-  part_label: "060307"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060307.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060307.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,8",
-  extents: "71.12927300000001,89.32341,91.66668700000002",
-  volume: "395399.90625",
-  part_label: "060308"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060308.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060308.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,9",
-  extents: "94.87701500000003,89.7892,100.40643299999999",
-  volume: "504645.59375",
-  part_label: "060309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060309.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,10",
-  extents: "98.43817200000001,90.384064,104.637878",
-  volume: "669115.6875",
-  part_label: "060310"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060310.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,11",
-  extents: "91.64080899999999,91.56042500000001,91.66668700000002",
-  volume: "508250.78125",
-  part_label: "060311"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,3,12",
-  extents: "49.28729299999998,80.42146300000002,43.996276999999964",
-  volume: "57867.074219",
-  part_label: "060312"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060312.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060312.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y4_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "6,4,1",
-  extents: "99.30999799999995,90.81002799999999,91.666664",
-  volume: "497085.5",
-  part_label: "060401"
+  extents: "2.2767469999999985,3.856966,3.908009",
+  volume: "17.65671",
+  part_label: "MeshZ1Y4X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060401.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y4_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,4,2",
-  extents: "47.84399400000001,80.42001299999998,91.666008",
-  volume: "129078.554688",
-  part_label: "060402"
+  offset: "3,5,1",
+  extents: "2.6201860000000003,3.5885920000000002,3.976567",
+  volume: "14.510687",
+  part_label: "MeshZ1Y5X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060402.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y5_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y5_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,4,3",
-  extents: "9.611999000000083,43.002013999999974,25.773986999999977",
-  volume: "1775.658936",
-  part_label: "060403"
+  offset: "4,5,1",
+  extents: "3.1270919999999993,3.5885920000000002,3.986617",
+  volume: "28.624138",
+  part_label: "MeshZ1Y5X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060403.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y5_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "6,4,4",
-  extents: "97.09027100000003,80.42147899999998,106.50888099999997",
-  volume: "289146.3125",
-  part_label: "060404"
+  offset: "5,5,1",
+  extents: "3.124428,4.070787000000001,3.986617",
+  volume: "37.068882",
+  part_label: "MeshZ1Y5X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,5",
-  extents: "99.03997900000002,80.42147899999998,91.66665699999999",
-  volume: "654935.375",
-  part_label: "060405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,6",
-  extents: "91.64080899999999,80.42147899999998,91.66668700000002",
-  volume: "294839.375",
-  part_label: "060406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,7",
-  extents: "48.967713,80.42147899999998,91.66668700000002",
-  volume: "220716.671875",
-  part_label: "060407"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060407.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060407.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,8",
-  extents: "94.83050600000001,90.686646,110.87475599999993",
-  volume: "490145.78125",
-  part_label: "060408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,9",
-  extents: "97.650574,90.92568999999997,111.8406369999999",
-  volume: "642026.625",
-  part_label: "060409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060409.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,10",
-  extents: "99.36822600000005,90.064728,99.87927200000001",
-  volume: "626035.625",
-  part_label: "060410"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060410.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,11",
-  extents: "96.96447799999999,91.47473199999996,91.66668700000002",
-  volume: "630076.9375",
-  part_label: "060411"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060411.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,4,12",
-  extents: "75.16705400000001,80.42147899999998,67.46758999999997",
-  volume: "162263.0625",
-  part_label: "060412"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060412.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060412.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y5_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "6,5,1",
-  extents: "99.46447799999999,91.99877900000001,107.825966",
-  volume: "645810.8125",
-  part_label: "060501"
+  extents: "2.941087999999999,3.6074339999999996,3.986618",
+  volume: "26.057379",
+  part_label: "MeshZ1Y5X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060501.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,2",
-  extents: "99.22601400000002,92.90798900000004,96.56400299999999",
-  volume: "492602.90625",
-  part_label: "060502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,3",
-  extents: "97.72802800000005,80.42199700000003,91.666",
-  volume: "267204.875",
-  part_label: "060503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,4",
-  extents: "91.64202900000004,88.93798800000002,91.668",
-  volume: "69719.5",
-  part_label: "060504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,5",
-  extents: "98.78179999999998,86.72259500000001,120.87735000000004",
-  volume: "443227.4375",
-  part_label: "060505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,6",
-  extents: "96.24487399999998,90.71423300000004,91.66668700000002",
-  volume: "528506.9375",
-  part_label: "060506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,7",
-  extents: "68.071778,80.42147800000004,91.66668700000002",
-  volume: "183027.71875",
-  part_label: "060507"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060507.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060507.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,8",
-  extents: "95.32733199999996,80.691284,106.65661599999999",
-  volume: "566389.9375",
-  part_label: "060508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,9",
-  extents: "99.36822600000005,89.64330999999999,91.66668699999991",
-  volume: "652922.9375",
-  part_label: "060509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,10",
-  extents: "99.36822600000005,90.45343000000003,91.66668700000002",
-  volume: "584557.6875",
-  part_label: "060510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,11",
-  extents: "97.42492700000003,91.35906900000003,91.66668700000002",
-  volume: "622286.875",
-  part_label: "060511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060511.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,5,12",
-  extents: "72.21527100000003,80.42147800000004,59.17132599999991",
-  volume: "133132.15625",
-  part_label: "060512"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060512.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060512.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,1",
-  extents: "96.18743900000004,42.00390599999997,95.07383",
-  volume: "284033.03125",
-  part_label: "060601"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060601.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,2",
-  extents: "97.74823000000004,58.93661499999996,91.666664",
-  volume: "416090.75",
-  part_label: "060602"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060602.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,3",
-  extents: "98.79705899999999,79.940857,98.12983700000001",
-  volume: "578881.25",
-  part_label: "060603"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,4",
-  extents: "99.33599899999996,80.42199699999998,91.668",
-  volume: "667044.5",
-  part_label: "060604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,5",
-  extents: "99.23400899999996,80.42199699999998,120.87600699999996",
-  volume: "571060.6875",
-  part_label: "060605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,6",
-  extents: "97.43786699999998,80.42147799999998,91.66668700000002",
-  volume: "547866.3125",
-  part_label: "060606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,7",
-  extents: "47.87927300000001,63.207245,91.66668700000002",
-  volume: "39361.363281",
-  part_label: "060607"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060607.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060607.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,8",
-  extents: "91.64080899999999,80.42147799999998,91.66668700000002",
-  volume: "381634.0625",
-  part_label: "060608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,9",
-  extents: "96.64654599999994,89.22607399999998,91.66668699999991",
-  volume: "650654.1875",
-  part_label: "060609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060609.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,10",
-  extents: "98.38562100000001,91.85143999999997,91.66668700000002",
-  volume: "648909.8125",
-  part_label: "060610"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060610.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,11",
-  extents: "91.64080899999999,80.42147799999998,91.66668700000002",
-  volume: "445795.75",
-  part_label: "060611"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,6,12",
-  extents: "52.896973,66.99899299999998,45.37420700000007",
-  volume: "28037.242188",
-  part_label: "060612"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060612.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060612.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,4",
-  extents: "94.47290099999998,29.428223000000003,89.83889699999997",
-  volume: "111937.460938",
-  part_label: "060704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,5",
-  extents: "97.80224699999997,77.19918799999999,91.66665699999999",
-  volume: "444748.53125",
-  part_label: "060705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,6",
-  extents: "94.63525400000003,70.24099700000005,74.52160600000002",
-  volume: "180778.25",
-  part_label: "060706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,8",
-  extents: "69.073487,40.931488,55.730469000000085",
-  volume: "34420.324219",
-  part_label: "060708"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060708.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060708.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,9",
-  extents: "91.64080899999999,57.56619299999994,91.66668699999991",
-  volume: "232752.203125",
-  part_label: "060709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060709.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,10",
-  extents: "91.21197600000005,57.51083399999999,91.66668700000002",
-  volume: "240229.90625",
-  part_label: "060710"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060710.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060710.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "6,7,11",
-  extents: "59.228699000000006,52.00833099999994,64.44720500000005",
-  volume: "56510.703125",
-  part_label: "060711"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/060711.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/060711.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,1,1",
-  extents: "84.56658900000002,61.516071000000004,91.666664",
-  volume: "180426.203125",
-  part_label: "070101"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070101.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070101.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,1,2",
-  extents: "74.60620100000006,45.899536000000005,91.666664",
-  volume: "74118.0",
-  part_label: "070102"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070102.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070102.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,1,3",
-  extents: "29.63378899999998,9.005623,21.656616000000014",
-  volume: "1135.74646",
-  part_label: "070103"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070103.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070103.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,2,1",
-  extents: "96.29766800000004,91.47865999999999,106.210037",
-  volume: "631376.375",
-  part_label: "070201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,2,2",
-  extents: "98.41320800000005,91.053764,108.41225399999999",
-  volume: "640600.375",
-  part_label: "070202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,2,3",
-  extents: "96.95190400000001,93.17089000000001,91.666672",
-  volume: "451743.9375",
-  part_label: "070203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,2,4",
-  extents: "91.64080799999999,42.587790999999996,58.55670199999997",
-  volume: "70376.953125",
-  part_label: "070204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,1",
-  extents: "91.64080799999999,91.13398800000002,91.666664",
-  volume: "524281.375",
-  part_label: "070301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,2",
-  extents: "98.90869099999998,89.258026,108.41225399999999",
-  volume: "652019.3125",
-  part_label: "070302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,3",
-  extents: "99.36822500000005,89.38812300000001,107.36735600000003",
-  volume: "606549.125",
-  part_label: "070303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,4",
-  extents: "98.40399100000002,80.42146300000002,91.66665599999999",
-  volume: "573537.8125",
-  part_label: "070304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,5",
-  extents: "91.64080799999999,50.759094000000005,56.14321899999999",
-  volume: "86144.992188",
-  part_label: "070305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,9",
-  extents: "33.00317300000006,63.766189000000026,29.668273999999997",
-  volume: "19176.841797",
-  part_label: "070309"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070309.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070309.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,10",
-  extents: "36.505187999999976,79.57006800000002,91.66668700000002",
-  volume: "82093.226562",
-  part_label: "070310"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070310.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070310.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,3,11",
-  extents: "24.36462400000005,50.85067700000002,36.68756099999996",
-  volume: "8924.306641",
-  part_label: "070311"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070311.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070311.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,1",
-  extents: "79.73107900000002,82.69689999999997,91.666664",
-  volume: "391092.625",
-  part_label: "070401"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070401.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070401.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,2",
-  extents: "96.45794699999999,89.26000900000003,91.666008",
-  volume: "622297.4375",
-  part_label: "070402"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070402.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,3",
-  extents: "99.36798099999999,89.27401700000001,91.666",
-  volume: "553342.0625",
-  part_label: "070403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,4",
-  extents: "99.49963300000002,89.52450599999997,111.55487099999999",
-  volume: "561664.75",
-  part_label: "070404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,5",
-  extents: "98.02996800000005,80.42147899999998,91.66665699999999",
-  volume: "542618.0625",
-  part_label: "070405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,6",
-  extents: "91.64080799999999,45.63095099999998,30.259918000000027",
-  volume: "23825.306641",
-  part_label: "070406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,8",
-  extents: "20.05377199999998,60.21063299999997,43.778625000000034",
-  volume: "11546.519531",
-  part_label: "070408"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070408.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070408.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,9",
-  extents: "59.62554899999998,80.42147899999998,91.66668699999991",
-  volume: "175691.03125",
-  part_label: "070409"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070409.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070409.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,10",
-  extents: "59.17877199999998,80.42147899999998,91.66668700000002",
-  volume: "285320.0625",
-  part_label: "070410"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070410.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070410.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,4,11",
-  extents: "35.679565000000025,80.42147899999998,67.73663299999998",
-  volume: "66745.054688",
-  part_label: "070411"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070411.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070411.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y5_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "7,5,1",
-  extents: "61.75469899999996,80.42147800000004,106.052933",
-  volume: "262526.875",
-  part_label: "070501"
+  extents: "2.524393,2.0183950000000017,3.344378",
+  volume: "3.200707",
+  part_label: "MeshZ1Y5X7"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070501.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070501.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y5_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y5_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "7,5,2",
-  extents: "91.64080799999999,80.42147800000004,108.41225399999999",
-  volume: "518438.15625",
-  part_label: "070502"
+  offset: "3,6,1",
+  extents: "2.5632509999999993,3.7553379999999983,3.986617",
+  volume: "3.312741",
+  part_label: "MeshZ1Y6X3"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070502.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X3.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "7,5,3",
-  extents: "98.75598200000002,91.23400900000001,91.666",
-  volume: "632477.625",
-  part_label: "070503"
+  offset: "4,6,1",
+  extents: "3.1279629999999994,3.8607939999999985,3.986617",
+  volume: "33.337669",
+  part_label: "MeshZ1Y6X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070503.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "7,5,4",
-  extents: "99.26873699999999,92.102417,95.23046900000003",
-  volume: "455194.34375",
-  part_label: "070504"
+  offset: "5,6,1",
+  extents: "3.0622670000000003,3.7403009999999988,4.199831",
+  volume: "31.453928",
+  part_label: "MeshZ1Y6X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070504.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X5.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "7,5,5",
-  extents: "99.45898399999999,92.27810600000004,120.87735000000004",
-  volume: "617908.8125",
-  part_label: "070505"
+  offset: "6,6,1",
+  extents: "3.126306999999999,3.5885919999999984,4.459442",
+  volume: "35.181973",
+  part_label: "MeshZ1Y6X6"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,5,6",
-  extents: "94.51428199999998,80.42147800000004,61.769408999999996",
-  volume: "215810.96875",
-  part_label: "070506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070506.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,5,8",
-  extents: "39.68633999999997,80.42147800000004,60.602722000000085",
-  volume: "31451.085938",
-  part_label: "070508"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070508.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070508.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,5,9",
-  extents: "67.17218000000003,80.42147800000004,91.66668699999991",
-  volume: "283326.71875",
-  part_label: "070509"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070509.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070509.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,5,10",
-  extents: "67.09020999999996,80.42147800000004,91.66668700000002",
-  volume: "291763.9375",
-  part_label: "070510"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070510.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070510.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,5,11",
-  extents: "38.79022199999997,80.42147800000004,67.43536400000005",
-  volume: "67041.1875",
-  part_label: "070511"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070511.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070511.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "7,6,1",
-  extents: "43.77844200000004,42.067229999999995,91.666664",
-  volume: "74895.320312",
-  part_label: "070601"
+  extents: "3.0690920000000013,4.012846,3.986617",
+  volume: "32.812626",
+  part_label: "MeshZ1Y6X7"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070601.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070601.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,6,1",
+  extents: "2.7872030000000017,3.327195999999997,3.986617",
+  volume: "11.633965",
+  part_label: "MeshZ1Y6X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,6,1",
+  extents: "0.018072000000000088,0.025559999999998695,0.120374",
+  volume: "1.0e-05",
+  part_label: "MeshZ1Y6X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y6_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y6_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,7,1",
+  extents: "0.34952899999999953,0.9045429999999968,0.801212",
+  volume: "0.041124",
+  part_label: "MeshZ1Y7X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,7,1",
+  extents: "3.1303840000000003,3.9545600000000007,4.132684",
+  volume: "22.225796",
+  part_label: "MeshZ1Y7X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,1",
+  extents: "2.9499779999999998,3.9545600000000007,4.412163",
+  volume: "32.861881",
+  part_label: "MeshZ1Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,1",
+  extents: "0.9333219999999987,1.5325130000000016,3.986614",
+  volume: "2.009032",
+  part_label: "MeshZ1Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,1",
+  extents: "1.187462,0.741106000000002,3.986609",
+  volume: "0.504345",
+  part_label: "MeshZ1Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,1",
+  extents: "3.1276170000000008,3.5885929999999995,3.986615",
+  volume: "20.935173",
+  part_label: "MeshZ1Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,7,1",
+  extents: "3.077179000000001,3.9777800000000028,3.986617",
+  volume: "34.957512",
+  part_label: "MeshZ1Y7X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,7,1",
+  extents: "2.178246999999999,3.5885929999999995,3.986617",
+  volume: "9.137258",
+  part_label: "MeshZ1Y7X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y7_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y7_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,8,1",
+  extents: "1.016487999999999,2.460006,2.78646",
+  volume: "2.052681",
+  part_label: "MeshZ1Y8X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,8,1",
+  extents: "1.4246280000000002,3.588592000000002,2.608203",
+  volume: "3.292573",
+  part_label: "MeshZ1Y8X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,8,1",
+  extents: "3.122851,3.952991000000001,3.986617",
+  volume: "33.319057",
+  part_label: "MeshZ1Y8X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,1",
+  extents: "2.080950999999999,3.588592000000002,4.148107",
+  volume: "19.964821",
+  part_label: "MeshZ1Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,1",
+  extents: "0.330175999999998,0.5098110000000027,3.986605",
+  volume: "0.12204",
+  part_label: "MeshZ1Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,1",
+  extents: "3.129221000000001,3.9208430000000014,3.986617",
+  volume: "28.060881",
+  part_label: "MeshZ1Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,8,1",
+  extents: "2.9993219999999994,3.9601060000000032,3.986616",
+  volume: "31.363016",
+  part_label: "MeshZ1Y8X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y8_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y8_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,9,1",
+  extents: "2.2656849999999977,3.5885909999999974,3.986617",
+  volume: "10.713372",
+  part_label: "MeshZ1Y9X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,9,1",
+  extents: "1.49627,3.5885909999999974,2.6803969999999997",
+  volume: "5.174205",
+  part_label: "MeshZ1Y9X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,1",
+  extents: "3.1278429999999995,3.957010999999998,3.986617",
+  volume: "38.049343",
+  part_label: "MeshZ1Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,1",
+  extents: "1.7157529999999994,3.712793999999999,3.986614",
+  volume: "15.429496",
+  part_label: "MeshZ1Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,1",
+  extents: "1.7648389999999985,3.5885909999999974,3.98661",
+  volume: "10.45116",
+  part_label: "MeshZ1Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,9,1",
+  extents: "3.1031179999999985,3.9597230000000003,4.4121619999999995",
+  volume: "39.637486",
+  part_label: "MeshZ1Y9X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z1_Y9_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z1_Y9_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,10,2",
+  extents: "0.6401959999999995,3.5885920000000056,0.7477520000000002",
+  volume: "0.436311",
+  part_label: "MeshZ2Y10X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,2",
+  extents: "2.158714,3.5885920000000056,3.058331",
+  volume: "6.720774",
+  part_label: "MeshZ2Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,2",
+  extents: "3.1060619999999997,3.952988000000005,4.185385999999999",
+  volume: "30.832214",
+  part_label: "MeshZ2Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,2",
+  extents: "2.6824619999999992,3.952988000000005,4.377115",
+  volume: "14.634211",
+  part_label: "MeshZ2Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,2",
+  extents: "1.469622000000001,3.5885920000000056,2.670782",
+  volume: "2.551421",
+  part_label: "MeshZ2Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,10,2",
+  extents: "3.074072000000001,3.966453999999999,3.986618",
+  volume: "29.389021",
+  part_label: "MeshZ2Y10X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,10,2",
+  extents: "2.7872020000000006,3.5885920000000056,3.986618",
+  volume: "20.179899",
+  part_label: "MeshZ2Y10X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y10_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y10_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,11,2",
+  extents: "0.7560509999999994,3.588592999999996,0.7545279999999996",
+  volume: "0.807598",
+  part_label: "MeshZ2Y11X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,2",
+  extents: "1.2646189999999988,3.1646539999999987,1.4889640000000002",
+  volume: "1.024254",
+  part_label: "MeshZ2Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,2",
+  extents: "3.102262999999999,3.588592999999996,3.986618",
+  volume: "18.649416",
+  part_label: "MeshZ2Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,2",
+  extents: "2.983122999999999,3.588592999999996,3.986618",
+  volume: "30.729826",
+  part_label: "MeshZ2Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,2",
+  extents: "2.92478,3.3142470000000017,3.986618",
+  volume: "11.989625",
+  part_label: "MeshZ2Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,2",
+  extents: "3.098993,4.092803999999994,4.420503999999999",
+  volume: "22.911161",
+  part_label: "MeshZ2Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,11,2",
+  extents: "3.0406150000000025,3.588592999999996,3.986618",
+  volume: "29.39724",
+  part_label: "MeshZ2Y11X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,11,2",
+  extents: "2.7872020000000006,3.588592999999996,3.329598",
+  volume: "13.151825",
+  part_label: "MeshZ2Y11X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y11_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y11_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,12,2",
+  extents: "0.19074900000000028,0.3211330000000032,0.16983399999999982",
+  volume: "0.001948",
+  part_label: "MeshZ2Y12X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,2",
+  extents: "2.7244010000000003,2.8147620000000018,2.0558509999999997",
+  volume: "2.164377",
+  part_label: "MeshZ2Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,2",
+  extents: "2.9648899999999987,3.588593000000003,3.986618",
+  volume: "15.846069",
+  part_label: "MeshZ2Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,2",
+  extents: "2.9770449999999986,3.774158,3.986618",
+  volume: "27.191895",
+  part_label: "MeshZ2Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,12,2",
+  extents: "2.9863639999999982,3.6372110000000006,4.100358",
+  volume: "24.338169",
+  part_label: "MeshZ2Y12X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,12,2",
+  extents: "2.7872030000000017,3.588593000000003,3.986618",
+  volume: "8.46596",
+  part_label: "MeshZ2Y12X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,12,2",
+  extents: "2.7872020000000006,0.9695660000000004,0.7320419999999999",
+  volume: "0.452497",
+  part_label: "MeshZ2Y12X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y12_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y12_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,2",
+  extents: "2.02599,2.104182999999999,1.2380589999999998",
+  volume: "1.16862",
+  part_label: "MeshZ2Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,13,2",
+  extents: "2.787203,2.2379339999999956,1.9167610000000002",
+  volume: "2.837395",
+  part_label: "MeshZ2Y13X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y13_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y13_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,13,2",
+  extents: "2.787202999999998,0.8140029999999996,1.8900189999999997",
+  volume: "0.443718",
+  part_label: "MeshZ2Y13X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y13_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y13_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,13,2",
+  extents: "1.3588920000000009,0.6107549999999975,0.26719199999999965",
+  volume: "0.069437",
+  part_label: "MeshZ2Y13X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y13_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y13_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,3,2",
+  extents: "1.360364999999999,1.286676,3.1116650000000003",
+  volume: "1.679882",
+  part_label: "MeshZ2Y3X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y3_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y3_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,2",
+  extents: "3.021545999999999,2.43727,3.986618",
+  volume: "17.428989",
+  part_label: "MeshZ2Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,2",
+  extents: "2.942926,2.01243,3.986618",
+  volume: "15.732374",
+  part_label: "MeshZ2Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,2",
+  extents: "1.9890059999999998,1.2675560000000008,3.986618",
+  volume: "3.231627",
+  part_label: "MeshZ2Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,4,2",
+  extents: "2.468349999999999,3.574619,2.9680910000000003",
+  volume: "7.864732",
+  part_label: "MeshZ2Y4X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y4_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y4_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,2",
+  extents: "3.045940999999999,3.5885920000000002,3.986618",
+  volume: "12.199788",
+  part_label: "MeshZ2Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,2",
+  extents: "3.111018999999999,3.9990249999999996,4.166928",
+  volume: "33.510475",
+  part_label: "MeshZ2Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,2",
+  extents: "2.7342640000000014,3.5885920000000002,4.468712999999999",
+  volume: "31.012173",
+  part_label: "MeshZ2Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,2",
+  extents: "2.316704999999999,3.5885920000000002,2.93928",
+  volume: "6.052222",
+  part_label: "MeshZ2Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,2",
+  extents: "3.1278360000000003,3.790847000000001,4.161358",
+  volume: "31.879473",
+  part_label: "MeshZ2Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,2",
+  extents: "2.7333510000000008,3.8968609999999995,4.468712999999999",
+  volume: "31.830435",
+  part_label: "MeshZ2Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,6,2",
+  extents: "0.05847300000000111,0.08980499999999836,0.12101700000000015",
+  volume: "0.000107",
+  part_label: "MeshZ2Y6X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,2",
+  extents: "3.113092999999999,3.889098999999998,3.986618",
+  volume: "16.341995",
+  part_label: "MeshZ2Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,2",
+  extents: "3.1103799999999993,3.866471999999998,4.420503999999999",
+  volume: "36.475323",
+  part_label: "MeshZ2Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,2",
+  extents: "2.966105999999998,3.5885919999999984,4.420503999999999",
+  volume: "34.563278",
+  part_label: "MeshZ2Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "7,6,2",
-  extents: "77.96575900000005,58.95538299999998,97.148079",
-  volume: "257625.0",
-  part_label: "070602"
+  extents: "2.787202999999998,3.6199449999999977,3.986618",
+  volume: "11.874719",
+  part_label: "MeshZ2Y6X7"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070602.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070602.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,6,2",
+  extents: "1.2483840000000015,1.4584629999999983,1.9313900000000004",
+  volume: "0.699417",
+  part_label: "MeshZ2Y6X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y6_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,7,2",
+  extents: "1.5755399999999993,3.5885929999999995,3.950672",
+  volume: "3.196377",
+  part_label: "MeshZ2Y7X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,2",
+  extents: "3.096539,3.9142019999999995,4.235901",
+  volume: "33.242783",
+  part_label: "MeshZ2Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,2",
+  extents: "2.787203,3.5885929999999995,3.986618",
+  volume: "8.032797",
+  part_label: "MeshZ2Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,2",
+  extents: "3.0393999999999988,2.946398000000002,3.986618",
+  volume: "9.464573",
+  part_label: "MeshZ2Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,2",
+  extents: "3.0876079999999995,3.7866859999999996,4.420503999999999",
+  volume: "33.035122",
+  part_label: "MeshZ2Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,7,2",
+  extents: "2.7872030000000017,3.890518,3.986618",
+  volume: "17.261711",
+  part_label: "MeshZ2Y7X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,7,2",
+  extents: "0.683008000000001,1.0956019999999995,1.682575",
+  volume: "0.224458",
+  part_label: "MeshZ2Y7X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y7_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y7_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,8,2",
+  extents: "2.477754,3.588592000000002,3.986618",
+  volume: "11.931935",
+  part_label: "MeshZ2Y8X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,2",
+  extents: "2.9037919999999993,3.9184340000000013,4.377115",
+  volume: "31.443014",
+  part_label: "MeshZ2Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,2",
+  extents: "0.4016559999999991,3.588592000000002,1.6721820000000003",
+  volume: "0.205328",
+  part_label: "MeshZ2Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,2",
+  extents: "2.3560909999999993,3.588592000000002,3.986618",
+  volume: "7.940125",
+  part_label: "MeshZ2Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,2",
+  extents: "3.0517020000000024,3.790314000000002,3.986618",
+  volume: "34.185471",
+  part_label: "MeshZ2Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,8,2",
+  extents: "2.0492169999999987,3.7329190000000025,3.920158",
+  volume: "7.475516",
+  part_label: "MeshZ2Y8X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y8_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y8_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "10,9,2",
+  extents: "0.10961400000000054,0.6160549999999994,0.2289399999999997",
+  volume: "0.002719",
+  part_label: "MeshZ2Y9X10"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X10.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X10.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,2",
+  extents: "2.5306999999999995,3.5885909999999974,3.986618",
+  volume: "14.54697",
+  part_label: "MeshZ2Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,2",
+  extents: "2.990658999999999,3.9337979999999995,3.986618",
+  volume: "33.956898",
+  part_label: "MeshZ2Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,2",
+  extents: "0.948065999999999,3.5885909999999974,2.5535639999999997",
+  volume: "1.494803",
+  part_label: "MeshZ2Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,2",
+  extents: "0.5940310000000011,3.5885909999999974,1.5998900000000003",
+  volume: "0.264539",
+  part_label: "MeshZ2Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,2",
+  extents: "3.123281000000002,3.757918,4.377115",
+  volume: "29.163265",
+  part_label: "MeshZ2Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,9,2",
+  extents: "2.7872020000000006,3.5885909999999974,3.986618",
+  volume: "19.277401",
+  part_label: "MeshZ2Y9X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z2_Y9_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z2_Y9_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,3",
+  extents: "2.8131519999999988,3.5885920000000056,3.986618",
+  volume: "14.288512",
+  part_label: "MeshZ3Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,3",
+  extents: "2.957578,3.820610000000002,3.986618",
+  volume: "30.433464",
+  part_label: "MeshZ3Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,3",
+  extents: "1.364388,2.178054000000003,3.6371",
+  volume: "1.276361",
+  part_label: "MeshZ3Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,3",
+  extents: "2.9692749999999997,3.7516020000000054,3.986618",
+  volume: "18.527309",
+  part_label: "MeshZ3Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,10,3",
+  extents: "2.7872030000000017,3.6260410000000007,3.986618",
+  volume: "24.510975",
+  part_label: "MeshZ3Y10X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,10,3",
+  extents: "0.43235500000000116,2.4293710000000033,0.7926529999999996",
+  volume: "0.197738",
+  part_label: "MeshZ3Y10X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y10_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y10_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,3",
+  extents: "1.1607130000000012,1.8250779999999978,3.298204",
+  volume: "0.544053",
+  part_label: "MeshZ3Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,3",
+  extents: "2.989146999999999,3.855731999999996,3.986618",
+  volume: "24.269993",
+  part_label: "MeshZ3Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,3",
+  extents: "3.0614469999999994,3.914211999999999,3.986618",
+  volume: "26.606115",
+  part_label: "MeshZ3Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,3",
+  extents: "3.020154999999999,3.881648999999996,4.3253900000000005",
+  volume: "32.155075",
+  part_label: "MeshZ3Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,11,3",
+  extents: "2.176660000000002,3.588592999999996,3.986618",
+  volume: "11.007199",
+  part_label: "MeshZ3Y11X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y11_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y11_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,3",
+  extents: "1.3357599999999987,1.0836180000000013,3.3086520000000004",
+  volume: "1.069187",
+  part_label: "MeshZ3Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,3",
+  extents: "2.969478999999998,2.4517859999999985,3.986618",
+  volume: "13.096658",
+  part_label: "MeshZ3Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,12,3",
+  extents: "2.787202999999998,2.4388310000000004,3.986618",
+  volume: "8.228302",
+  part_label: "MeshZ3Y12X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y12_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y12_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,12,3",
+  extents: "0.4606210000000033,0.36701599999999956,0.9439080000000004",
+  volume: "0.029634",
+  part_label: "MeshZ3Y12X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y12_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y12_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,3",
+  extents: "1.810112000000001,1.3021349999999998,0.39296299999999995",
+  volume: "0.247191",
+  part_label: "MeshZ3Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,3",
+  extents: "0.46098099999999853,1.2871400000000008,0.17125500000000038",
+  volume: "0.036677",
+  part_label: "MeshZ3Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,3",
+  extents: "1.8067680000000008,0.8102379999999982,0.2625150000000005",
+  volume: "0.093379",
+  part_label: "MeshZ3Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,14,3",
+  extents: "0.2128319999999988,0.16589400000000154,0.06390200000000057",
+  volume: "0.000405",
+  part_label: "MeshZ3Y14X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y14_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y14_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,2,3",
+  extents: "1.5412919999999986,3.247815,3.3447440000000004",
+  volume: "6.469813",
+  part_label: "MeshZ3Y2X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y2_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y2_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,3",
+  extents: "1.7695399999999992,3.159103,3.370635",
+  volume: "4.704868",
+  part_label: "MeshZ3Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,3",
+  extents: "2.0848889999999987,1.774737,2.5037959999999995",
+  volume: "3.260157",
+  part_label: "MeshZ3Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,3",
+  extents: "2.919072,3.929692000000001,3.986618",
+  volume: "9.757622",
+  part_label: "MeshZ3Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,3",
+  extents: "2.0362910000000003,3.5885920000000002,3.986618",
+  volume: "4.90622",
+  part_label: "MeshZ3Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,3",
+  extents: "1.5974450000000004,1.0525660000000006,2.3005309999999994",
+  volume: "0.770917",
+  part_label: "MeshZ3Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,3",
+  extents: "3.106733,3.9135720000000003,4.338787",
+  volume: "28.957144",
+  part_label: "MeshZ3Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,3",
+  extents: "2.7453559999999992,3.9522309999999994,4.50296",
+  volume: "29.166714",
+  part_label: "MeshZ3Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,3",
+  extents: "2.7640160000000016,3.719779000000001,4.1186039999999995",
+  volume: "22.903137",
+  part_label: "MeshZ3Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,3",
+  extents: "2.7478789999999993,3.8757579999999994,4.483577",
+  volume: "33.60043",
+  part_label: "MeshZ3Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,3",
+  extents: "2.0375499999999995,3.1535200000000003,3.986618",
+  volume: "10.41332",
+  part_label: "MeshZ3Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,3",
+  extents: "3.1238840000000003,3.907114,4.4048560000000005",
+  volume: "38.08823",
+  part_label: "MeshZ3Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,3",
+  extents: "2.915149999999999,3.860246,4.032085",
+  volume: "31.684874",
+  part_label: "MeshZ3Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y6_X6.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "7,6,3",
-  extents: "96.10711600000002,80.04812599999997,91.666672",
-  volume: "535051.625",
-  part_label: "070603"
+  extents: "2.787202999999998,1.9085869999999971,3.986618",
+  volume: "4.613379",
+  part_label: "MeshZ3Y6X7"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070603.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,4",
-  extents: "99.36798099999999,85.92199699999998,91.668",
-  volume: "669394.125",
-  part_label: "070604"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070604.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,5",
-  extents: "99.24200499999995,92.08200099999999,120.87600699999996",
-  volume: "656462.0625",
-  part_label: "070605"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070605.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,6",
-  extents: "94.57214299999998,80.42147799999998,65.46301300000005",
-  volume: "291048.0625",
-  part_label: "070606"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070606.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,8",
-  extents: "12.461364000000003,51.92074599999995,30.60632300000009",
-  volume: "2747.626221",
-  part_label: "070608"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070608.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070608.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,9",
-  extents: "27.17535399999997,80.42147799999998,91.66668699999991",
-  volume: "76399.8125",
-  part_label: "070609"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070609.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070609.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,10",
-  extents: "24.99102700000003,78.77383399999997,91.66668700000002",
-  volume: "80209.515625",
-  part_label: "070610"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070610.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070610.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,6,11",
-  extents: "14.40875200000005,50.572632,38.44421399999999",
-  volume: "3045.983398",
-  part_label: "070611"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070611.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070611.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,7,4",
-  extents: "94.47552399999995,29.429169,90.230072",
-  volume: "110065.546875",
-  part_label: "070704"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070704.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,7,5",
-  extents: "97.209655,69.78512600000005,91.66665699999999",
-  volume: "390796.34375",
-  part_label: "070705"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070705.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,7,6",
-  extents: "91.64080799999999,51.757293999999945,40.956818",
-  volume: "48499.8125",
-  part_label: "070706"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070706.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "7,7,9",
-  extents: "2.6184690000000046,5.188445999999999,25.034119000000032",
-  volume: "20.885641",
-  part_label: "070709"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/070709.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/070709.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,2,1",
-  extents: "17.555908000000045,72.84872399999999,58.651581",
-  volume: "16663.513672",
-  part_label: "080201"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080201.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080201.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,2,2",
-  extents: "44.55017099999998,68.56001300000001,91.666664",
-  volume: "129079.765625",
-  part_label: "080202"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080202.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080202.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,2,3",
-  extents: "55.15344200000004,53.22160400000001,91.666672",
-  volume: "104929.625",
-  part_label: "080203"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080203.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080203.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,2,4",
-  extents: "23.73504600000001,15.463866999999993,19.811615000000018",
-  volume: "1245.593018",
-  part_label: "080204"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080204.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080204.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,3,1",
-  extents: "6.0666499999999814,27.140548999999993,16.266791999999995",
-  volume: "446.388733",
-  part_label: "080301"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080301.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080301.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,3,2",
-  extents: "40.25402800000006,80.42147800000001,91.666664",
-  volume: "106652.5",
-  part_label: "080302"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080302.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080302.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,3,3",
-  extents: "68.235229,80.42146300000002,91.666672",
-  volume: "346426.84375",
-  part_label: "080303"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080303.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080303.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,3,4",
-  extents: "84.46295099999998,91.01908900000001,91.66665599999999",
-  volume: "318759.625",
-  part_label: "080304"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080304.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080304.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,3,5",
-  extents: "66.85382100000004,28.868286000000012,30.188508000000013",
-  volume: "10667.004883",
-  part_label: "080305"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080305.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080305.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,4,2",
-  extents: "22.277648999999997,80.42147899999998,59.733290999999994",
-  volume: "21540.128906",
-  part_label: "080402"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080402.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080402.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,4,3",
-  extents: "56.464966000000004,80.42147899999998,91.666672",
-  volume: "222564.4375",
-  part_label: "080403"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080403.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080403.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,4,4",
-  extents: "86.23455799999999,89.52450599999997,102.217804",
-  volume: "471642.53125",
-  part_label: "080404"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080404.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080404.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,4,5",
-  extents: "91.64074700000003,91.51867699999997,91.66665699999999",
-  volume: "321415.375",
-  part_label: "080405"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080405.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080405.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,4,6",
-  extents: "3.038269000000014,1.7985840000000053,1.084442000000024",
-  volume: "1.113057",
-  part_label: "080406"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080406.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080406.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,5,2",
-  extents: "4.3012690000000475,19.242796999999996,11.53331",
-  volume: "159.096985",
-  part_label: "080502"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080502.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080502.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,5,3",
-  extents: "38.48846400000002,80.42147800000004,91.666672",
-  volume: "95440.257812",
-  part_label: "080503"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080503.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080503.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,5,4",
-  extents: "72.67602499999998,80.42147800000004,91.66665599999999",
-  volume: "340920.40625",
-  part_label: "080504"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080504.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080504.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,5,5",
-  extents: "91.54418899999996,92.27810600000004,91.66665699999999",
-  volume: "534271.375",
-  part_label: "080505"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080505.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080505.png")
-mf.save
-puts "Created Part #{p.id}: #{mf.file.url}"
-p = Part.create(
-  project_id: project_id,
-  offset: "8,5,6",
-  extents: "57.20111099999997,80.42147800000004,24.10797100000002",
-  volume: "28553.421875",
-  part_label: "080506"
-)
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080506.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080506.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y6_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "8,6,3",
-  extents: "20.512023999999997,79.93426499999998,54.999863000000005",
-  volume: "16854.271484",
-  part_label: "080603"
+  extents: "1.4594880000000003,1.670386999999998,1.2924430000000005",
+  volume: "0.728388",
+  part_label: "MeshZ3Y6X8"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080603.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080603.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y6_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,3",
+  extents: "3.0518660000000004,3.907879000000001,3.986618",
+  volume: "24.869112",
+  part_label: "MeshZ3Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,3",
+  extents: "2.787203,3.5885929999999995,3.986618",
+  volume: "18.18375",
+  part_label: "MeshZ3Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,3",
+  extents: "3.087828,3.0801620000000014,3.986618",
+  volume: "17.623753",
+  part_label: "MeshZ3Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,3",
+  extents: "3.0792329999999986,3.7817159999999994,4.4048560000000005",
+  volume: "34.613472",
+  part_label: "MeshZ3Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y7_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,7,3",
+  extents: "1.6969320000000003,3.7150859999999994,3.986618",
+  volume: "10.736734",
+  part_label: "MeshZ3Y7X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,8,3",
+  extents: "0.4415420000000001,3.556743000000001,1.8335430000000006",
+  volume: "0.439176",
+  part_label: "MeshZ3Y8X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y8_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y8_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,3",
+  extents: "2.9574099999999994,3.905565000000003,3.986618",
+  volume: "34.565205",
+  part_label: "MeshZ3Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,3",
+  extents: "0.9297339999999998,3.588592000000002,3.986618",
+  volume: "5.956729",
+  part_label: "MeshZ3Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,3",
+  extents: "2.830848999999997,3.809297000000001,3.986618",
+  volume: "23.042843",
+  part_label: "MeshZ3Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,3",
+  extents: "2.766693,3.728481000000002,3.986618",
+  volume: "22.378254",
+  part_label: "MeshZ3Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,3",
+  extents: "0.2635360000000002,2.516814,1.0915389999999991",
+  volume: "0.144859",
+  part_label: "MeshZ3Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,3",
+  extents: "3.1276459999999986,3.713525999999998,4.4048560000000005",
+  volume: "33.339363",
+  part_label: "MeshZ3Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,3",
+  extents: "1.7944319999999987,3.823682999999999,4.031223000000001",
+  volume: "11.323298",
+  part_label: "MeshZ3Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,3",
+  extents: "1.6645830000000004,3.665887999999999,4.118404",
+  volume: "9.946472",
+  part_label: "MeshZ3Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,3",
+  extents: "2.9057480000000027,3.800658000000002,4.3253900000000005",
+  volume: "32.898228",
+  part_label: "MeshZ3Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "9,9,3",
+  extents: "0.4570459999999983,3.517783999999999,0.9782869999999999",
+  volume: "0.509464",
+  part_label: "MeshZ3Y9X9"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z3_Y9_X9.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z3_Y9_X9.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,4",
+  extents: "1.8921229999999998,3.155411000000001,3.986618",
+  volume: "5.6483",
+  part_label: "MeshZ4Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,4",
+  extents: "3.0574959999999987,3.791243999999999,3.986618",
+  volume: "31.60462",
+  part_label: "MeshZ4Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,4",
+  extents: "2.9702970000000004,3.8583069999999964,3.986618",
+  volume: "12.524959",
+  part_label: "MeshZ4Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,4",
+  extents: "3.0940879999999993,3.7793080000000003,3.986618",
+  volume: "29.026194",
+  part_label: "MeshZ4Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,10,4",
+  extents: "1.770500000000002,3.7793080000000003,3.986618",
+  volume: "13.327517",
+  part_label: "MeshZ4Y10X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y10_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y10_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,4",
+  extents: "2.741493,3.247592999999995,3.986618",
+  volume: "8.596787",
+  part_label: "MeshZ4Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,4",
+  extents: "3.1242919999999987,3.816646999999996,3.986618",
+  volume: "31.4109",
+  part_label: "MeshZ4Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,4",
+  extents: "2.9411239999999985,3.588592999999996,3.986618",
+  volume: "23.410463",
+  part_label: "MeshZ4Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,11,4",
+  extents: "1.0553220000000003,1.8891609999999943,3.085704",
+  volume: "1.259972",
+  part_label: "MeshZ4Y11X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y11_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y11_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,4",
+  extents: "2.7803940000000003,2.1554530000000014,2.5460469999999997",
+  volume: "3.213481",
+  part_label: "MeshZ4Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,4",
+  extents: "2.145239,2.3541290000000004,2.582065",
+  volume: "3.847125",
+  part_label: "MeshZ4Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,4",
+  extents: "2.401477,1.0510980000000032,3.188734",
+  volume: "2.11691",
+  part_label: "MeshZ4Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,12,4",
+  extents: "1.0861400000000003,0.9501190000000008,2.587102",
+  volume: "0.437452",
+  part_label: "MeshZ4Y12X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y12_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y12_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,4",
+  extents: "2.3024700000000005,3.2809680000000014,2.170769999999999",
+  volume: "3.968175",
+  part_label: "MeshZ4Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,4",
+  extents: "3.1116590000000004,3.8374629999999996,4.100695000000002",
+  volume: "28.19169",
+  part_label: "MeshZ4Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,4",
+  extents: "2.9866959999999985,3.895838999999995,4.231484999999999",
+  volume: "30.497885",
+  part_label: "MeshZ4Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,4",
+  extents: "0.6112640000000003,2.540772000000004,2.385498",
+  volume: "1.415678",
+  part_label: "MeshZ4Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,14,4",
+  extents: "1.7077999999999998,2.7053340000000006,2.1654479999999996",
+  volume: "2.885727",
+  part_label: "MeshZ4Y14X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y14_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y14_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,4",
+  extents: "3.0614850000000002,3.5506480000000025,4.476351000000001",
+  volume: "23.286812",
+  part_label: "MeshZ4Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,14,4",
+  extents: "2.508692999999999,2.692512999999998,3.986618",
+  volume: "13.076225",
+  part_label: "MeshZ4Y14X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y14_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y14_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,2,4",
+  extents: "2.348961000000001,2.2666629999999994,3.986618",
+  volume: "2.144502",
+  part_label: "MeshZ4Y2X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y2_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y2_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,4",
+  extents: "2.312455999999999,2.4713020000000006,3.986618",
+  volume: "10.286574",
+  part_label: "MeshZ4Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,4",
+  extents: "2.345492,3.5885920000000002,3.986618",
+  volume: "5.249693",
+  part_label: "MeshZ4Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,4",
+  extents: "2.988929999999998,3.914912000000001,4.129505000000002",
+  volume: "31.944963",
+  part_label: "MeshZ4Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,4",
+  extents: "0.690494000000001,2.4490929999999995,2.872477",
+  volume: "1.514807",
+  part_label: "MeshZ4Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,4",
+  extents: "2.666550000000001,3.8726179999999992,4.141327",
+  volume: "16.497023",
+  part_label: "MeshZ4Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,4",
+  extents: "3.074789000000001,3.9766829999999995,4.638131999999999",
+  volume: "38.161335",
+  part_label: "MeshZ4Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,4,4",
+  extents: "1.0238130000000005,3.5885920000000002,2.9226089999999996",
+  volume: "6.695779",
+  part_label: "MeshZ4Y4X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y4_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y4_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,4",
+  extents: "2.9393840000000004,3.7215550000000004,3.986618",
+  volume: "23.876751",
+  part_label: "MeshZ4Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,4",
+  extents: "3.0356679999999994,3.9323609999999984,4.572980999999999",
+  volume: "36.754074",
+  part_label: "MeshZ4Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,5,4",
+  extents: "2.787202999999998,3.5885920000000002,2.6244739999999993",
+  volume: "5.421579",
+  part_label: "MeshZ4Y5X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y5_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y5_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,5,4",
+  extents: "0.2689230000000009,0.0572020000000002,0.8458830000000006",
+  volume: "0.004157",
+  part_label: "MeshZ4Y5X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y5_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y5_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,4",
+  extents: "1.3732570000000006,3.342293999999999,3.986618",
+  volume: "6.13278",
+  part_label: "MeshZ4Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,4",
+  extents: "3.094669999999999,3.9065340000000006,3.986618",
+  volume: "37.753658",
+  part_label: "MeshZ4Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,4",
+  extents: "3.0061969999999985,3.970047000000001,4.518346999999999",
+  volume: "34.805248",
+  part_label: "MeshZ4Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,6,4",
+  extents: "3.065543999999999,3.5885919999999984,3.986618",
+  volume: "27.163664",
+  part_label: "MeshZ4Y6X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y6_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "8,6,4",
-  extents: "54.69976800000006,80.42147799999998,91.66665599999999",
-  volume: "209540.984375",
-  part_label: "080604"
+  extents: "1.8257919999999999,3.5885919999999984,3.986618",
+  volume: "10.710625",
+  part_label: "MeshZ4Y6X8"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080604.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080604.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y6_X8.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "8,6,5",
-  extents: "83.16094899999996,80.42147799999998,91.66665699999999",
-  volume: "443389.125",
-  part_label: "080605"
+  offset: "4,7,4",
+  extents: "2.5995340000000002,3.9030400000000007,4.176769",
+  volume: "22.077034",
+  part_label: "MeshZ4Y7X4"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080605.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080605.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y7_X4.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
-  offset: "8,6,6",
-  extents: "57.733825000000024,80.42147799999998,24.835968000000037",
-  volume: "37161.589844",
-  part_label: "080606"
+  offset: "5,7,4",
+  extents: "2.787203,3.5885929999999995,3.986618",
+  volume: "20.985401",
+  part_label: "MeshZ4Y7X5"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080606.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080606.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,4",
+  extents: "3.1116389999999985,3.5664809999999996,3.986618",
+  volume: "17.562054",
+  part_label: "MeshZ4Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,4",
+  extents: "3.0084820000000008,3.780926000000001,4.414076000000001",
+  volume: "31.723579",
+  part_label: "MeshZ4Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y7_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "8,7,4",
-  extents: "36.72344899999996,29.45382699999999,90.08956899999998",
-  volume: "28856.732422",
-  part_label: "080704"
+  extents: "1.8247680000000024,3.712200000000003,3.986618",
+  volume: "4.012965",
+  part_label: "MeshZ4Y7X8"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080704.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080704.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,4",
+  extents: "2.8526549999999986,3.901829000000003,4.37133",
+  volume: "27.233263",
+  part_label: "MeshZ4Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,4",
+  extents: "1.215052,3.588592000000002,4.190961999999999",
+  volume: "13.600986",
+  part_label: "MeshZ4Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,4",
+  extents: "3.11261,3.780313000000003,3.986618",
+  volume: "27.610462",
+  part_label: "MeshZ4Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,4",
+  extents: "2.0684530000000017,3.588592000000002,3.986618",
+  volume: "15.782328",
+  part_label: "MeshZ4Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,4",
+  extents: "2.4210279999999997,3.7060950000000012,3.986618",
+  volume: "24.616705",
+  part_label: "MeshZ4Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,4",
+  extents: "2.754178999999999,3.850291000000002,3.986618",
+  volume: "18.804449",
+  part_label: "MeshZ4Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,4",
+  extents: "2.816997999999998,3.7464660000000016,4.414076000000001",
+  volume: "19.253878",
+  part_label: "MeshZ4Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,4",
+  extents: "2.210022000000002,3.775965000000003,4.414076000000001",
+  volume: "24.286633",
+  part_label: "MeshZ4Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z4_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z4_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,5",
+  extents: "0.36180200000000085,0.38844600000000185,0.38109899999999897",
+  volume: "0.009864",
+  part_label: "MeshZ5Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,5",
+  extents: "2.9314969999999985,3.730995,3.986618",
+  volume: "3.819652",
+  part_label: "MeshZ5Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,5",
+  extents: "3.065054999999999,3.5885920000000056,4.2608239999999995",
+  volume: "25.626614",
+  part_label: "MeshZ5Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,5",
+  extents: "3.0871510000000004,3.7225719999999995,4.3623259999999995",
+  volume: "29.604059",
+  part_label: "MeshZ5Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,5",
+  extents: "2.945308999999998,3.764400000000002,3.986618",
+  volume: "29.051329",
+  part_label: "MeshZ5Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,10,5",
+  extents: "0.8697490000000023,2.786266000000005,2.2875499999999995",
+  volume: "0.928032",
+  part_label: "MeshZ5Y10X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y10_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y10_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,5",
+  extents: "2.5717030000000003,3.810108999999997,1.7815970000000014",
+  volume: "3.514098",
+  part_label: "MeshZ5Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,5",
+  extents: "2.787203,3.810108999999997,2.504835",
+  volume: "12.110129",
+  part_label: "MeshZ5Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,5",
+  extents: "2.931545999999999,3.588592999999996,3.986618",
+  volume: "2.897791",
+  part_label: "MeshZ5Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,5",
+  extents: "3.0646289999999983,3.310890999999998,3.986618",
+  volume: "19.107502",
+  part_label: "MeshZ5Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,5",
+  extents: "2.330400000000001,3.2006609999999966,3.986618",
+  volume: "9.095216",
+  part_label: "MeshZ5Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,5",
+  extents: "1.2316189999999994,2.0695230000000038,2.3408429999999996",
+  volume: "1.133126",
+  part_label: "MeshZ5Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,5",
+  extents: "2.9442180000000002,3.981869000000003,3.986618",
+  volume: "25.624941",
+  part_label: "MeshZ5Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,5",
+  extents: "2.959185999999999,3.818611000000004,4.0634820000000005",
+  volume: "25.030357",
+  part_label: "MeshZ5Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,5",
+  extents: "2.089257,3.8208199999999977,2.7645829999999982",
+  volume: "3.741657",
+  part_label: "MeshZ5Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,5",
+  extents: "2.922673,4.060030999999995,3.986618",
+  volume: "22.425165",
+  part_label: "MeshZ5Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,5",
+  extents: "3.1284359999999998,4.060030999999995,4.297706999999999",
+  volume: "36.29903",
+  part_label: "MeshZ5Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,5",
+  extents: "3.055707,3.5885919999999984,4.622883000000002",
+  volume: "34.352192",
+  part_label: "MeshZ5Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,5",
+  extents: "1.6851190000000003,2.9386669999999953,3.986618",
+  volume: "5.66726",
+  part_label: "MeshZ5Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,14,5",
+  extents: "2.53634,3.172233999999996,3.986618",
+  volume: "13.265462",
+  part_label: "MeshZ5Y14X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y14_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y14_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,5",
+  extents: "3.0677060000000003,3.588592999999996,3.986618",
+  volume: "33.435585",
+  part_label: "MeshZ5Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,14,5",
+  extents: "2.508958999999999,3.0338939999999965,3.986618",
+  volume: "11.970699",
+  part_label: "MeshZ5Y14X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y14_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y14_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,1,5",
+  extents: "2.572927,3.86046,3.6409780000000005",
+  volume: "10.543001",
+  part_label: "MeshZ5Y1X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y1_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y1_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,1,5",
+  extents: "2.787203,2.031752,3.0542310000000015",
+  volume: "5.239759",
+  part_label: "MeshZ5Y1X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y1_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y1_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,1,5",
+  extents: "0.017510999999998944,0.008606999999999587,0.18776100000000184",
+  volume: "1.0e-05",
+  part_label: "MeshZ5Y1X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y1_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y1_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,2,5",
+  extents: "1.1009270000000004,1.019918,2.7927649999999993",
+  volume: "0.76583",
+  part_label: "MeshZ5Y2X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y2_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y2_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,2,5",
+  extents: "3.099561999999999,3.588593,3.986618",
+  volume: "19.859686",
+  part_label: "MeshZ5Y2X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y2_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y2_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,5",
+  extents: "2.9465850000000007,3.852368,3.986618",
+  volume: "23.970913",
+  part_label: "MeshZ5Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,2,5",
+  extents: "0.8231770000000012,1.419835,3.4187790000000007",
+  volume: "1.164977",
+  part_label: "MeshZ5Y2X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y2_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y2_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,5",
+  extents: "0.22641300000000086,0.39549700000000065,0.6131739999999972",
+  volume: "0.016219",
+  part_label: "MeshZ5Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,5",
+  extents: "3.1324799999999993,4.047312,3.986618",
+  volume: "20.208931",
+  part_label: "MeshZ5Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,5",
+  extents: "3.1217689999999987,4.047312,3.986618",
+  volume: "36.424747",
+  part_label: "MeshZ5Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,5",
+  extents: "2.114777,3.5885920000000002,3.986618",
+  volume: "15.249671",
+  part_label: "MeshZ5Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,5",
+  extents: "1.1619539999999997,3.5885920000000002,3.1336590000000015",
+  volume: "4.202584",
+  part_label: "MeshZ5Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,5",
+  extents: "3.128321999999999,4.0765910000000005,4.590201",
+  volume: "36.668785",
+  part_label: "MeshZ5Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,5",
+  extents: "3.127616999999999,3.5885920000000002,4.693579",
+  volume: "38.256615",
+  part_label: "MeshZ5Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,4,5",
+  extents: "2.787202999999998,3.944343,3.986618",
+  volume: "26.265142",
+  part_label: "MeshZ5Y4X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y4_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y4_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,4,5",
+  extents: "0.10154700000000005,1.1267530000000008,0.8281020000000012",
+  volume: "0.030959",
+  part_label: "MeshZ5Y4X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y4_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y4_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,5",
+  extents: "0.7613400000000006,1.1058939999999993,2.862945",
+  volume: "0.515644",
+  part_label: "MeshZ5Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,5",
+  extents: "3.1276159999999997,3.738629999999999,3.986618",
+  volume: "30.695459",
+  part_label: "MeshZ5Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,5",
+  extents: "3.1307719999999986,3.981375999999999,3.986618",
+  volume: "35.508892",
+  part_label: "MeshZ5Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,5,5",
+  extents: "2.8599570000000014,3.981375999999999,3.986618",
+  volume: "27.739344",
+  part_label: "MeshZ5Y5X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y5_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y5_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,5,5",
+  extents: "0.24253200000000064,3.5885920000000002,3.986618",
+  volume: "0.32299",
+  part_label: "MeshZ5Y5X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y5_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y5_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,5",
+  extents: "1.3618759999999988,3.159502,3.986618",
+  volume: "4.908549",
+  part_label: "MeshZ5Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,5",
+  extents: "2.9175120000000003,3.914763999999998,3.986618",
+  volume: "37.4827",
+  part_label: "MeshZ5Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,5",
+  extents: "3.002415000000001,3.9056430000000013,4.134422000000001",
+  volume: "23.428415",
+  part_label: "MeshZ5Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,6,5",
+  extents: "2.9735869999999984,3.5885919999999984,3.986618",
+  volume: "29.206755",
+  part_label: "MeshZ5Y6X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,6,5",
+  extents: "1.4365900000000025,2.1261609999999997,3.986618",
+  volume: "2.912945",
+  part_label: "MeshZ5Y6X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y6_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,5",
+  extents: "2.354405,3.9052760000000006,4.3623259999999995",
+  volume: "20.012819",
+  part_label: "MeshZ5Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,5",
+  extents: "2.374756999999999,3.5885929999999995,4.305831999999999",
+  volume: "22.344513",
+  part_label: "MeshZ5Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,5",
+  extents: "2.350772000000001,3.5885929999999995,4.404070000000001",
+  volume: "18.916687",
+  part_label: "MeshZ5Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,5",
+  extents: "2.928101999999999,3.7818090000000026,4.279143000000001",
+  volume: "27.921909",
+  part_label: "MeshZ5Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y7_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "8,7,5",
-  extents: "63.67004399999996,57.63809199999997,91.66665699999999",
-  volume: "155136.359375",
-  part_label: "080705"
+  extents: "0.5140000000000029,1.3576279999999983,3.986618",
+  volume: "0.57934",
+  part_label: "MeshZ5Y7X8"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080705.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080705.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,5",
+  extents: "2.446746000000001,3.902586000000003,3.986618",
+  volume: "23.447071",
+  part_label: "MeshZ5Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,5",
+  extents: "1.3947069999999986,3.588592000000002,3.986618",
+  volume: "17.090557",
+  part_label: "MeshZ5Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,5",
+  extents: "0.45350799999999936,1.0696750000000002,3.8655359999999988",
+  volume: "0.253577",
+  part_label: "MeshZ5Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,5",
+  extents: "3.095758,3.7582950000000004,3.986618",
+  volume: "30.064375",
+  part_label: "MeshZ5Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,5",
+  extents: "1.6927010000000031,3.7098520000000015,3.986618",
+  volume: "12.724799",
+  part_label: "MeshZ5Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,5",
+  extents: "2.3772769999999994,3.5885909999999974,3.986618",
+  volume: "20.076689",
+  part_label: "MeshZ5Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,5",
+  extents: "2.9333899999999993,3.9360449999999965,3.986618",
+  volume: "25.641315",
+  part_label: "MeshZ5Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,5",
+  extents: "2.984056999999998,2.8104530000000025,3.8904630000000004",
+  volume: "2.27805",
+  part_label: "MeshZ5Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,5",
+  extents: "3.0958819999999996,3.749365000000001,4.3623259999999995",
+  volume: "31.532103",
+  part_label: "MeshZ5Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,5",
+  extents: "1.7890260000000033,3.6064059999999962,3.986618",
+  volume: "12.947185",
+  part_label: "MeshZ5Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z5_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z5_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,10,6",
+  extents: "1.335642,1.053401000000001,1.24831",
+  volume: "0.317854",
+  part_label: "MeshZ6Y10X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,6",
+  extents: "3.0456010000000004,3.5885920000000056,4.1620750000000015",
+  volume: "10.567919",
+  part_label: "MeshZ6Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,6",
+  extents: "3.0910279999999997,3.5885920000000056,4.416067000000002",
+  volume: "28.549387",
+  part_label: "MeshZ6Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,6",
+  extents: "3.0575270000000003,4.085827000000002,3.986618",
+  volume: "35.992153",
+  part_label: "MeshZ6Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,6",
+  extents: "3.122784000000001,3.5885920000000056,3.986618",
+  volume: "31.962767",
+  part_label: "MeshZ6Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,6",
+  extents: "2.3086149999999996,3.5885920000000056,3.986618",
+  volume: "16.949814",
+  part_label: "MeshZ6Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,11,6",
+  extents: "2.4446079999999997,3.588592999999996,3.4009469999999986",
+  volume: "11.940292",
+  part_label: "MeshZ6Y11X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,6",
+  extents: "3.0185389999999996,4.000118999999998,3.986618",
+  volume: "30.617001",
+  part_label: "MeshZ6Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,6",
+  extents: "3.089022,3.7536779999999936,3.986618",
+  volume: "24.553654",
+  part_label: "MeshZ6Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,6",
+  extents: "3.059156999999999,4.045845999999997,4.575711999999999",
+  volume: "32.982311",
+  part_label: "MeshZ6Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,6",
+  extents: "2.931965,3.588592999999996,4.5397",
+  volume: "15.818434",
+  part_label: "MeshZ6Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,11,6",
+  extents: "1.0530870000000014,1.5860099999999946,3.4759279999999997",
+  volume: "1.057652",
+  part_label: "MeshZ6Y11X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y11_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y11_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,6",
+  extents: "2.633283,3.588593000000003,3.986618",
+  volume: "18.995459",
+  part_label: "MeshZ6Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,6",
+  extents: "2.9911339999999997,3.588593000000003,3.986618",
+  volume: "30.161428",
+  part_label: "MeshZ6Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,6",
+  extents: "3.0525769999999994,4.028205999999997,3.986618",
+  volume: "24.713791",
+  part_label: "MeshZ6Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,6",
+  extents: "3.014004,3.588593000000003,4.1713260000000005",
+  volume: "31.589909",
+  part_label: "MeshZ6Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,6",
+  extents: "1.7485090000000003,2.656849000000001,3.0231229999999982",
+  volume: "5.077528",
+  part_label: "MeshZ6Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,6",
+  extents: "2.7386750000000006,3.8839909999999946,3.986618",
+  volume: "24.586662",
+  part_label: "MeshZ6Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,6",
+  extents: "3.118797,3.9159919999999957,4.416067000000002",
+  volume: "37.477261",
+  part_label: "MeshZ6Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,6",
+  extents: "2.9982549999999986,3.5885919999999984,4.2186379999999986",
+  volume: "28.423754",
+  part_label: "MeshZ6Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,6",
+  extents: "1.9298919999999988,1.9432639999999992,3.986618",
+  volume: "5.880292",
+  part_label: "MeshZ6Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,14,6",
+  extents: "2.171517,2.226891000000002,3.9629389999999987",
+  volume: "3.174028",
+  part_label: "MeshZ6Y14X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y14_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y14_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,6",
+  extents: "2.7872030000000008,2.2433660000000017,3.986618",
+  volume: "7.316612",
+  part_label: "MeshZ6Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,14,6",
+  extents: "1.1021789999999996,1.0080799999999996,2.1993699999999983",
+  volume: "0.188013",
+  part_label: "MeshZ6Y14X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y14_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y14_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,2,6",
+  extents: "1.525773000000001,2.7454929999999997,0.3864769999999993",
+  volume: "0.496068",
+  part_label: "MeshZ6Y2X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y2_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y2_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,6",
+  extents: "2.787203,2.549945,0.7563570000000013",
+  volume: "1.804282",
+  part_label: "MeshZ6Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,2,6",
+  extents: "0.625318,1.0619290000000001,0.3823819999999998",
+  volume: "0.073686",
+  part_label: "MeshZ6Y2X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y2_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y2_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,6",
+  extents: "2.2242250000000006,3.7545520000000003,3.5778099999999995",
+  volume: "3.185866",
+  part_label: "MeshZ6Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,6",
+  extents: "3.085472000000001,3.8696459999999995,3.986618",
+  volume: "22.237928",
+  part_label: "MeshZ6Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,6",
+  extents: "2.787202999999998,3.6031080000000006,3.986618",
+  volume: "13.910553",
+  part_label: "MeshZ6Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,3,6",
+  extents: "0.13101699999999994,0.9136159999999993,0.2523799999999987",
+  volume: "0.008625",
+  part_label: "MeshZ6Y3X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y3_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y3_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,6",
+  extents: "0.13563800000000015,0.7827959999999994,0.1060130000000008",
+  volume: "0.002211",
+  part_label: "MeshZ6Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,6",
+  extents: "3.115340999999999,3.5885920000000002,3.986618",
+  volume: "17.229078",
+  part_label: "MeshZ6Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,6",
+  extents: "3.1106740000000013,4.008276,3.986618",
+  volume: "36.083549",
+  part_label: "MeshZ6Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,4,6",
+  extents: "2.274954000000001,3.5885920000000002,3.986618",
+  volume: "10.577416",
+  part_label: "MeshZ6Y4X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y4_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y4_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,6",
+  extents: "0.13234500000000082,0.5736679999999996,0.12174399999999963",
+  volume: "0.002446",
+  part_label: "MeshZ6Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,6",
+  extents: "3.1276159999999997,3.7348610000000004,3.986618",
+  volume: "23.960543",
+  part_label: "MeshZ6Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,6",
+  extents: "3.127616999999999,3.964889000000001,4.575711999999999",
+  volume: "40.385059",
+  part_label: "MeshZ6Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,5,6",
+  extents: "2.787202999999998,3.5885920000000002,3.986618",
+  volume: "17.623886",
+  part_label: "MeshZ6Y5X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y5_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y5_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,5,6",
+  extents: "0.022131000000001677,0.7071080000000016,0.042888999999998845",
+  volume: "0.000134",
+  part_label: "MeshZ6Y5X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y5_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y5_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,6",
+  extents: "1.2819680000000009,2.9443480000000015,3.986618",
+  volume: "4.134145",
+  part_label: "MeshZ6Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,6",
+  extents: "3.0571450000000002,3.910736,3.986618",
+  volume: "36.70142",
+  part_label: "MeshZ6Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,6",
+  extents: "3.0105689999999985,3.9051280000000013,3.986618",
+  volume: "31.380688",
+  part_label: "MeshZ6Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,6,6",
+  extents: "2.787202999999998,3.8235220000000005,3.986618",
+  volume: "18.279545",
+  part_label: "MeshZ6Y6X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,6,6",
+  extents: "0.003851000000000937,0.01648699999999792,0.012346000000000856",
+  volume: "0.0",
+  part_label: "MeshZ6Y6X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y6_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y6_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,6",
+  extents: "2.062308999999999,3.9044799999999995,3.986618",
+  volume: "17.010593",
+  part_label: "MeshZ6Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,6",
+  extents: "2.5177750000000003,3.7167069999999995,3.986618",
+  volume: "24.555853",
+  part_label: "MeshZ6Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,6",
+  extents: "2.7048129999999997,3.7593829999999997,3.986618",
+  volume: "23.034735",
+  part_label: "MeshZ6Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,6",
+  extents: "2.787202999999998,3.7593829999999997,3.986618",
+  volume: "21.727133",
+  part_label: "MeshZ6Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y7_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
 p = Part.create(
   project_id: project_id,
   offset: "8,7,6",
-  extents: "21.840026999999964,16.94784599999997,9.259308000000033",
-  volume: "622.331421",
-  part_label: "080706"
+  extents: "0.03835700000000131,0.09292199999999795,0.2863679999999995",
+  volume: "0.000181",
+  part_label: "MeshZ6Y7X8"
 )
-mf = p.create_model_file( render_state: 2)
-mf.file = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/stls/080706.stl")
-mf.render = URI.parse("http://epluribus.s3.amazonaws.com/sanjay-temp/renders/080706.png")
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y7_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y7_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,6",
+  extents: "2.0581829999999997,3.7128640000000033,3.986618",
+  volume: "18.941824",
+  part_label: "MeshZ6Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,6",
+  extents: "2.2431659999999987,3.911119000000003,3.986618",
+  volume: "22.272364",
+  part_label: "MeshZ6Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,6",
+  extents: "1.323526000000001,3.588592000000002,3.986618",
+  volume: "3.196466",
+  part_label: "MeshZ6Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,6",
+  extents: "3.082177999999999,3.8185840000000013,4.334472999999999",
+  volume: "34.630878",
+  part_label: "MeshZ6Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,6",
+  extents: "1.084774000000003,3.588592000000002,3.986618",
+  volume: "4.854171",
+  part_label: "MeshZ6Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,6",
+  extents: "0.24677600000000055,0.18963199999999603,0.34628999999999976",
+  volume: "0.003007",
+  part_label: "MeshZ6Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,6",
+  extents: "3.123097999999999,3.7576959999999993,3.986618",
+  volume: "13.594324",
+  part_label: "MeshZ6Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,6",
+  extents: "2.922777999999999,3.846335,3.986618",
+  volume: "31.303244",
+  part_label: "MeshZ6Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,6",
+  extents: "3.080872000000001,3.8696579999999976,3.986618",
+  volume: "10.660954",
+  part_label: "MeshZ6Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,6",
+  extents: "2.9874420000000015,3.7842009999999995,3.986618",
+  volume: "31.990536",
+  part_label: "MeshZ6Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,6",
+  extents: "1.0269050000000028,2.227608,3.986618",
+  volume: "1.75836",
+  part_label: "MeshZ6Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z6_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z6_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,10,7",
+  extents: "1.2816249999999998,0.2625840000000039,2.286735",
+  volume: "0.234165",
+  part_label: "MeshZ7Y10X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,10,7",
+  extents: "3.0393030000000003,2.7277839999999998,3.986618",
+  volume: "10.465168",
+  part_label: "MeshZ7Y10X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,7",
+  extents: "3.1059980000000005,3.7981300000000005,3.986618",
+  volume: "33.379612",
+  part_label: "MeshZ7Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,7",
+  extents: "2.9828339999999987,3.5885920000000056,3.986618",
+  volume: "24.503937",
+  part_label: "MeshZ7Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,7",
+  extents: "2.944512999999999,3.9203680000000034,3.986618",
+  volume: "20.302435",
+  part_label: "MeshZ7Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,7",
+  extents: "3.0429270000000006,3.751629000000001,3.986618",
+  volume: "32.34457",
+  part_label: "MeshZ7Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,7",
+  extents: "1.3847009999999997,3.199074000000003,3.986618",
+  volume: "3.91493",
+  part_label: "MeshZ7Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,11,7",
+  extents: "2.554371,3.588592999999996,3.4938029999999998",
+  volume: "15.936625",
+  part_label: "MeshZ7Y11X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,11,7",
+  extents: "2.944057,4.001464999999996,4.650458",
+  volume: "37.701839",
+  part_label: "MeshZ7Y11X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,7",
+  extents: "2.7872030000000008,3.588592999999996,3.986618",
+  volume: "19.942991",
+  part_label: "MeshZ7Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,7",
+  extents: "2.787203,3.588592999999996,3.986618",
+  volume: "0.421171",
+  part_label: "MeshZ7Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,7",
+  extents: "3.1253449999999994,3.942192999999996,4.2884579999999985",
+  volume: "27.171352",
+  part_label: "MeshZ7Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,7",
+  extents: "2.268091,3.588592999999996,4.339409",
+  volume: "24.145405",
+  part_label: "MeshZ7Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,12,7",
+  extents: "2.285862,3.4961550000000017,3.2658500000000004",
+  volume: "7.714522",
+  part_label: "MeshZ7Y12X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,7",
+  extents: "3.0591670000000004,4.073523999999999,3.986618",
+  volume: "36.349663",
+  part_label: "MeshZ7Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,7",
+  extents: "2.9260349999999997,3.773415,3.986618",
+  volume: "20.49157",
+  part_label: "MeshZ7Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,7",
+  extents: "3.0956839999999985,3.7327769999999987,3.986618",
+  volume: "17.484524",
+  part_label: "MeshZ7Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,7",
+  extents: "3.0306679999999986,3.8463059999999984,3.986618",
+  volume: "34.389721",
+  part_label: "MeshZ7Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,7",
+  extents: "1.8264579999999988,2.4138340000000014,3.986618",
+  volume: "5.498614",
+  part_label: "MeshZ7Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,7",
+  extents: "2.967649,3.578707999999999,3.986618",
+  volume: "16.133663",
+  part_label: "MeshZ7Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,7",
+  extents: "3.073817000000001,3.5885919999999984,3.986618",
+  volume: "27.484846",
+  part_label: "MeshZ7Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,7",
+  extents: "3.026987,2.9758489999999966,3.986618",
+  volume: "23.082392",
+  part_label: "MeshZ7Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,7",
+  extents: "1.8620889999999992,2.3320989999999995,3.986618",
+  volume: "6.871157",
+  part_label: "MeshZ7Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,14,7",
+  extents: "0.46143100000000015,0.09273199999999804,0.18468500000000176",
+  volume: "0.002019",
+  part_label: "MeshZ7Y14X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y14_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y14_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,7",
+  extents: "1.1091829999999998,0.6508319999999994,0.6780790000000003",
+  volume: "0.113104",
+  part_label: "MeshZ7Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,7",
+  extents: "2.787203,3.0154199999999998,3.986618",
+  volume: "0.557004",
+  part_label: "MeshZ7Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,7",
+  extents: "2.9125820000000004,2.3527580000000006,1.7284219999999983",
+  volume: "4.633665",
+  part_label: "MeshZ7Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,3,7",
+  extents: "0.529205000000001,1.7350079999999997,1.7225329999999985",
+  volume: "0.579894",
+  part_label: "MeshZ7Y3X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y3_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y3_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,7",
+  extents: "0.6491600000000002,1.6880690000000005,1.2517129999999987",
+  volume: "0.433321",
+  part_label: "MeshZ7Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,7",
+  extents: "3.007444999999999,3.896039,3.986618",
+  volume: "13.475124",
+  part_label: "MeshZ7Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,7",
+  extents: "2.787203,3.5885920000000002,3.986618",
+  volume: "6.326096",
+  part_label: "MeshZ7Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,4,7",
+  extents: "0.27324099999999873,0.6159909999999993,0.2237739999999988",
+  volume: "0.007806",
+  part_label: "MeshZ7Y4X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y4_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y4_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,7",
+  extents: "2.137523999999999,3.5885920000000002,2.2133600000000015",
+  volume: "5.604455",
+  part_label: "MeshZ7Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,7",
+  extents: "3.1287019999999988,3.861312,4.524328000000001",
+  volume: "33.626312",
+  part_label: "MeshZ7Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,7",
+  extents: "2.9436279999999986,3.957555000000001,3.986618",
+  volume: "26.151508",
+  part_label: "MeshZ7Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,5,7",
+  extents: "0.9298609999999989,3.5885920000000002,1.4003890000000006",
+  volume: "1.459189",
+  part_label: "MeshZ7Y5X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y5_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y5_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,7",
+  extents: "2.038463,3.5885919999999984,3.986618",
+  volume: "3.677011",
+  part_label: "MeshZ7Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,7",
+  extents: "3.106375999999999,4.037396999999999,3.986618",
+  volume: "38.265476",
+  part_label: "MeshZ7Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,7",
+  extents: "3.071802,3.8271039999999985,4.378443000000001",
+  volume: "34.793301",
+  part_label: "MeshZ7Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,6,7",
+  extents: "0.9292580000000008,3.6545249999999996,3.986618",
+  volume: "4.361989",
+  part_label: "MeshZ7Y6X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,7",
+  extents: "2.7698850000000004,3.6884960000000007,3.986618",
+  volume: "14.2112",
+  part_label: "MeshZ7Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,7",
+  extents: "2.787203,3.9110700000000023,3.986618",
+  volume: "28.099216",
+  part_label: "MeshZ7Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,7",
+  extents: "3.1000840000000007,3.810532000000002,4.524328000000001",
+  volume: "29.377836",
+  part_label: "MeshZ7Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,7",
+  extents: "2.194527000000001,3.7883379999999995,3.986618",
+  volume: "14.640014",
+  part_label: "MeshZ7Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y7_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,8,7",
+  extents: "0.030107000000000994,0.18027500000000174,0.07085599999999914",
+  volume: "9.4e-05",
+  part_label: "MeshZ7Y8X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,7",
+  extents: "3.054112999999999,3.588592000000002,3.986618",
+  volume: "14.854405",
+  part_label: "MeshZ7Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,7",
+  extents: "2.6277849999999994,3.909345000000002,4.050630999999999",
+  volume: "30.03894",
+  part_label: "MeshZ7Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,7",
+  extents: "2.3729249999999986,3.7609100000000026,3.986618",
+  volume: "13.577273",
+  part_label: "MeshZ7Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,7",
+  extents: "2.787202999999998,3.780056000000002,3.986618",
+  volume: "29.33091",
+  part_label: "MeshZ7Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,8,7",
+  extents: "0.12437200000000104,1.6106620000000014,0.6941449999999989",
+  volume: "0.037762",
+  part_label: "MeshZ7Y8X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y8_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y8_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,7",
+  extents: "1.7052600000000009,1.4890899999999974,3.986618",
+  volume: "1.96796",
+  part_label: "MeshZ7Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,7",
+  extents: "3.1229359999999993,3.892408999999997,4.312913999999999",
+  volume: "20.306715",
+  part_label: "MeshZ7Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,7",
+  extents: "2.592048,3.8201810000000016,4.422163000000001",
+  volume: "31.069288",
+  part_label: "MeshZ7Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,7",
+  extents: "3.0054979999999993,3.925894000000003,3.986618",
+  volume: "19.460424",
+  part_label: "MeshZ7Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,7",
+  extents: "2.787202999999998,3.5885909999999974,3.986618",
+  volume: "25.870035",
+  part_label: "MeshZ7Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "8,9,7",
+  extents: "0.042349000000001524,0.20146000000000086,0.30067100000000124",
+  volume: "0.000441",
+  part_label: "MeshZ7Y9X8"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z7_Y9_X8.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z7_Y9_X8.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,10,8",
+  extents: "0.8809749999999998,0.11417700000000508,3.986618",
+  volume: "0.006735",
+  part_label: "MeshZ8Y10X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,10,8",
+  extents: "3.0801170000000004,3.153655999999998,3.986618",
+  volume: "15.810593",
+  part_label: "MeshZ8Y10X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,8",
+  extents: "3.070366000000001,3.5885920000000056,3.986618",
+  volume: "37.230232",
+  part_label: "MeshZ8Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,8",
+  extents: "2.787203,3.5885920000000056,3.986618",
+  volume: "15.253401",
+  part_label: "MeshZ8Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,8",
+  extents: "3.0270729999999997,3.951176000000004,3.986618",
+  volume: "15.435216",
+  part_label: "MeshZ8Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,8",
+  extents: "3.0286519999999992,3.951176000000004,4.457650000000001",
+  volume: "33.779682",
+  part_label: "MeshZ8Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,8",
+  extents: "0.8448980000000006,2.144344000000004,3.986618",
+  volume: "2.661836",
+  part_label: "MeshZ8Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,11,8",
+  extents: "3.089468,3.955379999999998,3.986618",
+  volume: "15.082997",
+  part_label: "MeshZ8Y11X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,11,8",
+  extents: "3.015065,3.955379999999998,3.986618",
+  volume: "34.635578",
+  part_label: "MeshZ8Y11X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,8",
+  extents: "2.9496100000000007,3.588592999999996,3.986618",
+  volume: "14.299963",
+  part_label: "MeshZ8Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,8",
+  extents: "3.062930999999999,3.779373999999997,4.6327520000000035",
+  volume: "15.931728",
+  part_label: "MeshZ8Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,8",
+  extents: "3.037716999999999,3.9591299999999947,3.986618",
+  volume: "34.095127",
+  part_label: "MeshZ8Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,8",
+  extents: "1.6779069999999994,3.588592999999996,3.986618",
+  volume: "7.415625",
+  part_label: "MeshZ8Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,12,8",
+  extents: "2.797612,2.622505000000004,3.986618",
+  volume: "4.886583",
+  part_label: "MeshZ8Y12X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,8",
+  extents: "3.087015,3.887779000000002,3.986618",
+  volume: "24.482424",
+  part_label: "MeshZ8Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,8",
+  extents: "3.1113109999999997,3.887779000000002,3.986618",
+  volume: "29.6896",
+  part_label: "MeshZ8Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,8",
+  extents: "3.1051009999999994,3.957962000000002,4.211635999999999",
+  volume: "38.099312",
+  part_label: "MeshZ8Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,8",
+  extents: "2.787203,3.588593000000003,3.986618",
+  volume: "21.008144",
+  part_label: "MeshZ8Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,12,8",
+  extents: "0.6040130000000001,0.8928989999999999,1.3151550000000007",
+  volume: "0.130859",
+  part_label: "MeshZ8Y12X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y12_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y12_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,13,8",
+  extents: "2.172463,2.2432169999999942,3.6809119999999993",
+  volume: "3.080546",
+  part_label: "MeshZ8Y13X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y13_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y13_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,8",
+  extents: "3.057963,2.716583,3.986618",
+  volume: "20.709517",
+  part_label: "MeshZ8Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,8",
+  extents: "2.9242559999999997,2.7489999999999952,3.986618",
+  volume: "20.146454",
+  part_label: "MeshZ8Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,13,8",
+  extents: "1.6800689999999996,1.3790849999999963,2.3580970000000008",
+  volume: "1.288464",
+  part_label: "MeshZ8Y13X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y13_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y13_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,8",
+  extents: "0.43769299999999944,0.0507559999999998,0.06375900000000101",
+  volume: "0.000182",
+  part_label: "MeshZ8Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,2,8",
+  extents: "0.9062799999999989,0.08952399999999994,0.08966600000000113",
+  volume: "0.002251",
+  part_label: "MeshZ8Y2X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y2_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y2_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,8",
+  extents: "0.996677,0.7118509999999993,1.4063790000000012",
+  volume: "0.28936",
+  part_label: "MeshZ8Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,8",
+  extents: "3.0219880000000003,2.900423,3.986618",
+  volume: "8.51365",
+  part_label: "MeshZ8Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,8",
+  extents: "3.012825000000001,3.904014,3.986618",
+  volume: "19.431042",
+  part_label: "MeshZ8Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,8",
+  extents: "1.367398999999999,3.5885920000000002,2.4849320000000006",
+  volume: "4.867317",
+  part_label: "MeshZ8Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,8",
+  extents: "3.0623419999999992,4.0365020000000005,3.986618",
+  volume: "17.590055",
+  part_label: "MeshZ8Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,8",
+  extents: "3.102157,3.7007499999999993,3.986618",
+  volume: "35.918232",
+  part_label: "MeshZ8Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,8",
+  extents: "2.957865,3.853078,3.986618",
+  volume: "23.404209",
+  part_label: "MeshZ8Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,4,8",
+  extents: "1.1874049999999983,2.6478959999999994,2.602875000000001",
+  volume: "2.083214",
+  part_label: "MeshZ8Y4X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y4_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y4_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,5,8",
+  extents: "0.06785499999999978,3.2501700000000007,2.5499340000000004",
+  volume: "0.032285",
+  part_label: "MeshZ8Y5X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y5_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y5_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,8",
+  extents: "3.113071999999999,4.0737700000000014,4.226112999999998",
+  volume: "31.737339",
+  part_label: "MeshZ8Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,8",
+  extents: "3.1258920000000003,3.7564539999999997,4.509987000000002",
+  volume: "39.524815",
+  part_label: "MeshZ8Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,8",
+  extents: "2.6515450000000005,4.0737700000000014,3.986618",
+  volume: "23.497723",
+  part_label: "MeshZ8Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,8",
+  extents: "3.1000060000000005,3.785450000000001,3.986618",
+  volume: "24.034363",
+  part_label: "MeshZ8Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,8",
+  extents: "3.119427999999999,3.5885919999999984,3.986618",
+  volume: "35.59985",
+  part_label: "MeshZ8Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,8",
+  extents: "2.981551999999999,3.9612230000000004,3.986618",
+  volume: "35.003345",
+  part_label: "MeshZ8Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,6,8",
+  extents: "0.3833449999999985,3.153210999999999,3.0751150000000003",
+  volume: "1.040412",
+  part_label: "MeshZ8Y6X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y6_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y6_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,7,8",
+  extents: "0.6759789999999999,1.410390999999997,3.514232",
+  volume: "0.79745",
+  part_label: "MeshZ8Y7X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y7_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y7_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,8",
+  extents: "3.127585,4.099203000000003,3.986618",
+  volume: "20.927738",
+  part_label: "MeshZ8Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,8",
+  extents: "3.0829249999999995,3.5885929999999995,3.986618",
+  volume: "34.80756",
+  part_label: "MeshZ8Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,8",
+  extents: "2.909626000000001,4.002188,3.986618",
+  volume: "34.495991",
+  part_label: "MeshZ8Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,7,8",
+  extents: "1.2469560000000008,3.5885929999999995,3.2717479999999988",
+  volume: "3.773581",
+  part_label: "MeshZ8Y7X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y7_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y7_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,8,8",
+  extents: "0.4241880000000009,0.8040710000000004,2.145848000000001",
+  volume: "0.223098",
+  part_label: "MeshZ8Y8X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y8_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y8_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,8",
+  extents: "3.0664679999999986,3.9272440000000017,3.986618",
+  volume: "17.440142",
+  part_label: "MeshZ8Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,8",
+  extents: "2.961955999999999,3.9272440000000017,3.986618",
+  volume: "31.18395",
+  part_label: "MeshZ8Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,8",
+  extents: "3.1061539999999983,3.7538740000000033,4.457650000000001",
+  volume: "31.009583",
+  part_label: "MeshZ8Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,8",
+  extents: "2.1393699999999995,3.7234820000000006,3.986618",
+  volume: "14.098478",
+  part_label: "MeshZ8Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,8",
+  extents: "2.184947,2.002766000000001,3.986618",
+  volume: "6.155299",
+  part_label: "MeshZ8Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,8",
+  extents: "3.1159469999999985,3.5885909999999974,3.986618",
+  volume: "31.363659",
+  part_label: "MeshZ8Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,8",
+  extents: "2.787203,3.5885909999999974,3.986618",
+  volume: "15.393303",
+  part_label: "MeshZ8Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,8",
+  extents: "3.1035020000000006,3.9175549999999966,3.986618",
+  volume: "25.448883",
+  part_label: "MeshZ8Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,8",
+  extents: "2.119336999999998,3.5885909999999974,3.986618",
+  volume: "18.249952",
+  part_label: "MeshZ8Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z8_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z8_Y9_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,10,9",
+  extents: "2.0846299999999998,3.5885920000000056,3.986618",
+  volume: "8.896648",
+  part_label: "MeshZ9Y10X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,10,9",
+  extents: "3.0525080000000004,3.6073069999999987,3.986618",
+  volume: "26.731447",
+  part_label: "MeshZ9Y10X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,10,9",
+  extents: "3.1271329999999997,3.6442110000000056,3.986618",
+  volume: "31.657768",
+  part_label: "MeshZ9Y10X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,10,9",
+  extents: "3.0725799999999985,3.8560560000000024,4.297615",
+  volume: "31.628466",
+  part_label: "MeshZ9Y10X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,10,9",
+  extents: "3.099385999999999,3.5885920000000056,4.463818000000003",
+  volume: "32.910374",
+  part_label: "MeshZ9Y10X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,10,9",
+  extents: "2.787203,3.5885920000000056,3.986618",
+  volume: "18.315514",
+  part_label: "MeshZ9Y10X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,10,9",
+  extents: "0.45796999999999954,0.9761310000000023,1.2055289999999985",
+  volume: "0.101177",
+  part_label: "MeshZ9Y10X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y10_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y10_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,11,9",
+  extents: "1.688012,3.588592999999996,3.986618",
+  volume: "6.465748",
+  part_label: "MeshZ9Y11X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,11,9",
+  extents: "3.1002359999999998,3.588592999999996,4.463818000000003",
+  volume: "35.157082",
+  part_label: "MeshZ9Y11X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,11,9",
+  extents: "3.1284929999999997,4.010089999999998,3.986618",
+  volume: "35.749771",
+  part_label: "MeshZ9Y11X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,11,9",
+  extents: "3.014002999999999,3.834733,3.986618",
+  volume: "33.372528",
+  part_label: "MeshZ9Y11X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,11,9",
+  extents: "2.787203,3.588592999999996,3.8917089999999988",
+  volume: "11.296247",
+  part_label: "MeshZ9Y11X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,11,9",
+  extents: "0.7817930000000004,0.7089239999999961,1.8950689999999994",
+  volume: "0.23545",
+  part_label: "MeshZ9Y11X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y11_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y11_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,12,9",
+  extents: "1.31185,0.6719590000000011,0.572453000000003",
+  volume: "0.105574",
+  part_label: "MeshZ9Y12X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y12_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y12_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,12,9",
+  extents: "2.308858,3.270298000000004,3.986618",
+  volume: "1.726496",
+  part_label: "MeshZ9Y12X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y12_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y12_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,12,9",
+  extents: "3.069210000000001,3.588593000000003,3.986618",
+  volume: "18.421474",
+  part_label: "MeshZ9Y12X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y12_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y12_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,12,9",
+  extents: "2.787203,3.588593000000003,3.986618",
+  volume: "19.218073",
+  part_label: "MeshZ9Y12X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y12_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y12_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,12,9",
+  extents: "1.1767209999999988,1.6829529999999977,1.2477650000000011",
+  volume: "0.476698",
+  part_label: "MeshZ9Y12X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y12_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y12_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,13,9",
+  extents: "2.579848000000001,1.1126209999999972,0.4603309999999965",
+  volume: "0.109298",
+  part_label: "MeshZ9Y13X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y13_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y13_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,13,9",
+  extents: "1.9135460000000002,1.8695099999999982,0.4496460000000013",
+  volume: "0.7154",
+  part_label: "MeshZ9Y13X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y13_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y13_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,2,9",
+  extents: "2.1260000000000012,2.553567,2.444316999999998",
+  volume: "3.559457",
+  part_label: "MeshZ9Y2X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y2_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y2_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,2,9",
+  extents: "1.454388999999999,3.118811,2.662491000000003",
+  volume: "5.021833",
+  part_label: "MeshZ9Y2X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y2_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y2_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,3,9",
+  extents: "0.5452380000000003,0.08793200000000034,1.1940269999999984",
+  volume: "0.015109",
+  part_label: "MeshZ9Y3X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y3_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y3_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,3,9",
+  extents: "2.787203,1.0520209999999999,3.986618",
+  volume: "1.455966",
+  part_label: "MeshZ9Y3X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y3_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y3_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,3,9",
+  extents: "2.9177359999999997,2.9152310000000003,3.6818620000000024",
+  volume: "4.95781",
+  part_label: "MeshZ9Y3X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y3_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y3_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,3,9",
+  extents: "2.9842609999999983,3.5885920000000002,2.432602000000003",
+  volume: "9.772572",
+  part_label: "MeshZ9Y3X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y3_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y3_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,3,9",
+  extents: "1.4655169999999984,3.585294000000001,2.626663999999998",
+  volume: "7.537718",
+  part_label: "MeshZ9Y3X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y3_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y3_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,4,9",
+  extents: "2.4901809999999998,3.8749400000000005,4.139025",
+  volume: "11.384646",
+  part_label: "MeshZ9Y4X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y4_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y4_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,4,9",
+  extents: "3.0145719999999994,3.744465,4.146149000000001",
+  volume: "19.727022",
+  part_label: "MeshZ9Y4X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y4_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y4_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,4,9",
+  extents: "2.787203,3.5885920000000002,3.597267000000002",
+  volume: "7.71268",
+  part_label: "MeshZ9Y4X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y4_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y4_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,4,9",
+  extents: "0.4607840000000003,0.3229950000000006,0.197457",
+  volume: "0.004018",
+  part_label: "MeshZ9Y4X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y4_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y4_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "2,5,9",
+  extents: "0.03841800000000006,0.8075520000000012,0.7840389999999999",
+  volume: "0.005034",
+  part_label: "MeshZ9Y5X2"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y5_X2.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y5_X2.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,5,9",
+  extents: "2.9792239999999994,3.6984510000000004,3.542636999999999",
+  volume: "17.9807",
+  part_label: "MeshZ9Y5X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y5_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y5_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,5,9",
+  extents: "2.953745999999999,3.9534119999999984,3.5658189999999976",
+  volume: "19.760798",
+  part_label: "MeshZ9Y5X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y5_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y5_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,5,9",
+  extents: "2.787203,3.8279510000000005,2.2550969999999992",
+  volume: "10.016407",
+  part_label: "MeshZ9Y5X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y5_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y5_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,5,9",
+  extents: "0.5789239999999989,1.4304750000000013,1.1212540000000004",
+  volume: "0.139582",
+  part_label: "MeshZ9Y5X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y5_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y5_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,6,9",
+  extents: "2.9991900000000005,3.5885919999999984,3.6006590000000003",
+  volume: "13.956893",
+  part_label: "MeshZ9Y6X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y6_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y6_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,6,9",
+  extents: "3.0178089999999997,3.7929190000000013,3.986618",
+  volume: "26.068768",
+  part_label: "MeshZ9Y6X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y6_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y6_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,6,9",
+  extents: "2.985738999999999,3.9000169999999983,3.8996700000000004",
+  volume: "23.763393",
+  part_label: "MeshZ9Y6X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y6_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y6_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,6,9",
+  extents: "2.2558249999999997,3.704982000000001,2.4447139999999976",
+  volume: "5.94169",
+  part_label: "MeshZ9Y6X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y6_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y6_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,7,9",
+  extents: "1.0482560000000003,2.6103900000000024,3.986618",
+  volume: "0.515039",
+  part_label: "MeshZ9Y7X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y7_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y7_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,7,9",
+  extents: "3.1031189999999995,3.696785000000002,3.986618",
+  volume: "20.792473",
+  part_label: "MeshZ9Y7X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y7_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y7_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,7,9",
+  extents: "3.0152590000000004,4.009316000000002,4.3256039999999985",
+  volume: "30.666189",
+  part_label: "MeshZ9Y7X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y7_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y7_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,7,9",
+  extents: "2.3907359999999986,3.5885929999999995,2.9732169999999982",
+  volume: "8.196398",
+  part_label: "MeshZ9Y7X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y7_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y7_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,8,9",
+  extents: "2.482218999999999,3.8757020000000004,3.986618",
+  volume: "20.141312",
+  part_label: "MeshZ9Y8X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y8_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y8_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,8,9",
+  extents: "3.1041999999999987,3.9713930000000026,4.3344960000000015",
+  volume: "37.305233",
+  part_label: "MeshZ9Y8X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y8_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y8_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,8,9",
+  extents: "2.9034250000000004,3.741257000000001,3.986618",
+  volume: "21.432903",
+  part_label: "MeshZ9Y8X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y8_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y8_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,8,9",
+  extents: "0.5206319999999991,2.661670000000001,0.9744000000000028",
+  volume: "0.276716",
+  part_label: "MeshZ9Y8X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y8_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y8_X7.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "1,9,9",
+  extents: "1.220868,0.318761999999996,1.8778450000000007",
+  volume: "0.183025",
+  part_label: "MeshZ9Y9X1"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X1.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X1.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "3,9,9",
+  extents: "1.8297950000000007,2.0614820000000016,3.986618",
+  volume: "2.842295",
+  part_label: "MeshZ9Y9X3"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X3.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X3.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "4,9,9",
+  extents: "3.1191969999999998,3.855818000000003,3.986618",
+  volume: "32.660263",
+  part_label: "MeshZ9Y9X4"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X4.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X4.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "5,9,9",
+  extents: "3.046913,3.9717280000000024,3.986618",
+  volume: "28.902895",
+  part_label: "MeshZ9Y9X5"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X5.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X5.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "6,9,9",
+  extents: "2.9616169999999986,3.8005200000000023,3.986618",
+  volume: "28.019115",
+  part_label: "MeshZ9Y9X6"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X6.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X6.png")
+mf.save
+puts "Created Part #{p.id}: #{mf.file.url}"
+p = Part.create(
+  project_id: project_id,
+  offset: "7,9,9",
+  extents: "0.8998929999999987,3.5885909999999974,1.4915659999999988",
+  volume: "1.826834",
+  part_label: "MeshZ9Y9X7"
+)
+mf = p.create_model_file(render_state: 2)
+mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9_Y9_X7.stl")
+mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
