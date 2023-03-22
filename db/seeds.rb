@@ -1,4 +1,6 @@
 project_id = 13
+color_id = 8
+
 p = Part.create(
   project_id: project_id,
   offset: "3,1,21",
@@ -7199,3 +7201,5 @@ mf.file = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/stls/Mesh_Z9
 mf.render = URI.parse("http://epluribus.s3.amazonaws.com/unicorn-temp/renders/Mesh_Z9_Y9_X7.png")
 mf.save
 puts "Created Part #{p.id}: #{mf.file.url}"
+
+Project.find(project_id).parts.update_all(desired_color_id: color_id)
