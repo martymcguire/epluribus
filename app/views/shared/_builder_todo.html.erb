@@ -218,5 +218,5 @@
     <% end %>
   <% end %>
 <% elsif ! @project.complete? # no current_user but project is active %>
-  <div class="alert">Want to jump in and start printing a part? <%= link_to "Sign in with your Google account", new_user_session_path %> to begin!</div>
+  <div class="alert">Want to jump in and start printing a part? <%= link_to "Sign in with your Google account", '/users/auth/google_oauth2', :method => :post %> to begin!</div>
 <% end # if current_user %>
