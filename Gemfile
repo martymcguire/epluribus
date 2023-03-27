@@ -1,10 +1,15 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.8'
+gem 'rails', '~> 6.0'
+
+# 2023-03-27 hacks for redefined constant warnings
+# https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
+gem 'net-http'
+gem 'uri', '0.10.0'    # force the default version for ruby 2.7
 
 # Use postgresql for Active Record
-gem "pg", "~> 0.18"
+gem "pg", "~> 1.1"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

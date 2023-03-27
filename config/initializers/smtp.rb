@@ -4,6 +4,8 @@ Epluribus::Application.config.action_mailer.smtp_settings = {
   port:                 ENV['SMTP_PORT'],
   user_name:            ENV['SMTP_USERNAME'],
   password:             ENV['SMTP_PASSWORD'],
-  domain:               'wethebuilders.com',
+  domain:               ENV['DEFAULT_HOST'],
   authentication:       'login',
   enable_starttls_auto: true  }
+
+Rails.application.routes.default_url_options[:host] = ENV['DEFAULT_HOST']
