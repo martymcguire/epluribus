@@ -81,7 +81,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    @project.update_attributes!(params.require(:project).permit(
+    @project.update!(params.require(:project).permit(
       :name, :description, :shipping_address, :preview_stl, :preview_img,
       :parts_in_reserve, :print_settings, :marking_instructions,
       :marking_instructions_photo

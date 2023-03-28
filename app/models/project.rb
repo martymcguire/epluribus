@@ -82,7 +82,7 @@ class Project < ApplicationRecord
     user_ids_counts = print_jobs.where(
         "user_id IS NOT NULL AND aasm_state in (?)",
         ['accepted','shipped','shipping']
-    ).group("user_id").pluck('user_id', 'count(*)')
+    ).group("user_id").pluck('user_id', Arel.sql('count(*)'))
     user_ids_counts.sort!{ |a,b| b[1] <=> a[1] }
     user_ids = user_ids_counts.map{ |uid,c| uid }
     users = Hash[ User.find(user_ids).map{ |u| [u.id,u] } ]
@@ -105,7 +105,7 @@ class Project < ApplicationRecord
         ['accepted','shipped','shipping']
     ).where(
         "t.project_id = ?", self.id
-    ).group("team_id").where("team_id IS NOT NULL").pluck('team_id', 'count(*)')
+    ).group("team_id").where("team_id IS NOT NULL").pluck('team_id', Arel.sql('count(*)'))
     team_ids_counts.sort!{ |a,b| b[1] <=> a[1] }
     team_ids = team_ids_counts.map{ |tid,c| tid }
     teams = Hash[ Team.find(team_ids).map{ |t| [t.id,t] } ]
