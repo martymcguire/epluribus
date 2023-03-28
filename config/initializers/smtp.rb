@@ -8,4 +8,4 @@ Epluribus::Application.config.action_mailer.smtp_settings = {
   authentication:       'login',
   enable_starttls_auto: true  }
 
-Rails.application.routes.default_url_options[:host] = ENV['DEFAULT_HOST']
+Epluribus::Application.config.action_mailer.default_url_options = { :host => ENV['DEFAULT_HOST'] }
