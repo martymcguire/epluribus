@@ -36,8 +36,7 @@ class ApplicationController < ActionController::Base
     if (! project.is_published?)
       if current_user.nil?
         redirect_to root_path
-      end
-      if ((! current_user.is_admin?) && (! project.editors.include?(current_user)))
+      elsif ((! current_user.is_admin?) && (! project.editors.include?(current_user)))
         redirect_to root_path
       end
     end
