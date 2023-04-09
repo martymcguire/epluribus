@@ -10,7 +10,7 @@
   <% else %>
     <div class="total-progress">
       <div class="total-needed">This build requires <span class="total-count"><%= project.parts.count %></span> parts</div>
-      <% if project.complete_count > 0.05 * project.parts.count %>
+      <% if project.complete_count > 0.01 * project.parts.count %>
         <div class="total-complete">We have completed <span class="total-complete-count"><%= project.complete_count %></span></div>
         <div style="max-width: 90%; margin: 1em auto 0;"><%= project_progress_bar(project) %></div>
       <% end %>
