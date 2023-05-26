@@ -1,44 +1,42 @@
-# fly.toml file generated for we-the-builders on 2022-05-15T12:50:23-04:00
+# fly.toml app configuration file generated for we-the-builders on 2023-05-26T11:27:01-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "we-the-builders"
-
+primary_region = "ewr"
 kill_signal = "SIGINT"
-kill_timeout = 5
-processes = []
-
-[env]
-RAILS_ENV="production"
-S3_BUCKET_NAME="epluribus"
-S3_REGION="us-east-1"
-DEFAULT_HOST="wethebuilders.com"
+kill_timeout = "5s"
 
 [experimental]
-  allowed_public_ports = []
   auto_rollback = true
 
+[env]
+  DEFAULT_HOST = "wethebuilders.com"
+  RAILS_ENV = "production"
+  S3_BUCKET_NAME = "epluribus"
+  S3_REGION = "us-east-1"
+
 [[services]]
-  http_checks = []
+  protocol = "tcp"
   internal_port = 8080
   processes = ["app"]
-  protocol = "tcp"
-  script_checks = []
 
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
   [services.concurrency]
+    type = "connections"
     hard_limit = 25
     soft_limit = 20
-    type = "connections"
-
-  [[services.ports]]
-    force_https = true
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
 
   [[services.tcp_checks]]
-    grace_period = "1s"
     interval = "15s"
-    restart_limit = 0
     timeout = "2s"
+    grace_period = "1s"
+    restart_limit = 0
