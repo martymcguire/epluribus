@@ -6,7 +6,7 @@ gem 'rails', '~> 6.0'
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
 gem 'net-http'
-gem 'uri', '0.10.0'    # force the default version for ruby 2.7
+gem 'uri', '~> 0.10.0'    # force the default version for ruby 2.7
 
 # Use postgresql for Active Record
 gem "pg", "~> 1.1"
@@ -64,7 +64,7 @@ gem "kt-paperclip", "~> 7.1", ">= 7.1.1"
 gem 'aws-sdk-s3'
 
 # Heroku configs
-ruby "2.7.6"
+ruby "2.7.8"
 group :production do
   gem 'rails_12factor'
 end

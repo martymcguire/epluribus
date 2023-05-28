@@ -272,7 +272,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    uri (0.10.0)
+    uri (0.10.2)
     validates_email_format_of (1.7.2)
       i18n
     version_gem (1.1.2)
@@ -308,11 +308,11 @@ DEPENDENCIES
   redcarpet (~> 3.5)
   sass-rails (~> 5.0)
   uglifier (>= 4.2.0)
-  uri (= 0.10.0)
+  uri (~> 0.10.0)
   validates_email_format_of
 
 RUBY VERSION
-   ruby 2.7.6p219
+   ruby 2.7.8p225
 
 BUNDLED WITH
    2.1.4
