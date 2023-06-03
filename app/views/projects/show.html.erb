@@ -17,9 +17,9 @@
     <%= render partial: 'shared/builder_todo' %>
   <% end %>
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-9 h-feed">
       <h1>
-        <%= @project.name %>
+        <span class="p-name"><%= @project.name %></span>
         <% if current_user && @project.user_is_admin?(current_user) %>
           <%= link_to("Edit Project Details", edit_project_path(@project), class: "btn btn-primary") %>
         <% end %>
@@ -56,3 +56,4 @@
       </div>
     </div>
   </div>
+</div>

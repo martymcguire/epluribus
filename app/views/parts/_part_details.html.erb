@@ -1,15 +1,15 @@
-State: <%= state_name(state) %><br />
-Project: <%= link_to part.project.name, part.project %><br />
-Part: <%= link_to "#{part.part.part_name} (#{part.part.id})", project_part_path(part.project.id, part.part.id) %><br />
-Expected Dimensions: <%= part.part.extents.split(',').join(', ') %><br />
-Desired Color: <%= part.part.desired_color.label %><br />
+State: <%= state_name(state) %><br>
+Project: <%= link_to part.project.name, part.project %><br>
+Part: <%= link_to "#{part.part.part_name} (#{part.part.id})", project_part_path(part.project.id, part.part.id) %><br>
+Expected Dimensions: <%= part.part.extents.split(',').join(', ') %><br>
+Desired Color: <%= part.part.desired_color.label %><br>
 <% if !!part.measurements %>
-  Reported Dimensions: <%= part.measurements %><br />
+  Reported Dimensions: <%= part.measurements %><br>
 <% end %>
 <% if !!part.user %>
-  Email: <a href='mailto:<%= part.user.name%> <<%= part.user.notification_email %>>'><%= part.user.name%> &lt;<%= part.user.notification_email %>&gt;</a><br />
+  Email: <a href='mailto:<%= part.user.name%> <<%= part.user.notification_email %>>'><%= part.user.name%> &lt;<%= part.user.notification_email %>&gt;</a><br>
 <% end %>
 <% if !!part.shipping_info %>
-  Shipping Info: <%= part.shipping_info %><br />
+  Shipping Info: <%= part.shipping_info %><br>
 <% end %>
 Last Updated: <%= time_ago_in_words(part.updated_at) %> ago

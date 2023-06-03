@@ -1,8 +1,8 @@
-Part ID: <%= part.part_name %><br />
+Part ID: <%= part.part_name %><br>
 <% if false && !!part.measurements %>
-  Measurements: <%= part.measurements %><br />
+  Measurements: <%= part.measurements %><br>
 <% end %>
 <% if false && !!part.shipping_info %>
-  Shipping Info: <%= part.shipping_info %><br />
+  Shipping Info: <%= part.shipping_info %><br>
 <% end %>
 Last Updated: <%= time_ago_in_words(part.updated_at) %> ago

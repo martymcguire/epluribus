@@ -2,9 +2,9 @@
   <%= image_tag( part.preview_url(:square), width: 150 ) %>
   <% if(!part.download_url.nil?) %>
     <div class="buttons">
-      <a href="<%= part.download_url %>" title="Download this File" alt="Download this File"><i class="fa fa-download fa-2x"></i></a>
+      <a href="<%= part.download_url %>" title="Download file <%= part.part_name %>"><span class="sr-only">Download file <%= part.part_name %></span><i class="fa fa-download fa-2x"></i></a>
       <% if(part.model_file.file_content_type == "application/octet-stream") # likely an STL %>
-        <a href="<%= project_part_preview_path(part.project_id, part.id) %>" title="Preview this File" alt="Preview this File"><i class="fa fa-eye fa-2x"></i></a>
+        <a href="<%= project_part_preview_path(part.project_id, part.id) %>" title="Preview file <%= part.part_name %>"><span class="sr-only">Preview file <%= part.part_name %></span><i class="fa fa-eye fa-2x"></i></a>
       <% end %>
     </div>
   <% end %>

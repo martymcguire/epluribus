@@ -44,7 +44,7 @@
   <% elsif @print_job.printed? %>
     <div class="well">
     <form action="<%= project_print_job_submit_path(@project,@print_job) %>" method="POST" enctype='multipart/form-data'>
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       <p class="lead"><strong>Verify Part <%= @print_job.part.part_name %></strong></p>
       <div class="row">
         <div class="col-md-2">
@@ -61,7 +61,7 @@
       <% if @project.marking_instructions %>
         <%= (markdown @project.marking_instructions).gsub('%PARTID%', @print_job.part.part_name).html_safe %>
       <% end %>
-      <hr style="border: 1px dashed #999"/>
+      <hr style="border: 1px dashed #999">
       <p class="lead">Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
@@ -78,14 +78,14 @@
         </div>
         <div class="col-md-4">
           Upload a photo of your finished print.
-          <br/><em>Smaller photos (less than 2mb in size) are best. If you're seeing errors at this step, try reducing the size of your photo.</em>
+          <br><em>Smaller photos (less than 2mb in size) are best. If you're seeing errors at this step, try reducing the size of your photo.</em>
           <div class="row" style="margin: 10px 0 0 0">
             <input name="photo" type="file" id="photo">
           </div>
         </div>
       </div>
       <%#= # not needed for project 11
-      <hr style="border: 1px dashed #999"/>
+      <hr style="border: 1px dashed #999">
       <p class="lead">2. Measure</p>
       <div class="row">
         <div class="col-md-2"></div>
@@ -110,7 +110,7 @@
       </div>
       <%
       %>
-      <hr style="border: 1px dashed #999"/>
+      <hr style="border: 1px dashed #999">
       <p class="lead">Check it In!</p>
       <div class="row">
         <div class="col-xs-2"></div>
@@ -118,7 +118,7 @@
           <p>That's all the details we need for this part! Click "Check it In!" to go to the next step.</p>
         </div>
         <div class="col-xs-4">
-          <input type="submit" value="Check it In!" class="btn btn-primary"></input>
+          <input type="submit" value="Check it In!" class="btn btn-primary">
         </div>
       </div>
     </form>
@@ -134,7 +134,7 @@
         <%= print_job_photo_preview(@print_job) %>
       </div>
       <div class="col-md-8">
-        <p>We're reviewing your photo and measurement info.<br />
+        <p>We're reviewing your photo and measurement info.<br>
         We look through them every few hours, so check back soon!</p>
       </div>
     </div>
@@ -143,7 +143,7 @@
 
   <% if ! @shipping_print_jobs.empty? %>
     <form method="POST" action="<%= ship_project_print_jobs_path(@project) %>">
-    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
     <h2>Parts Ready to Ship (or Deliver)</h2>
     <div class="well">
       <p class="lead">You've Got Parts to Ship (or Deliver)!</p>
@@ -159,21 +159,21 @@
             <div class="col-md-6">
               <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
-            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>" />
+            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>">
           </div>
         </div>
       <% end %>
-    <%= markdown (@project.shipping_address || "TBD") %>
-    <div class="row">
-      <div class="col-xs-4">
-        <input name='shipping_info' type="text" class="form-control" placeholder="Tracking Number or Delivery Details">
+      <%= markdown (@project.shipping_address || "TBD") %>
+      <div class="row">
+        <div class="col-xs-4">
+          <input name='shipping_info' type="text" class="form-control" placeholder="Tracking Number or Delivery Details">
+        </div>
+        <div class="col-xs-2">
+          <input type="submit" value="I Shipped (or Delivered) It!" class="btn btn-primary btn-sm">
+        </div>
       </div>
-      <div class="col-xs-2">
-    <input type="submit" value="I Shipped (or Delivered) It!" class="btn btn-primary btn-sm"></input>
-      </div>
-    </div>
+    </div><!-- Well -->
     </form>
-  </div><!-- Well -->
   <% end %>
 
   <% if @shipped_print_jobs.size > 0 %>
@@ -190,7 +190,7 @@
             <div class="col-md-8">
               <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
-            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>" />
+            <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>">
           </div>
         </div>
       <% end %>
@@ -209,9 +209,9 @@
           <div class="col-md-2"><%= part_preview(fpj.part) %></div>
           <div class="col-md-2"><%= print_job_photo_preview(fpj) %></div>
           <div class="col-md-8">
-            Reported Dimensions: <%= fpj.measurements %><br />
-            Tracking Info: <%= fpj.shipping_info %><br />
-            Accepted: <%= time_ago_in_words(fpj.updated_at) %> ago<br />
+            Reported Dimensions: <%= fpj.measurements %><br>
+            Tracking Info: <%= fpj.shipping_info %><br>
+            Accepted: <%= time_ago_in_words(fpj.updated_at) %> ago<br>
           </div>
         </div>
       </div>
