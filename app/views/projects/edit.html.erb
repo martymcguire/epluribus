@@ -1,3 +1,4 @@
+<% content_for :title do %>Edit project <%= ActionView::Base.full_sanitizer.sanitize(@project.id.to_s) %> – <% end %>
 <div class="container project-edit-tabs">
   <ul class="row nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#project-detail" aria-controls="project-detail" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Project Details</a></li>

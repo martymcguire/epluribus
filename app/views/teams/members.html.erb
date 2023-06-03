@@ -1,3 +1,4 @@
+<% content_for :title do %><%= ActionView::Base.full_sanitizer.sanitize(@team.name) %> – Team members – <% end %>
 <div class="container">
   <div class="row profile">
 		<% flash.each do |key, value| %>

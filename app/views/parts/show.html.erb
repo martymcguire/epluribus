@@ -1,3 +1,4 @@
+<% content_for :title do %>Part <%= @part.part_name %> – <%= ActionView::Base.full_sanitizer.sanitize(@part.project.name) %> – <% end %>
 <div class="container">
   <%= render partial: "parts/part_by_label_form", locals: { project: @part.project } %>
   <h1>All print jobs for Part <%= @part.part_name %> (<%= @part.id %>)</h1>
