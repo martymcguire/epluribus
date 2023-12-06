@@ -29,7 +29,8 @@ class Project < ApplicationRecord
     end
   end
 
-  def random_part_by_color(color_name)
+  def random_part_by_color(color_name, max_part_size)
+    # FIXME: max_part_size ignored
     color = PartColor.find_by_name(color_name)
     if(color.nil?)
       return nil
