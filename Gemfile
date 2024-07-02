@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 6.1'
 
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
@@ -64,7 +64,7 @@ gem "kt-paperclip", "~> 7.1", ">= 7.1.1"
 gem 'aws-sdk-s3'
 
 # Heroku configs
-ruby "2.7.8"
+ruby "3.0.7"
 group :production do
   gem 'rails_12factor'
 end
@@ -78,4 +78,4 @@ gem 'hashids', '1.0.2'
 gem "nanoid", "~> 2.0"
 
 # Nokogiri CVE 2022-03-01
-gem 'nokogiri', '~> 1.14.3'
+#gem 'nokogiri', '~> 1.14.3'
