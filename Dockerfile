@@ -5,6 +5,7 @@ FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
 ARG NODE_VERSION=16
 ARG BUNDLER_VERSION=2.5.14
+ENV BUNDLER_VERSION=${BUNDLER_VERSION}
 
 ARG RAILS_ENV=production
 ENV RAILS_ENV=${RAILS_ENV}
@@ -44,7 +45,10 @@ RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
 
 FROM build_deps as gems
 
-RUN gem install -N bundler -v ${BUNDLER_VERSION}
+# https://community.fly.io/t/a-couple-issues-with-the-dockerfile-generated-for-a-rails-detected-app/6242
+# RUN gem install -N bundler -v ${BUNDLER_VERSION}
+RUN gem update --system --no-document && \
+    gem install -N bundler -v ${BUNDLER_VERSION}
 
 COPY Gemfile* ./
 RUN bundle install &&  rm -rf vendor/bundle/ruby/*/cache
@@ -75,13 +79,15 @@ RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 COPY --from=gems /app /app
+COPY --from=gems /usr/lib/fullstaq-ruby/versions /usr/lib/fullstaq-ruby/versions
+COPY --from=gems /usr/local/bundle /usr/local/bundle
 COPY --from=node_modules /app/node_modules /app/node_modules
 
 ENV SECRET_KEY_BASE 1
 
 COPY . .
 
-# RUN bundle exec rails assets:precompile
+RUN bundle exec rails assets:precompile
 
 ENV PORT 8080
 
