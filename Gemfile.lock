@@ -190,7 +190,7 @@ GEM
     puma (5.6.8)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (2.2.7)
+    rack (2.2.9)
     rack-protection (3.0.6)
       rack
     rack-test (2.1.0)
@@ -273,7 +273,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    uri (0.10.0.2)
+    uri (0.13.0)
     validates_email_format_of (1.7.2)
       i18n
     version_gem (1.1.2)
@@ -308,7 +308,6 @@ DEPENDENCIES
   redcarpet (~> 3.5)
   sass-rails (~> 5.0)
   uglifier (>= 4.2.0)
-  uri (= 0.10.0.2)
   validates_email_format_of
 
 RUBY VERSION
