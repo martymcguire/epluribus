@@ -8,7 +8,8 @@ gem 'rails', '~> 6.1.7.9'
 gem 'net-http'
 
 # Use postgresql for Active Record
-gem "pg", "~> 1.1"
+# gem "pg", "~> 1.1"
+gem 'sqlite3', '~> 1.4' # older Rails is pegged to older sqlite
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
