@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7.9'
+gem 'rails', '~> 7.0.0'
 
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
@@ -49,7 +49,7 @@ gem 'puma', '~> 5.6'
 gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
-gem 'devise'
+gem 'devise', '~> 4.9'
 gem 'omniauth-google-oauth2'
 # added 2021-03 for https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
 gem 'omniauth-rails_csrf_protection'
