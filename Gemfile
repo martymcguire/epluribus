@@ -69,6 +69,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development do
+  gem 'dotenv'
+end
+
 # React
 gem 'react-rails', '~> 1.0'
 
