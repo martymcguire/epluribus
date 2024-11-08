@@ -78,7 +78,7 @@ end
 gem 'react-rails', '~> 1.0'
 
 # User ID hashing
-gem 'hashids', '1.0.2'
+gem 'hashids', '1.0.6'
 
 gem "nanoid", "~> 2.0"
 

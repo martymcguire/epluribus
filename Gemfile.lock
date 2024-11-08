@@ -112,7 +112,7 @@ GEM
     ffi (1.15.5)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashids (1.0.2)
+    hashids (1.0.6)
     hashie (5.0.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -296,7 +296,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2.2)
   devise
   dotenv
-  hashids (= 1.0.2)
+  hashids (= 1.0.6)
   jbuilder (~> 2.5)
   jquery-rails
   kt-paperclip (~> 7.1, >= 7.1.1)
