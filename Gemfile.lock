@@ -316,7 +316,7 @@ DEPENDENCIES
   validates_email_format_of
 
 RUBY VERSION
-   ruby 3.0.7p220
+   ruby 3.3.4p94
 
 BUNDLED WITH
    2.5.14
