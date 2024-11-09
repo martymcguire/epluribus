@@ -19,8 +19,9 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @activity = @project.print_jobs.order('updated_at DESC').limit(8)
-    ActiveRecord::Associations::Preloader.new.preload(
-      @activity, [:user, :part]
+    ActiveRecord::Associations::Preloader.new(
+      records: @activity,
+      associations: [:user, :part]
     )
     @individual_contributors = @project.contributors
     @team_contributors = @project.team_contributors

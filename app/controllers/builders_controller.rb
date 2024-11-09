@@ -6,8 +6,9 @@ class BuildersController < ApplicationController
     @builder = user_from_hashid!(params[:id])
     @project_parts = {}
     print_jobs = PrintJob.where(user_id: @builder.id, aasm_state: 'accepted')
-    ActiveRecord::Associations::Preloader.new.preload(
-      print_jobs, {:part => [:model_file]}
+    ActiveRecord::Associations::Preloader.new(
+      records: print_jobs,
+      associations: {:part => [:model_file]}
     )
     print_jobs.each do |pj|
       prj = @project_parts[pj.project_id]
@@ -20,8 +21,9 @@ class BuildersController < ApplicationController
     if current_user && current_user.is_admin?
       @active_project_parts = {}
       print_jobs = @builder.print_jobs.where.not(aasm_state: 'accepted')
-      ActiveRecord::Associations::Preloader.new.preload(
-        print_jobs, {:part => [:model_file, :project]}
+      ActiveRecord::Associations::Preloader.new(
+        records: print_jobs,
+        associations: {:part => [:model_file, :project]}
       )
       print_jobs.each do |pj|
         state = @active_project_parts[pj.aasm_state]
