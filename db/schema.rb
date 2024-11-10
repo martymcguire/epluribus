@@ -10,29 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[6.1].define(version: 2024_11_08_040425) do
-
+ActiveRecord::Schema[7.2].define(version: 2024_11_10_012147) do
   create_table "model_files", force: :cascade do |t|
     t.integer "part_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "file_file_name", limit: 255
     t.string "file_content_type", limit: 255
     t.integer "file_file_size"
-    t.datetime "file_updated_at"
+    t.datetime "file_updated_at", precision: nil
     t.integer "render_state", default: 0
     t.string "render_file_name", limit: 255
     t.string "render_content_type", limit: 255
     t.integer "render_file_size"
-    t.datetime "render_updated_at"
+    t.datetime "render_updated_at", precision: nil
   end
 
   create_table "part_colors", force: :cascade do |t|
     t.string "name", limit: 255
     t.string "label", limit: 255
     t.string "description", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
   end
 
   create_table "parts", force: :cascade do |t|
@@ -40,8 +39,8 @@ ActiveRecord::Schema[6.1].define(version: 2024_11_08_040425) do
     t.string "offset", limit: 255
     t.string "extents", limit: 255
     t.float "volume"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "print_jobs_count"
     t.string "part_label", limit: 255
     t.integer "desired_color_id", default: 1, null: false
@@ -55,20 +54,20 @@ ActiveRecord::Schema[6.1].define(version: 2024_11_08_040425) do
     t.string "aasm_state", limit: 255
     t.string "measurements", limit: 255
     t.string "shipping_info", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "photo_file_name", limit: 255
     t.string "photo_content_type", limit: 255
     t.integer "photo_file_size"
-    t.datetime "photo_updated_at"
+    t.datetime "photo_updated_at", precision: nil
   end
 
   create_table "projects", force: :cascade do |t|
     t.string "name", limit: 255
     t.text "description"
     t.string "preview_stl", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.string "preview_img", limit: 255
     t.boolean "featured"
     t.boolean "complete"
@@ -95,9 +94,9 @@ ActiveRecord::Schema[6.1].define(version: 2024_11_08_040425) do
     t.string "avatar_file_name"
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
-    t.datetime "avatar_updated_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "avatar_updated_at", precision: nil
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["project_id"], name: "index_teams_on_project_id"
     t.index ["user_id"], name: "index_teams_on_user_id"
   end
@@ -112,16 +111,16 @@ ActiveRecord::Schema[6.1].define(version: 2024_11_08_040425) do
     t.string "name", limit: 255, default: "", null: false
     t.text "avatar", limit: 255
     t.string "encrypted_password", limit: 255, default: "", null: false
-    t.datetime "remember_created_at"
+    t.datetime "remember_created_at", precision: nil
     t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
+    t.datetime "current_sign_in_at", precision: nil
+    t.datetime "last_sign_in_at", precision: nil
     t.string "current_sign_in_ip", limit: 255
     t.string "last_sign_in_ip", limit: 255
     t.string "provider", limit: 255
     t.string "uid", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.boolean "is_admin"
     t.string "secondary_email"
     t.boolean "secondary_email_confirmed", default: false

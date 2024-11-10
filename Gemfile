@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.0'
+gem 'rails', '~> 7.2.0'
 
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
