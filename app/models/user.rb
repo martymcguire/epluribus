@@ -4,8 +4,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :rememberable,
-         # :omniauthable, :omniauth_providers => [:google_oauth2]
-         :database_authenticatable, :registerable
+         :omniauthable, :omniauth_providers => [:google_oauth2]
+         # :database_authenticatable, :registerable
 
   has_and_belongs_to_many :editor_projects, class_name: 'Project', join_table: 'projects_editors'
 
@@ -26,8 +26,7 @@ class User < ApplicationRecord
       unless user
           user = User.create(name: data["name"],
                email: data["email"],
-               avatar: data["image"],
-               password: Devise.friendly_token[0,20]
+               avatar: data["image"]
           )
       end
       if user.avatar != data["image"]

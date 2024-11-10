@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  # devise_for :users,
-  #   :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
-  #   :format => false
+  #devise_for :users
+  devise_for :users,
+    :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },
+    :format => false
 
-  # devise_scope :users do
-  #   get 'sign_in', :to => redirect('/users/auth/google_oauth2'), :as => :new_user_session
-  #   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # end
+  devise_scope :users do
+    get 'sign_in', :to => redirect('/users/auth/google_oauth2'), :as => :new_user_session
+    get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
 
   root 'welcome#index'
   get 'sign_up', :to => 'welcome#sign_up'
