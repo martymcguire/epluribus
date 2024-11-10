@@ -31,8 +31,9 @@ class PartsController < ApplicationController
     @print_jobs = {}
     parts = Part.arel_table
     all_jobs = @project.print_jobs.joins(:part).where(parts[:offset].matches("%,#{@layer}")).order('updated_at DESC')
-    ActiveRecord::Associations::Preloader.new.preload(
-      all_jobs, [
+    ActiveRecord::Associations::Preloader.new(
+      records: all_jobs,
+      associations: [
         :user, 
         {:part => [:model_file, :desired_color]}
       ]
