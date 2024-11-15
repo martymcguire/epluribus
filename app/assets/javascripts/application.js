@@ -17,3 +17,4 @@
 //= require eventemitter
 //= require components
 //= require_tree .
+//= stub 3d
