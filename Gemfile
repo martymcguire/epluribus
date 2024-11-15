@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7.9'
+gem 'rails', '~> 7.2.0'
 
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
 gem 'net-http'
 
 # Use postgresql for Active Record
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.1", group: :production
+# older Rails is pegged to older sqlite
+gem 'sqlite3', '~> 1.4', group: [:test, :development]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -28,9 +30,6 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -47,7 +46,7 @@ gem 'puma', '~> 5.6'
 gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
-gem 'devise'
+gem 'devise', '~> 4.9'
 gem 'omniauth-google-oauth2'
 # added 2021-03 for https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
 gem 'omniauth-rails_csrf_protection'
@@ -63,16 +62,20 @@ gem "kt-paperclip", "~> 7.1", ">= 7.1.1"
 gem 'aws-sdk-s3'
 
 # Heroku configs
-ruby "3.0.7"
+ruby "3.3.4"
 group :production do
   gem 'rails_12factor'
+end
+
+group :development do
+  gem 'dotenv'
 end
 
 # React
 gem 'react-rails', '~> 1.0'
 
 # User ID hashing
-gem 'hashids', '1.0.2'
+gem 'hashids', '1.0.6'
 
 gem "nanoid", "~> 2.0"
 

@@ -9,7 +9,7 @@
           <div class="thumbnail">
             <%= image_tag( part.preview_url(:square), className: 'img-responsive') %>
             <p>Part: <%= part.part_name %></p>
-            <p>Received: <%= pj.updated_at.to_date.to_s(:long).gsub(/ /,'&nbsp;').html_safe %></p>
+            <p>Received: <%= pj.updated_at.to_date.to_formatted_s(:long).gsub(/ /,'&nbsp;').html_safe %></p>
           </div>
         </div>
       <% end %>

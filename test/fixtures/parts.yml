@@ -1,21 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  project_id: 
-  user_id: 
-  model_url: MyString
-  model_preview_url: MyString
+  project_id:
   offset: MyString
   extents: MyString
   volume: 1.5
-  aasm_state: MyString
 
 two:
-  project_id: 
-  user_id: 
-  model_url: MyString
-  model_preview_url: MyString
+  project_id:
   offset: MyString
   extents: MyString
   volume: 1.5
-  aasm_state: MyString

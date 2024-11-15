@@ -1,6 +1,6 @@
 class PrintJobsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_print_job_from_params, except: [:index, :ship]
+  before_action :find_print_job_from_params, except: [:ship]
   before_action :require_project_admin!, only: [:verify, :accept, :unassign]
 
   def printed
