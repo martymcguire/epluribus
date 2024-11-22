@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.2.0'
+gem 'rails', '~> 8.0.0'
 
 # 2023-03-27 hacks for redefined constant warnings
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
@@ -10,7 +10,7 @@ gem 'net-http'
 # Use postgresql for Active Record
 gem "pg", "~> 1.1", group: :production
 # older Rails is pegged to older sqlite
-gem 'sqlite3', '~> 1.4', group: [:test, :development]
+gem 'sqlite3', '~> 2.1', group: [:test, :development]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -29,7 +29,7 @@ class EditorsController < ApplicationController
   def destroy
     @editor = User.find(params[:id])
     @project.editors.delete(@editor)
-    render nothing: true, status: 200
+    render plain: "OK", status: 200
   end
 
 protected

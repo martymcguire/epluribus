@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_10_012147) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_10_012147) do
   create_table "model_files", force: :cascade do |t|
     t.integer "part_id"
     t.datetime "created_at", precision: nil
