@@ -7,10 +7,9 @@ gem 'rails', '~> 8.0.0'
 # https://stackoverflow.com/questions/70443856/ruby-2-7-4-net-constant-warnings
 gem 'net-http'
 
-# Use postgresql for Active Record
+# databases
 gem "pg", "~> 1.1", group: :production
-# older Rails is pegged to older sqlite
-gem 'sqlite3', '~> 2.1', group: [:test, :development]
+gem 'sqlite3', '~> 2.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
