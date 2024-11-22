@@ -17,9 +17,6 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 4.2.0'
 
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.2.2'
-
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -69,9 +66,6 @@ end
 group :development do
   gem 'dotenv'
 end
-
-# React
-gem 'react-rails', '~> 1.0'
 
 # User ID hashing
 gem 'hashids', '1.0.6'

@@ -12,9 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require react
-//= require react_ujs
-//= require eventemitter
-//= require components
 //= require_tree .
 //= stub 3d
