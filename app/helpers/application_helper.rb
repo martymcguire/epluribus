@@ -123,4 +123,11 @@ module ApplicationHelper
     hashid = hashids.encode(team.id)
     project_team_path(project,hashid)
   end
+
+  def tabs_for_project_edit(project)
+    return [
+      { url: edit_project_path(project), label: '<i class="fa fa-file-text-o"></i> Project Details'.html_safe },
+      { url: project_editors_path(project), label: '<i class="fa fa-users"></i> Project Editors'.html_safe },
+    ]
+  end
 end

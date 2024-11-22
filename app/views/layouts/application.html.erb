@@ -26,7 +26,7 @@
     <% if alert %><div class="alert alert-error"><%= alert %></div><% end %>
   </div>
 
-  <%= yield %>
+  <%= content_for?(:content) ? yield(:content) : yield %>
 
   <hr />
   <%= render partial: "shared/footer" %>

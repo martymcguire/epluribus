@@ -63,21 +63,7 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
-    @editors = @project.editors #.where.not(id: current_user.id)
-    @editors_json = @editors.map do |e|
-      {
-        project_id: @project.id,
-        user_id: e.id,
-        name: e.name,
-        avatar: e.avatar,
-        email: e.email
-      }
-    end
-    @form_presenter = {
-      action: project_editors_path(@project),
-      csrf_param: request_forgery_protection_token,
-      csrf_token: form_authenticity_token
-    }
+    render layout: "project_edit"
   end
 
   def update

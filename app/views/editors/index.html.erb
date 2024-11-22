@@ -1,3 +1,4 @@
+<% content_for :title do %>Editors list for project <%= ActionView::Base.full_sanitizer.sanitize(@project.id.to_s) %> – <% end %>
 <script>
 window.ProjectEditorStore = new ProjectEditorStoreDef({
   editors: JSON.parse("<%= escape_javascript(@editors_json.to_json).html_safe %>"),
