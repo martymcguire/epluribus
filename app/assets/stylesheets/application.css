@@ -57,7 +57,7 @@ a.navbar-right { /* login link */
 }
 
 /* mobile navbar open */
-.navbar-collapse[aria-expanded="true"] a {
+.navbar-collapse:not(.collapse) a {
   border: none;
   display: block;
   line-height: 50px;

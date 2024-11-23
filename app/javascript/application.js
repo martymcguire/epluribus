@@ -1,2 +1,1 @@
-import "vendor/jquery";
-import "vendor/bootstrap.min";
+import "components/show-hide"
