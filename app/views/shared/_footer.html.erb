@@ -1,4 +1,8 @@
   <footer>
-    <p class="text-center"><%= link_to "How it Works", how_it_works_path %> | <%= link_to "Projects", projects_path %> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZKRTQNJRCFLBA&source=url">Donate</a> | <%= link_to "Join Mailing List", sign_up_path %> | <%= link_to "About Us", about_path %> | <a href="https://docs.google.com/forms/d/e/1FAIpQLSde8gwwmJRLdCzUeqkqpXH4xJ7_5nSRv2wm0m8CoVPSTQBU5A/viewform?usp=sf_link">Contact Us</a></p>
+    <p class="text-center footer-links">
+      <% footer_links.each do |fl| %>
+        <%= link_to fl[:label].gsub(/ /, '&nbsp;').html_safe, fl[:url] %>
+      <% end %>
+    </p>
     <p class="text-center"><a href="http://madewithloveinbaltimore.org">Made with &hearts; in Baltimore</a></p>
   </footer>

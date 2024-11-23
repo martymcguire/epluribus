@@ -2,115 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-footer {
-  border-top: 1px solid #fff;
-  padding-top: 10px;
-  margin-top: 20px;
-  
-  a {
-    color: #000;
-    &:focus, &:hover {
-      color: inherit;
-    }
+
+.jumbotron {
+  background: transparent;
+  text-shadow: #eee 1px 1px 1px;
+  h3 {
+    font-weight: lighter;
   }
 }
 
-.carousel {
-  z-index: -99;
-  .item {
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: center center;
-  }
-}
-
-body.welcome-index {
-  color: #eee;
-  padding-top: 0;
-  background: #000;
-
-  .navbar {
+.call-to-action {
+  margin-top: 2em;
+  .btn-default {
     background: transparent;
-    border: none;
-    text-shadow: #333 1px 1px 1px;
-    a {
-      color: #fff;
-      &:focus, &:hover {
-        color: inherit;
-      }
+    font-weight: lighter;
+    text-shadow: #eee 1px 1px 1px;
+
+    &:hover {
+      color: #428bca;
+      border-color: #428bca;
+      border-width: 2px;
     }
-  }
-
-  #welcomeCarousel {
-    opacity: 0.5;
-  }
-
-  #welcomeCarousel .item {
-    position: fixed; 
-    width: 100%; height: 100%;
-    // opacity: 0.45;
-  }
-
-  .jumbotron {
-    margin-top: 4em;
-    background: transparent;
-    color: #fff;
-    text-shadow: #333 1px 1px 1px;
-    h3 {
-      font-weight: lighter;
-    }
-  }
-
-  .call-to-action {
-    margin-top: 25px;
-    .btn-default {
-      background: transparent;
-      color: #fff;
-      font-weight: lighter;
-      text-shadow: #333 1px 1px 1px;
-
-      &:hover {
-        color: #428bca;
-        border-color: #428bca;
-        border-width: 2px;
-      }
-    }
-  }
-
-  .fixed-footer footer {
-    position: absolute;
-    bottom: 0;
-    width: 96%;
-    margin-left: 2%;
-    a {
-      color: #fff;
-      &:focus, &:hover {
-        color: inherit;
-      }
-    }
-  }
-
-}
-
-body.welcome-about {
-  .about {
-    margin-top: 20px;
   }
 }
 
-body.welcome-how_it_works {
-  .how-it-works {
-    margin-top: 20px;
-    li {
-      margin-top: 10px;
-    }
-  }
-  #howCarousel, #howCarousel .carousel-inner, #howCarousel .item {
-    position: absolute;
-    width: 500px;
-    height: 500px;
+.container.how-it-works {
+  li {
+    margin-top: 1em;
   }
 }
 

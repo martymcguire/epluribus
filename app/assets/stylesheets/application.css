@@ -18,16 +18,82 @@ body {
 }
 
 .navbar, .navbar .navbar-brand {
+  color: #fff;
   padding-bottom: 0;
+}
+
+.navbar-brand img {
+  margin: -0.5em 0 0;
+  max-height: 50px;
 }
 
 .navbar img.navatar {
   border-radius: 50%;
-  float: left;
+  display: inline;
   height: 50px;
+  margin: 0.5em;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.navbar-collapse {
+  a, a:visited {
+    color: inherit;
+  }
+}
+
+.navbar-right a + a {
+  border-left: 1px solid white;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+a.navbar-right { /* login link */
+  margin-top: 0.25em;
+  
+  img {
+    height: 50px;
+  }
+}
+
+/* mobile navbar open */
+.navbar-collapse[aria-expanded="true"] a {
+  border: none;
+  display: block;
+  line-height: 50px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.navbar-fixed-top + .container {
+  margin-top: 3rem;
 }
 
 img.activitar {
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
+  height: auto;
   max-width: 100%;
 }
+
+footer {
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  margin-top: 20px;
+
+  a {
+    color: #000;
+    &:focus, &:hover {
+      color: inherit;
+    }
+  }
+
+	a + a:before {
+		content: " | ";
+		&:focus, &:hover {
+			text-decoration: none;
+		}
+	}
+
+}
+
