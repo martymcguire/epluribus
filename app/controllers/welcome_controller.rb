@@ -46,6 +46,37 @@ class WelcomeController < ApplicationController
   end
 
   def how_it_works
+    @heroes = [
+      {
+        file: "ben-chunks.png",
+        alt: "a 3D render of a partial bust of Benjamin Franklin made up of multi-colored chunks",
+        caption: "Claim a part of the sculpture. Each one is sized for 3D printing."
+      },
+      {
+        file: "print-part.jpg",
+        alt: "A blue part resting on the print bed of a Tinkerine Ditto 3D printer.",
+        caption: "Print your part on your 3D printer!"
+      },
+      {
+        file: "part-marking.jpg",
+        alt: "A hand writes in black sharpie on a green part.",
+        caption: 'If needed, mark the ID of your part on an "inside" surface.'
+      },
+      {
+        file: "delivery-guy.jpg",
+        alt: "A smiling delivery person carries several packages.",
+        caption: "Ship your finished parts to the project coordinator."
+      },
+      {
+        file: "assembly.jpg",
+        alt: "A builder applies glue to a 3D printed part on a table covered with partially assembled sculpture pieces.",
+        caption: "The build team assembles the parts into the final sculpture!"
+      }
+    ]
+    url_prefix = 'https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/'
+    @heroes.each do |h|
+      h[:src] = url_prefix + h[:file]
+    end
   end
 
   def about

@@ -19,26 +19,14 @@
       </ol>
     </div>
     <div class="col-md-6" style="padding-top: 1em">
-      <figure class="thumbnail">
-        <img src="https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/ben-chunks.png" alt="a 3D render of a partial bust of Benjamin Franklin made up of multi-colored chunks">
-        <figcaption class="caption">Claim a part of the sculpture. Each on is sized for 3D printing.</figcaption>
-      </figure>
-      <figure class="thumbnail">
-        <img src="https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/print-part.jpg" alt="A blue part resting on the print bed of a Tinkerine Ditto 3D printer.">
-        <figcaption class="caption">Print your part on your 3D printer!</figcaption>
-      </figure>
-      <figure class="thumbnail">
-        <img src="https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/part-marking.jpg" alt="A hand writes in black sharpie on a green part.">
-        <figcaption class="caption">If needed, mark the ID of your part on an "inside" surface.</figcaption>
-      </figure>
-      <figure class="thumbnail">
-        <img src="https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/delivery-guy.jpg" alt="A smiling delivery person carries several packages.">
-        <figcaption class="caption">Ship your finished parts to the project coordinator.</figcaption>
-      </figure>
-      <figure class="thumbnail">
-        <img src="https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/assembly.jpg" alt="A builder applies glue to a 3D printed part on a table covered with partially assembled sculpture pieces.">
-        <figcaption class="caption" class="caption">The build team assembles the parts into the final sculpture!</figcaption>
-      </figure>
+      <% @heroes.each do |h| %>
+        <figure class="thumbnail">
+          <%= image_tag h[:src], alt: h[:alt] %>
+          <% if h[:caption] -%>
+            <figcaption class="caption"><%= h[:caption] %></figcaption>
+          <%- end %>
+        </figure>
+      <% end %>
     </div>
   </div>
 </div>
