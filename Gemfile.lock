@@ -121,6 +121,10 @@ GEM
     hashie (5.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
+    importmap-rails (2.0.3)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.7.2)
     irb (1.14.1)
       rdoc (>= 4.0.0)
@@ -313,6 +317,7 @@ DEPENDENCIES
   devise (~> 4.9)
   dotenv
   hashids (= 1.0.6)
+  importmap-rails (~> 2.0)
   jquery-rails
   kt-paperclip (~> 7.1, >= 7.1.1)
   nanoid (~> 2.0)

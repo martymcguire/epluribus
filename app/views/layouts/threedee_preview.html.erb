@@ -1,7 +1,7 @@
 <% content_for :title do %>3D preview<% end -%>
 <% content_for :head do -%>
-  <%= stylesheet_link_tag    "3d", media: "all" %>
-  <%= javascript_include_tag "3d" %>
+  <%= stylesheet_link_tag "3d", media: "all" %>
+  <script type="module">import "3d"</script>
 <%- end %>
 <% content_for :footer do %><!-- no footer --><% end %>
 <%= render template: "layouts/application" %>

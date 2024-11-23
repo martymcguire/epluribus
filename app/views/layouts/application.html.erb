@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <title><%= yield :title %>We the Builders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_importmap_tags %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= yield :head %>
 </head>
 <body>

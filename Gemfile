@@ -74,3 +74,5 @@ gem "nanoid", "~> 2.0"
 
 # Nokogiri CVE 2022-03-01
 #gem 'nokogiri', '~> 1.14.3'
+
+gem "importmap-rails", "~> 2.0"
