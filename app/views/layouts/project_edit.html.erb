@@ -1,0 +1,19 @@
+<% content_for :content do %>
+<%- project_edit_tabs = tabs_for_project_edit(@project) -%>
+<%- # TODO: make this proper nav roles -%>
+<div class="container project-edit-tabs">
+  <ul class="row nav nav-tabs">
+    <% project_edit_tabs.each do |tab| -%>
+      <li <% if current_page?(tab[:url])%>class="active"<% end %>>
+        <%= link_to( tab[:label], tab[:url], current_page?(tab[:url]) ? { 'aria-current': 'page' } : {}) %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="tab-content row">
+    <div class="tab-pane container active">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+<% end %>
+<%= render template: "layouts/application" %>

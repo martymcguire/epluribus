@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :projects do
     get 'participate'
     get 'preview'
-    resources :editors, only: [:create, :destroy]
+    resources :editors, only: [:index, :create, :destroy]
     resources :parts do
       get 'preview'
       get 'layer/:layer', to: 'parts#layer', on: :collection, as: :layer

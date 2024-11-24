@@ -6,6 +6,17 @@ module ApplicationHelper
      markdown.render(text).html_safe
   end
 
+  def footer_links
+    return [
+      { url: how_it_works_path, label: 'How it Works' },
+      { url: projects_path, label: 'Projects' },
+      { url: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZKRTQNJRCFLBA&source=url', label: 'Donate' },
+      { url: sign_up_path, label: 'Join Mailing List' },
+      { url: about_path, label: 'About Us' },
+      { url: 'https://docs.google.com/forms/d/e/1FAIpQLSde8gwwmJRLdCzUeqkqpXH4xJ7_5nSRv2wm0m8CoVPSTQBU5A/viewform?usp=sf_link', label: 'Contact Us' },
+    ]
+  end
+
   def part_preview(part)
     render partial: 'shared/part_preview', locals: { part: part }
   end
@@ -122,5 +133,12 @@ module ApplicationHelper
     hashids = Hashids.new(HashidConfig.config[:salt])
     hashid = hashids.encode(team.id)
     project_team_path(project,hashid)
+  end
+
+  def tabs_for_project_edit(project)
+    return [
+      { url: edit_project_path(project), label: '<i class="fa fa-file-text-o"></i> Project Details'.html_safe },
+      { url: project_editors_path(project), label: '<i class="fa fa-users"></i> Project Editors'.html_safe },
+    ]
   end
 end

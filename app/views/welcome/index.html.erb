@@ -1,18 +1,25 @@
-<div id="welcomeCarousel" class="carousel container slide" data-ride="carousel" data-pause="false">
-  <div class="carousel-inner">
-    <div class="active item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/george-scanning.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/marked-parts.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/patchwork-of-ben-pieces.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-assembly.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-hat.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/george-complete.jpg')"></div>
-    <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/front-rotator/2015-05-16/ben-complete.jpg')"></div>
-  </div>
-</div>
 
 <div class="jumbotron text-center">
   <h2>Let's build big sculptures from small parts!</h2>
+  <div class="container">
+    <div class="row">
+      <% @heroes[0..3].each do |h| %>
+        <figure class="thumbnail col-xs-3">
+          <%= image_tag h[:src], alt: h[:alt] %>
+        </figure>
+      <% end %>
+    </div>
+  </div>
   <h3>You 3D print, document, and ship. We assemble. Together we build crowdsourced sculptures!</h3>
+  <div class="container">
+    <div class="row">
+      <% @heroes[-3,3].each do |h| %>
+        <figure class="thumbnail col-xs-4">
+          <%= image_tag h[:src], alt: h[:alt] %>
+        </figure>
+      <% end %>
+    </div>
+  </div>
   <div class="container call-to-action text-center">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-3">
@@ -32,7 +39,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="fixed-footer">
-  <%= render partial: "shared/footer" %>
 </div>

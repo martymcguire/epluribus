@@ -1,40 +1,40 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="
-.navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <%= link_to(
-                image_tag(
-                  "wethebuilders-white.png",
-                  style:"max-height: 50px; margin-top: -15px;"
-                ),
-                root_path,
-                class: "navbar-brand",
-                rel: "home",
-                title: "We the Builders Home"
-              )
-          %>
-        </div>
-        <div class="navbar-collapse collapse">
-          <% if user_signed_in? %>
-            <div class="navbar-right">
-              <% if ! current_user.avatar.nil? %>
-                <%= link_to(image_tag(current_user.avatar, class: 'navatar'), path_to_builder(current_user)) %>
-              <% end %>
-              <div style="float:left; color:#FFF; margin: 15px 0 0 15px">
-                Hi, <%= link_to "#{current_user.name}", path_to_builder(current_user) %>
-                <%= link_to "<i class='fa fa-gear'></i> Account".html_safe, path_to_edit_builder(current_user), style: 'margin-left: 1em; padding-left: 1em; border-left: 1px solid white'  %>
-                <%= link_to "Sign Out", destroy_user_session_path, style: 'margin-left: 1em; padding-left: 1em; border-left: 1px solid white'  %>
-              </div>
-             </div>
-          <% else %>
-            <%= link_to(image_tag('google-signin.png', height: '50'), '/users/auth/google_oauth2', :method => :post, :class=>"navbar-right") %>
-          <% end %> 
-        </div>
+        <show-hide>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" trigger>
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to(
+                  image_tag(
+                    "wethebuilders-white.png",
+                  ),
+                  root_path,
+                  class: "navbar-brand",
+                  rel: "home",
+                  title: "We the Builders Home"
+                )
+            %>
+          </div>
+          <div class="navbar-collapse collapse" content>
+            <% if user_signed_in? %>
+              <div class="navbar-right">
+                <%= link_to path_to_builder(current_user) do %>
+                  <% if ! current_user.avatar.nil? %>
+                    <%= image_tag(current_user.avatar, class: 'navatar', alt:'')%>
+                    <span><%= current_user.name %></span>
+                  <% end %>
+                <% end %>
+                <%= link_to "<i class='fa fa-gear'></i> Account".html_safe, path_to_edit_builder(current_user) %>
+                <%= link_to "Sign Out", destroy_user_session_path %>
+               </div>
+            <% else %>
+              <%= link_to(image_tag('google-signin.png'), '/users/auth/google_oauth2', :method => :post, :class=>"navbar-right") %>
+            <% end %>
+          </div>
+        </show-hide>
       </div>
     </div>

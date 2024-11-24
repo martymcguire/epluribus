@@ -1,0 +1,49 @@
+<% content_for :title do %>Editors list for project <%= ActionView::Base.full_sanitizer.sanitize(@project.id.to_s) %> – <% end %>
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 editors-edit-editors">
+        <h3>Current Editors</h3>
+        <% if @editors.empty? %>
+          <div class="row editors-edit-empty">This project has no other editors.</div>
+        <% end %>
+        <div hidden id="editors-remove-label">Remove editor</div>
+        <% @editors.each_with_index do |editor, idx| %>
+          <div class="row editors-edit-row">
+            <div class="col-md-3">
+              <%= image_tag(editor.avatar, { class: 'activitar', alt: '', width: 67.5, height: 67.5 }) %>
+            </div>
+            <div class="col-md-9" id="editor-<%= idx %>-name-email">
+              <%= editor.name %> &lt;<%= editor.email %>&gt;
+            </div>
+            <%= button_to(
+                  "×",
+                  project_editor_path(@project, editor),
+                  {
+                    class: 'remove',
+                    method: :delete,
+                    'aria-labelledby': "editors-remove-label editor-#{idx}-name-email"
+                  }
+                )
+            %>
+          </div>
+        <% end %>
+        </div>
+        <div class="col-sm-4">
+          <h3>Add new Editor</h3>
+          <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <% # TODO FIXME make sure this is all wired up? %>
+          <%= form_with do |form| %>
+            <div class="form-group">
+              <%= form.label :email, "Email" %>
+              <%= form.text_field :email, { class: 'form-control', placeholder: 'jane_smith@gmail.com' } %>
+            </div>
+            <%= form.submit "Invite", { class: 'btn btn-primary' } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

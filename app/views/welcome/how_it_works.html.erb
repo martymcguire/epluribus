@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <h3 class="text-center">How it works</h3>
-      <ol style="margin-right:5px">
+      <ol style="margin-right: 1em; padding-left: 1em">
         <li>Join the project by requesting a file to print. You will be assigned a part automatically.</li>
         <li>Download the STL file for your part from the project page.</li>
         <li>Print your given part within 24 hours. Check the project and part requirements for details like color, material, print settings, etc.</li>
@@ -18,17 +18,15 @@
         <li>When all parts for a project have been received, the assembly team will put them all together to make a finished sculpture. Your name will appear on the project page as a valued contributor to the project!</li>
       </ol>
     </div>
-    <div class="col-md-6">
-      <div id="howCarousel" class="carousel container slide" data-ride="carousel" data-pause="false">
-        <div class="carousel-inner">
-          <div class="active item" style="background-image: url('https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/ben-chunks.png')"></div>
-          <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/print-part.jpg')"></div>
-          <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/part-marking.jpg')"></div>
-          <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/delivery-guy.jpg')"></div>
-          <div class="item" style="background-image: url('https://s3.amazonaws.com/epluribus/how-it-works-rotator/2015-05-16/assembly.jpg')"></div>
-        </div>
-      </div>
+    <div class="col-md-6" style="padding-top: 1em">
+      <% @heroes.each do |h| %>
+        <figure class="thumbnail">
+          <%= image_tag h[:src], alt: h[:alt] %>
+          <% if h[:caption] -%>
+            <figcaption class="caption"><%= h[:caption] %></figcaption>
+          <%- end %>
+        </figure>
+      <% end %>
     </div>
   </div>
 </div>
-<%= render partial: "shared/footer" %>
