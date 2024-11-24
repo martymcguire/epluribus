@@ -19,9 +19,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
-  database: epluribus_production
+  database: <%= ENV['DATABASE_URL'] %>
   pool: 5
   timeout: 5000
   password:
