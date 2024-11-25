@@ -48,7 +48,7 @@
     <%= f.label :preview_image, "Preview Image" %>
     <span class="help-block">Photo or render. Square-ish. 500x500 is good.</span>
     <% if @project.preview_image.attached? %>
-    <%= image_tag @project.preview_image.variant(:thumb), style: "max-height: 200px"  %>
+    <%= image_tag @project.preview_image.variant(:thumb).processed, style: "max-height: 200px"  %>
     <% end %>
     <%= f.file_field :preview_image, class: 'form-control', accept: "image/jpeg, image/png" %>
   </div>
