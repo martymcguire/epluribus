@@ -77,7 +77,7 @@ class ProjectsController < ApplicationController
       :name, :description, :shipping_address,
       :preview_model, :preview_image,
       :parts_in_reserve, :print_settings, :marking_instructions,
-      :marking_instructions_photo
+      :marking_instructions_image
     ))
     redirect_to [:edit,@project], flash: { success: 'Project Details Updated' }
   end

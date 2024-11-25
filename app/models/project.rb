@@ -9,6 +9,7 @@ class Project < ApplicationRecord
   has_one_attached :preview_image do |image|
     image.variant :thumb, resize_to_fill: [ 500, 500 ]
   end
+  has_one_attached :marking_instructions_image
 
   scope :published, -> { where("status = 'published'") }
 
