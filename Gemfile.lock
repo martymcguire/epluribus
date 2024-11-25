@@ -291,6 +291,7 @@ PLATFORMS
 
 DEPENDENCIES
   aasm
+  activestorage (~> 8.0)
   aws-sdk-s3
   devise (~> 4.9)
   dotenv

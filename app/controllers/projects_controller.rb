@@ -56,6 +56,11 @@ class ProjectsController < ApplicationController
   # 3D preview
   def preview
     @project = Project.find(params[:project_id])
+    @model_file_url = (
+      @project.preview_model.attached? ?
+        @project.preview_model.url :
+        @project.preview_stl
+    )
     render layout: "threedee_preview"
   end
 
@@ -69,11 +74,12 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     @project.update!(params.require(:project).permit(
-      :name, :description, :shipping_address, :preview_stl, :preview_img,
+      :name, :description, :shipping_address,
+      :preview_model, :preview_img,
       :parts_in_reserve, :print_settings, :marking_instructions,
       :marking_instructions_photo
     ))
-    redirect_to @project, flash: { notice: 'Project Details Updated' }
+    redirect_to [:edit,@project], flash: { success: 'Project Details Updated' }
   end
 
 end

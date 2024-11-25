@@ -29,7 +29,11 @@ Rails.application.configure do
   config.cache_store = :memory_store
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  if ENV['AWS_ACCESS_KEY_ID'].nil?
+    config.active_storage.service = :local
+  else
+    config.active_storage.service = :s3
+  end
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

@@ -12,7 +12,7 @@
     <%= project_progress_bar(@project) %>
         <p>
           <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
-          <% if @project.preview_stl %>
+          <% if @project.preview_model.attached? || @project.preview_stl %>
             <%= link_to "View 3D model", project_preview_path(@project), class: "btn btn-default", role: "button" %>
           <% end %>
         </p>

@@ -1,8 +1,11 @@
 class Project < ApplicationRecord
+  include ActiveStoragePrefixable
 
   has_many :parts
   has_many :print_jobs
   has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
+
+  has_one_attached :preview_model
 
   scope :published, -> { where("status = 'published'") }
 
