@@ -21,3 +21,6 @@
 # Ignore local env
 google_keys
 /.env
+
+# Ignore storage
+/storage

@@ -6,6 +6,9 @@ class Project < ApplicationRecord
   has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
 
   has_one_attached :preview_model
+  has_one_attached :preview_image do |image|
+    image.variant :thumb, resize_to_fill: [ 500, 500 ]
+  end
 
   scope :published, -> { where("status = 'published'") }
 

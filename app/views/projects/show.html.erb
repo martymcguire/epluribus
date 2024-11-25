@@ -4,7 +4,10 @@
 	<meta property="og:url" content="<%= request.original_url %>" />
 	<meta property="og:title" content="<%= @project.name %> – We the Builders" />
 	<meta property="og:description" content="<%= desc %>" />
-	<meta property="og:image" content="<%= @project.preview_img %>" />
+  <% img = @project.preview_image.attached? ? @project.preview_image.variant(:thumb) : @project.preview_img -%>
+  <% if img %>
+    <meta property="og:image" content="<%= img.url %>" />
+  <% end %>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@we_the_builders" />
 <% end %>

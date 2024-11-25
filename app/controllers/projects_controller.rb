@@ -75,7 +75,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project.update!(params.require(:project).permit(
       :name, :description, :shipping_address,
-      :preview_model, :preview_img,
+      :preview_model, :preview_image,
       :parts_in_reserve, :print_settings, :marking_instructions,
       :marking_instructions_photo
     ))

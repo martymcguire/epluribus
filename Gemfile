@@ -49,3 +49,5 @@ gem "sprockets-rails", "~> 3.5.2"
 gem "sassc-rails", "~> 2.1"
 
 gem "activestorage", "~> 8.0"
+
+gem "image_processing", "~> 1.13"
