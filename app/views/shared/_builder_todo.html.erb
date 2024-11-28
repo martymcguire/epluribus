@@ -65,7 +65,7 @@
       <p class="lead">Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
-          <% marking_img = @project.marking_instructions_image.attached? ? @project.marking_instructions_image.url : (@project.marking_instructions_photo? ? @project.marking_instructions_photo : "part-marking.jpg") -%>
+          <% marking_img = @project.marking_instructions_image_url -%>
           <p><%= link_to( image_tag( marking_img, width: '150px' ), marking_img) %>
           <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
           </p>

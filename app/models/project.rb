@@ -148,4 +148,22 @@ class Project < ApplicationRecord
   def is_draft?
     self.status == "draft"
   end
+
+  ### bridge methods for the move from urls-on-table to ActiveStorage
+  def preview_model_url
+    preview_model.attached? ? preview_model.url : preview_stl
+  end
+
+  def preview_image_url
+    preview_image.attached? \
+      ? preview_image.variant(:thumb).processed \
+      : preview_img
+  end
+
+  def marking_instructions_image_url
+    marking_instructions_image.attached? \
+      ? marking_instructions_image \
+      : (marking_instructions_photo || "part-marking.jpg")
+  end
+
 end

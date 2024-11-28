@@ -26,8 +26,8 @@
   <div class="form-group">
     <%= f.label :marking_instructions_image, "Marking Instructions Image" %>
     <span class="help-block">(Optional) A photo to demonstrate special instructions for marking the printed parts, if any.</span>
-    <% if @project.marking_instructions_image.attached? %>
-      <%= image_tag @project.marking_instructions_image, style: "display: block; max-height: 200px" %>
+    <% if @project.marking_instructions_image_url %>
+      <%= image_tag @project.marking_instructions_image_url, style: "display: block; max-height: 200px" %>
     <% end %>
     <%= f.file_field :marking_instructions_image, class: 'form-control', accept: "image/jpeg" %>
   </div>
@@ -39,17 +39,13 @@
   <div class="form-group">
     <%= f.label :preview_model, "Preview Model" %>
     <span class="help-block">An STL for preview in a 3D model viewer</span>
-    <% if @project.preview_model.attached? %>
-    <p>Current file: <%= link_to @project.preview_model.filename, @project.preview_model.url %></p>
-    <% end %>
+    <p>Current file: <%= link_to File.basename(@project.preview_model_url), @project.preview_model_url %></p>
     <%= f.file_field :preview_model, class: 'form-control', accept: ".stl" %>
   </div>
   <div class="form-group">
     <%= f.label :preview_image, "Preview Image" %>
     <span class="help-block">Photo or render. Square-ish. 500x500 is good.</span>
-    <% if @project.preview_image.attached? %>
-    <%= image_tag @project.preview_image.variant(:thumb).processed, style: "max-height: 200px"  %>
-    <% end %>
+    <%= image_tag @project.preview_image_url, style: "max-height: 200px"  %>
     <%= f.file_field :preview_image, class: 'form-control', accept: "image/jpeg, image/png" %>
   </div>
   <div class="form-group">

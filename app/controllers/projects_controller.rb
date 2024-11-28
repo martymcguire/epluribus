@@ -56,11 +56,6 @@ class ProjectsController < ApplicationController
   # 3D preview
   def preview
     @project = Project.find(params[:project_id])
-    @model_file_url = (
-      @project.preview_model.attached? ?
-        @project.preview_model.url :
-        @project.preview_stl
-    )
     render layout: "threedee_preview"
   end
 

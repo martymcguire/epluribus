@@ -5,7 +5,7 @@
   <div class="col-md-4 desc-column">
     <h1>Current Project</h1>
     <div class="thumbnail">
-      <% img = @project.preview_image.attached? ? @project.preview_image.variant(:thumb) : @project.preview_img %>
+      <% img = @project.preview_image_url %>
       <%= link_to(image_tag(img), project_path(@project)) %>
       <div class="caption">
         <h3><%= @project.name %></h3>
@@ -13,7 +13,7 @@
     <%= project_progress_bar(@project) %>
         <p>
           <%= link_to "Learn More", project_path(@project), class: "btn btn-primary", role: 'button' %>
-          <% if @project.preview_model.attached? || @project.preview_stl %>
+          <% if @project.preview_model_url %>
             <%= link_to "View 3D model", project_preview_path(@project), class: "btn btn-default", role: "button" %>
           <% end %>
         </p>
