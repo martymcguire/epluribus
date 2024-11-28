@@ -1,8 +1,15 @@
 class Project < ApplicationRecord
+  include ActiveStoragePrefixable
 
   has_many :parts
   has_many :print_jobs
   has_and_belongs_to_many :editors, class_name: 'User', join_table: 'projects_editors'
+
+  has_one_attached :preview_model
+  has_one_attached :preview_image do |image|
+    image.variant :thumb, resize_to_fill: [ 500, 500 ]
+  end
+  has_one_attached :marking_instructions_image
 
   scope :published, -> { where("status = 'published'") }
 
@@ -141,4 +148,22 @@ class Project < ApplicationRecord
   def is_draft?
     self.status == "draft"
   end
+
+  ### bridge methods for the move from urls-on-table to ActiveStorage
+  def preview_model_url
+    preview_model.attached? ? preview_model.url : preview_stl
+  end
+
+  def preview_image_url
+    preview_image.attached? \
+      ? preview_image.variant(:thumb).processed \
+      : preview_img
+  end
+
+  def marking_instructions_image_url
+    marking_instructions_image.attached? \
+      ? marking_instructions_image \
+      : (marking_instructions_photo || "part-marking.jpg")
+  end
+
 end

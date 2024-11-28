@@ -37,7 +37,7 @@
       <div class="row">
         <div class="col-md-6 pull-right" style="display: flex; justify-content: flex-end">
             <%= link_to "<i class='fa fa-download'></i> Download this Part".html_safe, @print_job.part.download_url, class: "btn btn-primary", style: "margin-right: 1em" %><br>
-            <%= link_to "<i class='fa fa-check'></i> I Printed It!".html_safe, [@project, @print_job, :printed], class: "btn btn-primary", method: :post %>
+            <%= button_to "<i class='fa fa-check'></i> I Printed It!".html_safe, [@project, @print_job, :printed], class: "btn btn-primary", method: :post %>
         </div>
       </div>
     </div>
@@ -65,11 +65,9 @@
       <p class="lead">Mark and Photograph</p>
       <div class="row">
         <div class="col-md-2">
-          <p><%= link_to(
-                   image_tag( (@project.marking_instructions_photo? ? @project.marking_instructions_photo : "part-marking.jpg"), width: '150px' ),
-                   (@project.marking_instructions_photo? ? @project.marking_instructions_photo : image_path("part-marking.jpg"))
-                 ) %>
-            <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
+          <% marking_img = @project.marking_instructions_image_url -%>
+          <p><%= link_to( image_tag( marking_img, width: '150px' ), marking_img) %>
+          <span style="font-size: small">Mark your Part: <strong><%= @print_job.part.part_name %></strong></span>
           </p>
         </div>
         <div class="col-md-6">
