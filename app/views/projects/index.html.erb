@@ -27,7 +27,7 @@
         <div class="completed-projects">
           <% @older_projects.each do |old_proj| %>
             <div class="completed-project">
-              <%= link_to(image_tag(old_proj.preview_img), project_path(old_proj), class: "completed-project-image") %>
+              <%= link_to(image_tag(old_proj.preview_image_url), project_path(old_proj), class: "completed-project-image") %>
               <h4 class="completed-project-title"><%= old_proj.name %></h4>
             </div>
           <% end %>
