@@ -11,14 +11,14 @@ class ProjectsController < ApplicationController
     end
     @activity = []
     if(@project)
-      @activity = @project.print_jobs.order('updated_at DESC')
+      @activity = @project.print_jobs.order('updated_at DESC').limit(8)
     end
     @older_projects = Project.published.where(complete: true).order('updated_at DESC')
   end
 
   def show
     @project = Project.find(params[:id])
-    @activity = @project.print_jobs.order('id DESC').limit(8)
+    @activity = @project.print_jobs.order('updated_at DESC').limit(8)
     ActiveRecord::Associations::Preloader.new(
       records: @activity,
       associations: [:user, :part]
