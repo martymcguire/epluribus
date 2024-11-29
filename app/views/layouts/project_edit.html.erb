@@ -1,3 +1,6 @@
+<% content_for :head do %>
+  <script type="module">import "project-edit"</script>
+<% end %>
 <% content_for :content do %>
 <%- project_edit_tabs = tabs_for_project_edit(@project) -%>
 <%- # TODO: make this proper nav roles -%>

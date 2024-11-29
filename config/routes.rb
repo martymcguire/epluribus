@@ -50,4 +50,6 @@ Rails.application.routes.draw do
   
   # override ActiveStorage direct uploads controller
   post '/rails/active_storage/direct_uploads', to: 'direct_uploads#create'
+
+  resources :embeds, only: [:index]
 end

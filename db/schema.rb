@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_28_163557) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_29_201820) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -47,6 +47,28 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_28_163557) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "embeds", force: :cascade do |t|
+    t.string "url"
+    t.text "response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "type"
+    t.text "html"
+    t.string "title"
+    t.string "thumbnail_url"
+    t.integer "width"
+    t.integer "height"
+    t.integer "thumbnail_width"
+    t.integer "thumbnail_height"
+    t.string "embed_type"
+    t.string "author_url"
+    t.string "author_name"
+    t.string "provider_name"
+    t.string "provider_url"
+    t.string "version"
+    t.index ["id", "type"], name: "index_embeds_on_id_and_type"
   end
 
   create_table "model_files", force: :cascade do |t|

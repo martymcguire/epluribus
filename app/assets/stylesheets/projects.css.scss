@@ -6,6 +6,11 @@
   font-size: 1.1em;
   text-align: justify;
 }
+.project-description .embed-video iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
 
 .well.shipping-part {
   background: none #f7f7f7;

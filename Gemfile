@@ -51,3 +51,7 @@ gem "sassc-rails", "~> 2.1"
 gem "activestorage", "~> 8.0"
 
 gem "image_processing", "~> 1.13"
+
+gem "requestjs-rails", "~> 0.0.12"
+
+gem "ruby-oembed", "~> 0.18.1"
