@@ -8,6 +8,16 @@
         <%= link_to( tab[:label], tab[:url], current_page?(tab[:url]) ? { 'aria-current': 'page' } : {}) %>
       </li>
     <% end %>
+    <li style="float: right">
+      <%= link_to @project do %>
+        <i class="fa fa-globe"></i> View Project
+      <% end %>
+    </li>
+    <li style="float: right">
+      <%= link_to project_parts_path(@project) do %>
+        <i class="fa fa-cube"></i> Parts Admin
+      <% end %>
+    </li>
   </ul>
   <div class="tab-content row">
     <div class="tab-pane container active">
