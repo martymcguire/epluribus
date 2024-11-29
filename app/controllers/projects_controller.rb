@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
     if(@project)
       @activity = @project.print_jobs.order('updated_at DESC').limit(8)
     end
-    @older_projects = Project.published.where(complete: true).order('updated_at DESC')
+    @older_projects = Project.published.where(complete: true).order('id DESC')
   end
 
   def show
