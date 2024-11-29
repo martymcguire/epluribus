@@ -9,9 +9,8 @@
     <%= f.text_field :name, class: 'form-control', placeholder: 'My Awesome Project' %>
   </div>
   <div class="form-group">
-    <%= f.label :description, "Description" %>
-    <span class="help-block"><a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> and <a href="http://getbootstrap.com/css/">Bootstrap HTML</a> are supported.</span>
-    <%= f.text_area :description, class: 'form-control', rows: 20 %>
+    <%= f.label :details, "Description" %>
+    <%= f.rich_text_area :details %>
   </div>
   <div class="form-group">
     <%= f.label :print_settings, "Printing Instructions" %>

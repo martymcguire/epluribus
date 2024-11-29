@@ -82,6 +82,10 @@ div.recent-activity {
   }
 }
 
+trix-editor {
+  background-color: #FFF;
+}
+
 .completed-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

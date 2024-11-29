@@ -63,13 +63,14 @@ class ProjectsController < ApplicationController
 
   def edit
     @project = Project.find(params[:id])
+    @project.details = helpers.markdown(@project.description) if not @project.details?
     render layout: "project_edit"
   end
 
   def update
     @project = Project.find(params[:id])
     @project.update!(params.require(:project).permit(
-      :name, :description, :shipping_address,
+      :name, :details, :shipping_address,
       :preview_model, :preview_image,
       :parts_in_reserve, :print_settings, :marking_instructions,
       :marking_instructions_image

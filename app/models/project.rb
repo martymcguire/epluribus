@@ -11,6 +11,8 @@ class Project < ApplicationRecord
   end
   has_one_attached :marking_instructions_image
 
+  has_rich_text :details
+
   scope :published, -> { where("status = 'published'") }
 
   def part_available?
@@ -165,5 +167,17 @@ class Project < ApplicationRecord
       ? marking_instructions_image \
       : (marking_instructions_photo || "part-marking.jpg")
   end
+
+  def details_content
+    return self.details? ? self.details : (self.markdown self.description)
+  end
+
+  protected
+    # can remove this when we aren't markdowning in here
+    def markdown(text)
+      renderer = Redcarpet::Render::HTML.new(hard_wrap: true)
+      markdown = Redcarpet::Markdown.new(renderer, autolink: true, no_intra_emphasis: true, fenced_code_blocks: true)
+      markdown.render(text).html_safe
+    end
 
 end
