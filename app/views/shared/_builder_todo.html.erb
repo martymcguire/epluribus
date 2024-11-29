@@ -22,7 +22,7 @@
     <% end %>
   
   <% elsif @print_job.printing? %>
-    <div class="well"><p class="lead">Print!</p>
+    <div class="well container-fluid"><p class="lead">Print!</p>
       <div class="row">
         <div class="col-md-3">
           <p>Here's your file!</p>
@@ -42,7 +42,7 @@
       </div>
     </div>
   <% elsif @print_job.printed? %>
-    <div class="well">
+    <div class="well container-fluid">
     <form action="<%= project_print_job_submit_path(@project,@print_job) %>" method="POST" enctype='multipart/form-data'>
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       <p class="lead"><strong>Verify Part <%= @print_job.part.part_name %></strong></p>
@@ -123,7 +123,7 @@
     </div><!-- Well -->
 
   <% elsif @print_job.verifying? %>
-  <div class="well"><p class="lead">Awaiting Verification</p>
+  <div class="well container-fluid"><p class="lead">Awaiting Verification</p>
     <div class="row">
       <div class="col-md-2">
         <%= part_preview(@print_job.part) %>
@@ -143,10 +143,10 @@
     <form method="POST" action="<%= ship_project_print_jobs_path(@project) %>">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
     <h2>Parts Ready to Ship (or Deliver)</h2>
-    <div class="well">
+    <div class="well container-fluid">
       <p class="lead">You've Got Parts to Ship (or Deliver)!</p>
       <% @shipping_print_jobs.each do |print_job| %>
-        <div class="well shipping-part">
+        <div class="well shipping-part container-fluid">
           <div class="row">
             <div class="col-md-3">
               <%= part_preview(print_job.part) %>
@@ -175,17 +175,17 @@
   <% end %>
 
   <% if @shipped_print_jobs.size > 0 %>
-    <div class="well"><p class="lead">In Transit</p>
+    <div class="well container-fluid"><p class="lead">In Transit</p>
       <% @shipped_print_jobs.each do |print_job| %>
-        <div class="well shipping-part">
+        <div class="well shipping-part container-fluid">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <%= part_preview(print_job.part) %>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <%= print_job_photo_preview(print_job) %>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
               <%= render partial: 'parts/part_public_details', locals: { part: print_job.part } %>
             </div>
             <input type="hidden" name="print_job_ids[]" value="<%= print_job.id %>">
@@ -202,7 +202,7 @@
     <h2>Your Accepted Parts</h2>
     <p>You have contributed <%= sprintf("%0.2f", (@finished_print_jobs.size.to_f / @project.parts.size.to_f) * 100.0) %>% to the <%= @project.name %> Project!</p>
     <% @finished_print_jobs.each do |fpj| %>
-      <div class="well"><p class="lead">Part #<%= fpj.part.id %></p> 
+      <div class="well container-fluid"><p class="lead">Part #<%= fpj.part.id %></p>
         <div class="row">
           <div class="col-md-2"><%= part_preview(fpj.part) %></div>
           <div class="col-md-2"><%= print_job_photo_preview(fpj) %></div>
