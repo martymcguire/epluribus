@@ -1,0 +1,7 @@
+<% if embed.embed_type == "video" %>
+<div class="embed-video">
+<% else %>
+<div class="text-center">
+<% end %>
+  <%= embed.html.html_safe %>
+</div>

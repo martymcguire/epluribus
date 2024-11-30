@@ -28,7 +28,7 @@
         <% end %>
       </h1>
       <div class="project-description">
-        <%= markdown @project.description %>
+        <%= @project.details_content %>
       </div>
       <%= render partial: 'contributors', locals: { people: @team_contributors, type: 'team' } %>
       <%= render partial: 'contributors', locals: { people: @individual_contributors, type: 'individual' } %>

@@ -47,4 +47,9 @@ Rails.application.routes.draw do
         get 'verify_email/:code', to: 'builders#verify_email', as: :verify_email
     end
   end
+  
+  # override ActiveStorage direct uploads controller
+  post '/rails/active_storage/direct_uploads', to: 'direct_uploads#create'
+
+  resources :embeds, only: [:index]
 end
