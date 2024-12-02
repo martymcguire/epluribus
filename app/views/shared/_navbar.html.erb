@@ -32,7 +32,7 @@
                 <%= link_to "Sign Out", destroy_user_session_path %>
                </div>
             <% else %>
-              <%= link_to(image_tag('google-signin.png'), '/users/auth/google_oauth2', :method => :post, :class=>"navbar-right") %>
+              <%= button_to(image_tag('google-signin.png'), user_google_oauth2_omniauth_authorize_path, :method => :post, :class=>"navbar-right") %>
             <% end %>
           </div>
         </show-hide>
