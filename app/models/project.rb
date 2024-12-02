@@ -21,41 +21,18 @@ class Project < ApplicationRecord
   end
 
   def random_part(max_part_size = nil)
-    # idx = rand(self.parts.available.count)
-    # self.parts.available.first(offset: idx)
-    # ugh, this is gross. the above fails in pgsql because of stupid
-    # prepared statement binding. instead: let's get gross with it.
-    claimed_part_ids = Part.joins(:print_jobs).where("print_jobs.aasm_state != 'rejected'").where(project_id: id).select("parts.id").to_a
-    selector = Part.where(project_id: id)
-    if(! claimed_part_ids.empty?)
-      selector = selector.where("id NOT IN (?)", claimed_part_ids)
-    end
-    if(max_part_size.nil?)
-      return selector.reorder("RANDOM()").first()
-    else
-      smaller_parts = selector.smaller_than(max_part_size)
-      return smaller_parts[rand(smaller_parts.size)]
-    end
+    # no longer use max_part_size 2024-12-02
+    self.parts.available.sample
   end
 
-  def random_part_by_color(color_name, max_part_size)
-    # FIXME: max_part_size ignored
+  def random_part_by_color(color_name, max_part_size = nil)
+    # max_part_size ignored 2024-12-02
     color = PartColor.find_by_name(color_name)
     if(color.nil?)
       return nil
     end
 
-    claimed_part_ids = Part.joins(:print_jobs).where("print_jobs.aasm_state != 'rejected'").where(project_id: id).select("parts.id").to_a
-    selector = Part.where(project_id: id, desired_color_id: color.id)
-    if(! claimed_part_ids.empty?)
-      selector = selector.where("id NOT IN (?)", claimed_part_ids)
-    end
-    if(max_part_size.nil?)
-      return selector.reorder("RANDOM()").first()
-    else
-      smaller_parts = selector.smaller_than(max_part_size)
-      return smaller_parts[rand(smaller_parts.size)]
-    end
+    self.parts.available.where(desired_color: color.id).sample
   end
 
   def complete_count
