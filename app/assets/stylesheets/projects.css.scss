@@ -150,3 +150,13 @@ trix-editor {
     }
   }
 }
+
+form:has(.builder-todo-sign-in-link), .builder-todo-sign-in-link {
+  display: inline;
+}
+
+.builder-todo-sign-in-link {
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+}
