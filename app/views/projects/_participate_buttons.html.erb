@@ -1,4 +1,4 @@
-<% if part_colors.count == 1 %>
+<% if ! parts_have_colors %>
   <%= link_to "Give me a File to Print", project_participate_path(project), class: "btn btn-primary btn-sm" %>
 <% else %>
   <% part_colors.each do |color, count| %>

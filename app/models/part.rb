@@ -6,7 +6,6 @@ class Part < ApplicationRecord
 
   def self.available
     where("id NOT IN (?)", claimed.select(:part_id))
-    .where("part_label NOT LIKE 'upper%'") # FIXME TODO: project 15 hiding! remove!
   end
 
   def self.claimed
