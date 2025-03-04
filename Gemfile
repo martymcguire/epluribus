@@ -55,3 +55,7 @@ gem "image_processing", "~> 1.13"
 gem "requestjs-rails", "~> 0.0.12"
 
 gem "ruby-oembed", "~> 0.18.1"
+
+# Security whatever 2025-03-04. Can remove once upstream requirements include it.
+gem "uri", ">= 1.0.3"
+
