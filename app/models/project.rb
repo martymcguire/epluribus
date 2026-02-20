@@ -1,3 +1,4 @@
+require 'ostruct'
 class Project < ApplicationRecord
   include ActiveStoragePrefixable
 
