@@ -15,7 +15,7 @@ gem 'puma', '~> 6.6'
 gem 'redcarpet', '~> 3.5'
 
 # Authentication w/ Google OAuth2
-gem 'devise', '~> 4.9'
+gem 'devise', '~> 5.0'
 gem 'omniauth-google-oauth2'
 # added 2021-03 for https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284
 gem 'omniauth-rails_csrf_protection'
