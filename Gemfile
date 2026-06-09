@@ -9,7 +9,7 @@ gem 'rails', '~> 8.0.0'
 gem 'sqlite3', '~> 2.1'
 
 # Use puma as the app server
-gem 'puma', '~> 6.6'
+gem 'puma', '~> 7.2'
 
 # Markdown!
 gem 'redcarpet', '~> 3.5'
