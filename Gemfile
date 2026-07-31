@@ -6,7 +6,7 @@ ruby "3.3.4"
 gem 'rails', '~> 8.0.0'
 
 # databases
-gem 'sqlite3', '~> 2.1'
+gem 'sqlite3', '~> 2.9'
 
 # Use puma as the app server
 gem 'puma', '~> 7.2'
