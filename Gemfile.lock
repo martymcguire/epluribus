@@ -144,7 +144,7 @@ GEM
       reline (>= 0.4.2)
     jmespath (1.6.2)
     json (2.21.2)
-    jwt (2.9.2)
+    jwt (2.10.3)
       base64
     kt-paperclip (7.1.1)
       activemodel (>= 4.2.0)
